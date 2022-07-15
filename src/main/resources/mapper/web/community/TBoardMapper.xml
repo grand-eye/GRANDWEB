@@ -78,7 +78,7 @@
 					,date_format(tb.board_show_str_date,'%Y-%m-%d') as board_show_str_date
 					,date_format(tb.board_show_end_date,'%Y-%m-%d') as board_show_end_date
 					,tb.board_reg_name
-					<if test="board_idx !=0">
+					<if test="board_idx !=0 or board_menu_code == 'PU01'">
 						,tb.board_detail
 					</if>
 					,tb.board_memory
