@@ -59,6 +59,7 @@
 	var name;
 	var phone;
 
+	/*
 	var naver_id_login = new naver_id_login("Nh9x0gmuqMPpVv4EkP8o", "http://localhost:8080/");
 	var state = naver_id_login.getUniqState();
 	naver_id_login.setButton("green", 7,55);
@@ -66,6 +67,7 @@
 	naver_id_login.setState(state);
 	naver_id_login.setPopup();
 	naver_id_login.init_naver_id_login();
+	*/
 	
 	// 접근 토큰 값 출력
 	//console.log("@@"+naver_id_login.oauthParams.access_token);
