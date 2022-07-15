@@ -15,6 +15,17 @@
 		.myopia05 .anchor-arrow{display:inline-block; margin:60px 0 190px;}
 
 		.link-wrap .arrow02{margin-left:120px;}
+
+		/* jbnoh */
+		.pres_kind_list{padding: 20px;}
+		.desc_default{height: 260px;}
+		.equip_title {height:70px; line-height:70px; text-align:center; font-size:30px; font-weight:700; color:#1e3250; border:1px solid #b7b7b7;}
+		.pres_kind_list .pres_kind_list_item .title:after {display:block; content:''; width:100%; height:2px; margin-top:12px; background-color:#363636;}
+		.pres_kind_list .pres_kind_list_item .title.clr {color: #ccc;}
+		.pres_kind_list .pres_kind_list_item .desc-sheet {text-align: left; padding-left: 30px;}
+		.desc-sheet .desc-sheet-sub {padding-top: 30px;}
+		.desc-sheet .desc-sheet-sub.last {padding-bottom: 30px;}
+		.desc-sheet-sub .mini {color: #707070; font-size: medium; padding-top: 15px;}
 	</style>
 </head>
 <body>
@@ -96,12 +107,133 @@
 								<div class="wsize">
 									<div class="icon-list">
 										<div class="img-wrap"><img src="/common/img/sub/e_sty03_icon.png" alt="labelicon"></div>
-										<p class="cont-desc cont-desc01">
-											내용01<br>
-											내용02<br>
-											내용03<br>
-											내용04
-										</p>
+										<!-- 작업중 jbnoh -->
+										<ul class="pres_kind_list flex_between align-item-start pc_show">
+											<li class="pres_kind_list_item">
+												<p class="equip_title">드림 렌즈</p>
+												<div><img src="" alt="image"></div>
+												<p class="title clr">밤 착용 (수면)</p>
+												<p class="desc_default">
+													드림 렌즈는 수면 시 착용하는 굴절이상 교정용 특수 콘택트렌즈입니다.
+													<span class="txt_space"></span>
+													일반 렌즈와 다르게 가운데 부분이 주변부보다 편평해서 자는 동안 편평한 부분이 각막의 볼록한 부분을 변화시켜 근시를 교정합니다.
+												</p>
+												<p class="title"></p>
+												<div class="desc-sheet" style="background: #ebebeb;">
+													<div class="desc-sheet-sub">
+														<p>치료 효과</p>
+														<p class="mini">근시 교정&#183;근시 진행 완화</p>
+													</div>
+													<div class="desc-sheet-sub">
+														<p>난시 교정 완화</p>
+														<p class="mini">O</p>
+													</div>
+													<div class="desc-sheet-sub">
+														<p>관리의 난이도</p>
+														<p class="mini">++</p>
+													</div>
+													<div class="desc-sheet-sub">
+														<p>사용 시기</p>
+														<p class="mini">8시간 이상(수면중)</p>
+													</div>
+													<div class="desc-sheet-sub">
+														<p>가능한 나이</p>
+														<p class="mini">협조 가능한 나이부터</p>
+													</div>
+													<div class="desc-sheet-sub">
+														<p>맞춤 처방 주기</p>
+														<p class="mini">평균 2년 이상</p>
+													</div>
+													<div class="desc-sheet-sub last">
+														<p>우려되는 점</p>
+														<p class="mini">건조증&#183;각막염&#183;결막염</p>
+													</div>
+												</div>
+											</li>
+											<li class="pres_kind_list_item">
+												<p class="equip_title">마이오가드</p>
+												<div><img src="" alt="image"></div>
+												<p class="title clr">잠들기 전</p>
+												<p class="desc_default">
+													마이오가드는 0.125% 의 저농도 아트로핀 점안액으로 근시 진행 억제를 도와줍니다.
+													<span class="txt_space"></span>
+													근시 억제 40~70% 효과 인증받았으며, 드림 렌즈와 함께 사용할 수 있는 식품의약품안전처에서 정식으로 허가받은 점안액입니다.
+												</p>
+												<p class="title"></p>
+												<div class="desc-sheet">
+													<div class="desc-sheet-sub">
+														<p>치료 효과</p>
+														<p class="mini">근시 교정&#183;근시 진행 완화</p>
+													</div>
+													<div class="desc-sheet-sub">
+														<p>난시 교정 완화</p>
+														<p class="mini">X</p>
+													</div>
+													<div class="desc-sheet-sub">
+														<p>관리의 난이도</p>
+														<p class="mini">-</p>
+													</div>
+													<div class="desc-sheet-sub">
+														<p>사용 시기</p>
+														<p class="mini">잠들기 전 점안</p>
+													</div>
+													<div class="desc-sheet-sub">
+														<p>가능한 나이</p>
+														<p class="mini">만 4세 이상</p>
+													</div>
+													<div class="desc-sheet-sub">
+														<p>맞춤 처방 주기</p>
+														<p class="mini">월별 처방 가능</p>
+													</div>
+													<div class="desc-sheet-sub last">
+														<p>우려되는 점</p>
+														<p class="mini">빛 번짐&#183;근거리 저하&#183;통증</p>
+													</div>
+												</div>
+											</li>
+											<li class="pres_kind_list_item">
+												<p class="equip_title">마이사이트 렌즈</p>
+												<div><img src="" alt="image"></div>
+												<p class="title clr">낮 착용 (생활)</p>
+												<p class="desc_default">
+													마이사이트 렌즈는 하루 10시간 착용으로 시력 교정 및 근시 완화를 도와주는 렌즈입니다.
+													<span class="txt_space"></span>
+													드림 렌즈 착용에 실패한 경우, 수면 시간이 짧아 드림 렌즈로 충분한 효과를 내지 못한 경우, 안경 착용을 싫어하며 아트로핀 치료가 불가능할 때 사용합니다.
+												</p>
+												<p class="title"></p>
+												<div class="desc-sheet" style="background: #ebebeb;">
+													<div class="desc-sheet-sub">
+														<p>치료 효과</p>
+														<p class="mini">근시 교정&#183;근시 진행 완화</p>
+													</div>
+													<div class="desc-sheet-sub">
+														<p>난시 교정 완화</p>
+														<p class="mini">X</p>
+													</div>
+													<div class="desc-sheet-sub">
+														<p>관리의 난이도</p>
+														<p class="mini">+/-</p>
+													</div>
+													<div class="desc-sheet-sub">
+														<p>사용 시기</p>
+														<p class="mini">10시간 이상(생활할 때)</p>
+													</div>
+													<div class="desc-sheet-sub">
+														<p>가능한 나이</p>
+														<p class="mini">협조 가능한 나이부터</p>
+													</div>
+													<div class="desc-sheet-sub">
+														<p>맞춤 처방 주기</p>
+														<p class="mini">월별 처방 가능</p>
+													</div>
+													<div class="desc-sheet-sub last">
+														<p>우려되는 점</p>
+														<p class="mini">건조증&#183;각막염&#183;결막염</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<!-- 작업중 jbnoh -->
 									</div>
 								</div>
 							</div>
