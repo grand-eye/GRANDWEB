@@ -165,7 +165,7 @@
 								
 								<td>양안</td>
 								<td class="ls0"></td>
-								<td class="ls0">1,000,000</td>
+								<td class="ls0"></td>
 								<td class="ls0">2,400,000</td>
 								<td>수술종류에 따라 다름</td>
 							</tr>
@@ -176,8 +176,19 @@
 								
 								<td>양안</td>
 								<td class="ls0"></td>
-								<td class="ls0">1,200,000</td>
+								<td class="ls0"></td>
 								<td class="ls0">2,500,000</td>
+								<td>수술종류에 따라 다름</td>
+							</tr>
+							<tr>
+								<td>행위료-처치 및 수술료 등</td>
+								<td class="ls0">2Z9610001</td>
+								<td>시력교정술료-클리어뷰 스마일 라식</td>
+								
+								<td>양안</td>
+								<td class="ls0"></td>
+								<td class="ls0"></td>
+								<td class="ls0">4,000,000</td>
 								<td>수술종류에 따라 다름</td>
 							</tr>
 							<tr>
@@ -269,12 +280,24 @@
 								<td>치료재료, 할인율에 따라 다름</td>
 							</tr>
 							<tr>
+
+								<td>치료재료대 - 보장구</td>
+								<td class="ls0"></td>
+								<td>근시교정 소프트 렌즈(마이사이트 렌즈)</td>
+								
+								<td>단안</td>
+								<td class="ls0"></td>
+								<td class="ls0">70,000</td>
+								<td class="ls0">80,000</td>
+								<td>치료재료, 할인율에 따라 다름</td>
+							</tr>
+							<tr>
 								<td>치료재료대 - 조절성 인공수정체</td>
 								<td class="ls0">BI0202OZ</td>
 								<td>AT TORBI 709M (Toric)</td>
 								
 								<td>단안</td>
-								<td class="ls0">799,500</td>
+								<td class="ls0">799,530</td>
 								<td class="ls0"></td>
 								<td class="ls0"></td>
 								<td></td>
@@ -286,7 +309,7 @@
 								<td>ACRYSOF IQ TORIC NATURAL IOL(T2-T5)</td>
 								
 								<td>단안</td>
-								<td class="ls0">804,150</td>
+								<td class="ls0">799,530</td>
 								<td class="ls0"></td>
 								<td class="ls0"></td>
 								<td></td>
@@ -297,7 +320,7 @@
 								<td>IQ Toric (SN6AT6~9)</td>
 								
 								<td>단안</td>
-								<td class="ls0">804,150</td>
+								<td class="ls0">799,530</td>
 								<td class="ls0"></td>
 								<td class="ls0"></td>
 								<td></td>
@@ -363,7 +386,7 @@
 								<td>AT LARA 829MP</td>
 								
 								<td>단안</td>
-								<td class="ls0">4,704,150</td>
+								<td class="ls0"> 2,804,150</td>
 								<td class="ls0"></td>
 								<td class="ls0"></td>
 								<td></td>
@@ -374,7 +397,7 @@
 								<td>AT LISA 839MP</td>
 								
 								<td>단안</td>
-								<td class="ls0">4,704,150</td>
+								<td class="ls0"> 2,804,150</td>
 								<td class="ls0"></td>
 								<td class="ls0"></td>
 								<td></td>
@@ -385,7 +408,7 @@
 								<td>AT LISA TRI TORIC 939M(P)</td>
 								
 								<td>단안</td>
-								<td class="ls0">4,704,150</td>
+								<td class="ls0"> 2,804,150</td>
 								<td class="ls0"></td>
 								<td class="ls0"></td>
 								<td></td>
