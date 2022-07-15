@@ -66,48 +66,54 @@
     <select id="selectCommunity" resultType="TBoardVO" parameterType="TBoardVO">
 	-- com.grand.web.community.dao.TBoardDAOImpl.Mapper.selectCommunity
 
-		SELECT
-			row_number () over (order by board_etc10 asc,board_reg_date asc,board_idx asc) as rnum
-			,tb.board_idx
-			,tb.board_title
-			,tb.board_menu_code
-			,tb.board_cate_L
-			,tb.board_cate_M
-			,date_format(tb.board_reg_date,'%Y-%m-%d') as board_reg_date
-			,date_format(tb.board_show_str_date,'%Y-%m-%d') as board_show_str_date
-			,date_format(tb.board_show_end_date,'%Y-%m-%d') as board_show_end_date
-			,tb.board_reg_name
-			,tb.board_detail
-			,tb.board_memory
-			,tb.board_mobile
-			,tb.board_secret
-			,tb.board_notice
-			,tb.board_useyn
-			,tb.birthday
-			,tb.board_etc1
-			,tb.board_etc2
-			,tb.board_etc3
-			,tb.board_etc4
-			,tb.board_reply
-			,tb.save_file
-			,tb.board_url
-			,CASE
-				WHEN UPPER(tb.board_notice) = 'Y' THEN 9999
-				ELSE IFNULL(tb.board_etc10, 0)
-			END AS board_etc10
-			<if test="board_menu_code =='BD04' or board_menu_code =='BD06' ">
-			,tcd.tcd_title as tcd_title
-			,tcds.tcd_title as tcds_title
-			</if>
-		FROM t_board tb
-		<if test="board_menu_code =='BD04' or board_menu_code =='BD06'">
-			left OUTER join t_code_detail tcd
-			on tb.board_cate_L = tcd.tcd_code
-			left OUTER join t_code_detail tcds
-			on tb.board_cate_M = tcds.tcd_code
-		</if>
-		<include refid="whereBoardList" />
-		order by rnum desc
+		SELECT * FROM (
+			SELECT TBL.*, @rownum := @rownum+1 AS rnum FROM (
+				SELECT
+					tb.board_idx
+					,tb.board_title
+					,tb.board_menu_code
+					,tb.board_cate_L
+					,tb.board_cate_M
+					,date_format(tb.board_reg_date,'%Y-%m-%d') as board_reg_date
+					,date_format(tb.board_show_str_date,'%Y-%m-%d') as board_show_str_date
+					,date_format(tb.board_show_end_date,'%Y-%m-%d') as board_show_end_date
+					,tb.board_reg_name
+					<if test="board_idx !=0">
+						,tb.board_detail
+					</if>
+					,tb.board_memory
+					,tb.board_mobile
+					,tb.board_secret
+					,tb.board_notice
+					,tb.board_useyn
+					,tb.birthday
+					,tb.board_etc1
+					,tb.board_etc2
+					,tb.board_etc3
+					,tb.board_etc4
+					,tb.board_reply
+					,tb.save_file
+					,tb.board_url
+					,CASE
+						WHEN UPPER(tb.board_notice) = 'Y' THEN 9999
+						ELSE IFNULL(tb.board_etc10, 0)
+					END AS board_etc10
+					<if test="board_menu_code =='BD04' or board_menu_code =='BD06' ">
+						,tcd.tcd_title as tcd_title
+						,tcds.tcd_title as tcds_title
+					</if>
+				FROM t_board tb
+				JOIN (SELECT @rownum := 0) AS R
+				<if test="board_menu_code =='BD04' or board_menu_code =='BD06'">
+					left OUTER join t_code_detail tcd
+					on tb.board_cate_L = tcd.tcd_code
+					left OUTER join t_code_detail tcds
+					on tb.board_cate_M = tcds.tcd_code
+				</if>
+				<include refid="whereBoardList" />
+				order by board_etc10 asc,board_reg_date asc,board_idx asc
+			) TBL
+		) A order by rnum desc
 		<if test="board_menu_code !='BD16'">
 			LIMIT #{startpage} , #{rows}
 		</if>
