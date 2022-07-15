@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+html,body{height:100%}
+
+#al_wrap{position:relative;overflow:hidden;width:100%;height:100%;}
+.al_center{margin:0 auto;margin-top:200px;width:510px; text-align:center; }
+.al_center h1{margin:0;padding:0}
+.al_form{float:left;width:510px;height:360px;background:#fff}
+.al_form p{margin:0;padding:0}
+.al_form form{margin:0;padding:0}
+.al_form ul{margin:0;padding:0;margin-top:26px}
+.al_form li{position:relative;overflow:hidden;margin:0;padding:0;list-style:none;float:left}
+.al_input_area1 p.first{margin-bottom:10px}
+.al_form li.al_input_area2{margin-right:8px}
+.al_input_area2 p.first{margin-bottom:10px}
+.al_input{padding:0 10px;width:220px;height:40px;background:#dbdbdb;border:0;font:bold 18px '돋움'}

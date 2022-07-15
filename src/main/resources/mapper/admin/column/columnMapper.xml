@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.grand.admin.column.dao.TblColumnDAOImpl.Mapper">
+     
+     
+     <sql id="whereColumnList">
+     	WHERE
+     					1=1
+     	<if test="column_idx != null and column_idx != ''">
+			AND tl.column_idx = #{column_idx}
+	    </if>
+	    
+	    <if test="column_key != null and column_key != ''">
+			AND tl.column_key = #{column_key}
+	    </if>
+	    
+	    <if test="board_search != null and board_search != ''">
+	    	AND tl.column_title like CONCAT('%', #{board_search}, '%')
+	    </if>
+	    
+	    <if test="column_cate_search != null and column_cate_search != ''">
+	    	AND tl.column_cate = #{column_cate_search}
+	    </if>
+	    
+     </sql>
+     
+    <select id="selectColumnList" resultType="tblColumnVO">
+   -- com.grand.admin.column.dao.TblColumnDAOImpl.Mapper.selectColumnList
+		SELECT 
+					tl.column_idx
+					, tl.column_cate
+					, tl.column_title
+					, tl.column_key
+					, tl.column_useyn
+					, tl.column_url
+					, tl.column_content
+					, tl.column_thum
+					, tl.column_reg_id
+					, tl.column_reg_name
+					, tl.column_reg_date
+					, tl.column_mod_id
+					, tl.column_mod_name
+					, tl.column_mod_date
+					, tl.landing01
+					, tl.landing02
+					, tl.landing03
+					, tl.landing04
+					, tl.landing05
+					, tl.landing06
+					, tl.landing07
+					, tl.landing08
+					, tl.landing09
+					, tl.landing10
+					, fl.filePath
+					, fl.fileName
+		FROM 
+					tbl_column tl
+		LEFT OUTER JOIN tbl_file_path fp ON fp.file_gubun = #{file_gubun} and tl.column_idx = fp.file_parent_idx
+		LEFT OUTER JOIN tbl_file fl ON fp.file_path_idx = fl.idx
+		
+		<include refid="whereColumnList" />
+                  			
+		ORDER  BY tl.column_reg_date DESC, tl.column_idx DESC 
+   		        
+   		LIMIT #{startpage} , #{rows}
+   
+   	</select>
+   	
+   	<select id="selectColumnCount" resultType="int">
+   -- com.grand.admin.column.dao.TblColumnDAOImpl.Mapper.selectColumnCount
+		SELECT 
+					COUNT(*)
+		FROM 
+					tbl_column tl
+		
+		<include refid="whereColumnList" />
+   
+   	</select>
+   	
+   	<select id="selectColumnKeyCount" resultType="int">
+   -- com.grand.admin.column.dao.TblColumnDAOImpl.Mapper.selectColumnKeyCount
+		SELECT 
+					COUNT(*)
+		FROM 
+					tbl_column tl
+		WHERE
+					column_key = #{column_key}
+		
+   
+   	</select>
+   	
+   	<insert id="insertColumn" parameterType="tblColumnVO"  useGeneratedKeys="true" keyProperty="column_idx">
+     -- com.grand.admin.column.dao.TblColumnDAOImpl.Mapper.insertColumn
+		INSERT INTO tbl_column
+		(
+				  column_idx
+				, column_title
+				, column_key
+				, column_useyn
+				, column_url
+				, column_cate
+				, column_content
+				, column_reg_id
+				, column_reg_name
+				, column_reg_date
+				, column_thum
+				, landing01
+				, landing02
+				, landing03
+				, landing04
+				, landing05
+				, landing06
+				, landing07
+				, landing08
+				, landing09
+				, landing10
+				, column_content_backup
+		) 
+		VALUES 
+		(
+				  #{column_idx}
+				, #{column_title}
+				, #{column_key}
+				, #{column_useyn}
+				, #{column_url}
+				, #{column_cate}
+				, #{column_content}				
+				, #{reg_id}
+				, #{reg_nm}
+				, #{column_reg_date}
+				, #{column_thum}
+				, #{landing01}
+				, #{landing02}
+				, #{landing03}
+				, #{landing04}
+				, #{landing05}
+				, #{landing06}
+				, #{landing07}
+				, #{landing08}
+				, #{landing09}
+				, #{landing10}
+				, #{column_content_backup}
+		)  
+		ON DUPLICATE KEY 
+		UPDATE 
+			  column_title 			= #{column_title}
+			, column_key			= #{column_key}
+			, column_useyn 			= #{column_useyn}
+			, column_url 			= #{column_url}
+			, column_cate			= #{column_cate}
+			, column_content 		= #{column_content}
+			, column_thum			= #{column_thum}
+			, column_reg_date		= #{column_reg_date}
+			, column_mod_id 		= #{mod_id}
+			, column_mod_name 		= #{mod_nm}
+			, column_mod_date 		= now()
+			, landing01 		= #{landing01}
+			, landing02 		= #{landing02}
+			, landing03 		= #{landing03}
+			, landing04 		= #{landing04}
+			, landing05 		= #{landing05}
+			, landing06 		= #{landing06}
+			, landing07 		= #{landing07}
+			, landing08 		= #{landing08}
+			, landing09 		= #{landing09}
+			, landing10 		= #{landing10}
+			, column_content_backup 	= #{column_content_backup}
+   	</insert>
+   	
+   	<insert id="insertColumnBackup" parameterType="tblColumnVO"  useGeneratedKeys="true" keyProperty="column_idx">
+     -- com.grand.admin.column.dao.TblColumnDAOImpl.Mapper.insertColumnBackup
+		INSERT INTO tbl_column
+		(
+				  column_idx
+				, column_content_backup
+		) 
+		VALUES 
+		(
+				  #{column_idx}
+				, #{column_content_backup}
+		)  
+		ON DUPLICATE KEY 
+		UPDATE 
+			, column_content_backup 	= #{column_content_backup}
+   	</insert>
+  
+  	<delete id="deleteColumn" parameterType="tblColumnVO" >
+    -- com.grand.admin.column.dao.TblColumnDAOImpl.Mapper.deleteColumn
+    	DELETE FROM tbl_column
+		WHERE column_idx = #{column_idx}
+    </delete>
+    
+     <select id="selectColumn" resultType="tblColumnVO">
+   -- com.grand.admin.column.dao.TblColumnDAOImpl.Mapper.selectColumn
+		SELECT 
+					tl.column_idx
+					, tl.column_cate
+					, tl.column_title
+					, tl.column_key
+					, tl.column_useyn
+					, tl.column_url
+					, tl.column_content
+					, tl.column_thum
+					, tl.column_reg_id
+					, tl.column_reg_name
+					, tl.column_reg_date
+					, tl.column_mod_id
+					, tl.column_mod_name
+					, tl.column_mod_date
+					, cdt.tcd_title as column_cate_nm
+					, tl.landing01
+					, tl.landing02
+					, tl.landing03
+					, tl.landing04
+					, tl.landing05
+					, tl.landing06
+					, tl.landing07
+					, tl.landing08
+					, tl.landing09
+					, tl.landing10
+		FROM 
+					tbl_column tl
+		LEFT OUTER JOIN tbl_code_detail cdt ON tl.column_cate = cdt.tcd_code
+		WHERE
+					tl.column_idx = #{column_idx}
+   
+   	</select>
+   	
+   	
+   	<select id="selectColumnFileList" resultType="tblColumnVO">
+   	-- com.grand.admin.column.dao.TblColumnDAOImpl.Mapper.selectColumnFileList
+   
+			SELECT 
+				tf.idx
+				, tf.orgName
+				, tf.fileName
+				, get_typeCheck('extension',SUBSTRING_INDEX(tf.fileName,'.',-1),null) extension
+			FROM 
+				tbl_file_path tfp 
+			LEFT OUTER JOIN 
+				tbl_file tf 
+			ON tfp.file_path_idx = tf.idx
+			WHERE tfp.file_parent_idx = #{column_idx}
+   
+   	</select>
+   	
+   	<insert id="insertColumnFile" parameterType="tblColumnVO" >
+   	-- com.grand.admin.column.dao.TblColumnDAOImpl.Mapper.insertColumnFile
+   	
+   		INSERT INTO tbl_file_path
+		(file_gubun, file_parent_idx, file_regdate, file_path_idx, groupCode)
+		SELECT 
+					#{file_gubun} 
+					, #{column_idx}
+					, now()
+					, tfp.idx
+					, tfp.groupCode
+		FROM 				
+					tbl_file tfp 
+		WHERE 
+					idx = #{idx}
+   	</insert>
+   	
+   	<delete id="deleteColumnFile" parameterType="tblColumnVO" >
+    -- com.grand.admin.column.dao.TblColumnDAOImpl.Mapper.deleteColumnFile
+    
+    	DELETE FROM 
+    				tbl_file_path
+		WHERE 
+					file_parent_idx 	= #{column_idx}
+		AND
+					file_gubun			= #{file_gubun}
+    </delete>
+    
+</mapper>
+

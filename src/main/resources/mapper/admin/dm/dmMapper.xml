@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.grand.admin.dm.dao.TblSmslogsDAOImpl.Mapper">
+     
+     
+     <sql id="whereSmslogsList">
+     	WHERE
+     					1=1
+     	
+     	<if test="tblNumber != null and tblNumber != ''">
+			AND ts.tblNumber = #{tblNumber}
+	    </if>
+	    
+	    <if test="board_search != null and board_search != ''">
+	    	<choose>
+				<when test="board_search_option != null and board_search_option !='' and board_search_option.equals('phone')">
+					AND	ts.tblStrAddressee = #{board_search}
+				</when>
+				<when test="board_search_option != null and board_search_option !='' and board_search_option.equals('msg')">
+					AND	ts.tblStrComment like CONCAT('%', #{board_search}, '%')
+				</when>				
+			</choose>
+	    </if>
+     </sql>
+     
+    <select id="selectSmslogsList" resultType="tblSmslogsVO">
+   -- com.grand.admin.dm.dao.TblSmslogsDAOImpl.Mapper.selectSmslogsList
+			SELECT 
+						ts.tblNumber
+						, ts.tblStrSender
+						, ts.tblStrAddressee
+						, ts.tblStrComment
+						, ts.tblStrIp
+						, ts.tblStrStatus
+						, ts.tblRetMsg
+						, ts.tblRetCode
+						, ts.tblDtmRegDate
+			FROM 
+						tbl_smslogs	ts
+                   			
+			<include refid="whereSmslogsList" />
+			 
+			ORDER  BY ts.tblNumber DESC, ts.tblDtmRegDate  DESC
+    		        
+    		LIMIT #{startpage} , #{rows}
+   
+   	</select>
+   	
+   	<select id="selectSmslogsCount" resultType="int">
+     -- com.grand.admin.dm.dao.TblSmslogsDAOImpl.Mapper.selectSmslogsCount
+			  SELECT
+					COUNT(*)  
+				FROM tbl_smslogs ts
+		     	<include refid="whereSmslogsList" />
+			    
+    </select>    
+   	
+   <select id="selectSmsMsgList" resultType="smsMsgSetVO">
+   -- com.grand.admin.dm.dao.TblSmslogsDAOImpl.Mapper.selectSmsMsgList
+			SELECT 
+						sms.idx
+						, sms.send_type
+						, sms.send_action
+						, sms.send_location
+						, sms.send_state
+						, sms.send_msg
+						, sms.comment
+						, CHAR_LENGTH(sms.send_msg) as send_msg_length
+			FROM 
+						sms_msg_set	sms
+                   			
+			ORDER  BY sms.idx ASC
+			
+			LIMIT #{startpage} , #{rows}
+    		        
+   	</select>
+   	
+   	<select id="selectSmsMsgCount" resultType="int">
+     -- com.grand.admin.dm.dao.TblSmslogsDAOImpl.Mapper.selectSmsMsgCount
+			  SELECT
+					COUNT(*)  
+				FROM sms_msg_set sms		     	
+			    
+    </select>    
+    
+    <insert id="insertSmsMsgSet" parameterType="smsMsgSetVO" >
+    -- com.grand.admin.dm.dao.TblSmslogsDAOImpl.Mapper.insertSmsMsgSet
+			INSERT INTO sms_msg_set
+			(
+					idx
+				,	send_type 
+				,	send_action
+				,   send_location
+				, 	send_state
+				, 	send_msg
+				,	comment
+			) 
+			VALUES 
+			(
+					#{idx}
+				,	#{send_type}
+				, 	#{send_action}
+				, 	#{send_location}
+				, 	#{send_state}
+				,	#{send_msg}
+				,	#{comment}
+			)  
+			ON DUPLICATE KEY 
+			UPDATE
+					comment			=	#{comment}
+				<if test="send_type != null and send_type != ''">
+				,	send_type			=	#{send_type}
+				</if> 
+				<if test="send_action != null and send_action != ''">
+				, 	send_action		=	#{send_action}
+				</if>
+				<if test="send_location != null and send_location != ''">
+				, 	send_location	=	#{send_location}
+				</if>
+				<if test="send_state != null and send_state != ''">
+				, 	send_state		=	#{send_state}
+				</if>
+				<if test="send_msg != null and send_msg != ''">
+				, 	send_msg			=	#{send_msg}
+				</if>
+   	</insert>
+   	
+   	<select id="selectSmsConfig" resultType="tblSmsConfigVO">
+   -- com.grand.admin.dm.dao.TblSmslogsDAOImpl.Mapper.selectSmsConfig
+			SELECT 
+						cf_id
+						, cf_pw
+						, cf_ip
+						, cf_port
+						, cf_phone
+						, cf_admin
+						, cf_register
+						, cf_datetime
+						, cf_member
+						, cf_level
+						, cf_point
+						, cf_day_count
+			FROM 
+						tbl_sms_config
+                   			
+    		        
+   	</select>
+    
+    <update id="updateSmsConfig" parameterType="tblSmsConfigVO" >
+    -- com.grand.admin.dm.dao.TblSmslogsDAOImpl.Mapper.updateSmsConfig
+    
+    	UPDATE 
+    					tbl_sms_config
+    		SET 
+    					cf_id 			= #{cf_id}
+    					, cf_pw 		= #{cf_pw}
+    					, cf_phone 	= #{cf_phone}
+    					, cf_admin		= #{cf_admin}
+    					   		
+    </update>
+    
+</mapper>
+

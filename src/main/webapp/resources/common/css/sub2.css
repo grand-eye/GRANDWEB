@@ -1,0 +1,1866 @@
+@charset "UTF-8";
+/* 프리미엄노안백내장, 시력교정 드림렌즈, 망막 녹내장, 아이케어시스템, 로그인 회원가입 페이지 */
+.subEyecareJoinRetinaRevision{font-weight:500; word-break:keep-all;}
+.subEyecareJoinRetinaRevision h2{font-size:3rem; line-height:1.5}
+.subEyecareJoinRetinaRevision h3{font-size:2.2rem;}
+.subEyecareJoinRetinaRevision h4{font-weight:500; font-size:1.56rem;}
+.subEyecareJoinRetinaRevision .txt-center{text-align:center;}
+.subEyecareJoinRetinaRevision .tab{display:none;}
+.subEyecareJoinRetinaRevision .f_go{letter-spacing:-0.02em;}
+.subEyecareJoinRetinaRevision .sub_visual{background-position:center;}
+
+.top-tit{padding-bottom:7px;}
+.cont-tit{padding-bottom:32px;}
+.cont-desc{line-height:1.7;}
+
+/* 안종합검진 - pc */
+.checkup_wrap{padding-top:85px;}
+.checkup_wrap .checkup-hero01{background:url('/common/img/sub/e_checkup_bg01.jpg') center no-repeat;}
+.checkup01{padding-top:182px;}
+.checkup01 .cont-desc{padding-bottom:125px;}
+.checkup02{padding-top:240px;}
+.checkup02 .cont-tit{padding-bottom:103px;}
+.checkup_wrap .bg-list{display:flex; flex-direction:row; margin:0 -10px;}
+.checkup_wrap .bg-list > li{flex:1; height:790px; margin:0 10px; padding-top:43px; padding-left:25px; background-position:center bottom; background-repeat:no-repeat; background-size:cover;}
+.checkup_wrap .bg-list > li:nth-child(1){background-image:url('/common/img/sub/e_checkup02_img01.png');}
+.checkup_wrap .bg-list > li:nth-child(2){background-image:url('/common/img/sub/e_checkup02_img02.png');}
+.checkup_wrap .bg-list > li:nth-child(3){background-image:url('/common/img/sub/e_checkup02_img03.png');}
+.checkup_wrap .bg-list > li:nth-child(4){background-image:url('/common/img/sub/e_checkup02_img04.png');}
+.checkup_wrap .bg-list > li h3{padding-bottom:25px; font-weight:700; font-size:35px; color:#1e3250;}
+.checkup_wrap .bg-list > li h3 span{font-weight:500;}
+.checkup_wrap .bg-list > li p{font-weight:500; line-height:1.7;}
+.checkup_wrap .check-list{display:flex; flex-direction:row; flex-wrap:wrap; padding-top:35px;}
+.checkup_wrap .check-list > li{width:50%; margin-top:43px; padding-left:50px; background:url('/common/img/sub/e_icon_check.png') left center no-repeat; font-weight:500; font-size:25px; line-height:27px; box-sizing:border-box;}
+.checkup03{padding-top:300px;}
+.checkup03 .feature-wrap{margin-top:248px; padding-bottom:213px; background:#f7f5f2 url('/common/img/sub/e_checkup03_bg.png') center bottom no-repeat;}
+.checkup03 .feature-wrap .feature-list{position:relative; top:-165px; display:flex; flex-direction:row; justify-content:center; margin:0 -11px;}
+.checkup03 .feature-wrap .feature-list > li{width:348px; padding:0 11px;}
+.checkup03 .feature-wrap .feature-list > li p{padding-top:40px; line-height:1.8;}
+.checkup03 .feature-wrap .feature-list > li .feature-circle{display:flex; align-items:center; justify-content:center; position:relative; width:326px; height:326px; margin:0 auto; border:5px solid #1e3250; border-radius:100%; background:#fff; font-weight:700; font-size:35px; color:#1e3250;}
+.checkup03 .feature-wrap .feature-list > li:not(:last-child) .feature-circle:before{content:''; position:absolute; top:50%; right:-40px; transform:translateY(-50%); display:block; width:40px; height:2px; background:#1e3250;}
+.checkup03 .feature-wrap .feature-list > li .img-wrap{position:relative; top:-10px;}
+.subEyecareJoinRetinaRevision .space-sm{display:block; height:10px;}
+.checkup04{padding-top:235px;}
+.checkup04 .cont-tit{padding-bottom:107px;}
+.tab-menu .tab-rec{display:flex; width:100%;}
+.tab-menu .tab-rec > li{flex:1; height:73px;}
+.tab-menu .tab-rec > li a{display:flex; align-items:center; justify-content:center; width:100%; height:100%; border:2px solid #e1e1e1; border-left-width: 1px; border-right-width: 1px; box-sizing:border-box;}
+.tab-menu .tab-rec > li a.active{border:2px solid #1e3250; background:#1e3250; color:#fff;}
+.tab-menu .tab-rec-sub{display:flex; width:100%;}
+.tab-menu .tab-rec-sub > li{flex:1; height:73px;}
+.tab-menu .tab-rec-sub > li a{display:flex; align-items:center; justify-content:center; width:100%; height:100%; border:2px solid #e1e1e1; border-left-width: 1px; border-right-width: 1px; box-sizing:border-box;}
+.tab-menu .tab-rec-sub > li a.active{border:2px solid #1e3250; background:#1e3250; color:#fff;}
+.checkup_wrap .equip_swiper .swiper-container{padding-top:148px;}
+.checkup_wrap .equip_swiper{padding-bottom:235px;}
+.checkup_wrap .equip_swiper .equip_desc{padding-top:40px; text-align:left;}
+.checkup_wrap .equip_swiper .equip_name{text-align:left;}
+.checkup05{padding-top:142px; padding-bottom:150px; background:#f6f6f6;}
+.checkup05 .cont-tit{padding-bottom:140px; text-align:center;}
+.checkup05 .cont-list > .cont-list01{padding-bottom:178px;}
+.checkup05 .cont-list > .cont-list02{padding-bottom:178px;}
+.checkup05 .cont-list > li h3{padding-bottom:22px;}
+.checkup05 .cont-list > li .cont-box{border:1px solid #d7d7d7; background:#fff;}
+.checkup05 .cont-list > .cont-list02 .cont-box{padding:42px 0 28px;}
+.checkup05 .cont-list > li .cont-box-list{display:flex; flex-direction:row; padding:58px 0;}
+.checkup05 .cont-list > li .cont-box-list > li{display:flex; flex-direction:row; width:50%; padding-left:38px;}
+.checkup05 .cont-list > li .cont-box{display:flex; flex-direction:row; align-items:center;}
+.checkup05 .cont-list > .cont-list02 .cont-box{padding-left:50px;}
+.checkup05 .cont-list > .cont-list03 .cont-box{flex-direction:column; align-items:start; padding:97px 0 92px 53px;}
+.checkup05 .cont-list > .cont-list03 .cont-box > li{display:flex; flex-direction:row; width:100%;}
+.checkup05 .cont-list > .cont-list03 .cont-box > li .img-wrap{width:100%; max-width:150px;}
+.checkup05 .cont-list > .cont-list03 .cont-box > li .txt-wrap{padding-left:90px; padding-top:2px; font-weight:500; font-size:30px;}
+.checkup05 .cont-list > .cont-list03 .cont-box > li + li{padding-top:67px;}
+.checkup05 .cont-list > li .cont-box-list > li + li{padding-left:26px;}
+.checkup05 .cont-list > li .cont-box-list > li .txt-wrap{margin-left:41px; padding-left:22px; border-left:2px solid #cccccc;}
+.checkup05 .cont-list > .cont-list02 .cont-box .txt-wrap{margin-left:58px;}
+.checkup05 .cont-list > li .cont-box .txt-wrap h4{font-weight:500;}
+.checkup05 .cont-list > .cont-list02 .cont-box .txt-wrap h4{padding-left:83px; padding-top:2px; padding-bottom:38px; font-size:30px;}
+.checkup05 .cont-list > li .cont-box .bg-pstv{background:url('/common/img/sub/e_icon_pstv.png') left top no-repeat;}
+.checkup05 .cont-list > li .cont-box .bg-ngtv{background:url('/common/img/sub/e_icon_ngtv.png') left top no-repeat;}
+.checkup05 .cont-list > li .cont-box .txt-wrap .cont-txt-list{display:flex; flex-direction:row; flex-wrap:wrap; width:100%; max-width:482px; margin-left:83px; font-weight:500;}
+.checkup05 .cont-list > li .cont-box .txt-wrap .cont-txt-list > li{width:50%; padding-bottom:15px;}
+.checkup05 .cont-list > li .cont-box-list > li + li .txt-wrap{margin-left:36px;}
+.checkup05 .cont-list > li .cont-box-list > li h4{padding-bottom:40px; font-size:30px;}
+.checkup05 .cont-list > li .cont-box-list > li p{font-weight:500;}
+.checkup05 .cont-note{padding-top:27px; font-weight:500;}
+.checkup06{padding-top:53px; padding-bottom:102px;}
+.go-link{display:inline-block;}
+.anchor-arrow{padding-right:42px; background:url('/common/img/sub/icon_r_arrow.png') right 53% no-repeat; font-weight:700; font-size:30px; color:#1e3250;}
+
+/* 다래끼케어 - pc */
+.sty_wrap{padding-top:88px;}
+.sty_wrap .sty-hero01{background:url('/common/img/sub/e_sty_bg01.jpg') center no-repeat;}
+.sty01{padding-top:135px;}
+.sty01 .img-wrap{padding-top:80px; padding-bottom:113px;}
+.sty02{padding-top:272px; padding-bottom:280px;}
+.sty02 .cont-tit{padding-bottom:95px;}
+.sty02 .feature-list{display:flex; flex-direction:row; margin:0 -15px;}
+.sty02 .feature-list > li{width:33.3%; padding:0 15px;}
+.sty02 .feature-list > li h4{padding-top:68px; padding-bottom:50px; font-size:30px;}
+.sty02 .feature-list > li p{line-height:1.8;}
+.subEyecareJoinRetinaRevision .navy-bg{background:#1e3250; color:#fff;}
+.subEyecareJoinRetinaRevision .gray-bg{background:#f6f6f6;}
+.sty03 .navy-bg{padding-top:107px;}
+.sty03 .cont-tit{padding-bottom:222px;}
+.sty03 .gray-bg{padding-bottom:32px;}
+.sty03 .gray-bg .wsize{position:relative; top:-125px; background:#fff; box-shadow:0px 1px 3px 0px rgba(202, 202, 202, 0.94);}
+.sty03 h4{font-weight:700;}
+.sty03 .box-tit{padding-top:28px; padding-bottom:40px; font-size:30px; color:#1e3250;}
+.sty03 .icon-box{display:flex; flex-direction:row; align-items:start; flex-wrap:wrap; width:100%; max-width:748px; margin:0 auto; padding-top:43px; padding-bottom:115px;}
+.sty03 .icon-box > li{width:50%; padding:55px 0;}
+.sty03 .icon-box > li h4{padding-top:48px; padding-bottom:28px; color:#1e3250;}
+.sty03 .icon-box > li p{line-height:1.7;}
+.sty03 .icon-box > li .img-wrap{display:flex; align-items:center; justify-content:center; height:129px;}
+.sty04{padding-top:263px;}
+.sty04 .cont-desc{padding-bottom:248px;}
+.sty04 .feature-wrap{padding-bottom:107px; background:#f7f5f2 url('/common/img/sub/e_checkup03_bg.png') 47% 108% no-repeat; background-size:53%;}
+.sty04 .feature-list{display:flex; flex-direction:row; justify-content:center; position:relative; top:-162px;}
+.sty04 .feature-list > li{width:auto;}
+.sty04 .feature-circle{position:relative;}
+.sty04 .feature-circle p{position:absolute; top:140px; width:100%; font-weight:700; font-size:35px; color:#1e3250;}
+.sty04 .feature-desc{padding-top:67px; line-height:1.7;}
+.sty05{padding-top:245px;}
+.sty05 .cont-tit{padding-bottom:135px; text-align:center;}
+.sty05 .col-list-wrap{width:100%;}
+.sty05 .col-list{display:inline-block; text-align:left;}
+.sty05 .col-list > li{display:flex; flex-direction:row;}
+.sty05 .col-list > li + li{padding-top:98px;}
+.sty05 .col-list > li .txt-wrap{padding-left:43px; padding-top:3px;}
+.sty05 .col-list > li .txt-wrap h3{padding-bottom:42px; font-weight:500; font-size:30px;}
+.sty05 .col-list > li .txt-wrap p{line-height:1.8;}
+.sty05 .anchor-arrow{display:inline-block; margin:155px auto 243px;}
+
+/* 안구건조증 - pc */
+.subEyecareJoinRetinaRevision .page-wrap{padding-top:87px;}
+.dry_wrap .dry-hero01{background:url('/common/img/sub/e_dry_bg01.jpg') center no-repeat;}
+.dry01{padding-top:128px; padding-bottom:310px;}
+.dry01 h3{font-weight:500;}
+.dry01 .cont-tit{padding-bottom:37px;}
+.subEyecareJoinRetinaRevision .cont-desc .space-sm{height:13px;}
+.dry01 .img-wrap{padding-top:130px; padding-bottom:58px;}
+.dry02 .cont-tit{padding-bottom:105px;}
+.dry02 .feature-list{display:flex; flex-direction:row; flex-wrap:wrap; margin:0 -15px;}
+.dry02 .feature-list > li{width:33.3%; min-height:577px; padding:0 15px;}
+.dry02 .feature-list > li h4{padding-top:43px; padding-bottom:27px;}
+.dry02 .feature-list > li p{color:#929292; line-height:1.5;}
+.dry03 .cont-tit{text-align:center;}
+.dry03 .icon-list{display:flex; flex-direction:row; padding:0 17px 295px;}
+.dry03 .icon-list > li{flex:1; text-align:center;}
+.dry03 .cont-tit{padding-bottom:170px;}
+.dry03 .icon-list > li p{padding-top:73px; font-size:30px;}
+.dry03 .gray-bg{padding-top:138px; background:#f6f6f6 url('/common/img/sub/e_dry03_bg.png') 78% bottom no-repeat;}
+.dry03 .check-list{padding-top:82px; padding-bottom:127px;}
+.dry03 .check-list > li{padding-left:50px; background:url('/common/img/sub/e_icon_check.png') left center no-repeat; font-size:25px; line-height:27px;}
+.dry03 .check-list > li + li{margin-top:40px;}
+.dry04{padding-top:200px;}
+.dry04 .top-tit{color:#fff;}
+.dry04 .cont-tit{line-height:1.8;}
+.dry04 h4{font-weight:700; font-size:30px; color:#1e3250;}
+.dry04 .navy-bg{padding-top:107px;}
+.dry04 .gray-bg{padding-bottom:153px;}
+.dry04 .gray-bg .wsize{position:relative; top:-132px; background:#fff; box-shadow:0px 1px 3px 0px rgb(202 202 202 / 94%);}
+.dry04 .cont-tit{padding-bottom:222px;}
+.dry04 .icon-list{padding-bottom:135px;}
+.dry_wrap .top-img-wrap{padding-bottom:53px;}
+.dry_wrap .num-img-wrap{padding-bottom:22px;}
+.dry04 .tit-img-wrap01{padding-top:57px; padding-bottom:47px;}
+.dry04 .img-list{display:flex; flex-direction:row; justify-content:center; padding-top:87px; padding-bottom:75px;}
+.dry04 .img-list > li{padding:0 16px;}
+.subEyecareJoinRetinaRevision .vertical-line{display:inline-block; width:1px; height:115px; background:#464646;}
+.dry04 .vtc-line01{margin-top:30px; margin-bottom:27px;}
+.dry04 .h4-list02{padding-top:27px;}
+.dry04 .tit-img-wrap02{padding-top:48px; padding-bottom:42px;}
+.dry04 .img-wrap01{padding-bottom:43px;}
+.dry04 .num-img-wrap02{padding-top:172px;}
+.dry04 .tit-img-wrap03{padding-top:52px; padding-bottom:25px;}
+.dry04 .num-img-wrap03{padding-top:228px;}
+.dry04 .tit-img-wrap04{padding-top:32px; padding-bottom:15px;}
+.dry05{padding-top:250px;}
+.dry05 .cont-desc{padding-bottom:248px;}
+.subEyecareJoinRetinaRevision .system-list{padding-bottom:107px; background:#f7f5f2 url('/common/img/sub/e_checkup03_bg.png') 47% 108% no-repeat; background-size:53%;}
+.subEyecareJoinRetinaRevision .system-list .feature-list{display:flex; flex-direction:row; justify-content:center; position:relative; top:-162px;}
+.subEyecareJoinRetinaRevision .system-list .feature-list > li{width:auto;}
+.subEyecareJoinRetinaRevision .system-list .feature-circle{position:relative; min-height:365px;}
+.subEyecareJoinRetinaRevision .system-list .feature-circle p{position:absolute; top:140px; width:100%; font-weight:700; font-size:35px; color:#1e3250;}
+.subEyecareJoinRetinaRevision .system-list .feature-desc{padding-top:67px; line-height:1.7;}
+.subEyecareJoinRetinaRevision .notandum-sec{padding-top:255px;}
+.subEyecareJoinRetinaRevision .notandum-sec .cont-tit{padding-bottom:135px;}
+.subEyecareJoinRetinaRevision .notandum-sec .col-list-wrap{width:100%;}
+.subEyecareJoinRetinaRevision .notandum-sec .col-list{display:inline-block; text-align:left;}
+.dry06{padding-bottom:243px;}
+.subEyecareJoinRetinaRevision .notandum-sec .col-list > li{display:flex; flex-direction:row;}
+.subEyecareJoinRetinaRevision .notandum-sec .col-list > li + li{padding-top:105px;}
+.subEyecareJoinRetinaRevision .notandum-sec .col-list > li .txt-wrap{padding-left:43px; padding-top:3px;}
+.subEyecareJoinRetinaRevision .notandum-sec .col-list > li .txt-wrap h3{padding-bottom:42px; font-weight:500; font-size:30px;}
+.subEyecareJoinRetinaRevision .notandum-sec .col-list > li .txt-wrap p{line-height:1.8;}
+.subEyecareJoinRetinaRevision .notandum-sec .anchor-arrow{display:inline-block;}
+.dry06 .anchor-arrow{display:inline-block; margin:155px auto 0;}
+
+/* 알러지케어 - pc */
+.allergy_wrap .gyol-hero01{background:url('/common/img/sub/e_gyol_bg01.jpg') center no-repeat;}
+.gyol01{padding-top:155px;}
+.gyol01 .cont-desc{padding-bottom:155px; line-height:1.7;}
+.gyol02{padding-top:258px;}
+.gyol02 .cont-tit{padding-bottom:110px;}
+.subEyecareJoinRetinaRevision .kind-list{display:flex; flex-direction:row; flex-wrap:wrap; margin:0 -15px;}
+.subEyecareJoinRetinaRevision .kind-list > li{width:33.3%; padding:0 15px;}
+.gyol02 .feature-list > li h4{font-size:30px;}
+.gyol02 .feature-list .img-wrap{padding-bottom:60px;}
+.gyol02 .feature-list .feature-desc{padding-top:63px;}
+.gyol02 .feature-list .feature-desc > li{display:flex; flex-wrap:wrap; flex-direction:row; padding-left:33px; padding-right:10px; line-height:1.8;}
+.gyol02 .feature-list .feature-desc > li:first-child{min-height:167px; border-bottom:1px solid #b7b7b7;}
+.gyol02 .feature-list .feature-desc > li + li{padding-top:70px;}
+.gyol02 .feature-list .feature-desc > li .right-desc{width:calc(100% - 55px); padding-left:15px; text-align:left;}
+.gyol03{padding-top:300px;}
+.gyol03 .cont-desc{padding-bottom:75px;}
+.gyol03 .gray-bg{padding-top:55px; padding-bottom:137px;}
+.subEyecareJoinRetinaRevision .symptom-list{display:flex; flex-direction:row; padding:0 55px;}
+.subEyecareJoinRetinaRevision .symptom-list > li{flex:1; text-align:center;}
+.subEyecareJoinRetinaRevision .symptom-list > li p{padding-top:35px; font-size:30px;}
+.gyol04 .navy-bg{padding-top:87px;}
+.subEyecareJoinRetinaRevision .care-sec .navy-bg .cont-tit{padding-bottom:222px;}
+.care-sec .gray-bg .wsize{position:relative; background:#fff; box-shadow:0px 1px 3px 0px rgba(202, 202, 202, 0.94);}
+.gyol04 .gray-bg .wsize{top:-125px;}
+.gyol04 .icon-list{padding-bottom:110px;}
+.care-sec .box-tit{padding-top:28px; padding-bottom:40px; font-weight:700; font-size:30px; color:#1e3250;}
+.gyol04 .box-tit{padding-top:28px;}
+.gyol04 .cont-desc{line-height:1.7;}
+.care-sec .icon-box{display:flex; flex-direction:row; align-items:start; justify-content:center; flex-wrap:wrap; width:100%; margin:0 auto;}
+.care-sec .icon-box > li p{line-height:1.7;}
+.care-sec .icon-box > li .img-wrap{display:flex; align-items:center; justify-content:center;}
+.gyol04 .icon-box > li .img-wrap{padding-top:62px; padding-bottom:60px;}
+.gyol05{padding-top:233px;}
+.gyol05 .cont-desc{padding-bottom:252px;}
+.gyol05 .space-sm{height:12px;}
+.gyol06 .anchor-arrow{margin-top:222px; margin-bottom:155px;}
+.allergy_wrap .gak-hero01{background:url('/common/img/sub/e_gak_bg01.jpg') center no-repeat;}
+.gak01{padding-top:153px;}
+.gak01 .cont-desc{padding-bottom:133px;}
+.gak02{padding-top:283px;}
+.gak02 .cont-tit{padding-bottom:120px;}
+.gak02 .feature-list > li{width:50%;}
+.gak02 .feature-list > li .img-wrap{padding-bottom:55px;}
+.subEyecareJoinRetinaRevision .kind-list > li h4{font-size:30px;}
+.gak02 .feature-list > li h4{padding-bottom:63px;}
+.subEyecareJoinRetinaRevision .kind-list > li p{line-height:1.8;}
+.gak03{padding-top:313px;}
+.gak03 .cont-desc{padding-bottom:72px;}
+.gak03 .icon-list{padding-top:53px; padding-bottom:135px;}
+.gak03 .icon-list > li p{padding-top:82px;}
+.gak04 .navy-bg{padding-top:97px;}
+.gak04 .gray-bg .wsize{top:-129px;}
+.gak04 .icon-list{padding-bottom:93px;}
+.gak04 .icon-box > li .img-wrap{padding-top:67px; padding-bottom:50px;}
+.gak04 .icon-box > li p{line-height:1.8;}
+.gak05{padding-top:233px;}
+.gak05 .cont-desc{padding-bottom:252px;}
+.gak06 .anchor-arrow{margin-top:165px; margin-bottom:145px;}
+
+/* 주사치료 - pc */
+.shot_wrap .shot-hero01{background:url('/common/img/sub/r_shot_bg01.jpg') center no-repeat;}
+.subEyecareJoinRetinaRevision .first-sec{padding-top:128px;}
+.shot01 .cont-desc .space-sm{height:15px;}
+.shot02{padding-top:262px; padding-bottom:302px;}
+.shot02 .cont-tit{padding-bottom:35px;}
+.shot02 .feature-list > li{padding:72px 0;}
+.shot02 .feature-list > li h4{padding-top:40px;}
+.shot03 .navy-bg{padding-top:107px;}
+.shot03 .gray-bg{padding-bottom:20px;}
+.shot03 .gray-bg .wsize{top:-126px; padding-bottom:160px;}
+.shot03 .tit-img-wrap01{padding-top:33px; padding-bottom:200px;}
+.shot03 .img-list{display:flex; flex-direction:row; justify-content:center; align-items:flex-end;}
+.shot03 .img-list01{padding-top:58px; padding-bottom:50px;}
+.shot03 .img-list01 > li{padding:0 60px;}
+.shot03 .img-list01 .img-wrap{padding-bottom:15px;}
+.subEyecareJoinRetinaRevision .border-ellip{position:relative; width:100%; max-width:606px; margin:0 auto;}
+.subEyecareJoinRetinaRevision .border-ellip:before{content:''; position:absolute; left:0; top:50%; z-index:0; transform:translateY(-50%); width:100%; height:2px; background:#d7d7d7;}
+.subEyecareJoinRetinaRevision .border-ellip span{display:inline-block; position:relative; z-index:9; min-width:180px; padding:10px 0; border-radius:25px; background:#1e3250; color:#fff; font-size:23px;}
+.shot03 .cont-desc{line-height:1.8;}
+.shot03 .cont-desc01{padding-top:82px;}
+.shot03 .cont-desc .space-sm{height:25px;}
+.shot03 .img-list02{padding-top:133px; padding-bottom:50px;}
+.shot03 .img-list02 .img-wrap{display:flex; align-items:flex-end; min-height:200px; padding:0 50px 25px;}
+.shot03 .cont-desc02{padding-top:82px;}
+.shot_wrap .shot04{padding-top:190px;}
+.shot_wrap .shot04 .cont-tit{padding-bottom:110px;}
+.shot_wrap .link-wrap .arrow02{margin-left:120px;}
+.shot04 .link-wrap{padding-top:255px; padding-bottom:198px;}
+.subEyecareJoinRetinaRevision .link-wrap p + p{margin-left:163px;}
+
+/* 황반변성 - pc */
+.md_wrap .md01{padding-top:193px;}
+.md01 .cont-desc{padding-bottom:103px;}
+.md01 .img-cap{padding-top:62px; font-weight:500; font-size:30px;}
+.md02{padding-top:303px; padding-bottom:347px;}
+.md02 .cont-tit{padding-bottom:97px;}
+.md02 .feature-list > li{width:50%;}
+.md02 .feature-list > li h4{padding-top:60px; padding-bottom:68px; font-weight:700;}
+.md03 .cont-tit{padding-bottom:77px;}
+.md03 .gray-bg{padding-top:160px; padding-bottom:180px; background:#f6f6f6 url('/common/img/sub/r_md03_bg.jpg') 77% bottom no-repeat;}
+.md03 .gray-cont01{display:flex; flex-direction:row; justify-content:space-between; padding-bottom:115px;}
+.md03 h3{line-height:1.3;}
+.md03 .gray-cont01 h3{padding-top:7px;}
+.md03 .gray-cont01 .left-cont{text-align:left;}
+.md03 .gray-cont01 .right-cont{padding-right:55px;}
+.md03 .step-list{padding-top:55px;}
+.md03 .step-list > li{display:flex; flex-direction:row; font-size:25px; line-height:1.5;}
+.md03 .step-list > li + li{padding-top:33px;}
+.md03 .step-list > li .step-num{padding-right:15px;}
+.md03 .gray-cont02{display:flex; flex-direction:row; justify-content:space-between;}
+.md03 .gray-cont03{padding-top:115px; text-align:left;}
+.md03 .gray-cont03 .check-list{padding-top:68px;}
+.subEyecareJoinRetinaRevision .check-icon-list > li{padding-left:50px; background:url('/common/img/sub/e_icon_check.png') left center no-repeat; font-size:25px; line-height:27px;}
+.md03 .check-list > li + li{margin-top:43px;}
+.md04 .navy-bg{padding-top:107px;}
+.md04 .gray-bg .wsize{top:-128px; padding-bottom:127px;}
+.md04 .tit-img-wrap{padding-top:33px;}
+.md04 .img-list01{padding:113px 22px 25px; border-bottom:2px solid #d7d7d7;}
+.md04 .img-list{display:inline-flex; flex-direction:row; justify-content:center; align-items:flex-end;}
+.md04 .img-list > li{padding:0 60px;}
+.md04 .img-list .img-wrap{padding-bottom:15px;}
+.md04 .num-list{padding-top:60px;}
+.md04 .num-list > li{padding-bottom:72px; line-height:1.7;}
+.md04 .num-list > li img{padding-bottom:13px;}
+.md05{padding-top:207px;}
+.md05 .cont-desc{padding-bottom:250px;}
+.md_wrap .md06{padding-top:180px; padding-bottom:168px;}
+.md06 .col-list-wrap{padding-bottom:133px;}
+.md_wrap .md06 .col-list > li .txt-wrap h3{padding-bottom:22px;}
+.md_wrap .md06 .col-list > li + li{padding-top:112px;}
+
+/* 녹내장 - pc */
+.drag_box .drag_frame .img.gc_first {display:block; background-image:url('/common/img/sub/r_gc_img_normal.jpg');background-size:100% 100%;}
+.drag_box .drag_frame .img.gc_second {display:block; background-image:url('/common/img/sub/r_gc_img_abnormal.jpg');background-size:100% 100%;}
+.gc_wrap .gc01{padding-top:198px;}
+.gc01 .img-list{display:flex; flex-direction:row; justify-content:center; padding-top:168px;}
+.gc01 .img-list > li:first-child{padding-left:50px;}
+.gc01 .img-list > li + li{padding-left:65px;}
+.gc01 .img-list > li h3{padding-left:50px; padding-top:55px; font-weight:500; text-align:left;}
+.gc01 .img-list > li .color-em{padding-left:30px; color:#fb7e03;}
+.gc02{padding-top:290px;}
+.gc02 .cont-tit{padding-bottom:115px;}
+.gc02 .feature-list > li{width:50%;}
+.gc_wrap .gc02 .feature-list > li h4{padding-top:50px; padding-bottom:63px; font-weight:700;}
+.gc_wrap .gc02 .feature-list > li p{min-height:242px;}
+.gc03{padding-top:210px;}
+.gc03 .cont-tit{padding-bottom:103px;}
+.gc03 .img-list{display:flex; flex-direction:row; margin:0 -15px; padding-bottom:105px;}
+.gc03 .img-list > li{width:33.3%; padding:0 15px;}
+.gc03 .img-list > li h4{font-size:30px;}
+.gc03 .img-list > li .img-wrap{padding-bottom:57px;}
+.gc03 .vertical-line{margin:17px 0 25px; height:57px; background:#b7b7b7;}
+.gc03 .gray-bg{padding-top:122px;}
+.gc03 .icon-list{padding:85px 0 100px;}
+.gc_wrap .gc03 .icon-list > li p{padding-top:83px;}
+.gc04 .navy-bg{padding-top:108px;}
+.gc_wrap .gc04 .gray-bg{padding-bottom:35px;}
+.gc_wrap .gc04 .gray-bg .wsize{top:-138px; padding-bottom:138px;}
+.gc04 .img-list{display:inline-flex; flex-direction:row; padding-top:140px; margin-bottom:73px; border-bottom:2px solid #d7d7d7;}
+.gc04 .img-list > li{padding:0 35px 25px;}
+.gc04 .img-list > li .img-wrap{display:flex; align-items:flex-end; min-height:191px; margin-bottom:30px;}
+.gc04 .img-list > li p{font-size:23px;}
+.gc05{padding-top:230px;}
+.gc05 .cont-desc{padding-bottom:253px;}
+.gc_wrap .gc06{padding-top:198px; padding-bottom:168px;}
+
+.subEyecareJoinRetinaRevision .notandum-sec .bg-list > li .img-wrap{padding-right:48px;}
+.subEyecareJoinRetinaRevision .notandum-sec .bg-list > li .txt-wrap{padding-left:90px; background-position:left 2px; background-repeat:no-repeat;}
+.subEyecareJoinRetinaRevision .notandum-sec .bg-list > li .bg-ngtv{background-image:url('/common/img/sub/e_icon_ngtv.png');}
+.subEyecareJoinRetinaRevision .notandum-sec .bg-list > li .bg-pstv{background-image:url('/common/img/sub/e_icon_pstv.png');}
+.subEyecareJoinRetinaRevision .notandum-sec .bg-list > li .bg-minus{background-image:url('/common/img/sub/r_icon_minus.png');}
+.subEyecareJoinRetinaRevision .notandum-sec .bg-list > li .bg-bang{background-image:url('/common/img/sub/r_icon_bang.png');}
+
+.gc06 .col-list-wrap{padding-bottom:165px;}
+.gc_wrap .gc06 .col-list > li:nth-child(7){padding-top:135px;}
+.gc06 .col-list > li:nth-child(1) .txt-wrap{padding-top:30px; background-position:left 28px;}
+.gc06 .col-list > li:nth-child(2) .txt-wrap{padding-top:15px; background-position:left 13px;}
+.gc06 .col-list > li:nth-child(3) .txt-wrap{padding-top:30px; background-position:left 28px;}
+.gc06 .col-list > li:nth-child(5) .txt-wrap{padding-top:15px; background-position:left 13px;}
+.gc06 .col-list > li:nth-child(6) .txt-wrap{padding-top:22px; background-position:left 20px;}
+.gc_wrap .gc06 .col-list > li .txt-wrap h3{padding-bottom:20px;}
+.gc_wrap .gc06 .col-list > li + li{padding-top:85px;}
+
+/* 비문증 - pc */	
+.drag_box .drag_frame .img.rv_bimun_first {display:block; background-image:url('/common/img/sub/r_bm_img_normal.jpg');}
+.drag_box .drag_frame .img.rv_bimun_second {display:block; background-image:url('/common/img/sub/r_bm_img_abnormal.jpg');}
+.bimun_wrap .bm01{padding-top:193px;}
+.subEyecareJoinRetinaRevision .compare-list{display:flex; flex-direction:row; justify-content:center;}
+.subEyecareJoinRetinaRevision .compare-list > li:first-child{padding-left:50px;}
+.subEyecareJoinRetinaRevision .compare-list > li h3{padding-top:55px; font-weight:500; text-align:left;}
+.subEyecareJoinRetinaRevision .compare-list > li .color-em{color:#fb7e03;}
+.bm01 .img-list{padding-top:125px;}
+.bm01 .img-list > li + li{padding-left:130px;}
+.bm01 .img-list > li:first-child h3{padding-left:97px;}
+.bm01 .img-list > li:last-child h3{padding-left:63px;}
+.bm02{padding-top:290px;}
+.bm02 .cont-tit{padding-bottom:117px;}
+.bm02 .feature-list > li{width:50%;}
+.bm02 .feature-list > li h4{padding-bottom:65px; font-weight:700;}
+.bm02 .feature-list > li .img-wrap{padding-bottom:53px;}
+.bm03{padding-top:293px;}
+.bm03 .cont-tit{padding-bottom:68px;}
+.bm03 .img-list{display:flex; flex-direction:row; margin:0 -15px; padding-bottom:205px;}
+.bm03 .img-list > li{width:50%; padding:0 15px;}
+.bm03 .img-list > li h4{padding-top:40px; font-size:30px;}
+.bm03 .gray-bg{padding-top:107px; padding-bottom:112px;}
+.bm03 .check-list-wrap{padding-top:100px;}
+.bm03 .check-list{display:inline-block;}
+.bm03 .check-list > li{text-align:left;}
+.bm03 .check-list > li + li{margin-top:45px;}
+.bm04 .navy-bg{padding-top:100px;}
+.bimun_wrap .bm04 .gray-bg{padding-bottom:27px;}
+.bimun_wrap .bm04 .gray-bg .wsize{top:-127px; padding-bottom:120px;}
+.bimun_wrap .bm04 .box-tit{padding-bottom:28px;}
+.bm04 .cont-desc01{padding-bottom:357px; background:url('/common/img/sub/r_bm04_bg01.jpg') center bottom no-repeat;}
+.bm04 .cont-desc02{padding-top:60px;}
+.bm05{padding-top:215px;}
+.bm05 .cont-tit{padding-bottom:53px;}
+.bm05 .cont-desc{padding-bottom:250px;}
+.bm06{padding-bottom:168px;}
+.bm06 .col-list-wrap{padding-bottom:120px;}
+.bimun_wrap .bm06{padding-top:182px;}
+
+/* 당뇨망막 - pc */
+.drag_box .drag_frame .img.rd_first {display:block;background-image:url('/common/img/sub/r_diabet_img_normal.jpg');}
+.drag_box .drag_frame .img.rd_second {display:block;background-image:url('/common/img/sub/r_diabet_img_abnormal.jpg');}
+.diabet_wrap .diabet01{padding-top:187px;}
+.diabet01 .cont-tit{padding-bottom:42px;}
+.diabet01 .img-list{padding-top:83px;}
+.diabet01 .img-list > li + li{padding-left:98px;}
+.diabet01 .img-list > li:first-child h3{padding-left:93px;}
+.diabet01 .img-list > li:last-child h3{padding-left:53px;}
+.diabet02{padding-top:285px;}
+.diabet02 .cont-tit{padding-bottom:115px;}
+.diabet02 .feature-list > li{width:50%;}
+.diabet02 .feature-list > li .img-wrap{padding-bottom:58px;}
+.diabet02 .feature-list > li h4{padding-bottom:70px; font-weight:700;}
+.diabet03{padding-top:310px; padding-bottom:257px;}
+.subEyecareJoinRetinaRevision .visual-spt-list{display:flex; flex-direction:row; margin:0 -15px;}
+.subEyecareJoinRetinaRevision .visual-spt-list > li{width:33.3%; padding:0 15px;}
+.subEyecareJoinRetinaRevision .visual-spt-list > li h4{font-size:30px;}
+.subEyecareJoinRetinaRevision .visual-spt-list > li .navy-bg{padding:25px 0; font-size:25px;}
+.subEyecareJoinRetinaRevision .visual-spt-list > li .spt-desc{padding-top:35px;}
+.subEyecareJoinRetinaRevision .visual-spt-list .vertical-line{margin:20px 0 25px; height:57px; background:#b7b7b7;}
+.diabet03 .cont-tit{padding-bottom:140px;}
+.diabet04 .navy-bg{padding-top:107px;}
+.diabet_wrap .diabet04 .gray-bg{padding-bottom:73px;}
+.diabet_wrap .diabet04 .gray-bg .wsize{top:-125px;}
+.diabet04 .icon-list{padding-bottom:127px;}
+.diabet04 .cont-desc01{padding-top:18px;}
+.diabet04 .num-list{padding-top:45px;}
+.diabet04 .num-img-wrap{padding-top:32px; padding-bottom:18px;}
+.diabet04 .num-list > li + li{padding-top:90px;}
+.diabet04 .num-list > li h4{padding-bottom:35px; font-size:30px;}
+.diabet04 .num-list > li p{line-height:1.8;}
+.diabet05{padding-top:258px;}
+.diabet05 .cont-desc{padding-bottom:250px;}
+.diabet_wrap .diabet06{padding-top:220px; padding-bottom:203px;}
+.diabet06 .col-list-wrap{padding-bottom:92px;}
+.diabet_wrap .diabet06 .col-list > li + li{padding-top:110px;}
+.diabet_wrap .diabet06 .col-list > li .txt-wrap h3{padding-bottom:18px;}
+
+/* 프리미엄 - pc */
+.drag_box .drag_frame .img.rv_premium_first {background-image:url('/common/img/sub/rv_premium_img_abnormal.jpg');} 
+.drag_box .drag_frame .img.rv_premium_second {background-image:url('/common/img/sub/rv_premium_img_normal.jpg');} 
+.subEyecareJoinRetinaRevision .sub_desc{margin-top:37px; font-size:20px;}
+main .subEyecareJoinRetinaRevision .premium_wrap{padding-top:43px;}
+.premium_wrap .premium-hero01{background:url('/common/img/sub/rv_premium_bg01.jpg') center no-repeat;}
+.premium_wrap .premium01{padding-top:98px; padding-bottom:110px;}
+.premium01 .img-wrap{display:flex; flex-direction:row; align-items:center; justify-content:center;}
+.premium01 .navy-bg{display:flex; width:243px; height:243px; align-items:center; justify-content:center; margin-left:58px; border-radius:100%; font-size:25px; line-height:1.8;}
+.premium02 .navy-bg{padding-top:170px; padding-bottom:133px; background:#f6f6f6 url('/common/img/sub/rv_premium02_bg.jpg') center top no-repeat; color:#363636;}
+.premium_wrap .premium02 .navy-bg .top-tit{color:#f8f8f9;}
+.premium_wrap .premium02 .navy-bg .cont-tit{padding-bottom:88px; color:#fafcff;}
+.premium02 .wsize{position:relative; background:#ffffff;}
+.premium02 .badge-icon{display:inline-block; position:absolute; top:-3px; right:70px;}
+.premium02 .cont-desc01{padding-bottom:77px;}
+.premium02 .point-list{display:flex; flex-direction:row; flex-wrap:wrap; justify-content:center; width:100%; max-width:715px; padding-top:160px; padding-bottom:120px; margin:0 auto;}
+.premium02 .point-list > li{padding:0 20px;}
+.premium02 .point-list > li:nth-child(n+3){padding-top:100px;}
+.premium02 .point-list > li b{font-family:'Gmarket'; font-weight:700; font-size:20px; color:#dbd0c4;}
+.premium02 .point-list > li h4{width:100%; max-width:277px; padding-top:47px; padding-bottom:20px; margin:0 auto 40px; border-bottom:2px solid #e6ded4; font-weight:700;}
+.premium02 .point-list > li p{line-height:1.8;}
+.premium03{padding-top:147px; padding-bottom:340px; background:url('/common/img/sub/rv_premium03_bg.png') center bottom no-repeat;}
+.premium03 .cont-tit{padding-bottom:70px;}
+.premium03 .top-tit02{padding-top:102px; padding-bottom:43px;}
+.premium03 .note-data{padding-top:90px; color:#1e3250;}
+.premium03 .note-data dd{font-size:50px;}
+.premium03 .note-data dt{padding-top:18px; font-size:20px;}
+.premium04{padding-bottom:242px;}
+.premium_wrap .premium04 .feature-list{padding:0 23px;}
+.premium04 .feature-list > li{position:relative; padding:30px 0 53px;}
+.premium04 .feature-list > li + li:before{content:''; position:absolute; left:0; top:50%; transform:translateY(-50%); width:1px; height:115px; background:#797e85;}
+.premium04 .feature-list > li .img-wrap{display:flex; align-items:center; justify-content:center; height:85px;}
+.premium04 .feature-list > li .em-num{display:flex; align-items:center; justify-content:center; height:85px; padding-top:0; font-size:45px; color:#f2f4f5;}
+.premium04 .feature-list > li .em-num span{font-size:30px;}
+.premium_wrap .premium04 .feature-list > li .feature-desc{padding-top:12px; font-size:20px; color:#b7b7b7;}
+.premium_wrap .premium04 .box-tit{padding-bottom:85px;}
+.premium04 .img-desc{display:flex; flex-direction:row; justify-content:center; }
+.premium04 .img-desc > li{width:325px;}
+.premium04 .img-desc > li + li{margin-left:93px;}
+.premium04 .img-desc > li .img-num{padding-top:18px;}
+.premium04 .img-desc > li h4{padding-top:23px; border-top:2px solid #e6ded4; line-height:1.4;}
+.premium_wrap .premium05 .cont-tit{padding-bottom:65px;}
+.premium05 .top-tit02{padding-top:188px;}
+.premium_wrap .premium05 .cont-tit02{padding-bottom:95px;}
+.premium05 .icon-list{display:flex; flex-direction:row; flex-wrap:wrap; width:100%; max-width:793px; margin:0 auto;}
+.premium05 .icon-list > li{width:33.3%; padding-bottom:60px;}
+.premium05 .icon-list > li p{line-height:1.5;}
+.premium05 .icon-list > li .img-wrap{padding-bottom:47px;}
+.premium05 .anchor-arrow{display:inline-block; margin-top:110px; margin-bottom:145px;}
+
+/* 라식 - pc */
+main .sub .lasik_wrap{padding-top:0;}
+.lasik_wrap .lasik-hero01{background:url('/common/img/sub/rv_lasik_bg01.jpg') center no-repeat;}
+.lasik_wrap .sub_txt_bar{padding:37px 0; font-size:22px;}
+/*.lasik_wrap .sub_tab_menu > li{width:90px;}*/
+.lasik_wrap .lasiklasek01{padding-top:100px; padding-bottom:150px;}
+.lasik_wrap .lasiklasek01 .cont-tit{padding-bottom:43px;}
+.lasiklasek01 .cont-desc{padding-top:78px;}
+.lasik_wrap .lasiklasek02{padding-top:85px; padding-bottom:85px; background:#f3f3f5 url('/common/img/sub/rv_lasik02_bg.jpg') center bottom no-repeat;}
+main .lasik_wrap .lasek02{background:#f3f3f5 url('/common/img/sub/rv_lasek02_bg.jpg') center bottom no-repeat;}
+.lasiklasek02 .check-list{padding-top:70px;}
+.lasiklasek02 .check-list > li + li{margin-top:40px;}
+.lasiklasek03{padding-top:0px;}
+.lasiklasek03 .navy-bg{padding-top:100px;}
+.lasiklasek03 .gray-bg{padding-bottom:17px;}
+.lasik_wrap .lasiklasek03 .gray-bg .wsize{top:-133px; padding-bottom:23px;}
+.lasiklasek03 .num-list{display:flex; flex-direction:row; flex-wrap:wrap; width:100%; max-width:672px; margin:0 auto; padding-top:88px;}
+.lasiklasek03 .num-list > li{padding:0 15px 100px;}
+.lasiklasek03 .num-list > li h4{font-weight:700; line-height:1.3;}
+.lasiklasek03 .num-list > li .num-img-wrap{padding-top:43px; margin-bottom:23px; border-bottom:2px solid #e6ded4;}
+.lasiklasek04{padding-top:282px;}
+.lasiklasek04 .cont-tit{padding-bottom:42px;}
+.lasiklasek04 .cont-desc{padding-bottom:250px;}
+.lasik_wrap .lasiklasek04 .feature-wrap{background:#f7f5f2 url('/common/img/sub/rv_lasik04_bg.jpg') center bottom no-repeat;}
+.lasik_wrap .lasiklasek04 .link-wrap{padding-top:85px; padding-bottom:175px;}
+.lasik_wrap .lasek-hero01{background:url('/common/img/sub/rv_lasek_bg01.jpg') center no-repeat;}
+.lasik_wrap .lasiklasek05 {padding-top:180px;}
+/* 투데이라섹 특징 및 장점 */
+.lasiklasek06{padding-top:203px;}
+.lasiklasek06 .navy-bg{padding-top:100px;}
+.lasiklasek06 .gray-bg{padding-bottom:17px;}
+.lasik_wrap .lasiklasek06 .gray-bg .wsize{top:-133px; padding-bottom:23px;}
+/* 투데이라섹 주의사항- pc */
+.diabet_wrap .t_lasek_diabet01{padding-top:220px; padding-bottom:203px;}
+.t_lasek_diabet01 .col-list-wrap{padding-bottom:30px;}
+.diabet_wrap .t_lasek_diabet01 .col-list > li + li{padding-top:110px;}
+.diabet_wrap .t_lasek_diabet01 .col-list > li .txt-wrap h3{padding-bottom:18px;}
+.lasiklasek04 .t_lasek_diabet01 {padding-top:180px; padding-bottom:24px;}
+
+
+/* 회원가입 - pc */
+.header .join-gnb{border-bottom:none;}
+.sub.page-join{padding-top:0;}
+.join_wrap{padding-bottom:97px; background:#fbfbfb;}
+.join_wrap .cont-tit{padding-top:140px; padding-bottom:107px; font-weight:500; font-size:45px; text-align:center;}
+.join_wrap .join-process{display:flex; flex-direction:row; justify-content:center; padding-bottom:55px; text-align:center;}
+.join_wrap .join-process > li{font-size:30px; color:#959595;}
+.join_wrap .join-process > .active{color:#022e4b;}
+.join_wrap .join-process > .process-symbol{padding:0 35px;}
+.join_wrap > div.wsize{background:#fff;}
+.join_wrap > div.wsize .inner{width:100%; max-width:740px; margin:0 auto; padding:108px 0 75px;}
+.join_wrap .terms-head{padding:0 15px 40px;}
+.join_wrap .terms-desc{padding:0 15px 65px; font-weight:400; font-size:18px; line-height:1.8;}
+.join_wrap .terms-list{border-top:1px solid #bcbcbc;}
+.join_wrap .terms-list > li{padding:43px 0; border-bottom:1px solid #bcbcbc;}
+.join_wrap .terms-list > li .check-row{display:flex; flex-direction:row; justify-content:space-between; padding:0 15px;}
+.join_wrap .terms-list > li .check_box label span{color:#959595;}
+.join_wrap .terms-list > li .check-row .slide-btn{display:flex; flex-direction:row; align-items:center;}
+.join_wrap .terms-list > li .check-row .slide-btn img{transition:all 0.5s;}
+.join_wrap .terms-list > li .check-row .slide-btn.active img{transform:rotateX(180deg);}
+.join_wrap .terms-list > li .check-row .slide-btn span{padding-right:8px;}
+.join_wrap .terms-list > li .terms-wrap{display:none; margin-top:43px; padding:15px 15px 0; border-top:1px solid #bcbcbc;}
+.join_wrap .terms-list > li .terms-cont{overflow-y:auto; max-height:275px; font-weight:400; font-size:18px; line-height:1.7; white-space:pre-wrap;}
+.join_wrap .btn_apply{margin:87px auto 0;}
+/* 회원가입2 - pc */
+.page-info .join_wrap .join-process{padding-bottom:90px;}
+.page-info .join_wrap > div.wsize .inner{max-width:818px; padding:120px 0 105px;}
+.page-info .join_wrap > div.wsize .inner > ul + ul{padding-top:112px; padding-bottom:73px; border-bottom:1px solid #b7b7b7;}
+.join_wrap .info-input > li{padding-left:45px; font-size:25px;}
+.join_wrap .info-input > li + li{padding-top:45px;}
+.join_wrap .info-input > li input{width:100%;}
+.join_wrap .info-input > li .input-required{color:#cd4848;}
+.info-input input{padding:12px 22px; border:1px solid #bfbfbf; font-size:20px;}
+.info-input input::placeholder, .info-input input:-ms-input-placeholder, .info-input input::-ms-input-placeholder{font-weight:300; color:#a0a0a0;}
+.join_wrap .info-input > li .input-wrap{width:100%; max-width:592px; padding-top:18px;}
+.subEyecareJoinRetinaRevision .btn{min-width:145px; height:50px; border:1px solid #bfbfbf; background:#fbfbfb; font-weight:500; font-size:20px;}
+.join_wrap .info-input > li .btn-chk{margin-left:10px;}
+.join_wrap .info-input > li .input-chk{width:calc(100% - 155px);}
+.join_wrap .info-input > li .input-email1{width:230px;}
+.join_wrap .info-input > li .input-email2{width:173px; margin-right:2px;}
+.join_wrap .info-input > li .input-txt{padding:0 3px;}
+.join_wrap .info-input > li .select_box{display:inline-block; position:relative; width:147px; vertical-align:top;}
+.join_wrap .info-input > li .select_box .select{padding:14px 10px; width:100%; border:1px solid #434343; background-size:15px; font-size:20px;}
+.join_wrap .info-input > li .select_box .select_ul{width:100%;}
+.join_wrap .info-input > li .select_box .select_ul li{padding:14px 18px; font-size:20px;}
+.join_wrap .info-input > li .input-note{padding-top:25px; font-size:20px; word-break:keep-all; line-height:1.2;}
+.join_wrap .btn_apply{margin-top:105px; width:230px;}
+.page-info .join_wrap .btn_apply{margin-top:50px;}
+/* 회원가입3 - pc */
+.page-cmplt .join_wrap{padding-bottom:265px;}
+.page-cmplt .join_wrap .join-process{padding-bottom:78px;}
+.page-cmplt .join_wrap > div.wsize .inner{padding-top:165px; padding-bottom:157px;}
+.join_wrap .join-tit{padding-top:65px; padding-bottom:67px; color:#022e4b; line-height:1.4;}
+.join_wrap .inner .cont-desc{padding-bottom:60px; font-weight:400; font-size:18px;}
+.join_wrap .join-note{width:100%; max-width:818px; padding-top:38px; border-top:1px solid #b7b7b7; font-weight:400; font-size:18px; color:#959595; line-height:1.7;}
+.page-cmplt .join_wrap .btn_apply{margin:57px 0 0;}
+.join_wrap .btn-wrap{display:flex; flex-direction:row; justify-content:center;}
+.page-cmplt .join_wrap .btn-wrap button + button{margin-left:30px;}
+.subEyecareJoinRetinaRevision .btn-2nd{background:#ebe3da; color:#022e4b;}
+
+/* 로그인 - pc */
+.login_wrap .cont-tit{padding-top:20px; padding-bottom:135px; font-weight:500; font-size:45px; text-align:center;}
+.login_wrap .inner{max-width:460px; margin:0 auto; padding-bottom:283px;}
+.login_wrap .input-box > li{font-size:25px;}
+.login_wrap .input-box > li + li{padding-top:57px;}
+.login_wrap .input-box > li input{width:100%;}
+.login_wrap .input-box > li .input-required{color:#cd4848;}
+.input-box input{padding:12px 22px; border:1px solid #bfbfbf; font-size:20px;}
+.input-box input::placeholder, .info-input input:-ms-input-placeholder, .info-input input::-ms-input-placeholder{font-weight:300; color:#a0a0a0;}
+.login_wrap .input-box > li .input-wrap{padding-top:18px;}
+.login_wrap .login-option{display:flex; flex-direction:row; justify-content:space-between; padding-top:33px; font-size:25px;}
+.login_wrap .check_box label{font-size:25px;}
+.login_wrap .check_box label:before{width:27px; height:27px; border:1px solid #bfbfbf; vertical-align:top;}
+.login_wrap .btn-wrap{padding-top:63px;}
+.btn-main{background:#022e4b; color:#fff;}
+.login_wrap .btn-wrap .btn-main{display:flex; flex-direction:row; align-items:center; justify-content:center; width:100%; height:60px; font-weight:500; font-size:25px;}
+.login_wrap .btn-wrap button + button{margin-top:10px;}
+.btn-wrap .btn-login-naver{background:#32b419;}
+.btn-wrap .btn-login-kakao{background:#ffe100; color:#381e1f;}
+.btn-wrap .btn-login-google{background:#e43c29;}
+.btn-wrap .btn-join{background:#ebe3da; color:#022e4b;}
+.login_wrap .btn-wrap .btn-main img{padding-right:18px;margin-bottom:10px}
+.login_wrap .btn-wrap .login-division{position:relative; margin:38px 0 32px; text-align:center;}
+.login_wrap .btn-wrap .login-division:before{content:''; position:absolute; left:0; top:50%; z-index:-1; transform:translateY(-50%); width:100%; height:1px; background:#bfbfbf;}
+.login_wrap .btn-wrap .login-division span{padding:0 10px; background:#fff;}
+
+/* 렌즈삽입 - pc */
+.implant_wrap .implant-hero01{background:url('/common/img/sub/rv_implant_bg01.jpg') center no-repeat;}
+.implant_wrap .implant01{padding-top:145px; padding-bottom:138px;}
+.implant01 .cont-desc{padding-top:72px;}
+.implant_wrap .implant02{padding-top:93px; padding-bottom:85px; background:url('/common/img/sub/rv_implant02_bg.jpg') center bottom no-repeat; background-size:cover;}
+.implant02 .check-list{padding-top:82px;}
+.implant02 .check-list > li + li{margin-top:40px;}
+.implant03{padding-top:215px; padding-bottom:272px;}
+.implant03 .product-list{display:flex; flex-direction:row; padding-top:183px; margin:0 -15px;}
+.implant03 .product-list > li{width:50%; padding:0 15px;}
+.implant03 .product-list > li h3{color:#1e3250;}
+.implant03 .product-list > li .color-em{color:#fb7e03;}
+.implant03 .product-list > li .img-1st-wrap{position:relative; padding-top:18px;}
+.implant03 .product-list > li .img-1st-wrap p{position:absolute; top:55px; left:0; width:100%; font-size:25px; color:#6e6964; text-align:center;}
+.implant03 .img-2nd-wrap{margin-top:13px; padding-top:73px; padding-bottom:47px; background:#edf2f9;}
+.implant03 .img-2nd-wrap h4{padding-bottom:80px;}
+.implant03 .product-info{display:flex; flex-direction:row; margin:0 -5px;}
+.implant03 .product-info > li{width:50%; margin-left:5px; margin-right:5px;}
+.implant03 .product-info .img-2nd-wrap{background:#f4f3f3;}
+.implant03 .img-2nd-wrap .feature-list{display:inline-block; min-height:155px; margin-top:85px; text-align:left;}
+.implant03 .img-2nd-wrap .feature-list > li + li{padding-top:25px;}
+.implant04 .navy-bg{padding-top:107px;}
+.implant_wrap .implant04 .gray-bg .wsize{top:-126px;}
+.subEyecareJoinRetinaRevision .care-method{display:flex; flex-direction:row; flex-wrap:wrap; width:100%; max-width:672px; margin:0 auto; padding-top:82px;}
+.subEyecareJoinRetinaRevision .care-method > li{padding:0 15px 100px;}
+.subEyecareJoinRetinaRevision .care-method > li h4{font-weight:700; line-height:1.3;}
+.subEyecareJoinRetinaRevision .care-method > li .num-img-wrap{padding-top:43px; margin-bottom:23px; border-bottom:2px solid #e6ded4;}
+.implant05{padding-top:267px;}
+.implant05 .cont-desc{padding-bottom:253px;}
+.implant_wrap .implant05 .feature-wrap{background:#f7f5f2 url('/common/img/sub/rv_lasik04_bg.jpg') center bottom no-repeat;}
+.implant05 .anchor-arrow{display:inline-block; margin:60px 0 190px;}
+
+/* 드림렌즈 - pc */
+.dream_wrap .dream-hero01{background:url('/common/img/sub/rv_dream_bg01.jpg') center no-repeat;}
+.dream_wrap .dream01{padding-top:95px; padding-bottom:145px;}
+.dream_wrap .dream01 .img-list{padding-bottom:85px;}
+.dream_wrap .dream01 .img-list > li + li{padding-left:93px;}
+.dream_wrap .dream01 .img-list > li h3{padding-top:35px; font-weight:700; text-align:center;}
+.dream_wrap .dream01 .img-list > li:nth-child(1){padding-left:0;}
+.dream_wrap .dream01 .img-list > li:nth-child(1) h3{padding-left:35px;}
+.dream_wrap .dream01 .img-list > li:nth-child(2) .img-wrap{padding-left:62px;}
+.dream_wrap .dream02{padding-top:95px; padding-bottom:85px; background:url('/common/img/sub/rv_dream02_bg.jpg') center bottom no-repeat; background-size:cover;}
+.dream02 .check-list{padding-top:63px;}
+.dream02 .check-list > li + li{margin-top:40px;}
+.dream03{padding-top:158px; padding-bottom:240px;}
+.dream03 .tab-menu{padding-top:98px;}
+.dream03 .tab-cont-wrap{display:flex; flex-direction:row; align-items:center; justify-content:center; padding-top:12px;}
+.dream03 .tab-cont-wrap .tab-list{text-align:left;}
+.dream03 .tab-cont-wrap .tab-list > li + li{padding-top:23px;}
+.dream03 .cont-desc{padding-top:40px;}
+.dream04 .navy-bg{padding-top:107px;}
+.dream_wrap .dream04 .gray-bg .wsize{top:-125px;}
+.dream-wrap .dream04 .box-tit{padding-bottom:52px;}
+.dream-wrap .dream04 .num-list > li{padding-bottom:125px;}
+.dream05{padding-top:202px;}
+.dream05 .cont-tit{padding-bottom:45px;}
+.dream05 .cont-desc{padding-bottom:250px;}
+.dream05 .feature-caution{padding-top:22px; color:#fb7e03; line-height:1.7}
+.dream_wrap .dream05 .feature-wrap{padding-bottom:0;}
+.dream_wrap .dream05 .anchor-arrow{display:inline-block; margin-top:65px; margin-bottom:182px;}
+
+/* 수술주의사항 - pc */
+.sub .rv-care-desc{padding-bottom:0;}
+.notandum_wrap .tab{display:none;}
+.notandum_wrap .wsize02{max-width:1098px;}
+.notandum_wrap .sub_tab_menu{padding-top:53px;}
+.notandum_wrap .sub_tab_menu > li{width:90px;}
+.notandum_wrap .bg_brown_light{margin-bottom:15px;}
+.notandum_wrap .desc-list > p{display:inline-block; width:100%; max-width:276px;}
+.notandum_wrap .care_list li .desc_default .date{width:168px;}
+.notandum_wrap .list-dot{display:inline-block; width: 5px; height:5px; margin-right:3px; background-color:#363636; border-radius:50%;}
+.notandum_wrap #lasekTab .bg_blue_light li:nth-child(7) .desc_default .date{width:193px;}
+.notandum_wrap .bg_brown_light .care_list + h3{padding-top:87px;}
+
+/* 프리미엄노안 - pc */
+.oldpremium_wrap .oldpremium-hero01{background-image:url('/common/img/sub/nb_premium_bg01.jpg');}
+.oldpremium_wrap .oldpremium01{padding-top:140px;}
+.oldpremium01 .cont-desc{padding-top:43px;}
+.oldpremium02{padding-top:265px;}
+.oldpremium02 h2{padding-bottom:50px;}
+.oldpremium02 .img-list{display:flex; flex-direction:row; padding-top:85px; margin:0 -15px;}
+.oldpremium02 .img-list > li{width:50%; padding:0 15px;}
+.oldpremium02 .img-list > li .img-wrap{padding-bottom:17px;}
+.oldpremium02 .img-list > li .border-box{display:inline-block; padding:12px 22px; margin-bottom:20px; border-radius:25px; border:3px solid #1e3250; font-weight:700;}
+.oldpremium02 .img-list > li:nth-child(2) .border-box{background:#1e3250; color:#fff;}
+.oldpremium_wrap .oldpremium02 .vertical-line{height:63px; margin-bottom:5px;}
+.oldpremium02 .mo-icon-wrap{padding-top:38px; padding-bottom:47px;}
+.oldpremium02 .mo-icon-wrap h3{padding-bottom:38px; font-size:23px;}
+.oldpremium02 .mo-icon-list{padding-left:20%; margin:0 auto;}
+.oldpremium02 .mo-icon-list > li{display:flex; flex-direction:row; align-items:center; font-size:17px;}
+.oldpremium02 .mo-icon-list > li + li{padding-top:28px;}
+.oldpremium02 .mo-icon-list > li .img-wrap{width:26%; padding-bottom:0;}
+.oldpremium02 .mo-icon-list > li .txt-wrap{text-align:left; line-height:1.5;}
+.oldpremium02 .compare-wrap{position:relative; padding-top:52px; padding-bottom:90px;}
+.oldpremium02 .icon-list{position:absolute; left:50%; transform:translateX(-50%);}
+.oldpremium02 .icon-list h3{padding-bottom:53px; color:#b5b4b4;}
+.oldpremium02 .icon-list .feature-list{display:inline-block; }
+.oldpremium02 .icon-list .feature-list > li{width:145px; height:145px; margin:18px 0; border:10px solid #f6f6f6; border-radius:100%; background:#fff;}
+.oldpremium02 .icon-list .feature-list > li p{padding-top:10px; font-size:18px;}
+.oldpremium02 .versus-list{display:flex; flex-direction:row;}
+.oldpremium02 .versus-list > li{width:calc(50% - 40px);}
+.oldpremium02 .versus-list > li + li{margin-left:80px;}
+.oldpremium02 .versus-list > li h3{padding-bottom:55px;}
+.oldpremium02 .versus-list .feature-list{padding-left:82px; padding-right:48px; background:#fff;}
+.oldpremium02 .versus-list .feature-list > li{display:flex; align-items:center; justify-content:center; height:165px; font-size:25px; line-height:1.5;}
+.oldpremium02 .versus-list .feature-list > li + li{border-top:1px solid #e6e7e8;}
+.oldpremium03{padding-top:130px;}
+.oldpremium03 .tab-menu{padding-top:85px;}
+.oldpremium_wrap .tab-menu .tab-rec{flex-wrap:wrap;}
+.oldpremium_wrap .tab-menu .tab-rec > li{flex:none; width:20%;}
+.oldpremium_wrap .tab-menu .tab-rec > li:nth-child(n+6) a{border-top:none;}
+.subEyecareJoinRetinaRevision .tab-img-desc .tab-cont-wrap{display:flex; flex-direction:row; padding-top:125px; padding-bottom:213px;}
+.subEyecareJoinRetinaRevision .rens-desc{padding-left:70px; font-size:20px; text-align:left;}
+.subEyecareJoinRetinaRevision .rens-desc h3{padding-top:28px; color:#1e3250;}
+.subEyecareJoinRetinaRevision .tab-img-desc .tab-list{padding-top:55px; height:380px; text-align:left;}
+.subEyecareJoinRetinaRevision .tab-img-desc .tab-list > li{position:relative; padding-left:7px; line-height:1.7;}
+.subEyecareJoinRetinaRevision .tab-img-desc .tab-list > li:before{content:'·'; display:inline-block; position:absolute; top:0; left:0; height:18px;}
+.subEyecareJoinRetinaRevision .tab-img-desc .tab-list > li + li{margin-top:8px;}
+.subEyecareJoinRetinaRevision .tab-feature-cont{height:413px;}
+.subEyecareJoinRetinaRevision .tab-feature-cont .gray-bg{display:flex; flex-direction:row; height:100%;}
+.subEyecareJoinRetinaRevision .tab-feature-cont .gray-bg .img-wrap{display:flex; align-items:center; justify-content:center; width:47%;}
+.subEyecareJoinRetinaRevision .tab-feature-cont .gray-bg .img-wrap img{padding-right:25px;}
+.subEyecareJoinRetinaRevision .tab-feature-cont .gray-bg .mo_show.img-wrap{display:none;}
+.subEyecareJoinRetinaRevision .tab-feature-cont .gray-bg .right-cont{display:flex; flex-direction:column; justify-content:center; text-align:left;}
+.subEyecareJoinRetinaRevision .tab-feature-cont .gray-bg .right-cont h3{padding-bottom:73px; font-weight:500; font-size:30px; line-height:1.3;}
+.subEyecareJoinRetinaRevision .tab-img-desc .tab-feature-cont .tab-list{height:auto; padding-top:0;}
+.subEyecareJoinRetinaRevision .tab-img-desc .tab-feature-cont .tab-list .plus-desc{font-weight:400; color:#707070;}
+#oldprmtab0102 .gray-bg .right-cont h3{padding-bottom:23px;}
+#oldprmtab0104 .gray-bg .right-cont h3{padding-bottom:37px;}
+#oldprmtab0109 .gray-bg .right-cont h3{padding-bottom:52px;}
+#oldprmtab0110 .gray-bg .right-cont h3{padding-bottom:35px;}
+#oldprmtab0111 .gray-bg .right-cont{padding-bottom:150px;}
+#oldprmtab0111 .gray-bg .right-cont h3{padding-bottom:35px;}
+#oldprmtab0112 .gray-bg .right-cont h3{padding-bottom:35px;}
+#oldprmtab0113 .gray-bg .right-cont h3{padding-bottom:35px;}
+.oldpremium04{padding-top:335px; padding-bottom:202px;}
+.oldpremium04 .cont-desc{padding-bottom:125px;}
+.oldpremium04 .gray-bg{background:#fbfbfb;}
+.oldpremium04 .card-wrap{display:flex; flex-direction:row; align-items:center; justify-content:stretch; height:630px;}
+.oldpremium04 .card-wrap > li{display:flex; flex-direction:column; justify-content:center; align-items:center; width:50%; height:100%; padding-left:57px;}
+.oldpremium04 .card-wrap > li.txt-wrap{align-items:normal; text-align:left;}
+.oldpremium04 .card-wrap > li.txt-wrap h3{font-size:30px;}
+.oldpremium04 .card-wrap > li.txt-wrap .txt-cont{padding-top:80px; line-height:1.7;}
+.oldpremium05 .gray-bg{padding-bottom:45px;}
+.oldpremium05 .navy-bg{padding-top:80px;}
+.oldpremium_wrap .oldpremium05 .gray-bg .wsize{top:-110px;}
+.oldpremium_wrap .oldpremium05 .box-tit{padding-bottom:50px;}
+.oldpremium05 .cont-desc01{padding-bottom:80px;}
+.subEyecareJoinRetinaRevision .point-tit-desc{display:flex; flex-direction:row; flex-wrap:wrap; justify-content:center; width:100%; max-width:715px; padding:120px 0 173px; margin:0 auto;}
+.subEyecareJoinRetinaRevision .point-tit-desc > li{padding:0 38px;}
+.subEyecareJoinRetinaRevision .point-tit-desc > li:nth-child(n+3){padding-top:100px;}
+.subEyecareJoinRetinaRevision .point-tit-desc > li b{font-family:'Gmarket'; font-weight:700; font-size:20px; color:#dbd0c4;}
+.subEyecareJoinRetinaRevision .point-tit-desc > li h4{width:100%; max-width:277px; padding-top:47px; padding-bottom:20px; margin:0 auto 28px; border-bottom:2px solid #e6ded4; font-weight:700;}
+.subEyecareJoinRetinaRevision .point-tit-desc > li p{line-height:1.8;}
+.oldpremium06{padding-top:228px;}
+.oldpremium06 .cont-desc{padding-bottom:48px;}
+.oldpremium06 .time-list{position:relative; padding-top:118px;}
+.oldpremium06 .time-list > li{position:absolute; display:flex; flex-direction:row; width:100%; opacity:0; transition:opacity 0.5s;}
+.oldpremium06 .time-list > li.on{opacity:1;}
+.oldpremium06 .time-list > li .img-wrap{width:67%;}
+.oldpremium06 .time-list > li .txt-wrap{width:33%; padding-top:243px; text-align:left;}
+.oldpremium06 .time-list > li .txt-wrap h3{padding-bottom:58px; font-size:32px;}
+.oldpremium06 .time-list > li .txt-wrap p{font-size:25px; line-height:1.5;}
+.oldpremium06 .gray-bg{height:1045px;}
+.oldpremium06 .link-wrap{padding:80px 0 200px;}
+
+@media all and (min-width:992px) and (max-width:1200px){
+	/* 프리미엄노안 - 992px ~ 1200px */
+	.oldpremium02 .img-list{padding-left:12px; padding-right:12px;}
+	.oldpremium02 .versus-list{padding-left:12px; padding-right:12px;}
+	.oldpremium_wrap .tab-menu .tab-rec{padding-left:12px; padding-right:12px;}
+	.subEyecareJoinRetinaRevision .tab-feature-cont .gray-bg{padding-left:12px; padding-right:12px;}
+	.subEyecareJoinRetinaRevision .tab-feature-cont .gray-bg .right-cont h3 br{display:none;}
+	.oldpremium04 .card-wrap > li{padding-left:3%;}
+	.oldpremium04 .card-wrap > li.txt-wrap .txt-cont br{display:none;}
+	.oldpremium06 .time-list > li .img-wrap{width:60%; padding-left:12px;}
+	.oldpremium06 .time-list > li .txt-wrap{width:40%;}
+}
+
+@media all and (max-width:991px){
+	.mo_ib_show{display:inline-block;}
+	.cont-tit{padding-bottom:17px;}
+	.subEyecareJoinRetinaRevision h2{line-height:1.4;}
+	.subEyecareJoinRetinaRevision h4{font-size:18px;}
+	.cont-desc{font-size:16px;}
+	.subEyecareJoinRetinaRevision .sub_title{font-weight:700; font-size:35px;}
+	.subEyecareJoinRetinaRevision .page-wrap{padding-top:60px;}
+	.subEyecareJoinRetinaRevision .link-wrap p + p{margin-left:0;}
+	.subEyecareJoinRetinaRevision .system-list .feature-circle {min-height:0px;}
+	.subEyecareJoinRetinaRevision .feature-wrap.mo_show {background-size:100%;padding-bottom:100px;}
+	.subEyecareJoinRetinaRevision .notandum-sec {padding:80px 25px 0 25px;}
+	.subEyecareJoinRetinaRevision .notandum-sec .cont-tit {padding-bottom:55px;}
+	.subEyecareJoinRetinaRevision .notandum-sec .col-list > li .txt-wrap {padding-left:15px}
+	.subEyecareJoinRetinaRevision .notandum-sec .col-list > li .txt-wrap h3 {padding-bottom:15px;font-size:20px;}
+	.subEyecareJoinRetinaRevision .system-list .feature-desc {padding-top:30px;}
+	.subEyecareJoinRetinaRevision .notandum-sec .anchor-arrow {margin-top:45px;margin-bottom:50px;}
+	.subEyecareJoinRetinaRevision .system-list {padding:0 10px;}
+	.go-link{display:block;}
+	.sub {padding-top:45px;}
+
+	/* 로그인 - 991px */
+	.login_wrap .inner{padding:0 25px 54px;}
+	.login_wrap .cont-tit{padding-top:0; padding-bottom:55px; font-size:30px;}
+	.login_wrap .input-box > li{font-size:18px;}
+	.login_wrap .input-box > li .input-wrap{padding-top:10px;}
+	.login_wrap .input-box > li + li{padding-top:33px;}
+	.login_wrap .login-option{font-size:18px;}
+	.login_wrap .check_box label{font-size:18px;}
+	.login_wrap .check_box label:before{width:18px; height:18px; margin-right:10px;}
+	.login_wrap .btn-wrap{padding-top:40px;}
+	.login_wrap .btn-wrap .btn-main{height:45px; font-size:18px;}
+	.login_wrap .btn-wrap button + button{margin-top:5px;}
+	.login_wrap .btn-wrap .login-division{margin:23px 0 18px;}
+
+	/* 회원가입 - 991px */
+	.join_wrap{padding-bottom:60px; background:#fff;}
+	.join_wrap .cont-tit{padding-top:78px; padding-bottom:63px; font-size:35px;}
+	.join_wrap .join-process > li{font-size:19px;}
+	.join_wrap > div.wsize .inner{padding:0;}
+	.join_wrap .terms-desc{padding-bottom:40px; font-size:16px;}
+	.join_wrap .terms-head{padding-bottom:18px;}
+	.join_wrap .terms-desc br{display:none;}
+	.join_wrap .terms-list{margin:0 12px;}
+	.join_wrap .terms-list > li{padding:25px 0;}
+	.join_wrap .terms-list > li .check-row{padding:0;}
+	.join_wrap .terms-list > li .check-row .slide-btn{font-size:16px;}
+	.join_wrap .terms-list > li .terms-cont{font-size:16px;}
+	.join_wrap .terms-list > li .terms-wrap{margin-top:25px; padding:15px 0 0;}
+	.join_wrap .btn_apply{width:138px; margin-top:60px;}
+
+	/* 회원가입2 - 991px */
+	.page-info .join_wrap > div.wsize .inner{padding-top:0;}
+	.page-info .join_wrap .join-process{padding-bottom:78px;}
+	.join_wrap .info-input > li{padding-left:0; font-size:17px;}
+	.page-info .join_wrap > div.wsize .inner{padding:0 25px;}
+	.join_wrap .info-input > li + li{padding-top:25px;}
+	.page-info .join_wrap > div.wsize .inner > ul{display:inline-block; width:100%;}
+	.page-info .join_wrap > div.wsize .inner > ul + ul{padding-top:60px;}
+	.info-input input{padding:7px; font-size:15px;}
+	.join_wrap .info-input > li .input-note{padding-top:15px; font-size:16px;}
+	.page-info .join_wrap .btn_apply{margin-top:40px;}
+	.join_wrap .info-input > li .select_box{width:95px;}
+	.join_wrap .info-input > li .select_box .select{height:34px; padding:8px; font-size:15px;}
+	.join_wrap .info-input > li .select_box .select_ul li{padding:7px 3px; font-size:15px;}
+	.join_wrap .info-input > li .input-wrap{max-width:inherit;}
+	.join_wrap .info-input > li .input-txt{padding:0;}
+	.join_wrap .info-input > li .input-email1{width:37%;}
+	.join_wrap .info-input > li .input-email2{width:calc(30% - 17px);}
+	.join_wrap .info-input > li .select_box{width:30%;}
+	.subEyecareJoinRetinaRevision .btn{height:34px; font-size:16px;}
+	.join_wrap .info-input > li .input-chk{width:calc(100% - 83px);}
+	.join_wrap .info-input > li .btn-chk{width:80px; min-width:inherit; margin-left:3px;}
+	
+	/* 회원가입3 - 991px */
+	.page-cmplt .join_wrap{padding-bottom:68px;}
+	.page-cmplt .join_wrap .join-process{padding-bottom:0;}
+	.page-cmplt .join_wrap > div.wsize .inner{padding:60px 25px 0}
+	.join_wrap .join-tit{padding-top:42px; padding-bottom:35px; font-size:33px;}
+	.join_wrap .inner .cont-desc{padding-bottom:20px; font-size:16px;}
+	.join_wrap .join-note{padding-top:20px; font-size:16px;}
+	.page-cmplt .join_wrap .btn_apply{margin-top:32px;}
+	.page-cmplt .join_wrap .btn-wrap button + button{margin-left:18px;}
+	
+	
+	/* 프리미엄노안 - 991px */
+	.oldpremium_wrap .oldpremium-hero01{background-image: url('/common/img/sub/nb_premium_bg01_mo.jpg');}
+	.oldpremium01 .cont-desc{padding-top:20px;}
+	.oldpremium02{padding-top:73px;}
+	.oldpremium02 h2{padding-bottom:23px;}
+	.oldpremium02 .img-list{flex-direction:column; margin:0; padding-top:40px;}
+	.oldpremium02 .img-list > li{width:100%; padding:0;}
+	.oldpremium02 .img-list > li .border-box{padding:8px 22px; margin-bottom:10px;}
+	.oldpremium_wrap .oldpremium02 .vertical-line{height:32px;}
+	.oldpremium02 .img-list > li + li{padding-top:50px;}
+	.oldpremium02 .img-list > li > .img-wrap{width:82%; padding-bottom:12px;margin:0 auto;}
+	.oldpremium03{padding-top:87px;}
+	.oldpremium03 .tab-menu{padding:35px 40px 0;}
+	.oldpremium_wrap .tab-menu .tab-rec > li{width:50%; height:55px;}
+	.oldpremium_wrap .tab-menu .tab-rec > li a{font-size:17px;}
+	.oldpremium_wrap .tab-menu .tab-rec > li:nth-child(n+3) a{border-top:none;}
+	.subEyecareJoinRetinaRevision .tab-img-desc .tab-cont-wrap{padding:40px 0;}
+	.subEyecareJoinRetinaRevision .tab-img-desc .tab-cont-wrap .left-cont{display:none;}
+	.subEyecareJoinRetinaRevision .rens-desc{width:100%; padding-left:0; text-align:center;}
+	.subEyecareJoinRetinaRevision .tab-img-desc .tab-list{display:inline-block; height:auto; padding:10px 12px 0;}
+	.subEyecareJoinRetinaRevision .rens-desc h3{padding-top:10px;}
+	.oldpremium03 .product-wrap{padding-top:50px;}
+	.subEyecareJoinRetinaRevision .tab-img-desc .tab-list > li{font-size:16px;}
+	.subEyecareJoinRetinaRevision .tab-feature-cont{height:auto;}
+	.subEyecareJoinRetinaRevision .tab-feature-cont .gray-bg .right-cont{padding:0 5px 40px;}
+	.subEyecareJoinRetinaRevision .tab-feature-cont .gray-bg .right-cont h3{padding-top:38px; padding-bottom:23px; font-size:18px; text-align:center;}
+	.subEyecareJoinRetinaRevision .tab-feature-cont .gray-bg .pc_show.img-wrap{display:none;}
+	.subEyecareJoinRetinaRevision .tab-feature-cont .gray-bg .mo_show.img-wrap{display:flex; width:70%; margin:0 auto;}
+	.subEyecareJoinRetinaRevision .tab-feature-cont .gray-bg .img-wrap img{padding-right:0;}
+	.subEyecareJoinRetinaRevision .tab-feature-cont .gray-bg{justify-content:center;}
+	.subEyecareJoinRetinaRevision .tab-img-desc .tab-feature-cont .tab-list{padding:22px 0 0; margin:0 auto;}
+	.subEyecareJoinRetinaRevision .tab-feature-cont .tab-list > li{font-size:12px;}
+	.subEyecareJoinRetinaRevision .tab-img-desc .tab-list > li + li{margin-top:5px;}
+	.oldpremium04{padding-top:100px; padding-bottom:128px;}
+	.oldpremium04 .cont-desc{padding-bottom:75px;}
+	.oldpremium04 .card-wrap{flex-direction:column; height:auto; padding:0 25px;}
+	.oldpremium04 .card-wrap01 > li.txt-wrap{padding-bottom:36px; border-bottom:1px solid #d2d2d2; background:url('/common/img/sub/nb_premium04_pic01.png') right top no-repeat; background-size:62%;}
+	.oldpremium04 .card-wrap02 > li.txt-wrap{margin-top:53px; background:url('/common/img/sub/nb_premium04_pic02_mo.png') right top no-repeat; background-size:62%;}
+	.oldpremium04 .card-wrap > li{width:100%; padding:0;}
+	.oldpremium04 .card-wrap > .img-wrap{display:none;}
+	.oldpremium04 .card-wrap > .txt-wrap .txt-cont{text-align:center;}
+	.oldpremium04 .card-wrap > li.txt-wrap .txt-cont{padding-top:37%; font-size:16px;}
+	.oldpremium04 .card-wrap > li.txt-wrap h3{padding-left:32%; font-size:23px;}
+	.oldpremium04 .card-wrap > li.txt-wrap .img-wrap{width:38%; max-width:93px; margin-left:32%;}
+	.oldpremium05 .navy-bg{padding-top:52px;}
+	.oldpremium05 .cont-desc01{padding-bottom:60px;}
+	.oldpremium05 .img-wrap01{width:67%; max-width:432px; margin:0 auto;}
+	.oldpremium05 .img-wrap02{width:42%; max-width:273px; margin:0 auto;}
+	.subEyecareJoinRetinaRevision .care-sec .navy-bg .cont-tit{padding-bottom:80px;}
+	.care-sec .gray-bg{padding:0 25px;}
+	.subEyecareJoinRetinaRevision .care-sec .gray-bg .wsize{top:-40px;}
+	.subEyecareJoinRetinaRevision .care-sec .label-img-wrap{display:flex; align-items:flex-end; justify-content:center; height:47px;}
+	.subEyecareJoinRetinaRevision .point-tit-desc{padding:50px 0;}
+	.subEyecareJoinRetinaRevision .point-tit-desc > li{width:50%; padding:0 2px; font-size:14px;}
+	.subEyecareJoinRetinaRevision .point-tit-desc > li h4{width:calc(100% - 20px); padding-top:10px; margin-bottom:20px;}
+	.subEyecareJoinRetinaRevision .point-tit-desc > li p{display:inline-block;}
+	.subEyecareJoinRetinaRevision .point-tit-desc > li b{font-size:15px;}
+	.subEyecareJoinRetinaRevision .point-tit-desc > li:nth-child(n+3){padding-top:45px;}
+	.oldpremium06{padding-top:77px;}
+	.oldpremium06 .cont-desc{padding-bottom:23px;}
+	.oldpremium06 .gray-bg{height:auto;}
+	.oldpremium06 .time-list{padding-top:33px;}
+	.oldpremium06 .time-list > li{display:none; flex-direction:column; align-items:center; position:static;}
+	.oldpremium06 .time-list > li.on{display:flex;}
+	.oldpremium06 .time-list > li .txt-wrap{width:100%; padding-top:17px; text-align:center;}
+	.oldpremium06 .time-list > li .txt-wrap h3{padding-bottom:20px; font-size:19px;}
+	.oldpremium06 .time-list > li .txt-wrap p{min-height:162px; font-size:16px;}
+	.anchor-arrow{display:inline-block; padding-right:22px; font-size:20px;}
+	.subEyecareJoinRetinaRevision .link-wrap p + p{margin-top:42px; margin-left:0;}
+	.oldpremium06 .link-wrap{padding:37px 0;}
+
+	/* 아이 케어 시스템 알러지케어 */
+	#allergyTab0101 .feature-list {flex-direction:column}
+
+
+	/* > 시력 교정 클리닉(라식 라섹) */
+	.subEyecareJoinRetinaRevision .lasik_wrap .sub_txt_bar {padding: 35px 60px;font-size: 16px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek01 {padding:70px 50px 55px 50px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek01 .cont-desc {font-size:18px;padding-top:40px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek02 {background-image:none;padding:35px 20% 100px 25%;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek02 h2 {font-size:28px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek02 .check-list li {font-size:17px;background-size:23px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek02 .check-list > li + li  {margin-top: 45px;}
+
+
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek03 {padding-top:12px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek03 .icon-list .cont-desc {padding:0 20px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek03 .icon-list .num-list {max-width:100%;display:grid;grid-template-columns: 1fr 1fr;padding-top: 40px;margin:0}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek03 .icon-list .img-wrap img {height:70px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek03 .icon-list .num-list > li {max-width:100%;font-size:16px}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek03 .icon-list .num-list > li h4 {font-size:16px}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek03 .icon-list .num-list > li:nth-child(odd) {padding-left:0px;padding-right:7.5px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek03 .icon-list .num-list > li:nth-child(even) {padding-right:0px;padding-left:7.5px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek03 .num-list > li .num-img-wrap {width:100%;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek03 .num-list > li .tit-img-wrap img {width:100%;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek04 {padding-top:70px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek04 .cont-desc {padding-bottom:25px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek04 .link_box {flex-direction:column;padding: 35px 0 55px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek04 .link_box li:first-child a {padding-bottom:40px;}
+	.mo_lasik-hero01 img,
+	.mo_lasek-hero01 img {width:100%;max-height:423px;}
+
+	/* 투데이라섹 특징 및 장점*/
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek06 {padding-top:12px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek06 .icon-list .cont-desc {padding:0 20px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek06 .icon-list .num-list {max-width:100%;display:grid;grid-template-columns: 1fr 1fr;padding-top: 40px;margin:0}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek06 .icon-list .img-wrap img {height:70px;}
+	/* 투데이라섹 주의사항*/
+	.diabet_wrap .t_lasek_diabet01.notandum-sec {padding:65px 25px 0 25px;}
+	.diabet_wrap .t_lasek_diabet01 .col-list-wrap {padding-bottom:0px;}
+	.diabet_wrap .t_lasek_diabet01 .col-list > li + li {padding-top:50px;}
+
+	
+	
+	/* > 프리미엄 맞춤 교정술 */
+	.drag_box .drag_frame .img.rv_premium_first {background-image:url('/common/img/sub/m_rv_premium_img_abnormal.png');;background-size:100% 100%;}
+	.drag_box .drag_frame .img.rv_premium_second {background-image:url('/common/img/sub/m_rv_premium_img_normal.png');background-size:100% 100%;}
+	.revision__premium .premium01 .navy-bg {display: none;}
+	.revision__premium .premium_wrap .premium01 {padding-top: 27px;padding-bottom: 40px;}
+	.revision__premium .premium_wrap .premium02 .navy-bg {padding-top:50px;padding-bottom:0;}
+	.revision__premium .premium_wrap .premium02 .navy-bg .mo_banner img {width:100%}
+	.revision__premium .premium_wrap .premium02 .navy-bg .top-tit {font-size:16px;line-height:26px;}
+	.revision__premium .premium_wrap .premium02 .navy-bg .cont-tit {font-size:28px;padding-bottom:35px;}
+	.revision__premium .premium02 .point-list {padding:55px 25px 35px 25px;max-width: 100%;display:grid;grid-template-columns: 1fr 1fr;}
+	.revision__premium .premium02 .point-list li {max-width:100%;padding:0;}
+	.revision__premium .premium02 .point-list li:nth-child(odd) {padding-right:30px;padding-left:15px;}
+	.revision__premium .premium02 .point-list li:nth-child(even) {padding-right:15px;padding-left:30px;}
+	.revision__premium .premium02 .point-list > li:nth-child(n+3) {padding-top:35px;}
+	.revision__premium .premium02 .point-list li p {font-size:16px;}
+	.revision__premium .premium02 .cont-desc01 {padding:0 25px 77px 25px;}
+	.revision__premium .premium02 .point-list > li h4 {max-width: 250px;margin: 0 auto 10px;padding-top:20px;padding-bottom:10px;}
+	.revision__premium .premium03 {padding:75px 25px 340px 25px;}
+	.revision__premium .premium03 .top-tit02 {padding-top:60px;padding-bottom:35px;line-height:35px;font-size:23px;}
+	.revision__premium .premium04 {padding-bottom:120px;}
+	.revision__premium .premium04 .feature-list {display:grid;grid-template-columns: 1fr 1fr 1fr;padding:25px;}
+	.revision__premium .premium04 .feature-list li {padding:15px;}
+	.revision__premium .premium04 .feature-list li:nth-child(4):before {display:none}
+	.revision__premium .premium_wrap .premium04 .feature-list > li .feature-desc {font-size:15px;}
+	.revision__premium .premium04 .feature-list > li .img-wrap {height: 70px;}
+	.revision__premium .premium04 .feature-list > li .img-wrap img {max-width:60px;}
+	.revision__premium .premium04 .feature-list > li .em-num {font-size:25px;height: 60px;}
+	.revision__premium .premium04 .feature-list > li .em-num span{font-size:25px;}
+	.revision__premium .premium04 .feature-list > li + li:before {height: 95px;}
+	.revision__premium .premium04 .box-tit {padding-top:15px;padding-bottom:47px;}
+	.revision__premium .premium04 .img-desc {padding:0 25px;}
+	.revision__premium .premium04 .img-desc li {padding:0 10px;}
+	.revision__premium .premium04 .img-desc li h4 {font-size:16px;}
+	.revision__premium .premium04 .img-desc li:nth-child(2) {margin-left:20px;}
+	.revision__premium .premium05 .icon-list > li {padding:0 5px 40px 5px;}
+	.revision__premium .premium05 .icon-list > li .img-wrap {padding-bottom: 30px;}
+	.revision__premium .premium05 .icon-list > li .img-wrap img {min-width:50px;}
+	.revision__premium .premium05 .icon-list > li p {vertical-align: top;}
+	.revision__premium .premium05 .anchor-arrow {margin-top:35px;margin-bottom:75px;}
+	.revision__premium .premium05 .cont-tit02 {padding-bottom: 65px;}
+	.mo_premium-hero01 img {width:100%;max-height:423px;}
+
+
+	/* > 안내 렌즈 삽입술 */
+	
+	.revision__implant {padding-top:45px;}
+	.revision__implant .implant_wrap .implant01 {padding-top: 75px;padding-bottom: 65px;}
+	.revision__implant .implant01 .cont-desc {padding:48px 25px 0 25px;font-size:18px;}
+	.revision__implant .implant_wrap .implant02 {background-image:none;background-color:#f6f6f6;padding:35px 25% 37px 30%;}
+	.revision__implant .implant_wrap .implant02 .check-list {padding-top:40px;}
+	.revision__implant .implant_wrap .implant02 h2 {font-size:28px;}
+	.revision__implant .implant_wrap .implant02 .check-list li {font-size:17px;background-size:23px;}
+	.revision__implant .implant_wrap .implant02 .check-list li + li {margin-top:20px;}
+	.revision__implant .implant_wrap .implant03 {padding-top:75px;padding-bottom:35px;}
+	.revision__implant .implant_wrap .implant03 .li-product02 {padding-top:60px;}
+	.revision__implant .implant_wrap .implant03 .li-product01 h4,
+	.revision__implant .implant_wrap .implant03 .li-product02 h4{font-size:21px;padding-bottom:45px;}
+	.revision__implant .implant_wrap .implant03 .img-2nd-wrap .feature-list {margin-top:35px;}
+	.revision__implant .implant_wrap .implant03 .product-list {padding:60px 10px 0 10px;flex-direction:column;}
+	.revision__implant .implant_wrap .implant03 .product-list li {width:100%}
+	.revision__implant .implant_wrap .implant03 .product-list .li-product01 .img-2nd-wrap:nth-child(1) {margin:10px 2.5px 0px 5px;}
+	.revision__implant .implant_wrap .implant03 .product-list .li-product01 .img-2nd-wrap:nth-child(2) {margin:10px 5px 0px 2.5px;}
+	.revision__implant .implant_wrap .implant03 .product-list .li-product02 .img-2nd-wrap:nth-child(2) {margin-top:10px;}
+	.revision__implant .implant_wrap .implant03 .product-list .lens__img {width:100%;}
+	.revision__implant .implant_wrap .implant04 .care-method {display:grid;grid-template-columns:1fr 1fr;margin:0;max-width:100%;padding:40px 5px 0 5px;}
+	.revision__implant .implant_wrap .implant04 .care-method li {padding:0 0 100px 0;width:100%;padding-bottom:50px;}
+	.revision__implant .implant_wrap .implant04 .care-method li:nth-child(odd) {padding-right:17px;}
+	.revision__implant .implant_wrap .implant04 .care-method li:nth-child(even) {padding-left:17px;}
+	.revision__implant .implant_wrap .implant04 .care-method li .tit-img-wrap img {width:100%;}
+	.revision__implant .implant_wrap .implant04 .care-method li h4 {font-size:16px;}
+	.revision__implant .implant_wrap .implant04 .num-img-wrap {padding-top: 20px;margin-bottom: 15px;}
+	.revision__implant .implant_wrap .implant05 {padding-top:70px;}
+	.implant05 .cont-desc {padding-bottom:45px;}
+	.implant05 .anchor-arrow{margin:35px 0 75px;}
+	.mo_implant-hero01 img {width:100%;max-height:423px;}
+	.revision__implant .implant_wrap .implant03 .li-product01 .img-2nd-wrap .feature-list,
+	.revision__implant .implant_wrap .implant03 .li-product02 .img-2nd-wrap .feature-list {font-size:16px;}
+	.revision__implant .implant_wrap .implant03 .li-product01 .img-1st-wrap p,
+	.revision__implant .implant_wrap .implant03 .li-product02 .img-1st-wrap p {font-size:18px;}
+
+
+	/* > 드림렌즈 */
+
+	.revision__dream .dream_wrap {padding-top:40px;}
+	.revision__dream .dream_wrap .dream01 .compare-list {flex-direction: column;padding-bottom:50px;}
+	.revision__dream .dream_wrap .dream01 .cont-desc {padding:0 55px;}
+	.revision__dream .dream_wrap .dream01 {padding:40px 0 45px 0;}
+	.revision__dream .dream_wrap .dream01 .img-list > li:nth-child(2) {padding-top:55px;padding-left:0;}
+	.revision__dream .dream_wrap .dream01 .img-list > li:nth-child(2) .img-wrap {padding-left:0;}
+	.revision__dream .dream_wrap .dream01 .img-list > li:nth-child(2) .img-wrap img {padding-left:90px;}
+	.revision__dream .dream_wrap .dream01 .img-list > li img {max-width:100%;padding:0 25px;}
+	.revision__dream .dream_wrap .dream01 .img-list > li h3 {padding-left:0;padding-top:15px;} 
+	.revision__dream .dream_wrap .dream02 {background-image:none;background-color:#f6f6f6;padding:35px 20% 55px 25%;}
+	.revision__dream .dream_wrap .dream02 h2 {font-size:28px;}
+	.revision__dream .dream_wrap .dream02 .check-list {padding-top:45px;}
+	.revision__dream .dream_wrap .dream02 .check-list li {font-size:17px;background-size:23px;}
+	.revision__dream .dream_wrap .dream02 .check-list > li + li {margin-top:20px;}
+	.revision__dream .dream_wrap .dream03 {padding:60px 10px 65px 10px;}
+	.revision__dream .dream_wrap .dream03 p {padding:8px 50px 0 50px;}
+	.revision__dream .dream_wrap .dream03 .tab-menu {padding-top:37px;}
+	.revision__dream .dream_wrap .dream03 .tab-cont-wrap {padding:10px 25px;max-height:350px}
+	.revision__dream .dream_wrap .dream03 .tab-cont-wrap .left-cont img {max-height:350px}
+	.revision__dream .dream_wrap .dream03 .tab-cont-wrap .tab-list li {font-size:16px;}
+	.revision__dream .care-method {display:grid;grid-template-columns:1fr 1fr;padding-top:45px;max-width:100%}
+	.revision__dream .care-method li {padding:0 0 70px 0; }
+	.revision__dream .care-method li:nth-child(odd) {padding-right:15px;}
+	.revision__dream .care-method li:nth-child(even) {padding-left:15px;}
+	.revision__dream .care-method li .tit-img-wrap img {width:100%}
+	.revision__dream .care-method li h4 {font-size:16px}
+	.revision__dream .dream04 .cont-desc {font-size:17px;padding:0 10px;}
+	.revision__dream .dream04 .icon-list .box-tit {font-size:20px;padding:15px 50px 35px 50px;}
+	.revision__dream .dream05 {padding-top:90px;}
+	.revision__dream .dream05 .cont-desc {padding:0px 50px 200px 50px;}
+	.revision__dream .dream05 .feature-wrap .feature-list {padding:0 10px;}
+	.revision__dream .dream05 .feature-wrap .feature-circle {min-height:auto;}
+	.revision__dream .dream05 .feature-wrap li .feature-desc {padding-top:30px;font-size:16px;}
+	.revision__dream .dream05 .feature-wrap li:nth-child(1) .feature-desc {padding-top:40px;}
+	.revision__dream .dream_wrap .dream05 .anchor-arrow {margin:40px 0px;}
+	.mo_dream-hero01 img {width:100%;height:auto}
+	.revision__dream .feature-wrap {background-size: 100%;}
+	.feature-wrap .mo_dream_img {width:100%;padding-right:10px;max-height:251px;}
+
+	/* > 수술 주의사항 */
+	.revision__care .notandum_wrap .bg_brown_light {padding:35px 25px 30px 25px;}
+	.revision__care .care_list {padding-left:10px;padding-right:10px;}
+	.revision__care .care_list_wrap .care_list:before {left:20px;}
+	.revision__care .care_list li .desc_default .date:before {top:10px;}
+	.revision__care .notandum_wrap .care_list li .desc_default.long_title span {width:140px;}
+	.revision__care .notandum_wrap .care_list li .desc_default.exercise span {width:165px;}
+	.revision__care .notandum_wrap .care_list li .desc_default .date {width:120px}
+	.revision__care .notandum_wrap .desc-list > p {display:block}
+	.revision__care .care_list_wrap {padding:35px 25px 30px 25px;}
+	.revision__care .care_after_info {padding:32px 25px 50px 25px;}
+	.revision__care .notandum_wrap .care_list li .desc_default {font-size:17px;}
+	.revision__care .txt_box h4 {font-size:20px;}
+	.care_list li .title {font-size:20px;}
+	.revision__care .care_list li .img_box {width:20%;}
+	.care_list li {padding:20px 0;}
+	.notandum_wrap .sub_tab_menu {margin:0px;padding-top:40px;}
+
+	/* > 안구 건조증*/
+
+	.mo_dry-hero01 img {width:100%;max-height:420px;}
+	.eyecare__dry .dry01 {padding-top: 50px;padding-bottom:115px;}
+	.eyecare__dry .dry01 .img-wrap {padding:0;}
+	.eyecare__dry .mo_h3 {padding-top:65px;padding-bottom:25px;font-size:20px;}
+	.eyecare__dry .dry01 .cont-desc {padding:0 40px;font-size:17px;}
+	.eyecare__dry .dry01 .img-wrap img {padding-left: 10px;}
+	.eyecare__dry .dry02 .cont-tit {padding-bottom:70px;}
+	.eyecare__dry .dry02 .feature-list {padding:0 10px;}
+	.eyecare__dry .dry02 .feature-list > li {width:50%;padding-bottom:50px;min-height:0;}
+	.eyecare__dry .dry02 .feature-list > li:nth-child(odd) {padding-right:7.5px;padding-left:10px;}
+	.eyecare__dry .dry02 .feature-list > li:nth-child(even) {padding-left:7.5px;padding-right:10px;}
+	.eyecare__dry .dry02 .img-wrap img {width:100%}
+	.eyecare__dry .dry03 .cont-tit {padding-top:65px;padding-bottom:65px;}
+	.eyecare__dry .dry03 .icon-list {padding: 0 25px 90px;display:block;min-width:100%;text-align: center;}
+	.eyecare__dry .dry03 .icon-list li {padding-bottom:55px;display:inline-block;width:32%;}
+	.eyecare__dry .dry03 .icon-list li:nth-child(4) {width:48.5%;}
+	.eyecare__dry .dry03 .icon-list li:nth-child(5) {width:48.5%;}
+	.eyecare__dry .dry03 .icon-list li p {padding-top:30px;font-size:20px;text-align: center;}
+	.eyecare__dry .dry03 .gray-bg {background-image:none;padding:60px 20% 50px 25%;}
+	.eyecare__dry .dry03 .gray-bg h2 {font-size:28px;}
+	.eyecare__dry .dry03 .check-list {padding-top:50px;padding-bottom:0;}
+	.eyecare__dry .dry03 .check-list li {font-size:17px;background-size:23px;}
+	.eyecare__dry .dry03 .check-list > li + li {margin-top:20px;}
+	.eyecare__dry .dry04 {padding-top:25px}
+	.eyecare__dry .dry04 .navy-bg .top-tit {font-size:20px;}
+	.eyecare__dry .dry04 .img-list {display:block;}
+	.eyecare__dry .dry04 .img-list > li:nth-child(1) {display:block; margin: 0 auto;}
+	.eyecare__dry .dry04 .img-list > li {display:inline-block; width:49%;}
+	.eyecare__dry .dry04 .top-img-wrap {padding-bottom: 23px;}
+	.eyecare__dry .dry04 .num-img-wrap h4 {font-size:20px;}
+	.eyecare__dry .dry04 .cont-desc {font-size:17px}
+	.eyecare__dry .dry04 .num-img-wrap03 {padding-top:70px}
+	.eyecare__dry .dry04 .gray-bg {padding: 0 25px;}
+	.eyecare__dry .dry04 .img-wrap01 {padding:0 40px 30px 40px;}
+	.eyecare__dry .dry04 .tit-img-wrap02 {padding-top: 25px;padding-bottom: 20px;}
+	.eyecare__dry .dry04 .cont-desc {padding:0 15px;}
+	.eyecare__dry .dry04 .num-img-wrap02 {padding-top:86px;padding-bottom:40px;}
+	.eyecare__dry .dry04 .tit-img-wrap03 {padding:40px 15px 20px 15px;}
+	.eyecare__dry .dry04 .icon-list {padding-bottom:45px;}
+	.eyecare__dry .dry05 {padding-top:100px}
+	.eyecare__dry .dry05 .cont-desc {padding:0 10px 200px 10px;}
+	.eyecare__dry .dry05 .feature-wrap.mo_show {background-size:100%;padding-bottom:100px;}
+	.eyecare__dry .dry05 .feature-wrap.mo_show .feature-list .feature-circle {min-height:0;}
+	.eyecare__dry .dry05 .feature-wrap.mo_show .feature-list .feature-desc {padding-top:30px;}
+	.eyecare__dry .dry06.notandum-sec {padding:100px 25px 60px 25px;}
+	.eyecare__dry .dry06.notandum-sec .col-list > li + li {padding-top:52px;}
+	.eyecare__dry .dry06.notandum-sec .cont-tit {padding-bottom:55px;}
+	.eyecare__dry .dry06.notandum-sec .col-list > li .txt-wrap {width:100%}
+	.eyecare__dry .dry06.notandum-sec .col-list > li .txt-wrap h3 {font-size:20px;padding-bottom:12px;}
+	.eyecare__dry .dry06.notandum-sec .col-list > li .txt-wrap p {font-size:16px;}
+	.eyecare__dry .dry06 .anchor-arrow {margin: 50px auto 0;}
+	.eyecare__dry .aqua_cel_txt {font-size:20px;}
+	.eyecare__dry .dry_wrap .num-img-wrap {padding-bottom:30px;}
+
+
+	/* > 안구 내 주사치료*/
+	.retina__shottreat .shot_wrap  {padding-top: 37px;}
+	.retina__shottreat .first-sec {padding:70px 25px 0;}
+	.retina__shottreat .shot01 .cont-desc {font-size:18px;}
+	.retina__shottreat .shot02 {padding:150px 25px 55px 25px;}
+	.retina__shottreat .shot02 .kind-list {flex-direction: column;margin:0;}
+	.retina__shottreat .shot02 .kind-list li {width:100%;padding:0 0 55px 0;}
+	.retina__shottreat .shot02 .kind-list li .img-wrap img {width:100%}
+	.retina__shottreat .shot02 .kind-list li h4 {font-size:20px;font-weight:600;}
+	.retina__shottreat .shot03 .box-tit {font-size:20px;padding:0;}
+	.retina__shottreat .shot03 .cont-desc {font-size:17px;padding-top:35px;}
+	.retina__shottreat .shot03 .tit-img-wrap01 {padding-bottom:90px;}
+	.retina__shottreat .shot03 .tit-img-wrap01 img {padding:0 20px;}
+	.retina__shottreat .shot03 .img-list01 {padding-top:50px;padding-bottom:25px;}
+	.retina__shottreat .shot03 .img-list01 > li {padding:0 30px;}
+	.retina__shottreat .shot03 .img-list02 {padding:7% 10% 35px 18%;}
+	.retina__shottreat .shot03 .img-list02 .img-wrap {padding: 0 20px 10px;}
+	.retina__shottreat .shot03 .img-list02 li:first-child {width: 40%;}
+	.retina__shottreat .shot03 .img-list02 li:first-child .img-wrap {padding: 0 20px 15px;}
+	.retina__shottreat .shot03 .img-list02 li:last-child {width: 60%;}
+	.retina__shottreat .top-img-wrap {padding-bottom:25px;}
+	.retina__shottreat .shot03 .img-list02 .img-wrap {min-height:0;justify-content: center;}
+	.retina__shottreat .shot03 .border-ellip {max-width:100%;}
+	.retina__shottreat .shot03 .gray-bg .wsize {padding-bottom:50px;}
+	.retina__shottreat .shot03 .icon-list {padding:0 10px;}
+	.retina__shottreat .shot_wrap .shot04 {padding:100px 10px 0 10px;}
+	.retina__shottreat .shot04.notandum-sec .col-list > li + li{padding-top: 40px;}
+	.retina__shottreat .shot_wrap .shot04 .cont-tit {padding-bottom:75px;}
+	.retina__shottreat .shot04.notandum-sec .col-list > li .txt-wrap h3 {padding-bottom: 25px;font-size:20px}
+	.retina__shottreat .shot04.notandum-sec .col-list > li .txt-wrap p {font-size:17px;}
+	.retina__shottreat .shot04.notandum-sec .col-list-wrap {padding-right:15px;}
+	.retina__shottreat .shot04 .link-wrap {padding-top:100px;padding-bottom:90px;display: inline-flex;flex-direction: column;}
+	.retina__shottreat .shot04 .link-wrap a {margin:0px;}
+	.retina__shottreat .shot04 .link-wrap a:first-child {margin-bottom:40px;}
+	.retina__shottreat .mo_shot-hero01{background: url(/common/img/sub/mo_r_shot_bg01.jpg) center/100% no-repeat;}
+
+
+	/*안 종합 검진*/
+	.mo_checkup-hero01 img {width:100%;max-height:420px;}
+	.eyecare__checkup .checkup_wrap {padding-top:55px;}
+	.eyecare__checkup .sub_txt_bar {padding:20px 25px;}
+	.eyecare__checkup .checkup01 {padding:65px 25px 0px 25px;}
+	.eyecare__checkup .checkup02 {padding-top:95px;}
+	.eyecare__checkup .checkup01 .cont-desc {padding-bottom:40px;}
+	.eyecare__checkup .checkup02 .cont-tit {padding:0 25px 35px 25px;}
+	.eyecare__checkup .mo_checkup02 h2 {padding:90px 25px 60px 25px;}
+	.eyecare__checkup .mo_bg-list li {padding:10px 10px 0 10px;}
+	.eyecare__checkup .mo_bg-list img {width:100%}
+	.eyecare__checkup .mo_checkup02 .check-list {flex-direction: column;padding:0 25px;}
+	.eyecare__checkup .mo_checkup02 .check-list li {width:100%;font-size:17px;margin-top:20px;padding-left:40px;background-size:23px;}
+	.eyecare__checkup .checkup03 {padding-top:105px;}
+	.eyecare__checkup .checkup03 .top-tit,
+	.eyecare__checkup .checkup03 .cont-desc {padding:0 25px;}
+	.eyecare__checkup .checkup03 .cont-tit {padding:20px 25px 30px 25px;}
+	.eyecare__checkup .checkup03 .feature-wrap.mo_show {padding-top: 200px;margin-top:25px}
+	.eyecare__checkup .checkup03 .feature-wrap.mo_show .feature-list {width:100%}
+	.eyecare__checkup .checkup03 .feature-wrap.mo_show .feature-list {flex-direction:column;align-items: center;}
+	.eyecare__checkup .checkup03 .feature-wrap.mo_show .feature-list li {display:flex;justify-content: left;align-items: center;width:100%;padding-top:50px;}
+	.eyecare__checkup .checkup03 .feature-wrap.mo_show .feature-list li .img-wrap {padding:0 25px;width:100%}
+	.eyecare__checkup .checkup03 .feature-wrap.mo_show .feature-list li p{width:100%;padding-top:0;font-size:16px;text-align:left;}
+	.eyecare__checkup .checkup04 {padding-top:70px;}
+	.eyecare__checkup .checkup04 .cont-tit {padding-bottom:55px;}
+	.eyecare__checkup .checkup04 .wsize {padding:0 25px;}
+	.eyecare__checkup .checkup04 .tab-menu .tab-rec {display:grid;grid-template-columns: 1fr 1fr;}
+	.eyecare__checkup .checkup04 .tab-menu .tab-rec li:nth-child(1) a,
+	.eyecare__checkup .checkup04 .tab-menu .tab-rec li:nth-child(2) a {border-bottom:0px}
+	.eyecare__checkup .checkup_wrap .equip_swiper .swiper-container {padding-top:45px;}
+	.eyecare__checkup .checkup_wrap .equip_swiper {padding-bottom: 105px;}
+	.eyecare__checkup .checkup05 .cont-tit {padding-bottom:85px;}
+	.eyecare__checkup .checkup05 .cont-list > li .cont-box-list {flex-direction:column;padding:35px 35px 35px 10px;}
+	.eyecare__checkup .checkup05 .cont-list > li .cont-box-list li {width:100%;justify-content: center;}
+	.eyecare__checkup .checkup05 .cont-list > li .cont-box-list li h4 {font-size:20px;padding-bottom:20px;}
+	.eyecare__checkup .checkup05 .cont-list > li .cont-box-list li p {font-size:16px;}
+	.eyecare__checkup .checkup05 .cont-list > li .cont-box li {margin:0}
+	.eyecare__checkup .checkup05 .cont-list01,
+	.eyecare__checkup .checkup05 .cont-list02 {padding:0 25px 85px 25px;}
+	.eyecare__checkup .checkup05 .cont-list03 {padding:0 25px;}
+	.eyecare__checkup .checkup05 {padding:70px 0 35px 0;}
+	.eyecare__checkup .checkup05 .cont-list01 .cont-note {padding-top:20px;font-size:16px;}
+	.eyecare__checkup .checkup05 .cont-list01 .cont-box li:nth-child(2) {margin-right:85px;margin-top:45px;}
+	.eyecare__checkup .checkup05 .cont-list02 .cont-box {padding-left:17px;flex-direction:row;}
+	.eyecare__checkup .checkup05 .cont-list02 .cont-box .txt-wrap {margin-left:15px;}
+	.eyecare__checkup .checkup05 .cont-list02 .cont-box .txt-wrap .cont-txt-list {flex-direction: column;}
+	.eyecare__checkup .checkup05 .cont-list02 .cont-box .txt-wrap .cont-txt-list li {width:100%}
+	.eyecare__checkup .checkup05 .cont-list01 li {width:400px}
+	.eyecare__checkup .checkup05 .cont-list > .cont-list02 .cont-box {padding:25px;justify-content: center;}
+	.eyecare__checkup .checkup05 .cont-list > .cont-list03 .cont-box {padding: 35px 10px 30px 10px;}
+	.eyecare__checkup .checkup05 .cont-list > .cont-list03 .cont-box  {align-items: center;padding:30px 25px;}
+	.eyecare__checkup .checkup05 .cont-list > .cont-list03 .cont-box > li .txt-wrap {font-size:20px;padding-top:10px}
+	.eyecare__checkup .checkup06 {padding-top: 45px;padding-bottom: 50px;}
+
+
+	/*다래끼 케어*/
+	.eyecare__sty .sty_wrap .sty-hero01 {background: url(/common/img/sub/mo_eyecare_sty.png) center no-repeat;background-size:100% 100%}
+	.eyecare__sty .sty_wrap {padding-top:55px;}
+	.eyecare__sty .cont-desc {font-size:17px;}
+	.eyecare__sty .sty01 {padding:50px 25px 0 25px;}
+	.eyecare__sty .sty01 .img-wrap {padding-top: 50px;padding-bottom: 60px;}
+	.eyecare__sty .sty02 {padding:105px 25px 35px 25px;} 
+	.eyecare__sty .sty02 .cont-tit {padding-bottom:50px;}
+	.eyecare__sty .sty02 .feature-list {flex-direction: column;}
+	.eyecare__sty .sty02 .feature-list li {width:100%;padding-bottom:55px;}
+	.eyecare__sty .sty02 .feature-list li img {width:100%;}
+	.eyecare__sty .sty02 .feature-list .txt-wrap {display:flex;justify-content: center;}
+	.eyecare__sty .sty02 .feature-list .txt-wrap h4 {padding-top:35px;font-size:18px;}
+	.eyecare__sty .sty02 .feature-list .txt-wrap p {text-align:left;width:70%;padding-left:150px;padding-top:25px;font-size:17px;}
+	.eyecare__sty .sty03 .icon-box {padding-bottom:65px;}
+	.eyecare__sty .sty03 .icon-box li {padding:35px 10px;}
+	.eyecare__sty .sty03 .gray-bg {padding:0 25px;}
+	.eyecare__sty .sty03 .box-tit {padding:25px 25px 35px 25px;}
+	.eyecare__sty .sty03 .cont-desc {padding:0 25px;}
+	.eyecare__sty .sty04 {padding-top: 85px;} 
+	.eyecare__sty .sty04 .cont-desc {padding-left:10px;padding-right:10px;}
+	.eyecare__sty .sty04 .feature-wrap.mo_show .feature-list .feature-circle {min-height:0;}
+	.eyecare__sty .sty04 .feature-wrap.mo_show .feature-list .feature-desc {padding-top:30px;}
+	.eyecare__sty .sty05 {padding:75px 25px 0 25px;}
+	.eyecare__sty .sty05 .cont-tit {padding-bottom:75px;}
+	.eyecare__sty .sty05 .col-list li .txt-wrap h3 {padding-bottom: 25px;font-size:20px;}
+	.eyecare__sty .sty05 .anchor-arrow {margin: 60px auto;}
+	.eyecare__sty .sty05 .col-list li + li {padding-top: 40px;}
+	.eyecare__sty .system_list_box {padding-bottom:90px;}
+	.eyecare__sty .system_list li:first-child .desc_default {padding-top: 30px;}
+
+
+	/*알러지 케어*/
+	.mo_gak-hero01 img,
+	.mo_gyol-hero01 img {width:100%;max-height:420px;}
+	.eyecare__allergy .gyol01 {padding-top:55px;}
+	.eyecare__allergy .gak01 {padding:55px 10px 0 10px;}
+	.eyecare__allergy .gyol01 .cont-desc {padding:23px 25px 40px 25px;}
+	.eyecare__allergy .gak01 .cont-desc {padding:23px 15px 40px 15px;}
+	.eyecare__allergy .gyol02 {padding:85px 10px 0 10px;}
+	.eyecare__allergy .gak02 {padding:85px 40px 0 40px;}
+	
+	.eyecare__allergy .gyol02 .feature-list > li {display:flex;width:100%;padding-bottom:50px;padding-right:25px;}
+	.eyecare__allergy .gyol02 .feature-list li .img-wrap {padding-bottom:0px}
+	.eyecare__allergy .gyol02 .feature-list li .img-wrap img {width:100%;padding-right:10px;min-height:100%}
+	.eyecare__allergy .gyol02 .feature-list li div {width:100%}
+
+	.eyecare__allergy .gyol02 .feature-list li:nth-child(1) div h4:before {
+	content:"";
+	display:block;
+	background:url('/common/img/sub/mo_eyecare_allergy_numImg(1).png') no-repeat ;
+	width:60px;
+	height:50px;
+	position:relative;
+	left:50%;
+	transform: translateX(-50%);
+	background-size: 100% 70%;}
+	
+	.eyecare__allergy .gyol02 .feature-list li:nth-child(2) div h4:before {
+	content:"";
+	display:block;
+	background:url('/common/img/sub/mo_eyecare_allergy_numImg(2).png') no-repeat ;
+	width:60px;
+	height:50px;
+	position:relative;
+	left:50%;
+	transform: translateX(-50%);
+	background-size: 100% 70%;}
+	
+	.eyecare__allergy .gyol02 .feature-list li:nth-child(3) div h4:before {
+	content:"";
+	display:block;
+	background:url('/common/img/sub/mo_eyecare_allergy_numImg(3).png') no-repeat ;
+	width:60px;
+	height:50px;
+	position:relative;
+	left:50%;
+	transform: translateX(-50%);
+	background-size: 100% 70%;}
+
+	.eyecare__allergy .gyol02 .feature-list .feature-desc {padding-top:20px;}
+	.eyecare__allergy .gyol02 .feature-list .feature-desc > li + li {padding-top:15px}
+	.eyecare__allergy .gyol02 .feature-list .feature-desc > li {display:grid;grid-template-columns: 20% 80%;padding:0px;}
+	.eyecare__allergy .gyol02 .feature-list .feature-desc > li .right-desc {width:100%;padding-left:0;}
+	.eyecare__allergy .gyol02 .feature-list .feature-desc > li:first-child {min-height:0px;padding-bottom:12px}
+	.eyecare__allergy .gyol02 .feature-list li h4 {font-size:20px;}	
+	.eyecare__allergy .gyol03,
+	.eyecare__allergy .gak03 {padding-top:70px;}
+	.eyecare__allergy .gyol03 .symptom-list,
+	.eyecare__allergy .gak03 .symptom-list{display:grid;grid-template-columns: 1fr 1fr}
+	.eyecare__allergy .gyol03 .gray-bg,
+	.eyecare__allergy .gak03 .gray-bg {padding-top:0px;padding-bottom:40px;}
+	.eyecare__allergy .gyol03 .symptom-list li,
+	.eyecare__allergy .gak03 .symptom-list li {padding-bottom:40px;}
+	.eyecare__allergy .gyol03 .symptom-list li p,
+	.eyecare__allergy .gak03 .symptom-list li p{font-size:20px;padding-top:15px;}
+	.eyecare__allergy .cont-tit {padding-bottom:35px;}
+	.eyecare__allergy .gyol03 .cont-desc,
+	.eyecare__allergy .gak03 .cont-desc {padding:0 50px 45px 50px;}
+	.eyecare__allergy .icon-list {padding:0 30px;}
+	.eyecare__allergy .gyol04 .icon-box > li .img-wrap {padding-top:35px;padding-bottom:25px;}
+	.eyecare__allergy .gyol05,
+	.eyecare__allergy .gak05 {padding-top:55px;}
+	.eyecare__allergy .gyol05 .cont-desc,
+	.eyecare__allergy .gak05 .cont-desc {padding:0 25px 200px 25px;}
+	.eyecare__allergy #allergyTab0101 .feature-list {flex-direction:row}
+	.eyecare__allergy .gak02 .kind-list {flex-direction: column;margin:0;width:100%}
+	.eyecare__allergy .gak02 .kind-list li {width:100%}
+	.eyecare__allergy .gak02 .kind-list li .img-wrap {padding-bottom:20px;}
+	.eyecare__allergy .gak02 .kind-list li h4 {padding-bottom:25px;font-size:20px}
+	.eyecare__allergy .gak02 .kind-list li p {font-size:16px;}
+	.eyecare__allergy .gak03 .icon-list > li p {padding-top: 20px;}
+
+	/* 비문증 */
+	.drag_box .drag_frame .img.rv_bimun_first {display:block;background-image:url('/common/img/sub/m_retina_md_img_normal.png');background-size:100% 100%;}
+	.drag_box .drag_frame .img.rv_bimun_second {display:block;background-image:url('/common/img/sub/m_retina_md_img_abnormal.png');background-size:100% 100%;}
+	.drag_box .drag_control {margin:30px auto 0;padding:0 10px;}
+	.drag_box .drag_control span {font-size:17px;text-align:center}
+	.retina__bimun .bm01 {padding-top:75px;}
+	.retina__bimun .bm01 p {padding:18px 25px 0 25px;}
+	.retina__bimun .bm01 .img-list {padding:60px 10px 0 25px;}
+	.retina__bimun .bm01 .img-list li {padding-left:0;}
+	.retina__bimun .bm01 .img-list li h3 {padding-left:0;text-align:center;font-size:20px;}
+	.retina__bimun .bm02 {padding:120px 25px 0 25px;}
+	.retina__bimun .bm02 .cont-tit {padding-bottom:40px;}
+	.retina__bimun .bm02 .kind-list {flex-direction: column;}
+	.retina__bimun .bm02 .kind-list li {width:100%;padding-bottom:90px;}
+	.retina__bimun .bm02 .kind-list li .img-wrap {padding-bottom:35px;}
+	.retina__bimun .bm02 .kind-list li h4 {font-size:20px;padding-bottom:30px;}
+	.retina__bimun .bm02 .kind-list li p {font-size:18px;}
+	.retina__bimun .bm03 {padding-top:25px;}
+	.retina__bimun .bm03 .img-list {padding:0 10px 55px 10px;}
+	.retina__bimun .bm03 .img-list li:first-child {padding-right:2.5px;}
+	.retina__bimun .bm03 .img-list li:last-child {padding-left:2.5px;}
+	.retina__bimun .bm03 .img-list li h4 {font-size:18px;}
+	.retina__bimun .bm03 .gray-bg {padding:55px 25px;}
+	.retina__bimun .bm03 .gray-bg h3 {font-size:20px;}
+	.retina__bimun .bm03 .check-list-wrap {padding-top:35px;}
+	.retina__bimun .bm03 .check-list li {font-size:17px;background-size:23px;padding-left: 40px;}
+	.retina__bimun .bm03 .check-list > li + li {margin-top:25px;}
+	.retina__bimun .bm04 .gray-bg .wsize {padding:0 25px 50px 25px;}
+	.retina__bimun .bm04 .gray-bg h4 {font-size:20px;}
+	.retina__bimun .bm04 .cont-desc02 {padding-top:35px;}
+	.retina__bimun .bm05 {padding-top:90px;}
+	.retina__bimun .bm05 .cont-desc {padding:0 25px 200px 25px;}
+	.retina__bimun .bm05 .cont-tit {padding-bottom:35px;}
+	.retina__bimun .bm06 .col-list-wrap {padding-bottom:0px;}
+	.retina__bimun.subEyecareJoinRetinaRevision .notandum-sec .col-list li + li {padding-top:50px;}
+
+	/* 당뇨망막병증 */
+	.drag_box .drag_frame .img.rd_first {display:block;background-image:url('/common/img/sub/m_retina_diabetic_img_normal.png');background-size:100% 100%;}
+	.drag_box .drag_frame .img.rd_second {display:block;background-image:url('/common/img/sub/m_retina_diabetic_img_abnormal.png');background-size:100% 100%;}
+	.diabet_wrap .diabet01 {padding-top:75px;}
+	.diabet_wrap .diabet01 p {padding:0 25px;}
+	.diabet_wrap .diabet01 .cont-tit {padding-bottom:35px;}
+	.diabet_wrap .diabet01 .img-list {padding:60px 10px 0 25px;}
+	.diabet_wrap .diabet01 .img-list li {padding-left:0;}
+	.diabet_wrap .diabet01 .img-list li h3 {padding-left:0;text-align:center;font-size:20px;}
+
+	.diabet_wrap .diabet02 {padding:120px 25px 0 25px;}
+	.diabet_wrap .diabet02 .cont-tit {padding-bottom:40px;}
+	.diabet_wrap .diabet02 .kind-list {flex-direction: column;}
+	.diabet_wrap .diabet02 .kind-list li {width:100%;padding-bottom:65px;}
+	.diabet_wrap .diabet02 .kind-list li .img-wrap {padding-bottom:35px;}
+	.diabet_wrap .diabet02 .kind-list li h4 {font-size:20px;padding-bottom:30px;}
+	.diabet_wrap .diabet02 .kind-list li p {font-size:18px;}
+
+	.diabet_wrap .diabet03 {padding:50px 25px 65px 25px;}
+	.diabet_wrap .diabet03 .cont-tit {padding-bottom:50px;}
+	.diabet_wrap .diabet03 .visual-spt-list {flex-direction: column;margin:0;padding:0 60px;}
+	.diabet_wrap .diabet03 .visual-spt-list li {width:100%;}
+	.diabet_wrap .diabet03 .visual-spt-list li img {width:100%;}
+	.diabet_wrap .diabet03 .visual-spt-list li + li {padding-top:50px;}
+	.diabet_wrap .diabet03 .visual-spt-list li .spt-desc {padding-top:15px;padding-bottom:50px;font-size:17px;}
+	.diabet_wrap .diabet03 .visual-spt-list li h4 {font-size:20px;}
+	
+	.diabet_wrap .diabet04 .icon-list {padding:0 25px 55px 25px;}
+	.diabet_wrap .diabet04 .num-list > li + li {padding-top:60px;}
+	.diabet_wrap .diabet05 {padding-top:85px;}
+	.diabet_wrap .diabet05 .cont-desc {padding:0 10px 200px 10px;}
+	.diabet_wrap .diabet06.notandum-sec {padding:65px 25px 0 25px;}
+	.diabet_wrap .diabet06 .col-list-wrap {padding-bottom:0px;}
+	.diabet_wrap .diabet04.care-sec .navy-bg .cont-tit {padding:0 25px 80px 25px;}
+	.diabet_wrap .diabet06 .col-list > li + li {padding-top:50px;}
+
+	/* 녹내장 */
+	.drag_box .drag_frame .img.gc_first {display:block; background-image:url('/common/img/sub/m_retina_gc_img_normal.png');background-size:100% 100%;}
+	.drag_box .drag_frame .img.gc_second {display:block; background-image:url('/common/img/sub/m_retina_gc_img_abnormal.png');background-size:100% 100%;}
+	.gc_wrap .gc01 {padding-top:75px;}
+	.gc_wrap .gc01 p {padding:0 25px;}
+	.gc_wrap .gc01 .cont-tit {padding-bottom:35px;}
+	.gc_wrap .gc01 .img-list {flex-direction: column;padding:40px 25px 0 25px;}
+	.gc_wrap .gc01 .img-list li {padding-left:0;}
+	.gc_wrap .gc01 .img-list li:last-child {padding-top:50px;}
+	.gc_wrap .gc01 .img-list li h3 {padding-left:0;text-align:center;font-size:20px;}
+
+	.gc_wrap .gc02 {padding:135px 25px 0 25px;}
+	.gc_wrap .gc02 .cont-tit {padding-bottom:40px;}
+	.gc_wrap .gc02 .kind-list {flex-direction: column;}
+	.gc_wrap .gc02 .kind-list li {width:100%;padding-bottom:70px;}
+	.gc_wrap .gc02 .kind-list li h4 {font-size:20px;padding:35px 0 25px 0;}
+	.gc_wrap .gc02 .kind-list li p {font-size:18px;min-height:0px;}
+
+	.gc_wrap .gc03 {padding-top:50px;}
+	.gc_wrap .gc03 h2 {padding-bottom:45px;}
+	.gc_wrap .gc03 .img-list {flex-direction: column;margin:0;padding:0 75px;}
+	.gc_wrap .gc03 .img-list li {width:100%;}
+	.gc_wrap .gc03 .img-list li img {width:100%;}
+	.gc_wrap .gc03 .img-list li + li {padding-top:40px;}
+	.gc_wrap .gc03 .img-list li:last-child {padding-bottom:70px;}
+	.gc_wrap .gc03 .img-list li h4 {font-size:20px;}
+	.gc_wrap .gc03 .img-list li .img-wrap {padding-bottom:20px;}
+	.gc_wrap .gc03 .img-list li .txt-wrap {display:flex;justify-content: space-around;align-items:center}
+	.gc_wrap .gc03 .img-list li .txt-wrap .vertical-line {height:1px;width:35px;margin:0 10px;}
+
+	.gc_wrap .gc03 .gray-bg {padding:65px 25px 50px 25px;}
+	.gc_wrap .gc03 .gray-bg li {padding-top:15px;}
+	.gc_wrap .gc03 .gray-bg li p {font-size:17px;padding-top:20px;}
+	.gc_wrap .gc03 .icon-list {padding:30px 0 0 0;display:grid;grid-template-columns: 1fr 1fr 1fr;}
+	.gc_wrap .gc04 .img-list {padding-top:35px;min-height: 100px;margin-bottom: 30px;}
+	.gc_wrap .gc04 .img-list > li .img-wrap {min-height:100px;}
+	.gc_wrap .gc04 .img-list > li {padding:0 10px 15px;}
+	.gc_wrap .gc04 .cont-desc {padding:0 25px;}
+	.gc_wrap .gc04 .icon-list {padding:0 10px;}
+	.gc_wrap .gc04 .gray-bg .wsize {padding-bottom:65px;}
+	.gc_wrap .gc05 {padding-top:105px;}
+	.gc_wrap .gc05 .cont-desc {padding:0 10px 200px 10px;}
+	.gc_wrap .gc06 .col-list > li .txt-wrap {padding-left: 55px;}
+	.gc_wrap .gc06 .col-list > li .txt-wrap h3 {margin-top:5px;}
+	.gc_wrap .gc06 .col-list > li:nth-child(4) .txt-wrap h3 {margin-top:10px;}
+	.gc_wrap .gc06 .col-list > li .img-wrap {padding-right:25px;}
+	.gc_wrap .gc06 .col-list > li .img-wrap img {max-width:100px}
+	.gc_wrap .gc06 .col-list > li:nth-child(1) {min-height:75px;}
+	.gc_wrap .gc06 .col-list > li:nth-child(4) {min-height:65px;}
+	.gc_wrap .gc06 .col-list > li:nth-child(7),
+	.gc_wrap .gc06 .col-list > li + li {padding-top:50px;}
+	.gc_wrap .gc06 .bg-list > li .bg-pstv,
+	.gc_wrap .gc06 .bg-list > li .bg-ngtv,
+	.gc_wrap .gc06 .bg-list > li .bg-minus,
+	.gc_wrap .gc06 .bg-list > li .bg-bang {background-size: 40px;}
+	.gc06 .col-list-wrap {padding-bottom:0px;}
+
+
+	/*황반변성*/
+	.md_wrap .md01 {padding:80px 25px 0 25px;}
+	.md_wrap .md01 .cont-desc {padding-bottom:50px;font-size:18px;}
+	.md_wrap .md01 .cont-tit {padding-bottom:35px;}
+	.md_wrap .md01 .img-cap {padding-top:50px;font-size:20px;}
+	.md_wrap .md02 {padding:100px 25px 140px 25px;} 
+	.md_wrap .md02 .cont-tit {padding-bottom:50px;}
+	.md_wrap .md02 .feature-list {flex-direction: column;}
+	.md_wrap .md02 .feature-list li {width:100%;}
+	.md_wrap .md02 .feature-list li:first-child {padding-bottom:85px;}
+	.md_wrap .md02 .feature-list li p {font-size:18px;}
+	.md_wrap .md02 .feature-list li h4 {font-size:20px;padding:35px 0 30px 0;}
+	.md_wrap .md03 .cont-tit {padding-bottom:35px;}
+	.md_wrap .md03 .gray-bg {padding:50px 25px 50px 25px;}
+	.md_wrap .md03 .gray-cont01 {flex-direction: column;padding-bottom:40px;}
+	.md_wrap .md03 .gray-cont01 .left-cont {text-align:center;}
+	.md_wrap .md03 .step-list {text-align:left;padding-top:30px;}
+	.md_wrap .md03 .step-list > li {justify-content: center;}
+	.md_wrap .md03 .gray-cont01 .left-cont h3 {font-size:20px;}
+	.md_wrap .md03 .gray-cont01 .left-cont .step-list li {font-size:17px;}
+	.md_wrap .md03 .gray-cont01 .right-cont {padding:25px 30px 0 30px;}
+	.md_wrap .md03 .gray-cont02 {flex-direction: column;}
+	.md_wrap .md03 .gray-cont02 div {width:100%;padding:0 60px 40px 60px;}
+	.md_wrap .md03 .gray-bg {background-image:none;}
+	.md_wrap .md03 .gray-cont03 {padding:45px 45px 0;text-align:center}
+	.md_wrap .md03 .gray-cont03 .check-list {padding-top:0px;display: inline-block;text-align: center;}
+	.md_wrap .md03 .gray-cont03 .check-list li {text-align:left;font-size:17px;margin-top:30px;max-width:350px;background-size:23px;padding-left:40px;}
+	.md_wrap .md03 .gray-cont03 h3 {font-size:20px;}
+	.md_wrap .md04 .tit-img-wrap	{padding:25px 15px 0 30px;}
+	.md_wrap .md04 .img-list > li {padding:0 50px;}
+	.md_wrap .md04 .num-list > li {padding-bottom:0px;}
+	.md_wrap .md04 .num-list > li + li {padding-top:50px;}
+	.md_wrap .md04 .num-list > li p {font-size:17px}
+	.md_wrap .md04 .img-list01 {padding:85px 25px 25px;width:100%}
+	.md_wrap .md04 .num-list {padding:60px 50px;}
+	.md_wrap .md04 .icon-list {padding:0 10px;}
+	.md_wrap .care-sec .box-tit {padding-top:25px;padding-bottom:30px;}
+	.md_wrap .md04 .gray-bg .wsize {padding-bottom:0px;}
+	.md_wrap .md05 {padding-top:40px;}
+	.md_wrap .md05 .anchor-arrow {font-size:20px;padding-bottom:90px;background: url(/common/img/sub/icon_r_arrow.png) right 0% no-repeat;}
+	.md_wrap .md05 .top-tit {padding-bottom:25px;}
+	.md_wrap .md05 .cont-desc {padding: 25px 60px 210px 60px;}
+	.md_wrap .md06 .cont-tit {padding-bottom:75px;}
+	.md_wrap .md06 .col-list > li + li {padding-top:50px;}
+	.md_wrap .md06 .col-list-wrap {padding-bottom:0px;}
+	.md_wrap .md06.notandum-sec .anchor-arrow {margin:60px 0 80px 0;}
+
+
+
+
+}
+
+
+
+
+@media all and (max-width:750px){
+	.feature-wrap.mo_show {padding-bottom:50px;}
+	.br_none_750 {display:none;}
+
+	/* 로그인 - 750px */
+	.login_wrap .inner{padding-left:12px; padding-right:12px;}
+
+	/* 회원가입 - 750px */
+	.join_wrap .join-process > li{font-size:18px;}
+	.join_wrap .join-process > .process-symbol{padding:0 5px;}
+	.page-info .join_wrap > div.wsize .inner{padding:0 12px;}
+
+	/* 프리미엄노안 - 750px */
+	.oldpremium02 .mo-icon-list > li:nth-child(1) .img-wrap img{width:32px;}
+	.oldpremium02 .mo-icon-list > li:nth-child(2) .img-wrap img{width:37px;}
+	.oldpremium02 .mo-icon-list > li:nth-child(3) .img-wrap img{width:42px;}
+	.oldpremium02 .mo-icon-list > li:nth-child(4) .img-wrap img{width:38px;}
+
+	/* > 수술 주의사항 */
+	.revision__care .sub_title06 {font-size:20px;}
+	.revision__care .notandum_wrap .care_list li .desc_default {font-size:15px;}
+	.revision__care .notandum_wrap .care_list li .desc_default .date {width:120px;}
+	.revision__care .notandum_wrap .care_list li .exercise .date {width:150px;}
+	.revision__care .care_list li {width:100%}
+	.revision__care .care_list li .img_box {margin-right:20px;height:80px;min-width:0px}
+	.revision__care .care_list li .txt_box {width:100%}
+	.revision__care .notandum_wrap .care_list li .desc_default.exercise span {width:150px;}
+	.revision__care .notandum_wrap .care_list li .desc_default .date {width:110px;}
+	.revision__care .care_list li .title {font-size:18px;}
+	.revision__care .notandum_wrap .care_list li .desc_default {font-size:14px;}
+
+
+	/* > 안구 건조증*/
+	.eyecare__dry .dry06.notandum-sec .col-list > li .img-wrap {width:100px;}
+	.eyecare__dry .dry03 li img {max-width:100px;}
+	.eyecare__dry .dry05 .feature-wrap.mo_show {padding-bottom:50px;}
+	.eyecare__dry .dry03 .gray-bg {padding:60px 15% 50px 20%}
+
+
+	/* > 안구 내 주사치료*/
+	.retina__shottreat .shot_wrap .shot04 li .img-wrap img {max-width:130px}
+
+
+	/* > 안내 렌즈 삽입술*/
+	.revision__implant .implant_wrap .implant02 {padding:35px 15% 37px 20%;}
+
+
+	/*맞춤 교정술*/
+	.revision__premium .premium02 .point-list li:nth-child(odd) {padding-right:20px;padding-left:10px;}
+	.revision__premium .premium02 .point-list li:nth-child(even) {padding-right:10px;padding-left:20px;}
+	.premium02 .badge-icon {width:65px;height:50px;}
+	
+
+	/*시력교정 클리닉 (라식 라섹)*/
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek02 {padding:35px 15% 100px 20%;}
+	
+
+
+	/*안 종합 검진*/
+	.eyecare__checkup .checkup05 .img-wrap img {width:80px;}
+	.eyecare__checkup .checkup05 .cont-list > li .cont-box-list li h4 {font-size:18px;}
+	.eyecare__checkup .checkup05 .cont-list > li .cont-box-list li p {font-size:14px;}
+	.eyecare__checkup .checkup05 .cont-list > .cont-list03 .cont-box > li .txt-wrap {font-size:17px;padding-left:70px;}
+	.eyecare__checkup .checkup05 .cont-list > .cont-list03 .cont-box > li .img-wrap {max-width:130px;}
+	.eyecare__checkup .checkup05 .cont-list > .cont-list03 .cont-box > li .img-wrap img {width:85%}
+	.eyecare__checkup .checkup05 .cont-list01 .cont-box li:nth-child(2) {margin-right:40px;}
+
+
+	/*다래끼 케어*/
+	.eyecare__sty .sty02 .feature-list .txt-wrap p {padding-left:100px;}
+	.eyecare__sty .sty02 .feature-list .txt-wrap p {font-size:15px;}
+
+
+	/*황반변성*/
+	.md04 .img-list > li {padding:0 35px;}
+	.md04 .img-list01 {padding:65px 25px 25px;}
+	
+
+	.revision__dream .dream_wrap .dream02 {padding:35px 15% 55px 20%;}
+	
+
+	
+
+
+
+}
+
+
+
+@media all and (max-width:570px){
+
+	/* > 수술 주의사항 */
+	.revision__care .notandum_wrap .care_list li .desc_default {font-size:13px;}
+	.revision__care .notandum_wrap .care_list li .desc_default .date {width:110px;}
+	.revision__care .care_list {padding-left:20px;padding-right:10px;}
+	.care_list li .img_box {margin-right:20px;height:80px;}
+	.notandum_wrap #lasekTab .bg_blue_light li:nth-child(7) .desc_default .date {width: 143px;}
+
+
+
+}
+
+
+
+@media all and (max-width:450px){
+	.subEyecareJoinRetinaRevision .feature-wrap.mo_show {padding-bottom:0px;}
+	.subEyecareJoinRetinaRevision .notandum-sec .col-list > li .txt-wrap h3 {font-size:17px;}
+	.subEyecareJoinRetinaRevision .notandum-sec .col-list > li .txt-wrap p {font-size:13px;}
+	.br_none_450 {display:none;}
+
+	/* 프리미엄노안 - 450px */
+	.tri-img-wrap img{width:40px;}
+	.oldpremium_wrap .oldpremium01{padding-top:35px;}
+	.oldpremium02 .mo-icon-list{padding-left:3%;}
+	.oldpremium04 .card-wrap > li.txt-wrap h3{padding-left:0;}
+	.oldpremium04 .card-wrap > li.txt-wrap .img-wrap{margin-left:0;}
+
+	/* > 시력 교정 클리닉 */
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek02 h2 {font-size:23px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek02 .check-list {padding-top:25px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek02 .check-list > li {font-size:15px;padding-left:40px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek02 .check-list > li + li  {margin-top: 15px;}
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek03 .icon-list .num-list > li {padding-bottom:60px;}
+
+	/* > 프리미엄 맞춤 교정술 */
+	.revision__premium .premium02 .point-list > li h4 {font-size:16px}
+	.revision__premium .premium02 .point-list > li p {font-size:14px}
+	.revision__premium .premium05 .icon-list > li .img-wrap p {font-size:10px;height:45px;}
+	.revision__premium .premium05 .icon-list > li .img-wrap img {width:55%}
+	.revision__premium .premium02 .point-list li:nth-child(odd) {padding-right:10px;padding-left:5px;}
+	.revision__premium .premium02 .point-list li:nth-child(even) {padding-right:5px;padding-left:10px;}
+
+
+
+	/* > 드림렌즈 */
+	.revision__dream .dream_wrap .dream01 .compare-list {padding-bottom:30px;}
+	.revision__dream .dream_wrap .dream01 .img-list > li:nth-child(2) .img-wrap img {padding-left:60px;}
+	.revision__dream .dream_wrap .dream01 .img-list > li:nth-child(1) h3 {padding-left:15px;}
+	.revision__dream .dream_wrap .dream02 {padding:35px 10% 55px 15%;}
+	.revision__dream .dream_wrap .dream02 h2 {font-size:25px;}
+	.revision__dream .dream_wrap .dream02 .check-list li {font-size:15px;}
+	.revision__dream .dream_wrap .dream02 .check-list > li + li {margin-top:10px;}
+	.revision__dream .dream_wrap .dream03 .tab-cont-wrap {padding:5px 15px;}
+	.revision__dream .dream_wrap .dream03 .tab-cont-wrap .tab-list li {font-size:13px;}
+	.dream03 .tab-cont-wrap .tab-list > li + li {padding-top:10px;}
+	.revision__dream .feature-wrap {background-size: 120%;}
+
+	/* > 수술 주의사항 */
+	.revision__care .notandum_wrap .care_list li .desc_default {font-size:12px;}
+	.revision__care .notandum_wrap .care_list li .desc_default .date {width:100px;}
+	.revision__care .notandum_wrap .care_list li .exercise .date {width:120px;}
+	.revision__care .notandum_wrap .care_list li .exercise .date:nth-child(2) {width:90px;}
+	.revision__care .notandum_wrap #lasekTab .bg_blue_light li:nth-child(7) .desc_default .date {width: 120px;}
+	.revision__care .notandum_wrap .care_list li .days .date {width:90px;}
+	.revision__care .notandum_wrap .care_list li .care .date {width:90px}
+	.revision__care .care_list li .img_box {margin-right:10px;}
+	.revision__care .notandum_wrap .care_list li .desc_default.long_title span {width:105px;}
+	.revision__care .notandum_wrap .care_list li .desc_default.exercise span {width:130px;}
+	
+
+	/* > 안내 렌즈삽입*/
+	.revision__implant .implant_wrap .implant02 {padding:35px 5% 37px 10%;}
+	.revision__implant .implant_wrap .implant02 .check-list li {font-size:15px;background-position-y: 7px;}
+	.revision__implant .implant_wrap .implant02 .check-list li + li {margin-top:10px;}
+	.revision__implant .implant_wrap .implant02 h2 {font-size:25px;}
+	.revision__implant .implant_wrap .implant03 .li-product01 .img-2nd-wrap img,
+	.revision__implant .implant_wrap .implant03 .li-product02 .img-2nd-wrap img {max-width:60%}
+
+	.revision__implant .implant_wrap .implant03 .li-product01 .img-2nd-wrap .feature-list,
+	.revision__implant .implant_wrap .implant03 .li-product02 .img-2nd-wrap .feature-list {font-size:14px;}
+
+
+	/* > 안구 건조증*/
+	.eyecare__dry .dry06.notandum-sec .col-list > li .txt-wrap p {font-size:14px;}
+	.eyecare__dry .dry03 .icon-list {padding:0}
+	.eyecare__dry .dry03 li img {max-width:70px;}
+	.eyecare__dry .dry05 .feature-wrap.mo_show {padding-bottom:0px;}
+	.eyecare__dry .dry03 .gray-bg {padding: 60px 10% 50px 15%;}
+
+
+
+	/* > 안구 내 주사치료*/
+	.retina__shottreat .shot04.notandum-sec .col-list > li .txt-wrap h3 {padding-bottom:15px;font-size:20px}
+	.retina__shottreat .shot04.notandum-sec .col-list > li .txt-wrap p {font-size:15px;}
+	.retina__shottreat .shot04.notandum-sec .col-list > li .txt-wrap {padding-left:23px;}
+	.retina__shottreat .shot_wrap .shot04 .cont-tit {font-size:30px}
+
+
+	/* > 안 종합검진*/
+	.eyecare__checkup .checkup_wrap .check-list li {font-size:15px;margin-top:15px;}
+	.eyecare__checkup .checkup03 .feature-wrap.mo_show ul li p{font-size:14px;margin-top:20px;line-height:1.5;}
+	.eyecare__checkup .checkup05 .cont-list > li .cont-box-list li h4 {font-size:16px;padding-bottom:10px;}
+	.eyecare__checkup .checkup05 .cont-list > li .cont-box-list li p {font-size:13px;} 
+	.eyecare__checkup .checkup05 .cont-list > li .cont-box-list > li {padding-left:23px}
+	.eyecare__checkup .checkup05 .cont-list > .cont-list02 .cont-box .txt-wrap h4 {padding-left:45px;}
+	.eyecare__checkup .checkup05 .cont-list > li .cont-box .txt-wrap .cont-txt-list {margin-left:45px;}
+	.eyecare__checkup .checkup05 .cont-list > .cont-list02 .cont-box .txt-wrap h4 {font-size:20px;margin-left:10px;}
+	.eyecare__checkup .checkup05 .cont-list > li .cont-box .txt-wrap .cont-txt-list {font-size:13px}
+	.eyecare__checkup .checkup05 .cont-list01, .eyecare__checkup .checkup05 .cont-list02 {padding:0 15px 85px 15px;}
+	.eyecare__checkup .checkup05 .cont-list > .cont-list03 .cont-box > li .txt-wrap {font-size:15px;padding-left: 50px;}
+	.eyecare__checkup .checkup05 .cont-list > .cont-list03 .cont-box > li .img-wrap img {width:40%;}
+	.eyecare__checkup .checkup05 .cont-list > .cont-list03 .cont-box > li .txt-wrap {padding-top:5px;font-size:13px;}
+	.eyecare__checkup .checkup05 .cont-list > .cont-list03 .cont-box > li .img-wrap {margin-right:-50px;}
+	.eyecare__checkup .checkup05 .cont-list > .cont-list03 .cont-box  {padding:10px;}
+	.eyecare__checkup .checkup05 .cont-list > .cont-list03 .cont-box > li + li {padding-top:10px;}
+	.eyecare__checkup .checkup05 .cont-list01 .cont-box li:nth-child(2) {margin-right:40px;}
+	.eyecare__checkup .checkup05 .cont-list > li .cont-box .bg-pstv,
+	.eyecare__checkup .checkup05 .cont-list > li .cont-box .bg-ngtv {background-size: 30px;}
+
+
+	/*다래끼 케어*/
+	.eyecare__sty .sty02 .feature-list .txt-wrap p {padding-left:50px;font-size:12px}
+	.eyecare__sty .sty05 .col-list li .txt-wrap {padding-left:20px;}
+	.eyecare__sty .sty05 .col-list li .txt-wrap h3 {padding-bottom:20px;font-size:17px;}
+	.eyecare__sty .sty05 .col-list li .txt-wrap p {font-size:13px;}
+	.eyecare__sty .sty04 .feature-wrap.mo_show {padding-bottom:0px;}
+	
+	/*알러지 케어*/
+	.eyecare__allergy .gyol03 .symptom-list li img,
+	.eyecare__allergy .gak03 .symptom-list li img,
+	.eyecare__allergy .gak03 .symptom-list li img {width:90px;height:110px;}
+	.eyecare__allergy .gak03 .symptom-list {padding:0}
+	.eyecare__allergy .gyol03 .symptom-list li p {font-size:15px;}
+	.eyecare__allergy .gyol02 .feature-list .feature-desc > li {grid-template-columns: 30% 70%;padding:0px;}
+	.eyecare__allergy .gyol02 .feature-list li .img-wrap img {min-height:250px;}
+
+	/*당뇨망막병증*/
+	.diabet_wrap .diabet01 .img-list li h3 {font-size:17px;}
+	.diabet_wrap .diabet03 .visual-spt-list {padding:0 30px;}
+
+	/*녹내장*/
+	.gc_wrap .gc03 .img-list {padding:0 30px;}
+	.gc_wrap .gc03 .img-list li h4 {font-size:18px;}
+	.gc_wrap .gc03 .img-list li p {font-size:13px;}
+	.gc_wrap .gc06 .col-list > li .img-wrap img {max-width:80px}
+	.gc_wrap .gc06 .col-list > li .txt-wrap h3 {font-size:15px}
+	.gc_wrap .gc06 .col-list > li + li {padding-top:30px;}
+	.gc_wrap .gc06 .bg-list > li .bg-pstv,
+	.gc_wrap .gc06 .bg-list > li .bg-ngtv,
+	.gc_wrap .gc06 .bg-list > li .bg-minus,
+	.gc_wrap .gc06 .bg-list > li .bg-bang {background-size: 30px;}
+
+
+	/*황반변성*/
+	.md_wrap .md03 .gray-cont03 {padding:45px 25px 0;}
+	.md_wrap .md03 .gray-cont03 .check-list li {margin-top:15px;}
+	.md_wrap .md03 .gray-cont03 h3 {font-size:17px;}
+	.md_wrap .md04 .img-list > li {padding:0 20px;padding: 45px 25px 25px;}
+	.md_wrap .md04 .img-list01 {padding:0px 15px 15px;}
+	.md_wrap .md05 .cont-desc {padding: 25px 40px 210px 40px;}
+
+
+	/*맞춤 교정술*/
+	.revision__premium .premium05 .icon-list > li .img-wrap img {height:60px}
+
+
+
+	 /*시력교정 클리닉 (라식 라섹)*/
+	.subEyecareJoinRetinaRevision .lasik_wrap .lasiklasek02 {padding:65px 10% 100px 15%;}
+
+
+
+	
+}

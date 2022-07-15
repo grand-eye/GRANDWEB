@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.grand.admin.code.dao.CodeDAOImpl.Mapper">
+ 
+    <!-- 
+        mybatis-config.xml의 typeAlias에 등록해두지 않았다면 
+        
+        <select id="selectMember" resultType="com.example.dto.MemberVO" >
+            SELECT ID, PW ,NAME FROM TEST
+        </select>
+        
+        이렇게 해야 한다.
+    -->
+   	<insert id="insertCodeDetail" parameterType="codeDetailVO" >
+			INSERT INTO t_code_detail
+			(
+				tcd_master_code , 
+				tcd_level , 
+				tcd_parent , 
+				tcd_title , 
+				tcd_code , 
+				tcd_attr1 , 
+				tcd_attr2 , 
+				tcd_attr3 , 
+				tcd_useyn , 
+				tcd_order  ,
+			    tcd_attr4 , 
+				tcd_attr5 , 
+				tcd_attr6  				  
+			) 
+			VALUES 
+			(
+				#{tcd_master_code} , 
+				#{tcd_level} , 
+				#{tcd_parent} , 
+				 
+				#{tcd_title} , 
+				#{tcd_code} , 
+				#{tcd_attr1} , 
+				#{tcd_attr2} , 
+				#{tcd_attr3} , 
+				#{tcd_useyn} , 
+				#{tcd_order} ,
+				#{tcd_attr4} , 
+				#{tcd_attr5} ,
+				#{tcd_attr6}  				 
+			)  
+			ON DUPLICATE KEY 
+			UPDATE 
+				  tcd_master_code     = #{tcd_master_code}
+				, tcd_level	      			 = #{tcd_level}
+				, tcd_parent	      = #{tcd_parent}
+				, tcd_title	      = #{tcd_title}
+				, tcd_code	      = #{tcd_code}
+				, tcd_attr1	      = #{tcd_attr1}
+				, tcd_attr2	      = #{tcd_attr2}
+				, tcd_attr3	      = #{tcd_attr3}
+				
+				, tcd_attr4	      = #{tcd_attr4}
+				, tcd_attr5	      = #{tcd_attr5}
+				, tcd_attr6	      = #{tcd_attr6}				
+												
+				, tcd_useyn	      = #{tcd_useyn}
+				, tcd_order	      = #{tcd_order}
+  	</insert>    
+    
+    <select id="selectExistsCodeDetail"	resultType="int">
+			  SELECT 
+					count( tcd_code )
+		      FROM   t_code_detail
+		      where 1=1
+		      and tcd_code = #{search_code}
+		      
+    </select>    
+    
+    
+    
+    <select id="selectCodeDetail" resultType="codeDetailVO">
+    -- selectCodeDetail
+			SELECT
+				tcd_master_code		,
+				tcd_index		,
+				tcd_level		,    
+				tcd_parent		,    
+				tcd_path		,    
+				tcd_title		,    
+				tcd_code		,    
+				tcd_code	as id,  
+				tcd_attr1		,  
+				tcd_attr2		,    
+				tcd_attr3		,    
+				tcd_useyn		,    
+				tcd_order		,  
+			    'checked'  as checkState	,
+			    tcd_attr4		,    
+			    tcd_attr5		,    
+			    tcd_attr6		     
+			FROM
+				t_code_detail
+			WHERE	1=1
+			
+			<if  test="search_code != null and !search_code.equals('')">
+				AND tcd_code = #{search_code}
+			</if>
+			<if  test="search_parent != null and !search_parent.equals('')">
+				AND tcd_parent = #{search_parent}
+			</if>
+			<if  test="search_master != null and !search_master.equals('') and !search_master.equals('ALL')">
+				AND tcd_master_code = #{search_master}
+			</if>
+			<if  test="search_master.equals('ALL')">
+				AND tcd_master_code in ('A173','A181','A182','A183','A002','A180','A080')
+			</if>			
+			<if  test="search_level != null and !search_level.equals('')">
+				AND tcd_level = #{search_level}
+			</if>
+			<if  test="search_useyn != null and !search_useyn.equals('')">
+				AND tcd_useyn = #{search_useyn}
+			</if>
+			<if  test="s_attr_1 != null and !s_attr_1.equals('')">
+				AND tcd_attr1 = #{s_attr_1}
+			</if>
+			<if  test="s_attr_2 != null and !s_attr_2.equals('')">
+				AND tcd_attr2 = #{s_attr_2}
+			</if>
+			<if  test="s_attr_3 != null and !s_attr_3.equals('')">
+				AND tcd_attr3 = #{s_attr_3}
+			</if>
+			<if  test="s_attr_4 != null and !s_attr_4.equals('')">
+				AND tcd_attr4 = #{s_attr_4}
+			</if>
+			<if  test="s_attr_5 != null and !s_attr_5.equals('')">
+				AND tcd_attr5 = #{s_attr_5}
+			</if>
+			<if  test="s_attr_6 != null and !s_attr_6.equals('')">
+				AND tcd_attr6 = #{s_attr_6}
+			</if>
+			
+			<if  test="codeOpt != null and codeOpt !=''">
+				<![CDATA[
+				AND tcd_code not like '%|%'
+				]]>	
+			</if>
+			
+			
+			Order by
+				tcd_order asc
+    </select>
+    
+     
+    
+    <select id="selectExistsCodeID"	resultType="int">
+			  SELECT 
+					count( code_id )
+		      FROM   t_code
+		      where 1=1
+		      and code_id = #{code_id}
+    </select>
+        
+    
+   	<insert id="insertCode" parameterType="codeVO" >
+			INSERT INTO t_code
+			(
+					code_id 
+				,	code_name
+				,   code_useyn
+				, 	code_parent
+				, 	code_attr_01
+				, 	code_attr_02
+				, 	code_attr_03
+				, 	code_order
+				, 	code_level
+				, 	code_path
+			) 
+			VALUES 
+			(
+				  #{code_id}
+				, #{code_name}
+				, #{code_useyn}
+				, #{code_parent}
+				, #{code_attr_01}
+				, #{code_attr_02}
+				, #{code_attr_03}
+				, #{code_order}
+				, #{code_level}
+				, #{code_path}
+			)  
+			ON DUPLICATE KEY 
+			UPDATE 
+				  code_id     = #{code_id}
+				, code_name   = #{code_name}
+				, code_useyn  = #{code_useyn}
+				, code_parent = #{code_parent}
+				, code_attr_01= #{code_attr_01}
+				, code_attr_02= #{code_attr_02}
+				, code_attr_03= #{code_attr_03}
+				, code_order  = #{code_order}
+				, code_level  = #{code_level}
+				, code_path   = #{code_path}
+  	</insert>
+   	
+
+    <select id="selectMasterCodeCount" resultType="int">
+    
+			  SELECT 
+					count( code_id )
+		      FROM   t_code
+		      where 1=1
+		      and     code_level = 0
+		      <choose>
+		     		<when test="code_search != null and !code_search.equals('')">
+							AND 
+							(
+								INSTR( code_name , #{code_search})  <![CDATA[ > ]]> 0
+							)				     			
+		     		</when> 	
+		      </choose>
+    </select>    
+    
+    <select id="selectMasterCode" resultType="codeVO">
+    
+			SELECT t.* 
+			FROM   t_code as a 
+			JOIN (
+			
+						SELECT 
+								 code_id
+							,	 code_name
+							, 	 code_useyn
+							,	 code_parent
+							,	 code_path
+							,	 code_level
+							,	 code_order
+							
+			 
+				      FROM   t_code
+				      where 1=1
+				      and     code_level = 0
+				      <choose>
+				     		<when test="code_search != null and !code_search.equals('')">
+									AND 
+									(
+										INSTR( code_name , #{code_search})  <![CDATA[ > ]]> 0
+									)				     			
+				     		</when> 	
+				      </choose>
+				      ORDER  BY code_order asc 
+				      LIMIT   #{startpage} , #{rows}
+			      ) 
+			AS t ON t.code_id = a.code_id; 
+    
+    
+    </select>
+    
+    
+    
+</mapper>

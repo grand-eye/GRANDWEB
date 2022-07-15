@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.grand.admin.member.dao.TblMemberDAOImpl.Mapper">
+
+
+	<sql id="whereMemberList">
+    	WHERE
+					1=1
+		<if test="board_search_str_date != null and board_search_str_date != ''">
+			AND	mb.tblDtmRegDate <![CDATA[ >= ]]> #{board_search_str_date}
+		</if>
+		
+		<if test="board_search_end_date != null and board_search_end_date != ''">
+			AND	mb.tblDtmRegDate <![CDATA[ <= ]]> #{board_search_end_date}
+		</if>
+		
+		<if test="board_search_email != null and board_search_email != '' and board_search_email != 'ALL'">
+			AND	mb.tblBlnEmail = #{board_search_email}
+		</if>
+		
+		<if test="board_search_sms != null and board_search_sms != '' and board_search_sms != 'ALL'">
+			AND	mb.tblBlnSms = #{board_search_sms}
+		</if>
+		
+		<if test="board_search_memDel != null and board_search_memDel != '' and board_search_memDel != 'ALL'">
+			AND	mb.memDel = #{board_search_memDel}
+		</if>
+		
+		<if test="board_search != null and board_search != '' ">
+			<choose>
+				<when test="board_search_option != null and board_search_option !='' and board_search_option.equals('id')">
+					AND	mb.tblStrID = #{board_search_option}
+				</when>
+				<when test="board_search_option != null and board_search_option !='' and board_search_option.equals('name')">
+					AND	mb.tblStrName = #{board_search_option}
+				</when>
+				<when test="board_search_option != null and board_search_option !='' and board_search_option.equals('mobile')">
+					AND	mb.tblStrMobile = #{board_search_option}
+				</when>
+				<when test="board_search_option != null and board_search_option !='' and board_search_option.equals('email')">
+					AND	mb.tblBlnEmail = #{board_search_option}
+				</when>
+			</choose>
+		</if>
+		    
+    </sql>
+	
+    <select id="selectMemberList" resultType="tblMemberVO">
+    -- com.grand.admin.member.dao.TblMemberDAOImpl.Mapper.selectMemberList
+	   	SELECT 
+	   				  mb.tblNumber
+	   				  , mb.tblStrID
+	   				  , mb.tblStrName
+	   				  , mb.tblSection
+	   				  , mb.tblPassType
+	   				  , mb.tblStrPass
+	   				  , mb.tblSnsType
+	   				  , mb.tblStrPhone
+	   				  , mb.tblStrMobile
+	   				  , mb.tblBlnEmail
+	   				  , mb.tblBlnSms
+	   				  , mb.tblStrEmail
+	   				  , mb.tblDtmStrDate
+	   				  , mb.tblDtmRegDate
+	   				  , mb.tblDtmLastDate
+	   				  , mb.tblDtmRegIp
+	   				  , mb.tblIntGP
+	   				  , mb.tblIntLevel
+	   				  , mb.tblStrMemo
+	   				  , mb.tblDtmEndDate
+	   				  , mb.memDel
+	   				  , mb.memDel_reason
+	   				  , mb.memDel_hope
+	   				  , mb.memDel_date
+	   				  , mb.site
+	   				  , mb.etc1
+	   				  , mb.etc2
+	   				  , mb.etc3
+	   				  , mb.etc4
+	   				  , mb.etc5
+	   				  , cdt.tcd_title as levelName
+			FROM   
+						t_user mb
+			LEFT OUTER JOIN t_code_detail cdt ON mb.tblIntLevel = cdt.tcd_code
+			<include refid="whereMemberList" />
+			
+			ORDER BY tblNumber desc
+			
+			<if test='listType != "null" and listType != "excel"'>
+			LIMIT   #{startpage} , #{rows}
+			</if>
+	
+    </select>
+    
+    
+    <select id="selectMemberCount" resultType="int">
+     -- com.grand.admin.member.dao.TblMemberDAOImpl.Mapper.selectMemberCount
+			  SELECT
+					COUNT(*)  
+				FROM t_user mb
+		     	<include refid="whereMemberList" />
+			    
+    </select>    
+    
+    <select id="selectMember" resultType="tblMemberVO">
+    -- com.grand.admin.member.dao.TblMemberDAOImpl.Mapper.selectMember
+   		SELECT 
+	   				  mb.tblNumber
+	   				  , mb.tblStrID
+	   				  , mb.tblStrName
+	   				  , mb.tblSection
+	   				  , mb.tblPassType
+	   				  , mb.tblSnsType
+	   				  , mb.tblStrPhone
+	   				  , mb.tblStrMobile
+	   				  , mb.tblBlnEmail
+	   				  , mb.tblBlnSms
+	   				  , mb.tblStrEmail
+	   				  , mb.tblDtmStrDate
+	   				  , mb.tblDtmRegDate
+	   				  , mb.tblDtmLastDate
+	   				  , mb.tblDtmRegIp
+	   				  , mb.tblIntGP
+	   				  , mb.tblIntLevel
+	   				  , mb.tblStrMemo
+	   				  , mb.tblDtmEndDate
+	   				  , mb.memDel
+	   				  , mb.memDel_reason
+	   				  , mb.memDel_hope
+	   				  , mb.memDel_date
+	   				  , mb.site
+	   				  , mb.etc1
+	   				  , mb.etc2
+	   				  , mb.etc3
+	   				  , mb.etc4
+	   				  , mb.etc5
+	   				  , cdt.tcd_title as levelName	   				  
+		FROM   
+						t_user mb
+		LEFT OUTER JOIN t_code_detail cdt ON mb.tblIntLevel = cdt.tcd_code
+	    WHERE tblNumber = #{tblNumber}
+		
+    </select>
+    
+    <insert id="insertMember" parameterType="tblMemberVO" >
+    -- com.grand.admin.member.dao.TblMemberDAOImpl.Mapper.insertMember
+		INSERT INTO t_user
+		(
+					tblNumber
+				  , tblStrID
+				  , tblStrName
+				  , tblSection
+				  , tblPassType
+				  , tblStrPass
+				  , tblSnsType
+				  , tblStrMobile
+				  , tblBlnEmail
+				  , tblBlnSms
+				  , tblStrEmail
+				  , tblDtmStrDate
+				  , tblDtmRegDate
+				  , tblDtmLastDate
+				  , tblDtmRegIp
+				  , tblIntGP
+				  , tblIntLevel
+				  , tblStrMemo
+				  , tblDtmEndDate
+				  , site
+				  , etc1
+				  , etc2
+				  , etc3
+				  , etc4
+				  , etc5
+		) 
+		VALUES 
+		(
+				#{tblNumber}
+				, #{tblStrId}
+				, #{tblStrName}
+				, #{tblSection}
+				, #{tblPassType}
+				, sha2(#{tblStrPass}, 256)
+				, #{tblSnsType}
+				, #{tblStrMobile}
+				, #{tblBlnEmail}
+				, #{tblBlnSms}
+				, #{tblStrEmail}
+				, #{tblDtmStrDate}
+				, now()
+				, now()
+				, #{commonIp}
+				, #{tblIntGP}
+				, #{tblIntLevel}
+				, #{tblStrMemo}
+				, #{tblDtmEndDate}
+				, #{site}
+				, #{etc1}
+				, #{etc2}
+				, #{etc3}
+				, #{etc4}
+				, #{etc5}
+		)  
+		ON DUPLICATE KEY 
+		UPDATE 
+			tblStrName = #{tblStrName}
+			, tblSection = #{tblSection}
+			, tblPassType = #{tblPassType}
+			, tblStrPass = sha2(#{tblStrPass}, 256)
+			, tblSnsType = #{tblSnsType}
+			, tblStrMobile = #{tblStrMobile}
+			, tblBlnEmail = #{tblBlnEmail}
+			, tblBlnSms = #{tblBlnSms}
+			, tblStrEmail = #{tblStrEmail}
+			, tblDtmStrDate = #{tblDtmStrDate}
+			, tblIntGP = #{tblIntGP}
+			, tblIntLevel = #{tblIntLevel}
+			, tblStrMemo = #{tblStrMemo}
+			, site = #{site}
+			, etc1 = #{etc1}
+			, etc2 = #{etc2}
+			, etc3 = #{etc3}
+			, etc4 = #{etc4}
+			, etc5 = #{etc5}
+   	</insert>
+    
+    <delete id="deleteMember" parameterType="tblMemberVO" >
+   -- com.grand.admin.member.dao.TblMemberDAOImpl.Mapper.deleteMember
+    
+    	DELETE FROM t_user
+		WHERE tblNumber = #{tblNumber}
+    </delete>
+        
+</mapper>

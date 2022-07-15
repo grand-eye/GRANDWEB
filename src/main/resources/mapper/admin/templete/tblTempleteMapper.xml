@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.grand.admin.templete.dao.TblTempleteDAOImpl.Mapper">
+     
+     
+     <sql id="whereTempleteList">
+     	WHERE
+     					1=1
+     	
+     	<if test="templete_idx != null and templete_idx != ''">
+			AND tt.templete_idx = #{templete_idx}
+	    </if>
+	    
+    	<if test="templete_cate != null and templete_cate != ''">
+			AND tt.templete_cate = #{templete_cate}
+	    </if>
+	    
+	    <if test="templete_useyn != null and templete_useyn != ''">
+			AND tt.templete_useyn = #{templete_useyn}
+	    </if>
+	    
+	    <if test="templete_search != null and templete_search != ''">
+			AND (
+				tt.templete_title like CONCAT('%', #{templete_search}, '%')
+			)
+	    </if>
+     </sql>
+     
+    <select id="selectTempleteList" resultType="tblTempleteVO">
+          -- com.grand.admin.templete.dao.TblTempleteDAOImpl.Mapper.selectTempleteList
+			SELECT 
+						tt.templete_idx
+						, tt.templete_cate
+						, tt.templete_title
+						, tt.templete_type
+						, tt.templete_useyn
+						, tt.templete_css
+						, tt.templete_js
+						, tt.templete_content
+						, tt.templete_thum
+						, tt.templete_reg_id
+						, tt.templete_reg_name
+						, tt.templete_reg_date
+						, cdt.tcd_title as templete_cate_name
+			FROM 
+						t_templete	tt
+			INNER JOIN t_code_detail cdt ON tt.templete_cate = cdt.tcd_code
+                   			
+			<include refid="whereTempleteList" />
+			 
+			ORDER  BY tt.templete_idx DESC, tt.templete_reg_date  DESC
+    		        
+    		LIMIT 1000
+   
+   	</select>
+   	
+   	<select id="selectTemplete" resultType="tblTempleteVO">
+   -- com.grand.admin.templete.dao.TblTempleteDAOImpl.Mapper.selectTemplete
+			SELECT 
+						tt.templete_idx
+						, tt.templete_cate
+						, tt.templete_title
+						, tt.templete_type
+						, tt.templete_useyn
+						, tt.templete_css
+						, tt.templete_js
+						, tt.templete_content
+						, cdt.tcd_title as templete_cate_name
+			FROM 
+						t_templete	tt
+			INNER JOIN t_code_detail cdt ON tt.templete_cate = cdt.tcd_code
+            
+			<include refid="whereTempleteList" />
+			 
+   	</select>
+
+    <select id="selectTempleteCount" resultType="int">
+    -- com.grand.admin.templete.dao.TblTempleteDAOImpl.Mapper.selectTempleteCount
+			  SELECT
+					COUNT(*)  
+				FROM t_templete tt
+		      <include refid="whereTempleteList" />
+			    
+    </select>    
+    
+    <insert id="insertTemplete" parameterType="tblTempleteVO"  useGeneratedKeys="true" keyProperty="templete_idx">
+    -- com.grand.admin.templete.dao.TblTempleteDAOImpl.Mapper.insertTemplete
+		INSERT INTO t_templete
+		(
+				templete_idx
+				, templete_cate
+				, templete_title
+				, templete_type
+				, templete_useyn
+				, templete_css
+				, templete_js				
+				, templete_content
+				, templete_thum
+				, templete_reg_id
+				, templete_reg_name
+				, templete_reg_date
+		) 
+		VALUES 
+		(
+				#{templete_idx}
+				, #{templete_cate}
+				, #{templete_title}
+				, #{templete_type}
+				, #{templete_useyn}
+				, #{templete_css}
+				, #{templete_js}
+				, #{templete_content}
+				, #{templete_thum}
+				, #{reg_id}
+				, #{reg_nm}
+				, now()
+		)  
+		ON DUPLICATE KEY 
+		UPDATE 
+			templete_cate = #{templete_cate}
+			, templete_title = #{templete_title}
+			, templete_type = #{templete_type}
+			, templete_useyn = #{templete_useyn}
+			, templete_css = #{templete_css}
+			, templete_js = #{templete_js}
+			, templete_content = #{templete_content}
+			, templete_thum = #{templete_thum}
+			, templete_mod_id = #{mod_id}
+			, templete_mod_name = #{mod_nm}
+			, templete_mod_date = now()
+   	</insert>
+    
+    <delete id="deleteTemplete" parameterType="tblTempleteVO" >
+    -- com.grand.admin.templete.dao.TblTempleteDAOImpl.Mapper.deleteTemplete			 
+    
+    	DELETE FROM t_templete
+		WHERE templete_idx = #{templete_idx}
+    </delete>
+    
+    <delete id="deleteTempleteFile" parameterType="tblTempleteVO" >
+    -- com.grand.admin.templete.dao.TblTempleteDAOImpl.Mapper.deleteTempleteFile			 
+    
+    	DELETE FROM t_file_path
+		WHERE file_parent_idx = #{templete_idx}
+    </delete>
+    
+    <insert id="insertTempleteFile" parameterType="tblTempleteVO" >
+   	 -- com.grand.admin.templete.dao.TblTempleteDAOImpl.Mapper.insertTempleteFile			 
+   	 
+   		INSERT INTO t_file_path
+		(file_gubun, file_parent_idx, file_regdate, file_path_idx, groupCode)
+		SELECT 
+					#{tcd_attr3} 
+					, #{templete_idx}
+					, now()
+					, tfp.idx
+					, tfp.groupCode
+		FROM 
+					(
+						SELECT 
+									SUBSTRING_INDEX(SUBSTRING_INDEX(k.n, ',', numbers.n), ',', -1) val
+			  			FROM 
+			  						(
+			  							SELECT 1 n UNION ALL SELECT 2 UNION ALL SELECT 3
+				    					UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6
+				    					UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9
+				    					UNION ALL SELECT 10
+				    				) numbers 
+				    	INNER JOIN (SELECT #{file_name_arr} n) k
+				  					ON CHAR_LENGTH(k.n) - CHAR_LENGTH(REPLACE(k.n, ',', '')) >= numbers.n - 1
+				  	) arr 
+		LEFT OUTER JOIN 
+					t_file tfp 
+		ON 
+				arr.val = tfp.fileName
+   	</insert>
+    
+    <select id="selectTempleteFileList" resultType="tblTempleteVO">
+   -- com.grand.admin.templete.dao.TblTempleteDAOImpl.Mapper.selectTempleteFileList			 
+   
+			SELECT 
+				tf.idx
+				, tf.orgName
+				, tf.fileName
+				, get_typeCheck('extension',SUBSTRING_INDEX(tf.fileName,'.',-1),null) extension
+			FROM 
+				t_file_path tfp 
+			LEFT OUTER JOIN 
+				t_file tf 
+			ON tfp.file_path_idx = tf.idx
+			WHERE tfp.file_parent_idx = #{templete_idx}
+   
+   	</select>
+    
+</mapper>
+

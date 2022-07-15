@@ -1,0 +1,57 @@
+/* common */
+section, footer {padding: 50px 0;}
+.container {/*width:1200px; */margin: 0 auto; word-break:break-all;}
+.container h1, .container h2 {font-size: 22px; font-weight: 600; margin-bottom: 10px}
+.container h3 {font-size: 18px; font-weight: 700;margin-bottom: 10px;}
+.container p {font-size: 17px;line-height: 1.2;margin-bottom: 10px;}
+.container img {max-width:100%;}
+.container a {display: block;}
+.container .left {float:left;}
+.container .right {float:right;}
+.container .button-area li {float:left;}
+.container .button{width:100px; height: 50px; margin-right: 10px; border: 1px solid #000; border-radius: 5px; text-align: center;line-height: 50px; font-size: 15px;}
+.container .desc {color:#ccc;}
+.container .text-area {padding:50px; border: 1px solid #000;}
+.container .sns {padding: 10px 0;}
+.container .sns li {float:left;margin:0 5px;width: 30px;}
+.container .copyright {color: #666; padding: 20px 0;}
+
+/* 상단 */
+#style01 {background-color:#fff; height:50px;line-height:50px;}
+#style01 h2 {line-height:50px;}
+#style01 ul li {float:left;margin:0 10px;}
+
+#style02 {background-color: #e9f4ff; text-align: center;}
+#style02 ul {font-size: 0;}
+#style02 ul li {display: inline-block;font-size:17px;margin: 10px 15px;}
+
+#style03 {background-color: #d3e9ff}
+
+#style04 {background-color: #c8e3ff;}
+#style04 .left {width:50%}
+#style04 .right {float:right; width:45%;padding: 20px;}
+
+#style05 {background-color: #b2d8ff; text-align:center;}
+
+
+/* 하단 */
+#footer01{background-color: #fff; height:50px; line-height: 50px;}
+#footer01 h1 {line-height: 50px;}
+#footer01 ul li {float:left; margin: 0 10px;}
+
+#footer02{background-color: #e7f1e8;}
+#footer02 .left {width:25%;}
+#footer02 ul li {float:left;width:25%}
+
+#footer03{background-color: #d0e3d1;}
+#footer03 .left {width: 300px;}
+#footer03 .content .content-box {float: left; width:200px;}
+
+#footer04{background-color: #b9d6bb; text-align: center;}
+#footer04 h2 {margin-bottom: 20px;}
+#footer04 .sns {margin: 50px 0; }
+#footer04 .sns li{float: none; display: inline-block;}
+
+#footer05{background-color: #a2c8a4;}
+#footer05 .div {width: 20%;}
+#footer05 .content .content-box {float: left; width:20%;}

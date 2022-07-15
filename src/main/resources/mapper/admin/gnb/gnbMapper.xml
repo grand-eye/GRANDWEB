@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ 
+ 
+<mapper namespace="com.grand.admin.gnb.dao.GnbDAOImpl.Mapper">
+
+	
+	<insert id="insertGnbRule" parameterType="gnbVO" >
+
+	
+		 		INSERT INTO t_gnb_rule 
+		 		(
+		 			tgr_group_code			, 
+		 			tgr_gnb_code				, 
+		 			tgr_rule_yn					
+		 		)
+				VALUES 
+				(
+					  #{gnb_group_code}
+					, #{tm_code}
+					, #{rule}
+
+				)
+				ON DUPLICATE KEY 
+				UPDATE
+					  tgr_group_code    = #{gnb_group_code}
+					, tgr_gnb_code 		  = #{tm_code}
+					, tgr_rule_yn 		  = #{rule}
+					
+	
+	
+	</insert>
+	
+
+
+
+ 
+ 	<insert id="insertGnb" parameterType="gnbVO" >
+		 		INSERT INTO t_gnb_menu 
+		 		(
+		 			tm_code			, 
+		 			tm_level			, 
+		 			tm_parent			, 
+		 			tm_name			, 
+		 			tm_url				, 
+		 			tm_prefix			, 
+		 			tm_path			, 
+		 			tm_share_img	, 
+		 			tm_share_title	, 
+		 			tm_share_desc , 
+		 			tm_useyn			, 
+		 			tm_order			, 
+		 			tm_ssl				, 
+		 			tm_login			, 
+		 			tm_category
+		 		)
+				VALUES 
+				(
+					  #{tm_code}
+					, #{tm_level}
+					, #{tm_parent}
+					, #{tm_name}
+					, #{tm_url}
+					, #{tm_prefix}
+					, #{tm_path}
+					, #{tm_share_img}
+					, #{tm_share_title}
+					, #{tm_share_desc}
+					, #{tm_useyn}
+					, #{tm_order}
+					, #{tm_ssl}
+					, #{tm_login}
+					, #{tm_category}		
+				)
+				ON DUPLICATE KEY 
+				UPDATE
+					  tm_code  		  =  #{tm_code}
+					, tm_level 			  =  #{tm_level}
+					, tm_parent 		  =  #{tm_parent}
+					, tm_name 		  =  #{tm_name}
+					, tm_url 			  =  #{tm_url}
+					, tm_prefix 		  =  #{tm_prefix}
+					, tm_path 			  =  #{tm_path}
+					, tm_share_img  =  #{tm_share_img}
+					, tm_share_title  =  #{tm_share_title}
+					, tm_share_desc =  #{tm_share_desc}
+					, tm_useyn 		  =  #{tm_useyn}
+					, tm_order 		  =  #{tm_order}
+					, tm_ssl 			  =  #{tm_ssl}
+					, tm_login 		  =  #{tm_login}
+					, tm_category 	  =  #{tm_category}		
+ 	</insert>
+ 	
+ 	<select id="selectGnbMax"	resultType="int">
+ 		select
+ 			count( tm_code )
+		FROM   t_gnb_menu
+		where 1=1
+		and tm_category = #{s_category} 			
+ 	</select>
+ 	
+    <select id="selectExistsGnb"	resultType="int">
+			  SELECT 
+					count( tm_code )
+		      FROM   t_gnb_menu
+		      where 1=1
+		      and tm_code = #{s_code}
+    </select>    
+    
+    <select id="selectGnbOneData" resultType="gnbVO">
+    	
+    	SELECT
+    			tm_share_img
+    		,	tm_share_title
+    		,	tm_share_desc
+    		,	tm_name
+    	from
+    		t_gnb_menu
+    		
+    	where 1=1
+    	<if  test="s_url != null and !s_url.equals('')">
+    		and 
+    				(  
+    					tm_url = #{s_url} 
+    					or
+    					INSTR( tm_prefix , #{s_url})  <![CDATA[ > ]]>  0
+    				)
+    	</if>
+    	ORDER BY tm_level DESC
+    	limit 1
+    </select>
+    
+    
+    <select id="selectGnbOnlyClient" resultType="gnbVO">
+    -- com.grand.admin.gnb.dao.GnbDAOImpl.Mapper.selectGnbOnlyClient
+    		SELECT
+		 			tm_code			, 
+		 			tm_name			, 
+		 			tm_level			, 
+		 			tm_parent			, 		 			
+		 			tm_url				,
+		 			tm_login
+    		FROM   
+    					t_gnb_menu gm 
+    		WHERE
+    				1=1
+			<if  test="s_useyn != null and !s_useyn.equals('')">
+				AND tm_useyn = #{s_useyn}
+			</if>    	
+
+			<if  test="s_category != null and !s_category.equals('')">
+				AND tm_category = #{s_category}
+			</if>    
+					
+			<if  test="s_parent != null and !s_parent.equals('')">
+				AND tm_parent = #{s_parent}
+			</if>
+			
+			<if  test="s_code != null and !s_code.equals('')">
+				AND tm_code = #{s_code}
+			</if>    			    		
+			
+			<if  test="s_level != null and !s_level.equals('')">
+				AND tm_level = #{s_level}
+			</if>
+			
+			<if  test="s_ssl != null and !s_ssl.equals('')">
+				AND tm_ssl = #{s_ssl}
+			</if>
+			
+			<if  test="s_login != null and !s_login.equals('')">
+				AND tm_login = #{s_login}
+			</if>
+
+    		ORDER BY
+    			tm_order ASC	, tm_index ASC
+    </select>    
+    
+    <select id="selectGnb" resultType="gnbVO">
+      	    -- com.grand.admin.gnb.dao.GnbDAOImpl.Mapper.selectGnb
+    	     
+    		SELECT
+    				tm_index			,
+		 			tm_code				, 
+		 			tm_level			, 
+		 			tm_parent			, 
+		 			tm_name				, 
+		 			tm_url				, 
+		 			tm_prefix			, 
+		 			tm_path				, 
+		 			tm_share_img		, 
+		 			tm_share_title		, 
+		 			tm_share_desc 		, 
+		 			tm_useyn			, 
+		 			tm_order			, 
+		 			tm_ssl				, 
+		 			tm_login			, 
+		 			tm_category	   					    ,
+		 			tm_code	 as 		id 				,
+		 			tm_name  as 		text			,
+		 			ifnull( gr.tgr_rule_yn, 'N') as rule	,
+		 			gr.tgr_index
+    		FROM   
+    					t_gnb_menu gm left outer Join 
+						(
+							SELECT		
+								tgr_index				,
+								tgr_group_code	,
+								tgr_gnb_code		,
+								tgr_rule_yn			
+							FROM
+								t_gnb_rule
+							where 1=1
+
+							<if  test="s_group != null and !s_group.equals('')">
+								AND tgr_group_code = #{s_group}
+							</if>        						
+						) gr
+    					on gm.tm_code = gr.tgr_gnb_code
+    		WHERE
+    				1=1
+			<if  test="s_useyn != null and !s_useyn.equals('')">
+				AND tm_useyn = #{s_useyn}
+			</if>    	
+
+			<if  test="s_category != null and !s_category.equals('')">
+				AND tm_category = #{s_category}
+			</if>    
+					
+			<if  test="s_parent != null and !s_parent.equals('')">
+				AND tm_parent = #{s_parent}
+			</if>
+			
+			<if  test="s_code != null and !s_code.equals('')">
+				AND tm_code = #{s_code}
+			</if>    			    		
+			
+			<if  test="s_level != null and !s_level.equals('')">
+				AND tm_level = #{s_level}
+			</if>
+			
+			<if  test="s_rule != null and !s_rule.equals('')">
+				AND tgr_rule_yn = #{s_rule}
+			</if>
+			
+			<if  test="s_ssl != null and !s_ssl.equals('')">
+				AND tm_ssl = #{s_ssl}
+			</if>
+			
+			<if  test="s_login != null and !s_login.equals('')">
+				AND tm_login = #{s_login}
+			</if>
+			
+		      <choose>
+		     		<when test="s_layout != null and !s_layout.equals('')">
+		     		
+							<if  test="s_layout.equals('ADMIN')">
+								AND ifnull( tm_login, 'N') = 'N'
+							</if>
+							
+							<if  test="s_layout.equals('BOT')">
+								AND ifnull( tm_login, 'N') = 'Y'
+							</if>									
+							
+									     		
+		     		</when>
+		     	</choose>		
+		     		
+    		ORDER BY
+    			tm_order ASC	, tm_index ASC
+    </select>
+ 	
+ 	<delete id="deleteGnb" parameterType="gnbVO">
+    	
+    	DELETE FROM t_gnb_menu
+    	WHERE tm_code = #{ tm_code }
+    	or tm_parent = #{ tm_code }
+    		
+    </delete>
+ 
+     
+</mapper>

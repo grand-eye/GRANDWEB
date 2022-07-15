@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.grand.admin.board.dao.BoardDAOImpl.Mapper">
+ 
+    <!-- 
+        mybatis-config.xml의 typeAlias에 등록해두지 않았다면 
+        
+        <select id="selectMember" resultType="com.example.dto.MemberVO" >
+            SELECT ID, PW ,NAME FROM TEST
+        </select>
+        
+        이렇게 해야 한다.
+    -->
+    
+    
+   	<insert id="insertBoard" parameterType="boardVO" useGeneratedKeys="true" keyProperty="board_idx">
+   	-- com.grand.admin.board.dao.BoardDAOImpl.Mapper.insertBoard
+			INSERT INTO t_board
+			(
+					board_idx
+				,	board_menu_code
+				,	board_title
+				,	board_cate_L
+				, 	board_cate_M
+				,	board_reg_id
+				, 	board_reg_name
+				<if test="board_reg_pass != null and board_reg_pass != ''">
+				, 	board_reg_pass
+				</if>
+				,	board_reg_date
+				,	board_useyn
+				,	board_notice
+				<if test="board_show_str_date != null and board_show_str_date != ''">
+				,	board_show_str_date
+				</if>
+				<if test="board_show_end_date != null and board_show_end_date != ''">
+				,	board_show_end_date
+				</if>
+				<if test="board_mobile != null and board_mobile != ''">
+				,	board_mobile
+				</if>
+				<if test="board_sms_yn != null and board_sms_yn != ''">
+				,	board_sms_yn
+				</if>
+				<if test="board_email != null and board_email != ''">
+				,	board_email
+				</if>
+				<if test="board_email_yn != null and board_email_yn != ''">
+				,	board_email_yn
+				</if>
+				<if test="save_file != null and save_file != ''">
+				,	save_file
+				</if>
+				,	board_show
+				,	board_detail				
+				,	board_upload_drop
+				,	board_secret
+				<if test="board_cnt != null and board_cnt != ''">
+				,	board_cnt
+				</if>
+				<if test="board_url != null and board_url != ''">
+				,	board_url
+				</if>
+				<if test="board_etc1 != null and board_etc1 != ''">
+				,	board_etc1
+				</if>
+				<if test="board_etc2 != null and board_etc2 != ''">
+				,	board_etc2
+				</if>
+				<if test="board_etc3 != null and board_etc3 != ''">
+				,	board_etc3
+				</if>
+				<if test="board_etc4 != null and board_etc4 != ''">
+				,	board_etc4
+				</if>
+				<if test="board_etc5 != null and board_etc5 != ''">
+				,	board_etc5
+				</if>
+				<if test="board_etc6 != null and board_etc6 != ''">
+				,	board_etc6
+				</if>
+				<if test="board_etc7 != null and board_etc7 != ''">
+				,	board_etc7
+				</if>
+				<if test="board_etc8 != null and board_etc8 != ''">
+				,	board_etc8
+				</if>
+				<if test="board_etc9 != null and board_etc9 != ''">
+				,	board_etc9
+				</if>
+				<if test="board_etc10 != null">
+				,	board_etc10
+				</if>
+				<if test="utm_source != null and utm_source != ''">
+				,	utm_source
+				</if>
+				<if test="board_memory != null and board_memory != ''">
+				,	board_memory
+				</if>
+				
+			)
+			VALUES
+			(
+					#{board_idx}
+				,	#{board_menu_code}
+				,	#{board_title}
+				,	#{board_cate_L}
+				,	#{board_cate_M}
+				,	#{board_reg_id}
+				,	#{board_reg_name}
+				<if test="board_reg_pass != null and board_reg_pass != ''">
+				,	#{board_reg_pass}
+				</if>
+				<choose>
+					<when test="board_reg_date == null or board_reg_date ==''">
+					,now()
+					</when>
+					<otherwise>
+					,#{board_reg_date}
+					</otherwise>
+				</choose>
+				,	'Y'
+				,	IFNULL(#{board_notice},'N')
+				<if test="board_show_str_date != null and board_show_str_date != ''">
+				,	#{board_show_str_date}
+				</if>
+				<if test="board_show_end_date != null and board_show_end_date != ''">
+				 ,	#{board_show_end_date}
+				</if>
+				<if test="board_mobile != null and board_mobile != ''">
+				,	#{board_mobile}
+				</if>
+				<if test="board_sms_yn != null and board_sms_yn != ''">
+				,	#{board_sms_yn}
+				</if>
+				<if test="board_email != null and board_email != ''">
+				,	#{board_email}
+				</if>
+				<if test="board_email_yn != null and board_email_yn != ''">
+				,	#{board_email_yn}
+				</if>
+				<if test="save_file != null and save_file != ''">
+				,	#{save_file}
+				</if>
+				,	#{board_show}
+				,	#{board_detail}
+				,	#{board_upload_drop}
+				,	#{board_secret}
+				<if test="board_cnt != null and board_cnt != ''">
+				,	#{board_cnt}
+				</if>
+				<if test="board_url != null and board_url != ''">
+				,	#{board_url}
+				</if>
+				<if test="board_etc1 != null and board_etc1 != ''">
+				,	#{board_etc1}
+				</if>
+				<if test="board_etc2 != null and board_etc2 != ''">
+				,	#{board_etc2}
+				</if>
+				<if test="board_etc3 != null and board_etc3 != ''">
+				,	#{board_etc3}
+				</if>
+				<if test="board_etc4 != null and board_etc4 != ''">
+				,	#{board_etc4}
+				</if>
+				<if test="board_etc5 != null and board_etc5 != ''">
+				,	#{board_etc5}
+				</if>
+				<if test="board_etc6 != null and board_etc6 != ''">
+				,	#{board_etc6}
+				</if>
+				<if test="board_etc7 != null and board_etc7 != ''">
+				,	#{board_etc7}
+				</if>
+				<if test="board_etc8 != null and board_etc8 != ''">
+				,	#{board_etc8}
+				</if>
+				<if test="board_etc9 != null and board_etc9 != ''">
+				,	#{board_etc9}
+				</if>
+				<if test="board_etc10 != null">
+				,	#{board_etc10}
+				</if>
+				<if test="utm_source != null and utm_source != ''">
+				,	#{utm_source}
+				</if>
+				<if test="board_memory != null and board_memory != ''">
+				,	#{board_memory}
+				</if>
+			)
+			ON DUPLICATE KEY 
+			UPDATE
+					board_idx		 = #{board_idx}
+				<if test="board_title != null and board_title != ''">				
+				,	board_title	 = #{board_title}
+				</if>
+				<if test="board_menu_code != null and board_menu_code != ''">
+				,	board_menu_code = #{board_menu_code}
+				</if>
+				<if test="board_cate_L != null and board_cate_L != '' ">
+				,	board_cate_L = #{board_cate_L}
+				</if>
+				<if test="board_cate_M != null and board_cate_M != '' ">
+				,	board_cate_M = #{board_cate_M}
+				</if>
+				,	board_notice = IFNULL(#{board_notice},'N')
+				<if test="board_reg_name != null and board_reg_name != ''">
+				,	board_reg_name = #{board_reg_name}
+				</if>
+				<if test="board_reg_pass != null and board_reg_pass != ''">
+				,	board_reg_pass = #{board_reg_pass}				
+				</if>
+				<if test="board_show_str_date != null and board_show_str_date != ''">
+				,	board_show_str_date = #{board_show_str_date}
+				</if>
+				<if test="board_show_end_date != null and board_show_end_date != ''">
+				,	board_show_end_date = #{board_show_end_date}
+				</if>
+				<if test="board_mobile != null and board_mobile != ''">
+				,	board_mobile = #{board_mobile}
+				</if>
+				<if test="board_sms_yn != null and board_sms_yn != ''">
+				,	board_sms_ym= #{board_sms_yn}
+				</if>
+				<if test="board_email != null and board_email != ''">
+				,	board_email= #{board_email}
+				</if>
+				<if test="board_email_yn != null and board_email_yn != ''">
+				,	board_email_ym= #{board_email_yn}
+				</if>
+				<if test="save_file != null and save_file != ''">
+				,	save_file= #{save_file}
+				</if>
+				,	board_show = #{board_show}
+				,	board_detail = #{board_detail}
+				,	board_upload_drop = #{board_upload_drop}
+				,	board_mod_id = #{board_mod_id}
+				,	board_mod_date = now()
+				<if test="board_secret != null and board_secret != ''">
+				,	board_secret = #{board_secret}
+				</if>
+				<if test="board_cnt != null and board_cnt != ''">
+				,	board_cnt = #{board_cnt}
+				</if>
+				<if test="board_reply != null and board_reply != ''">
+				,	board_reply= #{board_reply}
+				</if>
+				<if test="board_url != null and board_url != ''">
+				,	board_url= #{board_url}
+				</if>
+				<if test="board_etc1 != null and board_etc1 != ''">
+				,	board_etc1= #{board_etc1}
+				</if>
+				<if test="board_etc2 != null and board_etc2 != ''">
+				,	board_etc2= #{board_etc2}
+				</if>
+				<if test="board_etc3 != null and board_etc3 != ''">
+				,	board_etc3= #{board_etc3}
+				</if>
+				<if test="board_etc4 != null and board_etc4 != ''">
+				,	board_etc4= #{board_etc4}
+				</if>
+				<if test="board_etc5 != null and board_etc5 != ''">
+				,	board_etc5= #{board_etc5}
+				</if>
+				<if test="board_etc6 != null and board_etc6 != ''">
+				,	board_etc6= #{board_etc6}
+				</if>
+				<if test="board_etc7 != null and board_etc7 != ''">
+				,	board_etc7= #{board_etc7}
+				</if>
+				<if test="board_etc8 != null and board_etc8 != ''">
+				,	board_etc8= #{board_etc8}
+				</if>
+				<if test="board_etc9 != null and board_etc9 != ''">
+				,	board_etc9= #{board_etc9}
+				</if>
+				<if test="board_etc10 != null">
+				,	board_etc10= #{board_etc10}
+				</if>
+				<if test="board_memory != null and board_memory != ''">
+				,	board_memory= #{board_memory}
+				</if>
+   	</insert>
+   	
+   	<insert id="insertBoardFile" parameterType="boardVO" >
+   	-- com.grand.admin.board.dao.BoardDAOImpl.Mapper.insertBoardFile
+   	
+   		INSERT INTO t_file_path
+		(file_gubun, file_parent_idx, file_regdate, file_path_idx, groupCode)
+		SELECT 
+					#{tcd_attr3} 
+					, #{board_idx}
+					, now()
+					, tfp.idx
+					, tfp.groupCode
+		FROM 
+					(
+						SELECT 
+									SUBSTRING_INDEX(SUBSTRING_INDEX(k.n, ',', numbers.n), ',', -1) val
+			  			FROM 
+			  						(
+			  							SELECT 1 n UNION ALL SELECT 2 UNION ALL SELECT 3
+				    					UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6
+				    					UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9
+				    					UNION ALL SELECT 10
+				    				) numbers 
+				    	INNER JOIN (SELECT #{file_name_arr} n) k
+				  					ON CHAR_LENGTH(k.n) - CHAR_LENGTH(REPLACE(k.n, ',', '')) >= numbers.n - 1
+				  	) arr 
+		LEFT OUTER JOIN 
+					t_file tfp 
+		ON 
+				arr.val = tfp.fileName
+   	</insert>
+    
+    <delete id="deleteBoardFile" parameterType="boardVO" >
+    -- com.grand.admin.board.dao.BoardDAOImpl.Mapper.deleteBoardFile
+    
+    	DELETE FROM t_file_path
+		WHERE file_parent_idx = #{board_idx}
+    </delete>
+    
+    <update id="deleteBoard" parameterType="boardVO" >
+    -- com.grand.admin.board.dao.BoardDAOImpl.Mapper.deleteBoard
+    
+    	UPDATE t_board
+    		SET board_useyn = 'N'
+   		WHERE board_idx = #{board_idx}
+    </update>
+    
+    <update id="updateBoardCount" parameterType="boardVO" >
+    -- com.grand.admin.board.dao.BoardDAOImpl.Mapper.updateBoardCount
+    
+    	UPDATE t_board
+		SET
+			board_cnt = board_cnt + 1
+   		WHERE board_idx = #{board_idx}
+    		
+    </update>
+    
+    <update id="updateGrid" parameterType="boardVO" >
+    -- com.grand.admin.board.dao.BoardDAOImpl.Mapper.updateGrid
+    
+    	UPDATE 
+    		t_board
+    	SET 
+    		consult_state = #{consult_state}
+    		,reservation_state = #{reservation_state}
+    		,visit_state = #{visit_state}
+    		,contract_state = #{contract_state}
+    		<if test="board_responsibility !=null and board_responsibility !=''">
+    		,board_responsibility = #{board_responsibility}
+    		</if>
+    		<if test="board_responsetime !=null">
+    		,board_responsetime = #{board_responsetime}
+    		</if>
+    		<if test="board_etc9 !=null and board_etc9 !=''">
+    		,board_etc9 = #{board_etc9}
+    		</if>
+    		<if test="chief_complaint !=null and chief_complaint !=''">
+    		,chief_complaint = #{chief_complaint}
+    		</if>
+    		<if test="board_menu_code !=null and board_menu_code !=''">
+    		,board_menu_code = #{board_menu_code}
+    		</if>
+    		<if test="board_cate_L !=null and board_cate_L !='' ">
+    		,board_cate_L = #{board_cate_L}
+    		</if>
+    		<if test="board_writeReserve !=null">
+    		,board_writeReserve = #{board_writeReserve}
+    		</if>
+   		WHERE 
+   			board_idx = #{board_idx}
+    </update>
+    
+     <insert id="insertHistory" parameterType="boardVO" >
+    -- com.grand.admin.board.dao.BoardDAOImpl.Mapper.insertHistory
+    
+    	INSERT INTO t_history
+			(
+					board_idx
+					,board_content
+					,board_reg_date
+					,board_menu_code
+					,board_reg_ip
+					,board_reg_name
+					,board_mod_id
+			)
+			VALUES
+			(
+					#{board_idx}
+				,	#{board_content}
+				,	now()
+				,	#{board_menu_code}
+				,	#{commonIp}
+				,	#{board_reg_name}
+				,	#{board_mod_id}
+			)
+    </insert>
+    
+    <sql id="whereBoardList">
+    	WHERE
+    		1=1
+    		<if test = "board_menu_code !='BDMNG' and board_menu_code !='BD18'" >
+    		AND 
+    		board_menu_code = #{board_menu_code}
+    		</if>
+    		<if test = "board_menu_code =='BDMNG' or board_menu_code =='BD18'" >
+	    		<choose>
+	    			<when test = "board_menu_code_search == null or board_menu_code_search ==''">
+	    				AND 
+	    				board_menu_code in ('BD11','BD12','BD08','BD16','BD17','BD19','BD20','BD21','BD22','BD23','BD24','BD30','BD31','BD32','BD33','BD34','BD35')
+	    			</when>
+	    			<when test = "board_menu_code_search == 'SC01'">
+	    				AND 
+	    					board_menu_code = 'BD17'
+	    				AND
+	    					utm_source ='mobon'
+	    			</when>
+	    			<when test = "board_menu_code_search == 'SC02'">
+	    				AND 
+	    					board_menu_code = 'BD17'
+	    				AND
+	    					utm_source ='instar'
+	    			</when>
+	    			<when test = "board_menu_code_search == 'BD17'">
+	    				AND 
+	    					board_menu_code = #{board_menu_code_search}
+	    				AND
+	    					utm_source not in ('instar','mobon')
+	    			</when>
+	    			<otherwise>
+	    				AND 
+	    				board_menu_code = #{board_menu_code_search}
+	    				<if test = "board_cate_search != null and board_cate_search != ''">
+	    					<choose>
+	    						<when test = "board_menu_code_search.equals('BD11')">
+		    						AND 
+		    						board_cate_L like CONCAT('%',#{board_cate_search},'%')
+	    						</when>
+		    					<otherwise>
+		    						AND 
+		    						board_cate_L = #{board_cate_search}
+		    					</otherwise>
+	    					</choose>
+	    				</if>
+	    			</otherwise>
+	    		</choose>
+    		</if>
+    		
+	        AND board_useyn != 'N'
+	      	
+	      	<if test="board_idx != null and board_idx != ''">
+	      		AND bd.board_idx = #{board_idx}
+	      	</if>
+	      	
+		    <if test="board_search != null and board_search != ''">
+		    	AND
+		    	<if test="board_menu_code.equals('BD16')">
+					bd.board_reg_name like CONCAT('%', #{board_search}, '%')
+				</if>
+				<if test=" !board_menu_code.equals('BD16') ">
+							<if test=" board_search_divide == 'NAME'">
+								bd.board_reg_name like CONCAT('%', #{board_search}, '%')
+							</if>
+							<if test=" board_search_divide == 'TITLE'">
+								bd.board_title like CONCAT('%', #{board_search}, '%')
+							</if>
+							<if test=" board_search_divide == 'DETAIL'">
+								bd.board_detail like CONCAT('%', #{board_search}, '%')
+							</if>
+							<if test=" board_search_divide == 'MOBILE'">
+								bd.board_mobile like CONCAT('%', #{board_search}, '%')
+							</if>
+							<if test=" board_search_divide == 'ACTOR'">
+								bd.board_etc1 like CONCAT('%', #{board_search}, '%')
+							</if>
+							<if test=" board_search_divide == 'ALL' or board_search_divide == null or board_search_divide ==''">
+								(
+									bd.board_title like CONCAT('%', #{board_search}, '%')
+								OR
+									bd.board_detail like CONCAT('%', #{board_search}, '%')
+								OR
+								    bd.board_reg_name like CONCAT('%', #{board_search}, '%')
+							    OR
+								    bd.board_etc1 like CONCAT('%', #{board_search}, '%')
+								OR
+								    bd.board_mobile like CONCAT('%', #{board_search}, '%')    						
+								)	
+							</if>
+				</if>				
+		    </if>
+		    <if test="board_start_date !=null and board_start_date !=''">
+		    	AND	board_reg_date >= #{board_start_date}
+		    </if>
+		    <if test="board_end_date !=null and board_end_date !=''">
+		    	AND	board_reg_date  <![CDATA[<=]]>  DATE_ADD(#{board_end_date}, INTERVAL 1 DAY)
+		    </if>
+		    <if test="board_cate_L_search != null and board_cate_L_search != ''">
+				AND bd.board_cate_L = #{board_cate_L_search}
+		    </if>
+		     <if test="board_cate_M_search != null and board_cate_M_search != ''">
+				AND bd.board_cate_M = #{board_cate_M_search}
+		    </if>
+			<if test="board_notice != null and !board_notice.equals('')">
+				AND bd.board_notice = #{board_notice}	
+			</if>
+    </sql>
+    
+    <select id="selectBoardCount" resultType="int">
+    
+			  SELECT
+					COUNT(*)  
+				FROM t_board bd
+		      <include refid="whereBoardList" />
+			    
+    </select>    
+    
+    <select id="selectBoard" resultType="boardVO">
+    -- com.grand.admin.board.dao.BoardDAOImpl.Mapper.selectBoard
+   	SELECT cast(@rownum := @rownum+1 as unsigned) as row_num
+			,t.board_idx
+			,t.board_menu_code
+			,t.board_title
+			,t.board_cate_L
+			,t.board_cate_M
+			,t.board_cate_S
+			,t.board_reg_id
+			,t.board_reg_name
+			,t.board_reg_pass						
+			,t.board_reg_date
+			,t.board_reg_ip
+			,t.board_mobile
+			,t.board_sms_yn
+			,t.board_email
+			,t.board_email_yn			
+			,REPLACE(SUBSTRING(t.board_reg_date,1,10),'-','.') board_reg_date_type
+			,t.board_useyn
+			,t.board_notice
+			,t.board_show_str_date
+			,REPLACE(SUBSTRING(t.board_show_str_date,1,10),'-','.') board_show_str_date_type
+			,t.board_show_end_date
+			,t.board_detail
+			,t.board_show
+			,t.board_cnt
+			,t.board_mod_id
+			,t.board_mod_date
+			,t.board_url
+			,t.board_secret
+			,t.board_reply
+			,t.board_etc1
+			,t.board_etc2
+			,t.board_etc3
+			,t.board_etc10
+			,t.utm_source
+			,t.utm_medium
+			,t.utm_campaign
+			,t.utm_term
+			,t.utm_content
+			,t.utm_path
+			,t.board_memory
+			,t.save_file
+			,tcd.tcd_title as tcd_title
+			,tcds.tcd_title as tcds_title	
+	FROM t_board t
+	left OUTER join t_code_detail tcd
+	on t.board_cate_L = tcd.tcd_code
+	left OUTER join t_code_detail tcds
+	on t.board_cate_M = tcds.tcd_code
+	WHERE
+		(@rownum:=0)=0
+	AND
+		board_menu_code = #{board_menu_code}
+	AND
+		t.board_useyn !='N'
+	<if test="board_idx != null and board_idx !=0">	
+	AND
+		board_idx = #{board_idx}
+	</if>	
+	-- order by t.board_reg_date desc,board_idx desc
+	order by board_idx desc
+	LIMIT #{startpage} , #{rows}
+    </select>
+    
+    <select id="selectBoardOptionList" resultType="boardVO">
+    -- com.grand.admin.board.dao.BoardDAOImpl.Mapper.selectBoardOptionList
+			SELECT 
+						tcd1.tcd_code, 
+						tcd1.tcd_title, 
+						tcd1.tcd_attr1, 
+						tcd1.tcd_attr2, 
+						REPLACE(tcd1.tcd_attr3,'N','notice') tcd_attr3,				
+						tcd1.tcd_attr2 tcd_master_code,
+						tcd1.tcd_attr3 tcd_fileYN, 
+						tcd1.tcd_attr4,
+						tcd1.tcd_attr5,
+						tcd1.tcd_attr6
+			FROM 
+						t_code_detail tcd1 
+			LEFT OUTER JOIN 
+						t_code_detail tcd2 
+			ON 
+						tcd1.tcd_code = tcd2.tcd_attr1
+			WHERE 1=1
+				 AND tcd1.tcd_master_code = 'A002'
+			<if test="board_menu_code != null and board_menu_code != ''">
+				AND tcd1.tcd_code = #{board_menu_code}
+    		</if>
+    		<if test="board_menu_code_text != null and board_menu_code_text != ''">
+				AND tcd1.tcd_title = #{board_menu_code_text}
+    		</if>
+    
+    </select>
+    
+    <select id="selectBoardTop" resultType="boardVO">
+    -- com.grand.admin.board.dao.BoardDAOImpl.Mapper.selectBoardTop
+    SELECT bd.board_idx
+						,bd.board_menu_code
+						,bd.board_title
+						,cdt.tcd_title board_cate_L
+						,cdt.tcd_code
+						,bd.board_cate_M
+						,bd.board_cate_S
+						,bd.board_reg_date
+						,bd.board_useyn
+						,bd.board_notice
+						,bd.board_show_str_date
+						,bd.board_show_end_date
+						,bd.board_detail
+						,bd.board_upload_drop
+						,bd.board_show
+						,bd.board_cnt
+	FROM t_board bd LEFT OUTER JOIN t_code_detail cdt ON bd.board_cate_L = cdt.tcd_code
+	WHERE 1=1
+	  	<!-- AND bd.board_useyn != 'N' -->
+	  	<if test="board_menu_code != null and board_menu_code != ''">
+	  	AND bd.board_menu_code = #{board_menu_code}
+	  	</if>
+	  	<if test="board_cate_L != null and board_cate_L != ''">
+	  	AND bd.board_cate_L = #{board_cate_L}
+	  	</if>
+	ORDER BY bd.board_idx DESC
+	LIMIT 1
+    </select>
+    
+    <select id="selectBoardFileList" resultType="boardVO">
+   -- com.grand.admin.board.dao.BoardDAOImpl.Mapper.selectBoardFileList
+   
+			SELECT 
+				tf.idx
+				, tf.orgName
+				, tf.fileName
+				, get_typeCheck('extension',SUBSTRING_INDEX(tf.fileName,'.',-1),null) extension
+			FROM 
+				t_file_path tfp 
+			LEFT OUTER JOIN 
+				t_file tf 
+			ON tfp.file_path_idx = tf.idx
+			WHERE tfp.file_parent_idx = #{board_idx}
+   
+   	</select>
+
+    <select id="selectHolidayList" resultType="hospitalHolidayVO">
+   -- com.grand.admin.board.dao.BoardDAOImpl.Mapper.selectHolidayList
+   
+			SELECT 
+				idx
+				, date
+				, time
+				, gubun
+			FROM 
+				hospital_holiday
+			WHERE 1=1
+			<if test="date != null and date != ''">
+			AND YEAR(date)  = SUBSTRING_INDEX(#{date}, '-', 1)
+			AND MONTH(date) = SUBSTRING_INDEX(#{date}, '-', -1)		
+			</if>
+			<if test="time != null and time != ''">
+			AND time = #{time}
+			</if>
+			<if test="gubun != null and gubun != ''">
+			AND gubun = #{gubun}
+			</if>
+			<if test="date_full != null and date_full != ''">
+			AND date = #{date_full}
+			</if>
+			ORDER BY time asc
+   	</select>
+   	
+   	<delete id="deleteHoliday" parameterType="hospitalHolidayVO" >
+    -- com.grand.admin.board.dao.BoardDAOImpl.Mapper.deleteHoliday
+    
+    	DELETE 
+    	FROM 
+    				hospital_holiday
+		WHERE
+					date  	= #{date}
+			AND time 		= #{time}
+			<if test="gubun != null and gubun != ''">
+			AND	gubun 	= #{gubun}
+			</if>
+				
+    </delete>
+    
+    <insert id="insertHoliday" parameterType="hospitalHolidayVO" useGeneratedKeys="true" keyProperty="board_idx">
+   	-- com.grand.admin.board.dao.BoardDAOImpl.Mapper.insertHoliday
+			INSERT INTO hospital_holiday
+			(
+					date
+				,	time
+				<if test="gubun != null and gubun != ''">
+				,	gubun
+				</if>
+			)
+			VALUES
+			(
+					#{date}
+				,	#{time}
+				<if test="gubun != null and gubun != ''">
+				,	#{gubun}
+				</if>
+			)
+   	</insert>
+   	
+    
+</mapper>

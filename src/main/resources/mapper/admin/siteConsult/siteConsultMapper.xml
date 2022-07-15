@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.grand.admin.consult.dao.SiteConsultDAOImpl.Mapper">
+
+
+    <select id="selectSiteConsultList" resultType="siteConsultVO">
+    -- com.grand.admin.consult.dao.SiteConsultDAOImpl.Mapper.selectSiteConsultList
+	   	SELECT 
+   				  	  sc.mh_no,
+					  sc.mh_type,
+					  sc.mb_id,
+					  sc.mh_name,
+					  sc.mh_email,
+					  sc.mh_category,
+					  sc.mh_message,
+					  sc.mh_reply,
+					  sc.mh_hp,
+					  sc.mh_datetime,
+					  sc.mh_booking,
+					  sc.mh_log,
+					  sc.mh_ip,
+					  sc.mh_consult,
+					  sc.mh_reservation,
+					  sc.mh_responsetime,
+					  sc.is_mobile,
+					  sc.mh_etc1,
+					  sc.mh_etc2,
+					  sc.mh_etc3,
+					  sc.mh_etc4,
+					  sc.mh_etc5,
+					  sc.mh_flow,
+					  sc.mh_keyword,
+					  sc.vi_referer,
+					  sc.utm_source,
+					  sc.utm_medium,
+					  sc.utm_campaign,
+					  
+					  sc.utm_term ,
+  					  sc.utm_content ,
+  					  sc.utm_path ,
+  					  sc.consult_state ,
+					  sc.reservation_state ,
+					  sc.visit_state ,
+					  sc.contract_state ,
+					  					  					  
+					  cdt.tcd_title,
+					  cdt.tcd_code,
+					  
+					  cdt_v.tcd_title as v_state
+			FROM   
+						site_consult sc
+			LEFT OUTER JOIN tbl_code_detail cdt
+				ON sc.mh_reservation = cdt.tcd_code
+			LEFT OUTER JOIN tbl_code_detail cdt_v
+				ON sc.consult_state = cdt_v.tcd_code
+				and sc.reservation_state = cdt_v.tcd_code
+				and sc.visit_state = cdt_v.tcd_code
+				and sc.contract_state = cdt_v.tcd_code	
+			WHERE
+						1=1
+			<if test = "mh_type !=null and mh_type !='' and mh_type != 'ALL' ">
+			AND
+				mh_type = #{mh_type}
+			</if>
+			<if test="board_search != null and board_search != ''">
+				AND 
+				<if test=" board_search_divide == 'SOURCE'">
+					utm_source like CONCAT('%', #{board_search}, '%')
+				</if>
+				<if test=" board_search_divide == 'MEDIUM'">
+					utm_medium like CONCAT('%', #{board_search}, '%')
+				</if>
+				<if test=" board_search_divide == 'CAMPAIGN'">
+					utm_campaign like CONCAT('%', #{board_search}, '%')
+				</if>
+				<if test=" board_search_divide == null or board_search_divide ==''">
+					mh_name like CONCAT('%', #{board_search}, '%')
+				</if>
+		    </if>
+		    <if test="board_start_date !=null and board_start_date !=''">
+		    	AND	mh_datetime >= #{board_start_date}
+		    </if>
+		    <if test="board_end_date !=null and board_end_date !=''">
+		    	AND	mh_datetime <![CDATA[<=]]> #{board_end_date}
+		    </if>	
+			<if test = "mh_reservation !=null and mh_reservation !='' and mh_reservation != 'ALL' ">
+			AND
+				mh_reservation = #{mh_reservation}
+			</if>
+		
+		
+	      	<choose>
+		      	<when test="sort != null and sort !=''">
+					ORDER BY ${sort} ${order}		
+			    </when>
+	      		<otherwise>
+					ORDER BY mh_no desc			
+	      		</otherwise>
+	      	</choose>
+	      	
+			<if test='listType != "null" and listType != "excel"'>
+				LIMIT   #{startpage} , #{rows}
+			</if>
+    </select>
+    
+    
+    <select id="selectSiteConsultCount" resultType="int">
+    -- com.grand.admin.consult.dao.SiteConsultDAOImpl.Mapper.selectSiteConsultCount
+		  SELECT
+						COUNT(*)  
+			FROM 
+						site_consult 
+			WHERE
+						1=1
+			<if test = "mh_type !=null and mh_type !='' and mh_type != 'ALL' ">
+			AND
+				mh_type = #{mh_type}
+			</if>
+			<if test = "mh_reservation !=null and mh_reservation !='' and mh_reservation != 'ALL' ">
+			AND
+				mh_reservation = #{mh_reservation}
+			</if>
+			    
+    </select>    
+    
+    <select id="selectSiteConsult" resultType="siteConsultVO">
+    -- com.grand.admin.consult.dao.SiteConsultDAOImpl.Mapper.selectSiteConsult
+   		SELECT 
+	   				  sc.mh_no,
+					  sc.mh_type,
+					  sc.mb_id,
+					  sc.mh_name,
+					  sc.mh_email,
+					  sc.mh_category,
+					  sc.mh_message,
+					  sc.mh_reply,
+					  sc.mh_hp,
+					  sc.mh_datetime,
+					  sc.mh_booking,
+					  sc.mh_log,
+					  sc.mh_ip,
+					  sc.mh_consult,
+					  sc.mh_reservation,
+					  sc.mh_responsetime,
+					  sc.is_mobile,
+					  sc.mh_etc1,
+					  sc.mh_etc2,
+					  sc.mh_etc3,
+					  sc.mh_etc4,
+					  sc.mh_etc5,
+					  sc.mh_flow,
+					  sc.mh_keyword,
+					  sc.vi_referer,
+					  sc.utm_source,
+					  sc.utm_medium,
+					  sc.utm_campaign,
+					  
+					  
+					  sc.utm_term ,
+  					  sc.utm_content ,
+  					  sc.utm_path ,
+  					  sc.consult_state ,
+  					  sc.reservation_state ,
+  					  sc.visit_state ,
+  					  sc.contract_state ,
+  					    					  
+					  					  									  
+					  cdt.tcd_title as mh_reservation_name ,
+					  cdt_v.tcd_title as v_state	
+		FROM   
+					site_consult sc
+		LEFT OUTER JOIN tbl_code_detail cdt ON sc.mh_reservation = cdt.tcd_code
+		LEFT OUTER JOIN tbl_code_detail cdt_v ON sc.consult_state = cdt_v.tcd_code
+						and sc.reservation_state = cdt_v.tcd_code
+						and sc.visit_state = cdt_v.tcd_code
+						and sc.contract_state = cdt_v.tcd_code
+		WHERE 
+					mh_no	= #{mh_no}
+		
+    </select>
+    
+   <update id="updateSiteConsult" parameterType="siteConsultVO" >
+    -- com.grand.admin.consult.dao.SiteConsultDAOImpl.Mapper.updateSiteConsult
+    
+    	UPDATE 
+    					site_consult
+    		SET
+    					 mh_reply			= #{mh_reply}
+    		<if test='mh_reservation != null and mh_reservation != ""'>
+    				 	, mh_reservation 	= #{mh_reservation}
+    		</if>
+    					
+    				 	consult_state = #{consult_state}
+			    		,reservation_state = #{reservation_state}
+			    		,visit_state = #{visit_state}
+			    		,contract_state = #{contract_state}
+    		
+    	WHERE
+    					mh_no			= #{mh_no}
+    					   		
+    </update>
+    
+   <update id="updateSiteConsultGrid" parameterType="siteConsultVO" >
+    -- com.grand.admin.consult.dao.SiteConsultDAOImpl.Mapper.updateSiteConsultGrid
+    
+    	UPDATE 
+    					site_consult
+    		SET
+    					mh_reservation 	= #{mh_reservation}
+    					, mh_responsetime = now()
+    					, mod_id = #{mod_id}
+    					, consult_state = #{consult_state}
+			    		, reservation_state = #{reservation_state}
+			    		, visit_state = #{visit_state}
+			    		, contract_state = #{contract_state}
+    	WHERE
+    					mh_no			= #{mh_no}
+    					   		
+    </update>
+    
+    
+</mapper>

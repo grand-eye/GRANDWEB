@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.grand.admin.board.dao.BoardNoteDAOImpl.Mapper">
+ 
+    <!-- 
+        mybatis-config.xml의 typeAlias에 등록해두지 않았다면 
+        
+        <select id="selectMember" resultType="com.example.dto.MemberVO" >
+            SELECT ID, PW ,NAME FROM TEST
+        </select>
+        
+        이렇게 해야 한다.
+    -->
+
+    <select id="selectBoardNote" resultType="noteVO" parameterType="noteVO">
+   	-- com.grand.admin.board.dao.BoardNoteDAOImpl.Mapper.selectBoardNote
+			SELECT 
+				board_idx
+				,board_name
+				,board_detail
+				,board_reg_date
+				,board_update_date
+				,board_use_yn
+			FROM 
+				tbl_note
+			<if test ="board_idx != 0">
+			WHERE
+				board_idx = #{board_idx}
+			</if>	
+   	</select>
+   	
+   	<insert id="insertNote" parameterType="noteVO" useGeneratedKeys="true" keyProperty="board_idx">
+   	-- com.grand.admin.board.dao.BoardNoteDAOImpl.Mapper.insertNote
+			INSERT INTO tbl_note
+			(
+				board_name
+				,board_detail
+				,board_reg_date
+				,board_update_date
+				,board_use_yn
+				,board_delete_yn
+			)	
+			VALUES	
+			(
+				#{board_name}
+				,#{board_detail}
+				,now()
+				,now()
+				,ifnull(#{board_use_yn},'N')
+				,ifnull(#{board_delete_yn},'N')
+			)
+			ON DUPLICATE KEY 
+			UPDATE 
+				board_name = #{board_name}
+				,board_detail = #{board_detail}
+				,board_update_date = now()
+				,board_use_yn = #{board_use_yn}
+			
+   	</insert>
+   	
+   	<delete id="deleteNote" parameterType="noteVO">
+   	-- com.grand.admin.board.dao.BoardNoteDAOImpl.Mapper.deleteNote
+			DELETE FROM tbl_note
+			WHERE board_idx = #{board_idx}
+   	</delete>
+    
+</mapper>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.grand.admin.landing.dao.TblLandingDAOImpl.Mapper">
+     
+     
+     <sql id="whereLandingList">
+     	WHERE
+     					1=1
+     	
+     	<if test="landing_idx != null and landing_idx != ''">
+			AND tl.landing_idx = #{landing_idx}
+	    </if>
+	    
+	    <if test="landing_key != null and landing_key != ''">
+			AND tl.landing_key = #{landing_key}
+	    </if>
+	    
+	    <if test="board_search != null and board_search != ''">
+	    	AND tl.landing_title CONCAT('%', #{board_search}, '%')
+	    </if>
+     </sql>
+     
+    <select id="selectLandingList" resultType="tblLandingVO">
+   -- com.grand.admin.landing.dao.TblLandingDAOImpl.Mapper.selectLandingList
+		SELECT 
+					tl.landing_idx
+					, tl.landing_cate
+					, tl.landing_title
+					, tl.landing_key
+					, tl.landing_useyn
+					, tl.landing_url
+					, tl.landing_content
+					, tl.landing_reg_id
+					, tl.landing_reg_name
+					, tl.landing_reg_date
+					, tl.landing_mod_id
+					, tl.landing_mod_name
+					, tl.landing_mod_date
+					, fl.filePath
+					, fl.fileName
+		FROM 
+					tbl_landing tl
+		LEFT OUTER JOIN tbl_file_path fp ON fp.file_gubun = #{file_gubun} and tl.landing_idx = fp.file_parent_idx
+		LEFT OUTER JOIN tbl_file fl ON fp.file_path_idx = fl.idx
+		
+		<include refid="whereLandingList" />
+                  			
+		ORDER  BY tl.landing_idx DESC, tl.landing_reg_date DESC
+   		        
+   		LIMIT #{startpage} , #{rows}
+   
+   	</select>
+   	
+   	<select id="selectLandingCount" resultType="int">
+   -- com.grand.admin.landing.dao.TblLandingDAOImpl.Mapper.selectLandingCount
+		SELECT 
+					COUNT(*)
+		FROM 
+					tbl_landing tl
+		
+		<include refid="whereLandingList" />
+   
+   	</select>
+   	
+   	<select id="selectLandingKeyCount" resultType="int">
+   -- com.grand.admin.landing.dao.TblLandingDAOImpl.Mapper.selectLandingKeyCount
+		SELECT 
+					COUNT(*)
+		FROM 
+					tbl_landing tl
+		WHERE
+					landing_key = #{landing_key}
+   
+   	</select>
+   	
+   	<insert id="insertLanding" parameterType="tblLandingVO"  useGeneratedKeys="true" keyProperty="landing_idx">
+     -- com.grand.admin.landing.dao.TblLandingDAOImpl.Mapper.insertLanding
+		INSERT INTO tbl_landing
+		(
+				  landing_idx
+				, landing_title
+				, landing_key
+				, landing_useyn
+				, landing_url
+				, landing_content
+				, landing_reg_id
+				, landing_reg_name
+				, landing_reg_date
+				, landing_cate
+		) 
+		VALUES 
+		(
+				  #{landing_idx}
+				, #{landing_title}
+				, #{landing_key}
+				, #{landing_useyn}
+				, #{landing_url}
+				, #{landing_content}
+				, #{reg_id}
+				, #{reg_nm}
+				, now()
+				, #{landing_cate}
+		)  
+		ON DUPLICATE KEY 
+		UPDATE 
+			  landing_title 				= #{landing_title}
+			, landing_key					= #{landing_key}
+			, landing_useyn 			= #{landing_useyn}
+			, landing_url 					= #{landing_url}
+			, landing_content 			= #{landing_content}
+			, landing_mod_id 			= #{mod_id}
+			, landing_mod_name 	= #{mod_nm}
+			, landing_mod_date 		= now()
+			, landing_cate = #{landing_cate}
+   	</insert>
+  
+  	<delete id="deleteLanding" parameterType="tblLandingVO" >
+    -- com.grand.admin.landing.dao.TblLandingDAOImpl.Mapper.insertLanding
+    	DELETE FROM tbl_landing
+		WHERE landing_idx = #{landing_idx}
+    </delete>
+    
+     <select id="selectLanding" resultType="tblLandingVO">
+   -- com.grand.admin.landing.dao.TblLandingDAOImpl.Mapper.selectLanding
+		SELECT 
+					tl.landing_idx
+					, tl.landing_cate
+					, tl.landing_title
+					, tl.landing_key
+					, tl.landing_useyn
+					, tl.landing_url
+					, tl.landing_content
+					, tl.landing_reg_id
+					, tl.landing_reg_name
+					, tl.landing_reg_date
+					, tl.landing_mod_id
+					, tl.landing_mod_name
+					, tl.landing_mod_date					
+		FROM 
+					tbl_landing tl
+		WHERE
+					tl.landing_idx = #{landing_idx}
+   
+   	</select>
+   	
+   	
+   	<select id="selectLandingFileList" resultType="tblLandingVO">
+   	-- com.grand.admin.landing.dao.TblLandingDAOImpl.Mapper.selectLandingFileList
+   
+			SELECT 
+				tf.idx
+				, tf.orgName
+				, tf.fileName
+				, get_typeCheck('extension',SUBSTRING_INDEX(tf.fileName,'.',-1),null) extension
+			FROM 
+				tbl_file_path tfp 
+			LEFT OUTER JOIN 
+				tbl_file tf 
+			ON tfp.file_path_idx = tf.idx
+			WHERE tfp.file_parent_idx = #{landing_idx}
+   
+   	</select>
+   	
+   	<insert id="insertLandingFile" parameterType="tblLandingVO" >
+   	-- com.grand.admin.landing.dao.TblLandingDAOImpl.Mapper.insertLandingFile
+   	
+   		INSERT INTO tbl_file_path
+		(file_gubun, file_parent_idx, file_regdate, file_path_idx, groupCode)
+		SELECT 
+					#{file_gubun} 
+					, #{landing_idx}
+					, now()
+					, tfp.idx
+					, tfp.groupCode
+		FROM 				
+					tbl_file tfp 
+		WHERE 
+					idx = #{idx}
+   	</insert>
+   	
+   	<delete id="deleteLandingFile" parameterType="tblLandingVO" >
+    -- com.grand.admin.landing.dao.TblLandingDAOImpl.Mapper.deleteLandingFile
+    
+    	DELETE FROM 
+    				tbl_file_path
+		WHERE 
+					file_parent_idx 	= #{landing_idx}
+		AND
+					file_gubun			= #{file_gubun}
+    </delete>
+    
+</mapper>
+

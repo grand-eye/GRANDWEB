@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration     PUBLIC "-//mybatis.org//DTD Config 3.0//EN"    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+		<settings>    
+       		<setting name="cacheEnabled" value="false" />
+       		<setting name="useGeneratedKeys" value="true" />
+       		<setting name="defaultExecutorType" value="REUSE" />        
+			<setting name="jdbcTypeForNull" value="VARCHAR" />
+  		 </settings>
+   
+        <typeAliases>
+			<typeAlias alias="string" type="java.lang.String" />
+			<typeAlias alias="integer" type="java.lang.Integer" />
+			<typeAlias alias="long" type="java.lang.Long" />
+			<typeAlias alias="hashMap" type="java.util.HashMap" />
+			<typeAlias alias="arrayList" type="java.util.ArrayList" />
+			<typeAlias alias="linkedHashMap" type="java.util.LinkedHashMap" />        
+            <typeAlias type="com.grand.web.test.vo.TestVO" alias="testVO"/>
+            <typeAlias type="com.grand.message.vo.MessageVO" alias="messageVO"/>
+            <typeAlias type="com.grand.admin.common.vo.CommonVO" alias="commonVO"/>
+            <typeAlias type="com.grand.admin.file.vo.FileVO" alias="fileVO"/>
+            <typeAlias type="com.grand.admin.code.vo.CodeVO" alias="codeVO"/>
+            <typeAlias type="com.grand.admin.code.vo.CodeDetailVO" alias="codeDetailVO"/>
+            <typeAlias type="com.grand.admin.file.vo.FileWhiteVO" alias="fileWhiteVO"/>
+            <typeAlias type="com.grand.admin.gnb.vo.GnbVO" alias="gnbVO"/>
+            <typeAlias type="com.grand.admin.board.vo.BoardVO" alias="boardVO"/>
+            <typeAlias type="com.grand.admin.board.vo.HospitalHolidayVO" alias="hospitalHolidayVO"/>
+            <typeAlias type="com.grand.admin.member.vo.TblMemberVO" alias="tblMemberVO"/>
+            <typeAlias type="com.grand.admin.templete.vo.TblTempleteVO" alias="tblTempleteVO"/>
+            <typeAlias type="com.grand.admin.landing.vo.TblLandingVO" alias="tblLandingVO"/>
+            <typeAlias type="com.grand.admin.dm.vo.TblSmslogsVO" alias="tblSmslogsVO"/>
+            <typeAlias type="com.grand.admin.dm.vo.SmsMsgSetVO" alias="smsMsgSetVO"/>
+            <typeAlias type="com.grand.admin.dm.vo.TblSmsConfigVO" alias="tblSmsConfigVO"/>
+            <typeAlias type="com.grand.admin.consult.vo.SiteConsultVO" alias="siteConsultVO"/>
+            <typeAlias type="com.grand.admin.banner.vo.BannerVO" alias="bannerVO"/>
+            <typeAlias type="com.grand.admin.column.vo.TblColumnVO" alias="tblColumnVO"/>
+            <typeAlias type="com.grand.admin.board.vo.NoteVO" alias="noteVO"/>
+            <typeAlias type="com.grand.admin.history.vo.HistoryVO" alias="historyVO"/>
+            <typeAlias type="com.grand.admin.banner.vo.BannerwebVO" alias="BannerwebVO"/>
+            
+            <typeAlias type="com.grand.web.community.vo.TBoardVO" alias="TBoardVO"/>
+            <typeAlias type="com.grand.web.user.vo.TUserVO" alias="TUserVO"/>
+            
+        </typeAliases>
+        
+</configuration>

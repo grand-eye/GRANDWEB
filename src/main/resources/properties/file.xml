@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>업로드 경로설정</comment>
+	<entry key="rootPath"><![CDATA[NAS]]></entry>
+	<!-- <entry key="rootPath"><![CDATA[C:\project\PROJECT_NEW\src\main\webapp\resources\front\img\nas]]></entry> -->
+	<entry key="rootPath_watermark"><![CDATA[V:\]]></entry> 
+	<entry key="watermark"><![CDATA[V:\_data\watermark2.png]]></entry>
+	<entry key="loginess"><![CDATA[V:\_data\loginEss.png]]></entry>
+	<entry key="noimg"><![CDATA[V:\_data\noimg.jpg]]></entry>
+	<entry key="webPath"><![CDATA[]]></entry>
+	<!-- <entry key="webPath"><![CDATA[/common/img/nas]]></entry> -->	
+	
+	<entry key="mail_regist">
+	<![CDATA[
+	
+	]]>
+	</entry>
+		
+		
+	<entry key="mail_idpw">
+		<![CDATA[
+				<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+				<html xmlns="http://www.w3.org/1999/xhtml">
+				<head>
+				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				<title>아이디 패스워드 안내</title>
+				</head>
+				<body style="padding:0; margin:0;">
+				   <div>
+				      <div class="id_pwd_info_box">
+				         <div class="ip_header" style="position:relative; display:flex; justify-content:center; align-itmes:center; position:relative; width:100%; padding:110px 0 50px; background-color:#e6ded4; text-align:center; color:#363636; font-weight:500;">
+				            <div style="width:850px; position:relative;">
+				               <span class="logo" style="position:absolute; left:0; top:-50px;"><img src="http://localhost:8080/common/img/common/logo.png" alt="강남그랜드안과" style="height:37px;"></span>
+				               <span class="rany" style="position:absolute; right:0; bottom:-57px; width:170px; height:116px; background:url('http://localhost:8080/common/img/common/img_rany.png') no-repeat center bottom; background-size:contain;"><img src="http://localhost:8080/common/img/common/img_rany.png" alt="rany"></span>
+				               <p style="padding:0; margin:0; padding-top:40px; padding-left:10%; font-size:44px; text-align:left;">아이디 ㅣ 패스워드 안내</p>
+				            </div>
+				         </div>
+				         <div class="ip_info_box" style="max-width:990px; margin:0 auto; display:flex; align-items:center; flex-direction:column;">
+				            <ul class="ip_info" style="margin:0; padding:0; padding-top:85px; width:523px; font-size:21px; color:#363636; list-style:none;">
+				               <li class="ip_item" style="padding:0; margin:0; display:flex; align-items:center; border:1px solid #ebebeb; border-bottom:none; list-style:none;">
+				                  <div class="title" style="padding:20px 30px; width:40%; font-weight:bold; background-color:#f2f2f2;">아이디</div>
+				                  <div class="info" style="padding:20px 30px; width:60%;">@ID@</div>
+				               </li>
+				               <li class="ip_item" style="padding:0; margin:0; display:flex; align-items:center; border:1px solid #ebebeb; border-bottom: 1px solid #ebebeb; list-style:none;">
+				                  <div class="title" style="padding:20px 30px; width:40%; font-weight:bold; background-color:#f2f2f2;">임시패스워드</div>
+				                  <div class="info" style="padding:20px 30px; width:60%;">@PASS@</div>
+				               </li>
+				            </ul>
+				            <a href="javascript:void(0)" class="btn_more" style="padding:0; margin:0; text-decoration:none; color:inherit; display:block; margin-top:85px; padding:24px 40px 26px; font-size:24px; background-color:#1e3250; color:#fff; text-align:center; border-radius:50px; line-height:1;">홈페이지 바로가기<span style="display:inline-block; margin-left:10px; vertical-align:super; text-decoration:none; color:inherit;"><img src="http://localhost:8080/common/img/main/icon_button_arrow.png" alt="화살표" style="vertical-align:middle;"></span></a>
+				         </div>
+				      </div>
+				   </div>
+				</body>
+				</html>
+		]]>
+	</entry>
+
+	
+	
+</properties>

@@ -1,0 +1,419 @@
+$(document).ready(function() {
+	// 퀵메뉴
+	$(".btn_top").on("click", function(e){
+		$("html, body").animate({ scrollTop: 0 }, 500);
+		return false;
+	})
+
+	$(window).on('resize', function () {
+		let winW = $(window).width();	
+		if(winW <= 1236){
+			$(".btn_quick").show();
+			$(".quick_box").hide();
+		}else{
+			$(".btn_quick").hide();
+			$(".quick_box").show();
+		}
+	})
+	// 탑 배너 닫기
+	$(".btn_banner_close").on("click", function() {
+		$(".top_banner").hide();
+	});
+
+	// 탑 배너 닫기
+	$(".btn_banner_close").on("click", function() {
+		$(".top_banner").hide();
+	});
+	// 탑 배너 슬라이드
+	var banner_swiper = new Swiper('.banner_swiper .swiper-container', {
+		slidesPerView: 1,
+		speed: 500,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		navigation: {
+			nextEl: '.banner_swiper .swiper-button-next',
+			prevEl: '.banner_swiper .swiper-button-prev',
+		},
+		pagination:{
+			el:'.banner_swiper .swiper-pagination'
+		},
+		on : {
+			slideChange : function() {
+				var opt = $('.banner_swiper .swiper-container .swiper-slide').eq(this.activeIndex).data("opt");
+				console.log(opt);
+
+				if( opt == "w" ) {
+					$(".banner_swiper").removeClass("bl_type");
+				} else {
+					$(".banner_swiper").addClass("bl_type");
+				}
+			}
+		}
+	});
+
+	// 비주얼 슬라이드
+	/*var visual_swiper = new Swiper('.visual_swiper .swiper-container', {
+		speed: 700,
+		navigation: {
+			nextEl: '.visual_swiper .swiper-button-next',
+			prevEl: '.visual_swiper .swiper-button-prev',
+		},
+	});*/
+	
+	//모바일 메뉴 오픈
+	$('.mo_menu_btn').on('click', function(){
+		$('.mo_gnb_wrap').toggle();
+		$('body').toggleClass('lock');
+		$('.mo_menu_btn').toggleClass('active');
+	});
+	//모바일 메뉴 2depth 활성화
+	$('.mo_gnb .gnb_list > li').on('click', function(){
+		$('.mo_gnb .gnb_list > li').removeClass('active');
+		$(this).addClass('active');
+	});
+	//배너 닫기
+	$('.btn_banner_close_mo').on('click', function(){
+		$('.top_banner').toggle();
+		$('.mo_menu').addClass('banner_closed');
+	});
+	
+
+	// 롤링 배너 - 공지사항 -> index.jsp 에서 사용 중
+	/*var rolling_swiper01 = new Swiper('.notice_swiper .swiper-container', {
+		direction: 'vertical',
+		loop:true,
+		speed:500,
+		touchRatio: 0,
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: false,
+		},
+	});*/
+
+	// 롤링 배너 - 미디어  -> index.jsp 에서 사용 중
+	/*var rolling_swiper02 = new Swiper('.media_swiper .swiper-container', {
+		direction: 'vertical',
+		loop:true,
+		speed:500,
+		touchRatio: 0,
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: false,
+		},
+	});*/
+
+	// 특별한 이벤트  -> index.jsp 에서 사용 중
+	/*var event_swiper = new Swiper('.event_swiper .swiper-container', {
+		speed: 700,
+		slidesPerView: 3,
+		spaceBetween: 28,
+		navigation: {
+			nextEl: '.event_swiper .swiper-button-next',
+			prevEl: '.event_swiper .swiper-button-prev',
+		},
+	});*/
+
+	// 강남그랜드안과의 특별함
+	var special_swiper = new Swiper('.special_swiper .swiper-container', {
+		centeredSlides: true,
+		speed: 700,
+		slidesPerView: 1.4,
+		spaceBetween: 22,
+		loop: true,
+		navigation: {
+			nextEl: '.special_swiper .swiper-button-next',
+			prevEl: '.special_swiper .swiper-button-prev',
+		},
+		breakpoints: {
+			1200:{
+				slidesPerView: '1',
+
+			},
+			991:{
+				slidesPerView: 'auto',
+				loop: false,
+				spaceBetween: 70,
+			}
+		}
+	});
+	
+	$(window).resize(function(){
+		special_swiper.update();
+	})
+	special_swiper.on('slideChange', function () {
+		console.log("a")
+	});
+
+	/*var special_swiper = new Swiper('.special_swiper .swiper-container', {
+		centeredSlides: true,
+		speed: 700,
+		slidesPerView: 'auto',
+		navigation: {
+			nextEl: '.special_swiper .swiper-button-next',
+			prevEl: '.special_swiper .swiper-button-prev',
+		},
+	});
+	
+	special_swiper.on('slideChange', function () {
+		var swiperIdx = this.realIndex;
+		console.log(swiperIdx);
+		var target = $('.special_swiper').eq(swiperIdx).children('.special_txt');
+		console.log("target="+target);
+		var sec_title = target.children('.sec_title').text();
+		console.log("sec_title="+sec_title);
+		$('.special_txt.rel').children('.sec_title').text(sec_title);
+	});*/
+
+	// 고객체험기  -> index.jsp 에서 사용 중
+	/*var review_swiper = new Swiper('.review_swiper .swiper-container', {
+		speed: 700,
+		slidesPerView: 3,
+		spaceBetween: 28,
+		navigation: {
+			nextEl: '.review_swiper .swiper-button-next',
+			prevEl: '.review_swiper .swiper-button-prev',
+		},
+	});*/
+});
+
+function rollingSwiper(swiper_prm,swiper_class){
+	var swiper_prm = new Swiper(swiper_class+' .swiper-container', {
+		direction: 'vertical',
+		loop:true,
+		speed:700,
+		touchRatio: 0,
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: false,
+		},
+	});
+};
+
+function bannerSwiper(swiper_prm,swiper_class){
+	var swiper_prm = new Swiper(swiper_class+" .swiper-container", {
+		speed: 700,
+		slidesPerView: 1.5,
+		spaceBetween: 14,
+		navigation: {
+			nextEl: swiper_class + ' .swiper-button-next',
+			prevEl: swiper_class + ' .swiper-button-prev',
+			
+		},
+		breakpoints: {
+		   750:{
+	          slidesPerView: 2,
+	          spaceBetween: 28
+	       },
+	       991:{
+	          slidesPerView: 2.5,
+	          spaceBetween: 28
+	       },
+		   1021:{
+	          slidesPerView: 3,
+	          spaceBetween: 28
+	       }
+	    }
+	});
+};
+
+function bannerSwiper1(swiper_prm,swiper_class){
+	var swiper_prm = new Swiper(swiper_class+" .swiper-container", {
+		speed: 700,
+		slidesPerView: 2,
+		spaceBetween: 14,
+		navigation: {
+			nextEl: swiper_class + ' .swiper-button-next',
+			prevEl: swiper_class + ' .swiper-button-prev',
+			
+		},
+		breakpoints: {
+		   750:{
+	          slidesPerView: 2,
+	          spaceBetween: 28
+	       },
+	       991:{
+	          slidesPerView: 2.5,
+	          spaceBetween: 28
+	       },
+		   1021:{
+	          slidesPerView: 3,
+	          spaceBetween: 28
+	       }
+	    }
+	});
+};
+
+function mainBannerSwiper(swiper_prm,swiper_class){
+	var swiper_prm = new Swiper(swiper_class+" .swiper-container", {
+		speed: 700,
+		navigation: {
+			nextEl: swiper_class + ' .swiper-button-next',
+			prevEl: swiper_class + ' .swiper-button-prev',			
+		},
+		pagination:{
+			el:'.visual_swiper .swiper-pagination',
+			type: 'bullets',
+			clickable : true
+		},
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+	});
+};
+
+function bannerSwiper_new(swiper_prm,swiper_class){
+	var swiper_prm = new Swiper(swiper_class+" .swiper-container", {
+	    speed: 700,
+	    slidesPerView: 'auto',
+	    spaceBetween: 12,
+	    navigation: {
+	    	nextEl: swiper_class + ' .swiper-button-next',
+			prevEl: swiper_class + ' .swiper-button-prev',
+	    },
+	    breakpoints: {
+	       991:{
+	          slidesPerView: 3,
+	          spaceBetween: 28
+	       }
+	    }
+	 });
+}
+
+function popupSwiper(swiper_prm,swiper_class){
+	
+	/*var banner_swiper = new Swiper('.banner_swiper .swiper-container', {
+		slidesPerView: 1,
+		speed: 500,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		navigation: {
+			nextEl: '.banner_swiper .swiper-button-next',
+			prevEl: '.banner_swiper .swiper-button-prev',
+		},
+		pagination:{
+			el:'.banner_swiper .swiper-pagination'
+		},
+		on : {
+			slideChange : function() {
+				var opt = $('.banner_swiper .swiper-container .swiper-slide').eq(this.activeIndex).data("opt");
+				console.log(opt);
+	
+				if( opt == "w" ) {
+					$(".banner_swiper").removeClass("bl_type");
+				} else {
+					$(".banner_swiper").addClass("bl_type");
+				}
+			}
+		}
+	});*/
+	
+	/*var swiper_prm = new Swiper(swiper_class+" .swiper-container", {
+		slidesPerView: 1,
+		speed: 500,
+		speed: 700,
+	    slidesPerView: 'auto',
+	    spaceBetween: 12,
+		navigation: {
+			nextEl: swiper_class + ' .swiper-button-next',
+			prevEl: swiper_class + ' .swiper-button-prev',
+		},
+		pagination:{
+			el: swiper_class +' .swiper-pagination'
+		}
+	});*/
+}
+
+
+
+function applyAPI(apply_button_name, agree_button_name, title, menu_code){
+	$("."+apply_button_name).on('click',function(){
+
+		if( $("#"+agree_button_name).is(":checked") == false && agree_button_name !=null){
+			alert("개인정보 수집 사용에 동의 해주시기 바랍니다.");
+			return false;
+		}
+		
+		this.category = $(".checkup_list_title").attr("opt");
+		
+		this.prm = {};
+		
+		this.prm.board_reg_name = $("#name").val();
+		this.prm.board_email = $("#email").val();
+		this.prm.board_mobile = $("#phone").val();
+		this.prm.board_title = title;
+		this.prm.board_cate_L = "";
+		this.prm.board_useyn = "Y";
+		this.prm.board_show = "Y";
+		this.prm.board_menu_code = menu_code;
+		this.prm.board_detail = $("#cont").val();
+		
+		
+		if( menu_code == "BD11" ){
+			this.prm.board_cate_L = $("select option:selected").attr("val");
+		}
+		
+		
+		//상담 문의 - 나이
+		if( menu_code == 'BD04'){
+			this.prm.board_etc1 = $("#age").val();
+		}
+		
+		//제안 제휴 - 회사명
+		if( menu_code == 'BD08' ){
+			this.prm.board_etc2 = $("#company").val();
+		}
+		
+		//검사 신청
+		if( menu_code == 'BD12' ){
+			
+			if( $(".checkup_list_title").attr("opt") == "" || $(".checkup_list_title").attr("opt") ==null ){
+				alert("검사 항목을 선택 해주시기 바랍니다.");
+				return false;
+			}
+			
+			if( $(".name_box input").val() == "" || $(".name_box input").val() ==null ){
+				alert("성함을 입력 해주시기 바랍니다.");
+				return false;
+			}
+			
+			if( $(".years_box input").val() == "" || $(".years_box input").val() ==null ){
+				alert("나이를 입력 해주시기 바랍니다.");
+				return false;
+			}
+			
+			if( $(".num_box input").val() == "" || $(".num_box input").val() ==null ){
+				alert("연락처를 입력 해주시기 바랍니다.");
+				return false;
+			}
+			
+			this.prm.board_etc1 = $(".years_box input").val();
+			this.prm.board_reg_name = $(".name_box input").val();
+			this.prm.board_mobile = $(".phone_num_title").text() + $(".num_box input").val().replace(/[^0-9]/g, "");
+			this.prm.board_cate_L = this.category;
+
+		}
+		
+		$.ajax({
+			url			: "/community/interface/insertBoard"
+			,data		: this.prm
+			,type		: "POST"
+			,dataType	: "json"
+			,success	: function(data){
+				
+				if( data.resultMsg == 'Y' ){
+					alert('신청이 완료됐습니다.');
+					location.reload();
+				}else{
+					alert('에러가 발생했습니다. 관리자에게 문의해주시기 바랍니다.');
+				}
+			}
+		});
+	});
+}
+
+

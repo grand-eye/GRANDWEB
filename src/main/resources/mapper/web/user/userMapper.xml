@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.grand.web.user.dao.TUserDAOImpl.Mapper">
+	
+    
+    
+    <select id="selectUserCount" resultType="_int" parameterType="TUserVO">
+     -- com.grand.web.user.dao.TUserDAOImpl.Mapper.selectUserCount
+			SELECT
+				COUNT(*)  
+			FROM 
+				t_user
+			WHERE
+				tblStrID = #{tblStrID}
+    </select>
+    
+    <select id="selectUserOne" resultType="TUserVO" parameterType="TUserVO">
+     -- com.grand.web.user.dao.TUserDAOImpl.Mapper.selectUserOne
+			SELECT
+				tblStrID 
+				, tblStrEmail 
+				, tblStrName
+			FROM 
+				t_user
+			WHERE
+				tblStrName = #{tblStrName}
+			AND
+				tblStrEmail = #{tblStrEmail}
+			<if test=" tblStrID !=null and tblStrID !='' ">
+			AND
+				tblStrID = #{tblStrID}
+			</if>		
+    </select>   
+    
+    <select id="selectUser" resultType="TUserVO" parameterType="TUserVO">
+    -- com.grand.admin.member.dao.TblMemberDAOImpl.Mapper.selectMember
+   		SELECT 
+	   				tblStrID
+				  , tblStrName
+				  , tblStrPass
+				  , tblStrEmail
+				  , tblDtmRegDate
+				  , tblDtmLastDate
+				  , tblDtmRegIp
+		FROM
+			t_user   
+	    WHERE 
+	    	tblStrID = #{tblStrID}
+	    AND		
+			tblStrPass = SHA2( #{tblStrPass}, 256 )
+    </select>
+    
+    <insert id="insertUser" parameterType="TUserVO">
+     -- com.grand.web.user.dao.TUserDAOImpl.Mapper.insertUser
+		INSERT INTO t_user
+		(
+				  tblStrID
+				  , tblStrName
+				  , tblStrPass
+				  , tblStrEmail
+				  , tblStrPhone
+				  , tblDtmRegDate
+				  , tblDtmLastDate
+				  , tblDtmRegIp
+		) 
+		VALUES 
+		(
+				#{tblStrID}
+				, #{tblStrName}
+				, sha2(#{tblStrPass}, 256)
+				, #{tblStrEmail}
+				, #{tblStrPhone}
+				, now()
+				, now()
+				, #{commonIp}
+		)  
+   	</insert>
+    
+    <delete id="deleteUser" parameterType="TUserVO" >
+    -- com.grand.web.user.dao.TUserDAOImpl.Mapper.deleteUser
+    
+    	DELETE FROM t_user
+		WHERE
+			tblStrID = #{tblStrID}
+		and
+			tblStrName = #{tblStrName}
+		and
+			tblStrEmail = #{tblStrEmail}
+		and
+			tblStrPass = SHA2(#{tblStrPass},256)	
+    </delete>
+    
+    <update id="updateUser" parameterType="TUserVO">
+     -- com.grand.web.user.dao.TUserDAOImpl.Mapper.updateUser
+			UPDATE
+				t_user
+			SET tblStrPass = SHA2(#{tblStrPass},256)
+			WHERE
+				tblStrID = #{tblStrID}
+			and
+				tblStrName = #{tblStrName}
+			and
+				tblStrEmail = #{tblStrEmail}		
+    </update>
+        
+</mapper>

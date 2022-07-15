@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>DB설정/업로드경로설정/기타설정</comment>
+
+	<entry key="driverClassName">com.mysql.cj.jdbc.Driver</entry>
+	<entry key="url">
+		<![CDATA[
+			jdbc:log4jdbc:mysql://localhost:3306/grand?autoReconnect=true&useSSL=false&serverTimezone=UTC&characterEncoding=utf8
+		]]>
+	</entry>
+
+	<entry key="username">root</entry>
+	<entry key="password">jong!Q@W3e4r</entry>
+
+	<!-- ?? -->
+	<!--
+	<entry key="username">usr_grand_stg</entry>
+	<entry key="password">Qwert09!23</entry>
+	-->
+
+	<!-- REAL -->
+	<!--
+	<entry key="username">usr_grand</entry>
+	<entry key="password">Alvmfwm!@3</entry>
+	-->
+
+	<entry key="GRAND_URL"><![CDATA[https://grand.co.kr/]]></entry>
+	<entry key="GRAND_BRANDCODE"><![CDATA[GRAND]]></entry>
+	<entry key="GRAND_B2BID"><![CDATA[mplz]]></entry>
+	<entry key="GRAND_KEY"><![CDATA[MPLZ_ENCRYPT_KEY]]></entry>
+	<entry key="MAIL_HOST"><![CDATA[mail.grand.co.kr]]></entry>
+	<entry key="MAIL_ID"><![CDATA[grand]]></entry>
+	<entry key="MAIL_PW"><![CDATA[123qwer]]></entry>
+	<entry key="MAIL_PORT"><![CDATA[25]]></entry>
+	<entry key="MAIL_FROM"><![CDATA[help@grand.co.kr]]></entry>
+</properties>

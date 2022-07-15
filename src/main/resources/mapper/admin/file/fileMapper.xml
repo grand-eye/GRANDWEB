@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.grand.admin.file.dao.FileDAOImpl.Mapper">
+
+
+    <insert id="insertFileWhite" parameterType="fileWhiteVO">
+    -- com.grand.admin.file.dao.FileDAOImpl.Mapper.insertFileWhite
+    
+		   INSERT INTO t_file_whitelist
+			(
+				  tfw_index,
+				  tfw_mimetype, 
+				  tfw_ext
+			)
+		VALUES
+			(
+			      #{tfw_index}
+				, #{tfw_mimetype}
+				, #{tfw_ext}
+			)
+			ON DUPLICATE KEY 
+			UPDATE
+				tfw_mimetype   = #{tfw_mimetype},
+				tfw_ext 			 = #{tfw_ext}
+	</insert>
+	
+	
+	<select id="selectFileWhiteList" resultType="fileWhiteVO">
+	-- com.grand.admin.file.dao.FileDAOImpl.Mapper.selectFileWhiteList
+	
+	        SELECT
+		        tfw_index,
+				tfw_mimetype,
+				tfw_ext
+	        FROM 
+	        	t_file_whitelist
+	        where 1=1
+	      <choose>
+	     		<when test="search_word != null and !search_word.equals('')">
+						AND 
+						(
+							INSTR( tfw_mimetype , #{search_word})  <![CDATA[ > ]]> 0
+						)				     			
+	     		</when> 	
+	      </choose>
+	      ORDER  BY tfw_index  asc 	
+	
+	
+	
+	</select>
+
+
+   <select id="selectFileInfoCount" resultType="int">
+    -- com.grand.admin.file.dao.FileDAOImpl.Mapper.selectFileInfoCount
+    
+				        SELECT 
+				        	count(idx)
+				        FROM 
+				        	t_fileinfo
+				        where 1=1
+				      <choose>
+				     		<when test="search_txt != null and !search_txt.equals('')">
+									AND 
+									(
+										INSTR( cateNm , #{search_txt})  <![CDATA[ > ]]> 0
+										OR	
+										INSTR( cateCode   , #{search_txt} )  <![CDATA[ > ]]> 0
+									)				     			
+				     		</when> 	
+				      </choose>
+				      ORDER  BY idx asc 
+    </select>
+
+    <select id="selectFileInfo" resultType="fileVO">
+    -- com.grand.admin.file.dao.FileDAOImpl.Mapper.selectFileInfo
+    
+			SELECT t.* 
+			FROM   t_fileinfo as a 
+			JOIN (
+			
+				        SELECT
+					        idx,
+							cateCode,
+							cateNm,
+							filePath,
+							fileExt,
+							fileSize,
+							modDt ,
+							fileEtc as fileetc
+				        FROM 
+				        	t_fileinfo
+				        where 1=1
+				      <choose>
+				     		<when test="search_txt != null and !search_txt.equals('')">
+									AND 
+									(
+										INSTR( cateNm , #{search_txt})  <![CDATA[ > ]]> 0
+										OR	
+										INSTR( cateCode   , #{search_txt} )  <![CDATA[ > ]]> 0
+									)				     			
+				     		</when> 	
+				      </choose>
+				      ORDER  BY idx asc 
+				      LIMIT   #{startpage} , #{rows}
+			      ) 
+			AS t ON t.cateCode = a.cateCode; 
+			
+
+    </select>
+    
+    
+    <insert id="insertFileInfo" parameterType="fileVO">
+    -- com.grand.admin.file.dao.FileDAOImpl.Mapper.insertFileInfo
+    
+		   INSERT INTO t_fileinfo
+			(
+				  cateCode
+				, cateNm
+				, filePath
+				, fileExt
+				, fileSize
+				, modDt
+				, fileEtc
+				
+			)
+		VALUES
+			(
+				  #{cateCode}
+				, #{cateNm}
+				, #{filePath}
+				, #{fileExt}
+				, #{fileSize}
+				, NOW()
+				, #{fileetc}
+			)
+			ON DUPLICATE KEY 
+			UPDATE
+				cateCode  		= #{cateCode}	,
+				cateNm 			= #{cateNm}		,
+				filePath 				= #{filePath}		,
+				fileExt 				= #{fileExt}			,
+				fileSize 				= #{fileSize}		,
+				fileEtc     			= #{fileEtc}			
+	</insert>
+	
+	<update id="updateFileInfo" parameterType="fileVO" >
+
+	</update>
+	
+	<insert id="setFile" parameterType="fileVO">
+	-- com.grand.admin.file.dao.FileDAOImpl.Mapper.setFile
+	
+		INSERT INTO t_file
+		(
+			fileName,
+			filePath,
+			orgName,
+			delYn,
+			etcTxt,
+			modDt,
+			groupCode ,
+			cateCode	,
+			extCode,
+			subCateCode,
+			imageTags
+		) 
+		VALUES 
+		(
+			#{fileName},
+			#{filePath},
+			#{orgName},
+			'N',
+			#{etcTxt},
+			NOW(),
+			#{groupCode} ,
+			#{cateCode} ,
+			#{extCode},
+			#{subCateCode},
+			#{imageTags}
+		)
+		<selectKey resultType="int" keyProperty="idx" order="AFTER">
+        	SELECT LAST_INSERT_ID() 
+    	</selectKey>	
+	</insert>
+	
+	<select id="selectFileConfig" resultType="fileVO" parameterType="fileVO">
+	-- com.grand.admin.file.dao.FileDAOImpl.Mapper.selectFileConfig
+	
+        SELECT
+	        idx,
+			cateCode,
+			cateNm,
+			filePath,
+			fileExt,
+			fileSize,
+			modDt ,
+			fileEtc as fileEtc
+        FROM 
+        	t_fileinfo
+        where cateCode = #{cateCode}
+    </select>
+    
+    
+     <select id="selectFileListCount" resultType="int">
+     -- com.grand.admin.file.dao.FileDAOImpl.Mapper.selectFileListCount
+     
+				     	select
+				     		count(idx)
+				     	from
+				     		t_file
+				        where delYn = 'N'
+				      <choose>
+				     		<when test="search_org_name != null and !search_org_name.equals('')">
+									AND 
+									(
+										INSTR( orgName , #{search_org_name})  <![CDATA[ > ]]> 0
+									)				     			
+				     		</when>
+				     		<when test="search_cate_code != null and !search_cate_code.equals('')">
+									AND 
+									(
+										INSTR( cateCode , #{search_cate_code})  <![CDATA[ > ]]> 0
+									)				     			
+				     		</when> 
+				     		<when test="search_etc_txt != null and !search_etc_txt.equals('')">
+									AND 
+									(
+										INSTR( extCode , #{search_etc_txt})  <![CDATA[ > ]]> 0
+									)				     			
+				     		</when> 	
+				      </choose>     	
+				      
+				      <if test="search_sub_cate_code != null and !search_sub_cate_code.equals('')">
+				      		AND 
+									(
+										INSTR( subCateCode , #{search_sub_cate_code})  <![CDATA[ > ]]> 0
+									)		
+				      </if>
+				      
+				      <if test="search_images_tag != null and !search_images_tag.equals('')">
+				      		AND 
+									(
+										INSTR( imageTags , #{search_images_tag})  <![CDATA[ > ]]> 0
+									)		
+				      </if>
+     </select>
+     
+    <select id="selectFileList" resultType="fileVO">
+    -- com.grand.admin.file.dao.FileDAOImpl.Mapper.selectFileList
+    
+			SELECT t.* 
+			FROM   t_file as a 
+			JOIN (
+				        SELECT
+					        idx,
+							fileName,
+							filePath,
+							orgName,
+							delYn,
+							etcTxt,
+							modDt,
+							groupCode,
+							cateCode,
+							extCode ,
+							subCateCode,
+							imageTags
+				        FROM 
+				        	t_file
+				        where delYn = 'N'
+				      <choose>
+				     		<when test="search_org_name != null and !search_org_name.equals('')">
+									AND 
+									(
+										INSTR( orgName , #{search_org_name})  <![CDATA[ > ]]> 0
+									)				     			
+				     		</when>
+				     		<when test="search_cate_code != null and !search_cate_code.equals('')">
+									AND 
+									(
+										INSTR( cateCode , #{search_cate_code})  <![CDATA[ > ]]> 0
+									)				     			
+				     		</when> 
+				     		<when test="search_etc_txt != null and !search_etc_txt.equals('')">
+									AND 
+									(
+										INSTR( extCode , #{search_etc_txt})  <![CDATA[ > ]]> 0
+									)				     			
+				     		</when>      
+				      </choose>
+				      
+				      <if test="search_sub_cate_code != null and !search_sub_cate_code.equals('')">
+				      		AND 
+									(
+										INSTR( subCateCode , #{search_sub_cate_code})  <![CDATA[ > ]]> 0
+									)		
+				      </if>
+				      
+				      <if test="search_images_tag != null and !search_images_tag.equals('')">
+				      		AND 
+									(
+										INSTR( imageTags , #{search_images_tag})  <![CDATA[ > ]]> 0
+									)		
+				      </if>
+				      
+				      <choose>
+				     		<when test="fileKeyArray != null and !fileKeyArray.equals('') ">
+				     			ORDER BY FIELD(idx, <foreach item="item" collection="fileKeyArray" separator=",">#{item}</foreach>) desc	,  idx  desc	
+				     		</when>
+				     		<otherwise>
+				     			ORDER  BY idx  desc
+				     		</otherwise>
+				     	</choose>
+				       		
+				      LIMIT   #{startpage} , #{rows}		
+			
+			)    	
+    		AS t ON t.idx = a.idx; 
+	</select>
+	
+	<select id="selectDownloadFile" resultType="fileVO">
+	-- com.grand.admin.file.dao.FileDAOImpl.Mapper.selectDownloadFile
+	
+	        SELECT
+		        idx,
+				fileName,
+				filePath,
+				orgName,
+				delYn,
+				etcTxt,
+				modDt,
+				groupCode,
+				cateCode,
+				extCode,
+				subCateCode,
+				imageTags
+	        FROM 
+	        	t_file
+	        where delYn = 'N'
+	        <if test="idx != 0 ">
+				AND idx	= #{idx}	     			
+     		</if>
+     		<if test="fileName != null and !fileName.equals('')">
+				AND 
+				(
+					INSTR( fileName , #{fileName})  <![CDATA[ > ]]> 0
+				)				     			
+     		</if>
+     		<if test="orgName != null and !orgName.equals('')">
+				AND 
+				(
+					INSTR( orgName , #{orgName})  <![CDATA[ > ]]> 0
+				)				     			
+     		</if> 
+     		<if test="cateCode != null and !cateCode.equals('')">
+				AND 
+				(
+					INSTR( cateCode , #{cateCode})  <![CDATA[ > ]]> 0
+				)				     			
+     		</if>	
+     		<if test="search_sub_cate_code != null and !search_sub_cate_code.equals('')">
+				AND 
+				(
+					INSTR( subCateCode , #{search_sub_cate_code})  <![CDATA[ > ]]> 0
+				)				     			
+     		</if> 
+	</select>
+	
+	
+	<delete id="deleteFile" parameterType="fileVO" >
+   	-- com.grand.admin.file.dao.FileDAOImpl.Mapper.deleteFile
+    
+    	update t_file set delYn = 'Y'
+		WHERE idx = #{idx}
+    </delete>
+    
+</mapper>

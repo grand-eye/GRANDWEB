@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.grand.admin.banner.dao.BannerDAOImpl.Mapper">
+
+
+   <select id="selectbannerInfoCount" resultType="int">
+    -- com.grand.admin.banner.dao.BannerDAOImpl.Mapper.selectbannerInfoCount
+	        SELECT 
+	        	count(banner_idx)
+	        FROM 
+	        	tbl_banner
+	        	where 1=1 
+	        	and banner_delyn = 'N'
+			<if test="banner_search != null and banner_search != ''">
+				and banner_explan like  CONCAT('%',#{banner_search},'%') 
+			</if>
+	      ORDER  BY banner_idx asc 
+    </select>
+    
+    <select id="selectbannerInfo" resultType="bannerVO">
+    -- com.grand.admin.banner.dao.BannerDAOImpl.Mapper.selectbannerInfo
+			SELECT banner_idx, banner_explan, banner_showyn, banner_subidx, banner_regdate,banner_gnb
+			FROM   tbl_banner as a
+			where 1=1 
+			and banner_delyn = 'N'
+			<if test="banner_search != null and banner_search != ''">
+				and banner_explan like  CONCAT('%',#{banner_search},'%') 
+			</if>
+			
+			ORDER  BY banner_idx asc 
+			LIMIT   #{startpage} , #{rows}
+    </select>
+    <select id="selectBannersubUpdateInfo" resultType="bannerVO">
+    -- com.grand.admin.banner.dao.BannerDAOImpl.Mapper.selectBannersubUpdateInfo
+    	SELECT 
+    	bannersub_idx,
+    	bannersub_linktype,
+    	bannersub_summary,
+    	concat(DATE_FORMAT(bannersub_showstrdate, "%Y-%m-%d") ,' ~ ',DATE_FORMAT(bannersub_showenddate, "%Y-%m-%d"))as bannersub_showdate,bannersub_idx, bannersub_explan,
+    	bannersub_webImg,
+		bannersub_etcImg,
+		bannersub_mobImg,			
+		bannersub_spareImg,
+		(SELECT orgName FROM tbl_file where idx = bannersub_webImgfilekey) as weboriname,
+		(SELECT orgName FROM tbl_file where idx = bannersub_etcImgfilekey) as ectoriname,
+		(SELECT orgName FROM tbl_file where idx = bannersub_mobImgfilekey) as moboriname,
+		(SELECT orgName FROM tbl_file where idx = bannersub_spareImgfilekey) as spareoriname,
+    	bannersub_webImgfilekey, bannersub_etcImgfilekey,bannersub_mobImgfilekey,bannersub_spareImgfilekey ,bannersub_show, bannersub_link, bannersub_showorder, bannersub_showstrdate, bannersub_showenddate, bannersub_tag, bannersub_regdate
+    	 ,<![CDATA[concat('<a href="#" class="easyui-linkbutton bannerbutton" id="bannerfunc" onclick="fnUpdateContent(',bannersub_idx,');">상세보기</a>     <a href="#" target="_blank" id="bannerlink" class="easyui-linkbutton bannerbutton" onclick="fnlink(',bannersub_link,');">링크</a>') as bannersub_func  ]]> 
+		FROM tbl_bannersub
+		where 1=1
+		and bannersub_delyn = 'N'
+		<if test="bannersub_idx != null and bannersub_idx != ''">
+		and bannersub_idx in (#{bannersub_idx})
+		</if>
+		<if test="bannersub_parentidx != null and bannersub_parentidx != ''">
+		and bannersub_parentidx in (#{bannersub_parentidx})
+		</if>
+    </select>
+    <select id="selectbannersubInfo" resultType="bannerVO">
+    -- com.grand.admin.banner.dao.BannerDAOImpl.Mapper.selectbannersubInfo
+    	SELECT 
+    	(SELECT banner_explan FROM tbl_banner where banner_idx = bannersub_parentidx and banner_delyn = 'N') as p_banner_explan,
+    	bannersub_idx,
+    	bannersub_summary,
+    	concat(DATE_FORMAT(bannersub_showstrdate, "%Y-%m-%d") ,' ~ ',DATE_FORMAT(bannersub_showenddate, "%Y-%m-%d"))as bannersub_showdate,bannersub_idx, bannersub_explan,
+    	bannersub_webImg,
+		bannersub_etcImg,
+		bannersub_mobImg,			
+		bannersub_spareImg,
+		(SELECT orgName FROM tbl_file where idx = bannersub_webImgfilekey) as weboriname,		
+		(SELECT orgName FROM tbl_file where idx = bannersub_etcImgfilekey) as ectoriname,
+		(SELECT orgName FROM tbl_file where idx = bannersub_mobImgfilekey) as moboriname,
+		(SELECT orgName FROM tbl_file where idx = bannersub_spareImgfilekey) as spareoriname,
+    	bannersub_webImgfilekey, bannersub_etcImgfilekey,bannersub_mobImgfilekey,bannersub_spareImgfilekey ,bannersub_show, bannersub_link, bannersub_showorder, bannersub_showstrdate, bannersub_showenddate, bannersub_tag, bannersub_regdate
+    	 ,<![CDATA[concat('<a href="#" class="easyui-linkbutton bannerbutton" id="bannerfunc" onclick="fnUpdateContent(',bannersub_idx,');">상세보기</a>     <a href="',bannersub_link,'" id="bannerlink" target="_blank" class="easyui-linkbutton bannerbutton" onclick="fnlink(',bannersub_link,');">링크</a>') as bannersub_func  ]]> 
+		FROM tbl_bannersub 
+		where 1=1
+		and bannersub_delyn = 'N'
+		<if test="bannersub_idx != null and bannersub_idx != ''">
+					        		and bannersub_idx in (#{bannersub_idx})
+		</if>
+		<if test="bannersub_parentidx != null and bannersub_parentidx != ''">
+					        		and bannersub_parentidx in (#{bannersub_parentidx})
+		</if>
+		<if test="bannersub_show != null and bannersub_show != ''">
+				and bannersub_show = #{bannersub_show}
+		</if>
+		<if test="bannersub_showstrdate != null and bannersub_showstrdate != '' and bannersub_showenddate != null and bannersub_showenddate != ''">
+			<![CDATA[ 
+				and bannersub_showstrdate >= #{bannersub_showstrdate} and bannersub_showenddate >= #{bannersub_showenddate}
+			]]>
+				 
+		</if>
+		ORDER  BY bannersub_idx desc 
+		LIMIT   #{startpage} , #{rows}
+	</select>
+	<select id="selectbannersubInfoCount" resultType="int">
+	-- com.grand.admin.banner.dao.BannerDAOImpl.Mapper.selectbannersubInfoCount
+		  SELECT 
+				        	count(bannersub_idx)
+				        FROM 
+				        	tbl_bannersub
+				        	where 1=1
+				        	and bannersub_delyn = 'N'
+		<if test="bannersub_idx != null and bannersub_idx != ''">
+					        		and bannersub_idx in (#{bannersub_idx})
+		</if>
+		<if test="bannersub_parentidx != null and bannersub_parentidx != ''">
+					        		and bannersub_parentidx in (#{bannersub_parentidx})
+		</if>
+		<if test="bannersub_show != null and bannersub_show != ''">
+				and bannersub_show = #{bannersub_show}
+		</if>
+		<if test="bannersub_showstrdate != null and bannersub_showstrdate != '' and bannersub_showenddate != null and bannersub_showenddate != ''">
+			<![CDATA[ 
+				and bannersub_showstrdate >= #{bannersub_showstrdate} and bannersub_showenddate >= #{bannersub_showenddate}
+			]]>
+				 
+		</if>
+				      ORDER  BY bannersub_idx asc 
+	</select>
+    <insert id="insertbannerInfo" parameterType="bannerVO">
+    -- com.grand.admin.banner.dao.BannerDAOImpl.Mapper.insertbannerInfo
+		   INSERT INTO tbl_banner
+			(
+				  banner_idx,
+				  banner_explan, 
+				  banner_showyn, 
+				  banner_subidx, 
+				  banner_regdate,
+				  banner_delyn,
+				  banner_gnb
+			)
+		VALUES
+			(
+			      #{banner_idx}
+				, #{banner_explan}
+				, #{banner_showyn}
+				, #{banner_subidx}
+				, now()
+				, 'N'
+				, #{banner_gnb}
+			)
+			ON DUPLICATE KEY 
+			UPDATE
+				banner_explan   = #{banner_explan},
+				banner_showyn 	= #{banner_showyn},
+				banner_subidx   = #{banner_subidx},
+				banner_regdate 	= now(),
+				banner_delyn  = 'N',
+				banner_gnb = #{banner_gnb}
+	</insert>
+	 <insert id="insertBannersub" parameterType="bannerVO">
+	 -- com.grand.admin.banner.dao.BannerDAOImpl.Mapper.insertBannersub
+		   INSERT INTO tbl_bannersub
+			(
+				  bannersub_idx,
+				  bannersub_summary,
+				  bannersub_parentidx,
+				  bannersub_explan, 
+				  bannersub_show, 
+				  bannersub_link, 
+				  bannersub_showorder, 
+				  bannersub_showstrdate, 
+				  bannersub_showenddate, 
+				  bannersub_tag, 
+				  bannersub_regdate,
+				  bannersub_webImg,
+ 				  bannersub_etcImg,
+ 				  bannersub_mobImg,
+				  bannersub_spareImg,
+				  bannersub_webImgfilekey,
+				  bannersub_etcImgfilekey,
+				  bannersub_mobImgfilekey,
+				  bannersub_spareImgfilekey,
+				  bannersub_linktype,
+				  bannersub_delyn
+			)
+		VALUES
+			(
+				  #{bannersub_idx},
+				  #{bannersub_summary},
+				  #{bannersub_parentidx},
+			   	  #{bannersub_explan}, 
+				  #{bannersub_show}, 
+				  #{bannersub_link}, 
+				  #{bannersub_showorder}, 
+				  #{bannersub_showstrdate}, 
+				  #{bannersub_showenddate}, 
+				  #{bannersub_tag}, 
+				  now(),
+				  #{bannersub_webImg},
+ 				  #{bannersub_etcImg},
+ 				  #{bannersub_mobImg},
+				  #{bannersub_spareImg},
+				  #{bannersub_webImgfilekey},
+				  #{bannersub_etcImgfilekey},
+				  #{bannersub_mobImgfilekey},
+				  #{bannersub_spareImgfilekey},
+				  #{bannersub_linktype},
+				  'N'
+				  
+			)
+			ON DUPLICATE KEY 
+			UPDATE
+				  bannersub_explan = #{bannersub_explan} 
+				  ,bannersub_parentidx = #{bannersub_parentidx}
+				  ,bannersub_summary = #{bannersub_summary}  
+				  , bannersub_show = #{bannersub_show}
+				  , bannersub_link = #{bannersub_link}
+				  , bannersub_showorder = #{bannersub_showorder}
+				  , bannersub_showstrdate = #{bannersub_showstrdate}
+				  , bannersub_showenddate = #{bannersub_showenddate}
+				  , bannersub_tag = #{bannersub_tag}
+				  , bannersub_regdate  = now()
+				  ,bannersub_webImg = #{bannersub_webImg}
+ 				  ,bannersub_etcImg = #{bannersub_etcImg}
+ 				  ,bannersub_mobImg = #{bannersub_mobImg}
+				  ,bannersub_spareImg = #{bannersub_spareImg}
+				  ,bannersub_webImgfilekey = #{bannersub_webImgfilekey}
+				  ,bannersub_etcImgfilekey = #{bannersub_etcImgfilekey}
+				  ,bannersub_mobImgfilekey = #{bannersub_mobImgfilekey}
+				  ,bannersub_spareImgfilekey = #{bannersub_spareImgfilekey}
+				  ,bannersub_linktype = #{bannersub_linktype}
+				  ,bannersub_delyn = 'N'
+	</insert>
+	<update id="deleteBannerInfo">
+	-- com.grand.admin.banner.dao.BannerDAOImpl.Mapper.deleteBannerInfo
+		update 
+				tbl_bannersub 
+		set 
+				bannersub_delyn = 'Y'
+		where 
+				bannersub_idx = #{bannersub_idx}
+	</update>
+</mapper>

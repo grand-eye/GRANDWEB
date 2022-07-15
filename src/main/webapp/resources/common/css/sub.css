@@ -1,0 +1,1623 @@
+@charset "UTF-8";
+/*========== 공통 ==========*/
+.sub {font-family:'Gotham','NotoSans', sans-serif; font-size:20px; padding-top:120px; color:#363636; word-break:keep-all; letter-spacing: -0.075em;}
+
+.txt_space {display:block; height:12px;}
+.desc_default {line-height:1.7; font-weight:500;}
+
+.mark_new {position:absolute; right:0; top:-110px; font-size:30px; padding:35px 27px; background-color:#1e3250; color:#fff; text-align:center; border-radius:0 0 100% 100%; letter-spacing:0;}
+.mark_best {position:absolute; right:16px; top:-4px; font-size:20px; padding:17px 10px 20px; background-color:#1e3250; color:#fff; text-align:center; border-radius:0 0 100% 100%; letter-spacing:0;}
+/* 시력교정클리닉 */
+.mark_newred {position:absolute; right:0; top:-110px; font-size:30px; padding:35px 27px; background-color:#c60807; color:#fff; text-align:center; border-radius:0 0 100% 100%; letter-spacing:0;}
+.mark_bestblue {position:absolute; right:0; top:-110px; font-size:30px; padding:35px 27px; background-color:#1c4287; color:#fff; text-align:center; border-radius:0 0 100% 100%; letter-spacing:0;}
+
+/* bg */
+.bg_navy {background-color:#1e3250;}
+.bg_gray {background-color:#f6f6f6;}
+.bg_brown_light {background-color:#f2efec;}
+.bg_blue_light {background-color:#d8e4f4;}
+
+/* > title type */
+.sub_title {font-size:45px; text-align:center; font-weight:500;}
+.sub_title01 {font-size:48px; text-align:center; font-weight:700;}
+.sub_title01 span {display:block; padding-bottom:20px; font-size:25px; text-align:center; font-weight:500;}
+.sub_title02 {font-size:40px; text-align:center; font-weight:700; line-height:1.4;}
+.sub_title02 .blue {color:#1e3250;}
+.sub_title02 .yellow {color:#cfa67e;}
+.sub_title02 .grey {color:#464646;}
+.sub_title02 .red {color:#c60807;}
+.sub_title03 {font-size:30px; font-weight:700; line-height:1.3;}
+.sub_title04 {font-size:25px; font-weight:500;}
+.sub_title05 {width:100%; padding-bottom:12px; font-size:20px; font-weight:700; border-bottom:2px solid #363636;}
+.sub_title06 {font-size:35px; font-weight:700; }
+.sub_desc {margin-top:55px; text-align:center; font-size:25px; font-weight:500; line-height:2;}
+.sub_desc02 {margin-top:40px; text-align:center; font-size:20px; font-weight:500; line-height:1.8;}
+.sub_sec {padding-top:160px;}
+.sub_visual {width:100%; height:420px; background-repeat:no-repeat; background-size:cover;}
+.sub_visual_txt {font-weight:500;}
+.sub_visual_txt .title {font-size:35px; padding-bottom:35px;}
+.sub_visual_txt .desc {line-height:1.6;}
+.sub_txt_bar {padding:30px 0 35px; background-color:#1e3250; font-size:25px; color:#eaf0f9; text-align:center; font-weight: 500; line-height:1.5;}
+.sub_txt_bar_brown {padding:30px 0 35px; background-color:#e6ded4; font-size:25px; color:#363636; text-align:center; font-weight: 500; line-height:1.2;} 
+
+/* > list type */
+.list_box > li {position:relative; line-height:1.4; padding-left: 20px;}
+.list_box > li:before {content:''; position:absolute; left:0; top:11px; width: 7px; height:7px; background-color:#363636; border-radius:50%;}
+.list_box > li + li {margin-top:13px;}
+
+.list_box02 > li {position:relative; line-height:1.4; padding-left: 15px; color:#6f6f6f; font-size:18px;}
+.list_box02 > li:before {content:''; position:absolute; left:0; top:11px; width: 6px; height:6px; background-color:#6f6f6f; border-radius:50%;}
+.list_box02 > li + li {margin-top:13px;}
+
+.list_box03 > li {position:relative; line-height:1.4; padding-left: 15px;}
+.list_box03 > li:before {content:''; position:absolute; left:0; top:11px; width: 5px; height:5px; background-color:#363636; border-radius:50%;}
+.list_box03 > li + li {margin-top:13px;}
+
+/* > button */
+.btn_detail {display:block; font-size:30px; font-weight:700; color:#1e3250; text-align:center;}
+.btn_detail:after {display:inline-block; content:''; width:13px; height:22px; margin-left:25px; background:url('/common/img/common/icon_arrow_detail.png')no-repeat center; vertical-align:top;}
+.btn_apply {display:block; margin:70px auto 0; width:200px; height:70px; line-height:70px; text-align:center; font-size:20px; color:#fff; font-weight:700; background-color:#1e3250;}
+.btn_tv {display:block; margin:70px auto 0; width:300px; height:82px; padding-left:44px; background:url('/common/img/sub/community_btn_youtube.png') no-repeat center; background-size:contain; font-weight:500; line-height:74px; text-align:center;}
+
+/* > select */
+.select_box{position:relative;}
+.select_box .select {background: #fff url('/common/img/common/icon_select_arrow.png') no-repeat 93% center; border: 1px solid #b7b7b7; overflow: hidden; padding: 20px 30px; width: 450px; cursor:pointer;}
+.select_box .select_ul {overflow-x: hidden; overflow-y: auto; width:450px; border: 1px solid #b7b7b7; display: none; position: absolute; background: #fff; border-top: none; z-index:10;}
+.select_box .select_ul li {padding: 10px 0 10px 18px; width: 100%; cursor:pointer; font-weight:500; border-bottom: 1px solid #b7b7b7; padding: 15px 30px;}
+.select_box .select_ul li:last-child {border-bottom:none;}
+.select_box .select_ul li:hover {background-color:#1e3250; color:#fff;}
+
+/* > input */
+.input_box {width:100%; line-height:50px; border-bottom:1px solid #959595; flex-wrap:nowrap;}
+.input_box label {min-width:80px; font-weight:500; color:#adadad;}
+.input_box input {width:calc(100% - 80px); height:50px; padding:0 10px; color:#363636; font-size:20px; font-weight:400; letter-spacing:0; background-color:transparent; }
+.input_box.input_cont {width:100%;}
+
+.input_box02 input {width:100%; height:48px; padding:0 20px; border:1px solid #b7b7b7; font-size:18px;}
+
+/* checkbox */
+.check_box_wrap {margin-top:40px;}
+.check_box_wrap .check_box + .check_box {margin-left:30px;}
+.check_box {position: relative;}
+.check_box input {display:none; opacity: 0; filter: alpha(opacity=0); width: 17px; height: 17px;}
+.check_box label {color: #4c4c4c; font-size: 20px; cursor:pointer;}
+.check_box label:before {display: inline-block; content:''; width:17px; height:17px; margin-right:15px; background-color:#fff; border:1px solid #707070; vertical-align:bottom;}
+.check_box input:checked + label:before {background: #1e3250 url('/common/img/common/icon_checkbox_on.png') center no-repeat;} 
+
+/* > radio */
+.radio_box_wrap {margin-top:40px;}
+.radio_box_wrap .radio_box + .radio_box {margin-left:60px;}
+.radio_box {position: relative;}
+.radio_box input {display:none; opacity: 0; filter: alpha(opacity=0); width: 17px; height: 17px;}
+.radio_box label {color: #4c4c4c; font-size: 20px; cursor:pointer;}
+.radio_box label:before {display: inline-block; content:''; width:17px; height:17px; margin-right:15px; background-color:#fff; border:1px solid #707070; vertical-align:middle;}
+.radio_box input:checked + label:before {background: #1e3250 url('/common/img/common/icon_checkbox_on.png') center no-repeat;} 
+
+/* > search */
+.search_box {width:56%; height:68px; border: 1px solid #d7d7d7; margin:0 auto; }
+.search_box .search {width:calc(100% - 130px);}
+.search_box .search input {width:100%; height:100%; padding:0 20px;  font-size:20px; color:#363636;}
+.search_box .search input::placeholder {color:#adadad;}
+.search_box .search input:-ms-input-placeholder {color:#adadad;}
+.search_box .search input::-moz-placeholder {color:#adadad;}
+.search_box .btn_search {width:130px; height:100%; background-color:#1e3250; border:1px solid #1e3250; font-size:20px; color:#fff;}
+
+.search_box02 {width:56%; height:68px; border-bottom: 2px solid #363636; margin:0 auto;}
+.search_box02 .search {width:calc(100% - 70px);}
+.search_box02 .search input {width:100%; height:100%; padding:0 20px; font-size:20px; color:#363636; text-align:center;}
+.search_box02 .search input::placeholder {color:#adadad;}
+.search_box02 .search input:-ms-input-placeholder {color:#adadad;}
+.search_box02 .search input::-moz-placeholder {color:#adadad;}
+.search_box02 .btn_search {width:35px; height:35px; margin-right:20px; background:url('/common/img/common/icon_search.png') no-repeat center;}
+
+
+/*========== 비급여진료비 안내 ==========*/
+.nonbenefit .sec_desc {margin-top:25px;}
+.table_box {overflow-x:auto; padding:100px 0 60px;}
+.table_box table {width:100%;}
+.table_box table td {padding:9px 15px; border:1px solid #b7b7b7; font-size:14px; text-align:left; color:#363636; font-family:'NotoSans'; letter-spacing:-0.05em;}
+.table_box thead th {padding:9px 13px; background-color:#e1e1e1; border:1px solid #b7b7b7; text-align:left; font-weight:500; font-size:14px; color:#363636; font-family:'NotoSans';}
+
+.info_download_box {padding:45px 0; background-color:#f4f4f4;}
+.info_download_box > div {position:relative;}
+.info_download_box > div:after {content:''; position:absolute; right:0; bottom:-45px; width:196px; height:143px; background:url('/common/img/sub/grand_nonbe_img_g.png') no-repeat center; background-size:contain;}
+.info_download_box h4 {font-size:22px; font-weight:500;}
+.info_download_box h4 > span {color:#1e3250;}
+.info_download_box .txt {position:relative; width:82%; padding-top:35px; font-size:16px; line-height:1.7; font-family:'NotoSans';}
+.info_download_box .txt em {font-weight:700;}
+.btn_download_box {position:absolute; right:15px; bottom:-10px; font-size:0;}
+.btn_download_box button {color:#363636;}
+.btn_download_box button + button {margin-left:15px;}
+
+
+/*========== 강남그랜드안과 - 병원소개 ==========*/
+.intro_sec01 .sub_visual {margin-top:110px; background-image:url('/common/img/sub/grand_intro_bg_intro.jpg'); justify-content:center;}
+.intro_sec01 .sub_visual_txt {color:#fff; font-weight:500; text-shadow:1px 1px 0px rgba(0,0,0,0.5);}
+.intro_sec01 .sub_visual_txt .txt02 {margin-top:15px; font-size:50px;}
+.intro_sec01 .sub_visual_txt .txt03 {margin-top:20px; font-size:22px; line-height:1.5}
+
+.intro_sec02 .img img{padding:0 10px;}
+.intro_sec02 .txt_box {align-items:flex-start; justify-content:center; margin-top:120px; padding:0 10px;}
+.intro_sec02 .txt_item {width:42.5%;}
+.intro_sec02 .txt_item + .txt_item {margin-left:15%;}
+.intro_sec02 .txt_item li {position:relative; padding:50px 0 80px 80px;}
+.intro_sec02 .txt_item .num {position:absolute; top:45px; left:0; font-size:40px; letter-spacing:0;}
+.intro_sec02 .txt_item .tit {font-size:40px; font-weight:500;}
+.intro_sec02 .txt_item .desc {margin-top:45px; line-height:1.4;}
+.intro_sec02 .txt_item.left_item .num {color:#d2c8bc;}
+.intro_sec02 .txt_item.left_item li:first-child {border-top: 10px solid #e6ded4;}
+.intro_sec02 .txt_item.left_item li {border-top:1px solid #e6ded4;}
+.intro_sec02 .txt_item.right_item .num {color:#1e3250;}
+.intro_sec02 .txt_item.right_item li:first-child {border-top: 10px solid #1e3250;}
+.intro_sec02 .txt_item.right_item li {border-top:1px solid #1e3250;}
+
+.intro_sec03{padding-bottom:200px;}
+.intro_sec03 .sub_visual {margin-top:110px; background-image: url('/common/img/sub/grand_intro_bg_ci.jpg');}
+.intro_sec03 .ci_box{margin-top:110px;}
+.intro_sec03 .ci_box .img {width:406px}
+.intro_sec03 .ci_box .img span {display:block; margin-top:40px; text-align:center; font-size:40px; color:#062f4d; font-weight:400;}
+.intro_sec03 .ci_box .txt {width:calc(100% - 406px); margin-left:10%;}
+.intro_sec03 .ci_box h4 {padding-bottom: 15px; font-size:32px; font-weight:500; border-bottom:1px solid #ccc;}
+.intro_sec03 .ci_box p {padding-top:15px;font-size:18px; line-height:1.7;}
+.intro_sec03 .rany_box {text-align:center;}
+.intro_sec03 .rany_box li span {position:relative; left:-7px; display:inline-block; margin-top:5px; font-size:14px;}
+.intro_sec03 .rany_box li + li {margin-left:30px;}
+
+
+/*========== 강남그랜드안과 - 의료진 소개 ==========*/
+.sub_desc.doctor_desc:after {display:block; margin:60px auto 45px; content:''; width:1px; height:115px; background-color:#707070;}
+.doctor_box .doctor_txt_bar {padding:30px 0; text-align:center; font-size:30px; font-weight:500; color:#e1e1e1; background-color:#1e3250; line-height:1.5;}
+.lys_box{margin-top:175px;}
+.doctor_box .doctor_history_box {padding-top:70px; background-color:#dde0e5; border-bottom:1px solid #e1e1e1;}
+.doctor_box .doctor_history_box .flex{align-items:flex-end;}
+.doctor_box .history_inr {position:relative; width:455px;}
+.doctor_box .doctor_carelist li {font-weight:500;}
+.doctor_box .doctor_carelist li:after {display:inline-block; content:''; width:1px; height:14px; margin:0 10px; background-color:#363636; vertical-align:middle;}
+.doctor_box .doctor_carelist li:last-child:after {display:none;}
+.doctor_box .doctor_name {padding:30px 0 25px; border-bottom:1px solid #1e3250; font-size:45px; font-weight:500;}
+.doctor_box .doctor_name span {font-weight:300; color:#707070;}
+.doctor_box .tab_menu {margin-top:65px;}
+.doctor_box .tab_menu li {font-weight:500; color:#959595; cursor:pointer;}
+.doctor_box .tab_menu li + li {margin-left:60px;}
+.doctor_box .tab_menu li:after {display:block; content:''; margin-top:5px; width:100%; height:3px; background-color:transparent;}
+.doctor_box .tab_menu li.active {color:#1e3250;}
+.doctor_box .tab_menu li.active:after {display:block; content:''; margin-top:5px; width:100%; height:3px; background-color:#1e3250;}
+.doctor_box .tab {height:315px; overflow:auto; margin:40px 0; padding-left:30px;}
+.doctor_box .tab::-webkit-scrollbar {width: 4px;}
+.doctor_box .tab::-webkit-scrollbar-thumb {background-color: #1e3250;}
+.doctor_box .tab::-webkit-scrollbar-track {background-color: #fff;}
+.doctor_box .tab {
+	/* 스크롤바 - explorer */	
+	scrollbar-3dLight-Color: #fff; 
+	scrollbar-base-color: #fff; 
+	scrollbar-Face-Color: #1e3250; 
+	scrollbar-Track-Color: #fff; 
+	scrollbar-DarkShadow-Color: #fff;
+	scrollbar-Highlight-Color: #fff; 
+	scrollbar-Shadow-Color: #fff
+}
+.doctor_box .history_list li {font-size:18px; color:#58595b; font-weight:500;}
+.doctor_box .history_list li + li {margin-top:11px;} 
+.lys_swiper{margin-bottom:100px;}
+.doctor_swiper {padding:55px 0; border-bottom:1px solid #e1e1e1;}
+.doctor_swiper .swiper-container{margin-top:55px;}
+.doctor_swiper > div {position:relative;}
+.doctor_swiper .swiper-wrapper {align-items:center;}
+.doctor_swiper .img-wrap{text-align:center;}
+.doctor_swiper .swiper-button-next:after, .doctor_swiper .swiper-button-prev:after {display:none;}
+.doctor_swiper .swiper-button-prev {width:42px; height:42px; left:-85px; right: auto; bottom:25%; top:auto; background:url('/common/img/common/icon_slide_arrow_r_gray_prev.png') no-repeat 0 0;}
+.doctor_swiper .swiper-button-next {width:42px; height:42px; right:-85px; left: auto; bottom:25%; top:auto; background:url('/common/img/common/icon_slide_arrow_r_gray_next.png') no-repeat 0 0;}
+.doctor_swiper .swiper-pagination{left:50%; transform:translate(-50%);}
+.doctor_box.lys_box .history_list li {font-size:18px; color:#58595b;}
+.doctor_box.lys_box .history_list li + li {margin-top:10px;} 
+.doctor_box.lys_box .doctor_txt_bar {background-color:#e6ded4; color:#736357;}
+.doctor_box.lys_box .doctor_history_box {background-color:#f2eee9;}
+.doctor_box.lys_box .history_inr {position:relative;}
+.doctor_box.lys_box .doctor_name {border-bottom:1px solid #828892;}
+.doctor_box.lys_box .tab::-webkit-scrollbar {width: 4px;}
+.doctor_box.lys_box .tab::-webkit-scrollbar-thumb {background-color: #e6ded4;}
+.doctor_box.lys_box .tab::-webkit-scrollbar-track {background-color: #fff;}
+.doctor_box.lys_box .tab {
+	/* 스크롤바 - explorer */	
+	scrollbar-3dLight-Color: #fff; 
+	scrollbar-base-color: #fff; 
+	scrollbar-Face-Color: #e6ded4; 
+	scrollbar-Track-Color: #fff; 
+	scrollbar-DarkShadow-Color: #fff;
+	scrollbar-Highlight-Color: #fff; 
+	scrollbar-Shadow-Color: #fff
+}
+.doctor_box.ljj_box .doctor_txt_bar {background-color:#707070; color:#ffffff;}
+.doctor_box.ljj_box .doctor_history_box {background-color:#ebebeb;}
+
+/*========== 강남그랜드안과 - 장비 소개 ==========*/
+/* > 검사 장비 */
+.partner_wrap{padding-top:90px;}
+.sub_tab_menu {margin-top:90px; text-align:center; justify-content:center;}
+.sub_tab_menu li {margin:0 50px; color:#b9b9b9; font-weight:500; cursor:pointer;}
+.sub_tab_menu li:after {display:block; content:''; margin-top:5px; width:100%; height:3px; background-color:transparent;}
+.sub_tab_menu li.active {color:#363636;}
+.sub_tab_menu li.active:after {display:block; content:''; margin-top:5px; width:100%; height:3px; background-color:#062f4d;}
+.partner_wrap .tab_contents{padding-top:45px; padding-bottom:180px;}
+
+.tab_exam .sub_visual {background-image:url('/common/img/sub/grand_equip_ex_bg.jpg');}
+.tab_oper .sub_visual {background-image:url('/common/img/sub/grand_equip_op_bg.jpg');}
+.tab_disi .sub_visual {background-image:url('/common/img/sub/grand_equip_di_bg.jpg'); background-position:right center;}
+
+.equip_swiper {position:relative; padding-bottom:160px;}
+.e_swiper0201{margin-top:170px;}
+.last_equip_swiper{padding-bottom:250px;}
+.equip_swiper .swiper-container {padding-top:60px;}
+.equip_swiper .swiper-button-next:after, .equip_swiper .swiper-button-prev:after {display:none;}
+.equip_swiper .swiper-button-prev {width:22px; height:39px; left:-55px; right: auto; bottom:60%; top:auto; background:url('/common/img/common/icon_slide_arrow_prev.png') no-repeat 0 0;}
+.equip_swiper .swiper-button-next {width:22px; height:39px; right:-55px; left: auto; bottom:60%; top:auto; background:url('/common/img/common/icon_slide_arrow_next.png') no-repeat 0 0;}
+.equip_swiper .swiper-slide {width:30%;}
+.equip_swiper .equip_title {height:70px; line-height:70px; text-align:center; font-size:30px; font-weight:700; color:#1e3250; border:1px solid #b7b7b7; border-right:none; border-left:none;}
+.equip_swiper .equip_desc {padding-top:20px; min-height:180px; font-weight:500; line-height:1.7;} 
+.equip_swiper .equip_img {padding-top:60px; height:430px; display:flex; justify-content:center; align-items:center;}
+.equip_swiper .equip_name {padding-top:60px; text-transform:uppercase; letter-spacing:0; color:#1e3250; font-size:25px;}
+
+.oper_box .txt-cont{padding-top:25px; font-weight:500; font-size:16px; line-height:2;}
+
+/* > 수술 장비 */
+.oper_box > .sub_title02:after {display: block; margin: 40px auto 15px; content: ''; width: 1px; height: 115px; background-color: #b7b7b7;}
+.oper_box .btn_detail {margin-top:50px;}
+
+.oper_ex500_box {padding:95px 0 45px; margin-bottom:200px; background-color:#f2f4f5;}
+.oper_ex500_box > div {position:relative;}
+.oper_ex500_box .sub_title02 {text-align:left;}
+.oper_ex500_box .sub_title02 .blue {font-weight:400;}
+.oper_ex500_box .sub_title02 .red {font-weight:400;}
+.oper_ex500_box .tag_box {padding-top:45px;}
+.oper_ex500_box .tag_box li {font-size:30px; font-weight:500;}
+.oper_ex500_box .tag_box li + li {margin-top:20px;}
+.oper_ex500_box .img {position:absolute; right:0; top:45px;}
+
+.oper_list_box {padding:45px 0; background-color:#1e3250; justify-content:center;}
+.oper_list_box li {padding:10px 0; width:25%; color:#f2f4f5; text-align:center;}
+.oper_list_box li .top {font-size:30px; font-family:'Gotham';}
+.oper_list_box li .top span {font-size:45px;}
+.oper_list_box li .txt {padding-top:30px; color:#b7b7b7}
+.oper_list_box li + li {border-left: 1px solid #959595;}
+
+/* > 소독 장비 */
+.tab_disi .img {text-align:center;}
+
+
+/*========== 강남그랜드안과 - 위치 및 진료안내 ==========*/
+.info_hours .sub_visual {justify-content:center; text-align:center; font-size:35px; font-weight:500; line-height:1.4; height:240px; background-image:url('/common/img/sub/grand_info_bg.jpg'); background-position:center;}
+.hours_reservation_box {margin-top:60px; justify-content:center; text-align:center;} 
+.hours_reservation_box li .couns_box a {display:block;}
+.hours_reservation_box li {width:33.3%; margin: 0 15px; font-size:25px; font-weight:700; border:1px solid #d7d7d7;}
+.hours_reservation_box li .item_top {height:133px; background:#1e3250 url('/common/img/sub/grand_info_img_calen.png') no-repeat center;}
+.hours_reservation_box li.couns_box .item_top {background:#f6f6f6 url('/common/img/sub/grand_info_img_speech.png') no-repeat center;}
+.hours_reservation_box li .btn_link {width:53px; height:53px; margin:30px auto; background:url('/common/img/common/icon_link_arrow.png') no-repeat center; background-size:contain; transition: all 0.3s;}
+.hours_reservation_box li:hover .btn_link {background-image:url('/common/img/common/icon_link_arrow_on.png');}
+.hours_reservation_box li p {padding-top:35px;}
+.hours_wrap {align-items:flex-start; margin-top:150px;}
+.hours_box {width:50%;}
+.hours_box:first-child {margin-right:30px;}
+.hours_box .table_info {width:100%;}
+.hours_box .table_info tr {font-size:20px; color:#363636;}
+.hours_box .table_info thead th {padding:20px 0 18px; background-color:#f6f6f6; border:1px solid #b7b7b7; font-weight:500; font-size:20px; color:#363636;}
+.hours_box .sc_table_info thead th:first-child{width:160px;}
+.hours_box .table_info tbody td {padding:20px 0; border:1px solid #b7b7b7; font-weight:500; font-size:20px; color:#363636; font-family:'Gmarket', 'NotoSans';}
+.hours_box .table_info .bar {display:inline-block; width:20px; height:1px; margin:0 5px; background-color:#363636; vertical-align:middle;}
+.hours_box .info_tel {padding:20px 50px;}
+.hours_box .info_tel span {font-size:25px; font-weight:700; color:#1e3250; letter-spacing:0;}
+.notice-wrap{margin-top:150px;}
+.info_hours .list_box {padding:50px 75px; background-color:#f6f6f6;}
+
+.info_loca_inr {margin-top:90px; align-items:flex-start;}
+.info_loca_inr .loca_txt_box {width:calc(100% - 720px);}
+.info_loca_inr .loca_txt_box > p {font-weight:500;}
+.info_loca_inr .map_btn_box {font-size:0;}
+.info_loca_inr .map_btn_box li {display:inline-block; width:200px; height:70px; margin-top:10px; margin-right:10px; font-size:20px; line-height:70px; color:#fff; font-weight:700; text-align:center;}
+.info_loca_inr .map_btn_box li.naver_map {background-color:#3cbb33;} 
+.info_loca_inr .map_btn_box li.kakao_map {background-color:#ffc705; color:#603913} 
+.info_loca_inr .map_btn_box li.mobile_map {background-color:#1e3250;} 
+.info_loca_inr .loca_map_box {width:720px; border: 1px solid #d7d7d7; height:540px;}
+.info_loca_inr .loca_map_box iframe {width:100%; height:100%;}
+.info_loca_inr .loca_parking_info {margin-top:60px;}
+.info_loca_inr .loca_parking_info .list_box {width:85%; font-weight:500;}
+
+.info_parking {align-items:flex-start; margin-top:150px;}
+.info_parking .park_info {width: calc(100% - 720px);}
+.info_parking .park_table {width: 720px;}
+.info_parking .list_box {font-weight:500;}
+.info_parking .list_box .title {display:inline-block; width:135px;}
+.info_parking .list_box .addr {padding-top:15px; margin-top:15px; border-top:1px solid #b7b7b7; width:70%;}
+.info_parking .park_table li {height:63px; border:1px solid #b7b7b7; border-bottom:none;}
+.info_parking .park_table li:last-child {border-bottom:1px solid #b7b7b7;}
+.info_parking .park_table li > div { display:flex; align-items:center;}
+.info_parking .park_table li > .title {width:120px; height:100%; text-align:center; font-weight:700; border-right:1px solid #b7b7b7; justify-content:center;}
+.info_parking .park_table li > .cont {font-size:18px; width:calc(100% - 120px); height:100%; padding-left:18px; font-weight:500; line-height:1.3;}
+
+.info_subway{margin-top:150px; padding-bottom:200px;}
+.info_subway .txt01 {padding-left:95px; font-weight:500;}
+.info_subway .txt01 > .txt {display:inline-block; height:27px; line-height:24px; padding:0 7px; color:#fff; font-weight:500; background-color:#9c1217; border-radius:50px;}
+.info_subway .txt01 > .num {display:inline-block; width:27px; height:27px; margin:0 5px 0 11px; text-align:center; line-height:24px; color:#fff; font-weight:600; background-color:#1f9d15; border-radius:100%;}
+.info_subway .icon_person {display:inline-block; margin:0 10px 0 90px; width:16px; height:31px; background:url('/common/img/sub/grand_info_icon_person.png') no-repeat center;}
+
+
+/*========== 강남그랜드안과 - 제안 제휴 ==========*/
+.partner_wrap .sub_visual_txt {width:100%;}
+/* > 제휴 제안 */
+.tab_prop .sub_visual {background-image:url('/common/img/sub/grand_part_bg01.jpg');}
+.tab_prop .sub_visual_txt .desc {width:51%;}
+.part_write_box .sub_title03 {padding-bottom:25px;}
+.write_box_inr {padding:60px 0; border-top:1px solid #b7b7b7; border-bottom:1px solid #b7b7b7;}
+.write_box_inr .input-wrap{padding-top:80px;}
+.write_box_inr .flex_between > div:first-child{margin-right:95px;}
+.write_box_inr .terms-wrap{padding-top:90px;}
+
+.part_write_box{padding-top:120px;}
+.part_write_box .input_box {margin-top:40px;}
+.part_write_box .check_box {margin-top:30px;}
+.part_write_box .check_box label:before {margin-right:3px;}
+.part_write_box .list_box {margin-top:35px; padding-left:15px;}
+
+/* > 제휴 예약 신청 */
+.tab_appl .sub_visual {background-image:url('/common/img/sub/grand_part_bg02.jpg');}
+.tab_appl .sub_visual_txt .desc {width:50%;}
+
+/* > 안 종합검진 신청 */
+.tab_medi .sub_visual {background-image:url('/common/img/sub/grand_part_bg03.jpg');}
+.tab_medi .sub_visual_txt .desc {width:50%;}
+
+/*========== 시력교정클리닉 - 수술장비 ==========*/
+/* > 원데이라식 */
+.rv_o_lasik07_z8_box {padding:95px 0 45px; margin-bottom:270px; background-color:#e6ded4;}
+.rv_o_lasik07_z8_box > div {position:relative;}
+.rv_o_lasik07_z8_box .sub_title02 {text-align:left;}
+.rv_o_lasik07_z8_box .sub_title02 .blue {font-weight:400;}
+.rv_o_lasik07_z8_box .tag_box {padding-top:45px;}
+.rv_o_lasik07_z8_box .tag_box li {font-size:30px; font-weight:500;}
+.rv_o_lasik07_z8_box .tag_box li + li {margin-top:20px;}
+.rv_o_lasik07_z8_box .img {position:absolute; right:0; top:45px;}
+
+.rv_o_lasik07_ex500_box {padding:95px 0 45px; margin-bottom:200px; background-color:#f2f4f5;}
+.rv_o_lasik07_ex500_box > div {position:relative;}
+.rv_o_lasik07_ex500_box .sub_title02 {text-align:left;}
+.rv_o_lasik07_ex500_box .sub_title02 .blue {font-weight:400;}
+.rv_o_lasik07_ex500_box .tag_box {padding-top:45px;}
+.rv_o_lasik07_ex500_box .tag_box li {font-size:30px; font-weight:500;}
+.rv_o_lasik07_ex500_box .tag_box li + li {margin-top:20px;}
+.rv_o_lasik07_ex500_box .img {position:absolute; right:0; top:45px;}
+
+.rv_c_lasik05_z8_box {padding:95px 0 189px; margin-bottom:0px; background:#f3f1f1 url('/common/img/sub/rv_c_lasik05_bg.jpg') center no-repeat;}
+.rv_c_lasik05_z8_box > div {position:relative;}
+.rv_c_lasik05_z8_box .sub_title02 {text-align:left;}
+.rv_c_lasik05_z8_box .sub_title02 .red {font-weight:400;}
+.rv_c_lasik05_z8_box .tag_box {padding-top:45px;}
+.rv_c_lasik05_z8_box .tag_box li {font-size:30px; font-weight:500;}
+.rv_c_lasik05_z8_box .tag_box li + li {margin-top:20px;}
+.rv_c_lasik05_z8_box .img {position:absolute; right:0; top:45px;}
+
+/*========== 노안 백내장 - 노안백내장클리닉 ==========*/
+/* > 노안 */
+.tab_pres .sub_visual {position:relative; background-image:url('/common/img/sub/pres_clinic_bg.jpg');}
+.tab_pres .sub_visual .txt {position:absolute; left:42%; top:42%; transform:translate(-50%,-50%); font-size:35px; font-weight:500; text-shadow:1px 1px 0px rgba(119,144,119,0.5);}
+.pres_list_box {padding-top:120px;}
+.pres_list {padding-top:80px;}
+.pres_list .title {display:inline-block; margin-top:15px; padding: 10px 30px; border-radius:50px; color:#1e3250; font-weight:700; border:3px solid #1e3250;}
+.pres_list .title.pres {background-color:#1e3250; color:#fff;}
+.pres_kind_list {padding-top:50px;}
+.pres_kind_list .pres_kind_list_item {width:32%;}
+.pres_kind_list .pres_kind_list_item .title {padding-top:45px; font-size:25px; font-weight:700;}
+.pres_kind_list .pres_kind_list_item .title:after {display:block; content:''; width:100%; height:2px; margin-top:12px; background-color:#363636;}
+.pres_kind_list .pres_kind_list_item .desc_default {min-height:185px; padding-top:40px;}
+.pres_kind_list .pres_kind_list_item .img {margin-top:54px;}
+
+.sympo_list li + li {margin-top:18px;}
+.sympo_list .txt_box {width:calc(100% - 817px); height:420px; padding:65px 55px; background-color:#e6ded4;}
+.sympo_list .txt_box .num {display:block; border-bottom:1px solid #cfc1b0;}
+.sympo_list .txt_box .target {padding-top:20px; font-size:30px; font-weight:700;}
+.sympo_list .txt_box .desc_default {padding-top:30px;}
+.sympo_list li .img_one {background:url('/common/img/sub/pres_clinic_img_symptom01.png') no-repeat center;background-size:100% 100%;width:817px;height:420px;}
+.sympo_list li .img_two {background:url('/common/img/sub/pres_clinic_img_symptom02.png') no-repeat center;background-size:100% 100%;width:817px;height:420px;}
+.sympo_list li .img_three {background:url('/common/img/sub/pres_clinic_img_symptom03.png') no-repeat center;background-size:100% 100%;width:817px;height:420px;}
+.sympo_list li .img_four {background:url('/common/img/sub/pres_clinic_img_symptom04.png') no-repeat center;background-size:100% 100%;width:817px;height:420px;}
+
+
+.pres_treat {width:100%; padding:120px 0 90px; background:url('/common/img/sub/pres_clinic_treate_bg.jpg') no-repeat center; background-size:cover;}
+.pres_treat .sub_title01 {padding-bottom:85px;}
+.pres_treat_box .box {min-height:777px; padding:30px 40px; background-color:#fff; box-shadow:-1px 2px 3px rgba(0,0,0,0.08);}
+.pres_treat_box .box .num {position:relative; width:100%; height:104px; margin-bottom:65px; background:url('/common/img/sub/pres_clinic_img_treat_num01.png') no-repeat center;}
+.pres_treat_box .box .num span {position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); font-size:30px; font-weight:700; height:40px; line-height:40px; background-color:#fff;}
+.pres_treat_box .box .title {font-size:25px; font-weight:700; color:#1e3250; text-align:center;}
+.pres_treat_box .box .title:after {display:block; content:''; width:100%; height:4px; margin-top:12px; background-color:#1e3250;}
+.pres_treat_box .box .img {margin:30px 0; text-align:center;}
+.pres_treat_box .box.non {width:30%;}
+.pres_treat_box .box.sur {width:70%; margin-left:20px;}
+.pres_treat_box .box.sur .title01 {padding:0 16px;}
+.pres_treat_box .box.sur .title02 {padding:0 32px;}
+.pres_treat_box .box.sur .num {background-image:url('/common/img/sub/pres_clinic_img_treat_num02.png');}
+.pres_treat_box .box.sur .box_inr {padding:0 27px 85px;}
+.pres_treat_box .box.sur .box_inr:first-child {border-right:1px solid #b7b7b7;}
+
+.pres_system .sub_desc02 {padding-bottom:250px;}
+/*.system_list_box {padding-bottom:0px; background:#f7f5f2 url('/common/img/sub/pres_clinic_bg_system.png') no-repeat bottom; background-size:76%; }*/
+.system_list_box {padding-bottom:0px; background:#f7f5f2 url('/common/img/sub/rv_lasik04_bg.jpg') center bottom no-repeat;}
+.system_list_box .system_list {display:flex; flex-direction:row; justify-content:center; position:relative; top:-100px;}
+.system_list_box .system_list li {width:auto;position:relative;}
+.system_list_box .title_box {position:relative; min-height:365px;}
+.system_list_box .title_box p {position:absolute; top:140px; width:100%; font-weight:700; font-size:35px; color:#1e3250;}
+.system_list_box .desc_default {padding-top:67px;}
+
+.link_box {padding:65px 0 180px;}
+.link_box li {margin:0 55px;}
+
+/* > 백내장 */
+.tab_cata .sub_visual {position:relative; background-image:url('/common/img/sub/pres_cata_bg.jpg');}
+.tab_cata .sub_visual .txt {position:absolute; left:42%; top:42%; transform:translate(-50%,-50%); font-size:35px; font-weight:500;}
+
+.cata_list .title {position:relative; margin-bottom:100px;}
+.cata_list .title:after {position:absolute; left:50%; bottom:-95px; transform:translateX(-50%); height:95px; width:2px; margin:0 auto; background-color:#1e3250; content:'';}
+
+.cata_swiper {position:relative;}
+.cata_swiper .swiper-button-next:after, .cata_swiper .swiper-button-prev:after {display:none;}
+.cata_swiper .swiper-button-prev {width:22px; height:39px; left:-55px; right: auto; bottom:23%; top:auto; background:url('/common/img/common/icon_slide_arrow_prev.png') no-repeat 0 0;}
+.cata_swiper .swiper-button-next {width:22px; height:39px; right:-55px; left: auto; bottom:23%; top:auto; background:url('/common/img/common/icon_slide_arrow_next.png') no-repeat 0 0;}
+.cata_swiper > .img {margin-top:60px; border:1px solid #d7d7d7;}
+.cata_swiper .pres_kind_list .title {padding-top:0;}
+.cata_swiper .pres_kind_list .pres_kind_list_item {width:auto;}
+
+.care_sec .bg_navy {padding:100px 0 222px;}
+.cata_treat_inr {position:relative; top:-133px; padding-bottom:23px; background-color:#fff;box-shadow: 0px 1px 3px 0px rgba(202, 202, 202, .94);}
+.cata_treat_inr > .title {padding:30px 0 30px; font-size:30px; font-weight:700; color:#1e3250;}
+.cata_treat_inr > .desc_default {padding-top:30px;}
+.cata_treat_list {padding:105px 100px 0; flex-wrap:wrap;}
+.cata_treat_list li {width:32%;}
+.cata_treat_list .num {padding-top: 43px; margin-bottom: 23px; border-bottom: 2px solid #e6ded4;}
+.cata_treat_list .list_title {min-height:180px; font-size:25px; font-weight:700; line-height:1.7;}
+
+.sympo_list li .cata_img_one {background:url('../img/sub/pres_cata_img_symptom01.png') no-repeat center;background-size:100% 100%;width:817px;height:420px;}
+.sympo_list li .cata_img_two {background:url('../img/sub/pres_cata_img_symptom02.png') no-repeat center;background-size:100% 100%;width:817px;height:420px;}
+.sympo_list li .cata_img_three {background:url('../img/sub/pres_cata_img_symptom03.png') no-repeat center;background-size:100% 100%;width:817px;height:420px;}
+.sympo_list li .cata_img_four {background:url('../img/sub/pres_cata_img_symptom04.png') no-repeat center;background-size:100% 100%;width:817px;height:420px;}
+
+
+/* > 수술 전 후 주의사항 */
+.care_list_wrap .care_list{position:relative;}
+.care_list_wrap .care_list:before {content:''; position:absolute; top:-1px; left:110px; width:71px; height:37px; background:url('/common/img/common/img_triangle_light_brown.png') no-repeat center; background-size:contain;}
+.bg_blue_light .care_list:before {background-image:url('/common/img/common/img_triangle_light_blue.png');}
+.pres_care_desc {margin-top:0; padding:20px 0 120px;}
+.care_list_wrap {padding:100px 0 130px;}
+.care_list {margin-top:30px; padding:30px 85px; border:1px solid #d7d7d7; background-color:#fff;}
+.care_list li {padding:60px 0;}
+.care_list li + li {border-top:1px solid #ccc;}
+.care_list li .img_box {min-width: 170px; margin-right:70px; text-align: right;}
+.care_list li .txt_box {width:calc(100% - 240px);}
+.care_list li .title {font-size:30px; font-weight:500;}
+.care_list li .desc_default {padding-top:25px;}
+.care_list li .desc_default .date {position:relative; display:inline-block; width:145px; padding-left:12px;}
+.care_list li .desc_default .date:before {content:''; position:absolute; left:0; top:15px; width: 5px; height:5px; background-color:#363636; border-radius:50%;}
+.care_after_info {padding:50px 0 110px;}
+.care_after_info .list_box03 {padding-top:40px;}
+.care_after_info .list_box03 > li {letter-spacing: -0.095em; font-weight:500;}
+
+/*========== 커뮤니티 - 공지사항 ==========*/
+.table_notice_wrap {margin-top:70px;}
+.table_notice {width:100%;}
+.table_notice thead th {height:71px; padding:0 10px; border-top: 2px solid #363636; font-size:20px; font-weight:500; color:#363636; line-height:1}
+.table_notice tbody td {height:70px; padding:0 10px; border-top:1px solid #b7b7b7; border-bottom:1px solid #b7b7b7; font-size:20px; color:#828282; font-weight:500; letter-spacing:-0.05em; line-height:1; cursor:pointer;}
+.table_notice .title {text-align:left; color:#363636;}
+.table_notice .bg {background-color:#f6f6f6;}
+.table_notice .class.notice {display:inline-block; width:68px; padding: 6px 0 7px; background-color:#1e3250; border-radius:50px; color:#fff; font-size:18px; font-weight:500;}
+
+
+/*========== 커뮤니티 - 온라인 상담 ==========*/
+.table_notice .class.answer {display:inline-block; width:88px; padding:4px 0 5px; background-color:#1e3250; border:2px solid #1e3250; font-size:18px; color:#fff; font-weight:500; text-align:center; border-radius:50px;}
+.table_notice .class.wait {display:inline-block; width:88px; padding:4px 0 5px; background-color:#fff; border:2px solid #1e3250; font-size:18px; color:#363636; font-weight:500; text-align:center; border-radius:50px;}
+.table_notice td .icon_lock {display:inline-block; width:20px; height:25px; margin-right:12px; background:url('/common/img/common/icon_lock.png') no-repeat center; vertical-align:sub;}
+.table_notice td.name {color:#363636;}
+
+.counsel_detail_info {width:855px; padding:120px 0;}
+.counsel_detail_info .counsel_detail_list {border-bottom:1px solid #b7b7b7;}
+.counsel_detail_info .counsel_detail_list .title {display:inline-block; width:150px; height:80px; line-height:80px; text-align:center; background-color:#f6f6f6; font-weight:500;}
+.counsel_detail_info .counsel_detail_list .cont {padding:0 60px;}
+.counsel_detail_info .counsel_detail_list:last-child {border-bottom:none;}
+
+.counsel_detail_answer {border-top: 1px solid #b7b7b7;}
+.counsel_detail_answer > .title {padding-top:35px; font-weight:700;}
+.counsel_detail_answer .answer_box {margin-top:30px; padding:90px 0 100px; text-align:center; border:1px solid #e1e1e1;}
+.counsel_detail_answer .btn_apply {margin:0;}
+.counsel_detail_answer .btn_box {margin-top:60px;}
+.counsel_detail_answer .btn_counsel {width:123px; height:70px; border:1px solid #d7d6d6; font-weight:500; color:#1b1b1b; font-size:20px;}
+.counsel_detail_answer .btn_counsel + .btn_counsel {margin-left:30px;}
+
+.counsel_confirm_box {max-width:340px; margin:0 auto;}
+.counsel_confirm_box > .title {font-weight:700;}
+.counsel_confirm_box > .desc {padding-top:30px; font-size:18px;}
+.counsel_confirm_box > .btn_password {display:block; margin-top:15px; width:175px; height:50px; text-align:center; line-height:50px; border: 1px solid #e1e1e1;}
+.counsel_confirm_box > .btn_confirm {display:block; margin-top:20px; height:60px; line-height:60px; text-align:center; background-color:#1e3250; color:#fff; font-weight:700;}
+
+/*========== 커뮤니티 - 온라인 상담(서브) ==========*/
+
+.counsel__review .ml__auto {margin-left:auto;}
+
+
+/*========== 커뮤니티 - 온라인 상담 상세 ==========*/
+.counsel_detail_box .input_box {align-items: flex-start; margin-top:20px;}
+.counsel_detail_box .input_box label {min-width:190px; font-weight:700; color:#363636;}
+.counsel_detail_box .input_box input[type='textarea'] {width:100%; height:300px; overflow:scroll; word-break:keep-all;}
+.counsel_detail_box #cont {width:100%; height:345px;border:none;outline:none;overflow:scroll;padding:10px;font-weight:400;font-size:20px;font-family: 'NotoSans', sans-serif;color:#363636;}
+
+
+.counsel_privacy_box {margin-top:40px;}
+.counsel_privacy_box .cont {margin-top:30px; border:1px solid #e1e1e1;}
+.counsel_privacy_box .cont_inr {height:80px; margin:30px 45px; margin-top:30px; overflow:auto; line-height:1.5; font-size:18px;}
+.counsel_privacy_box .cont_inr::-webkit-scrollbar {width: 6px;}
+.counsel_privacy_box .cont_inr::-webkit-scrollbar-thumb {background-color: #1e3250;}
+.counsel_privacy_box .cont_inr::-webkit-scrollbar-track {background-color: #ebebeb;}
+.counsel_privacy_box .cont_inr {
+	/* 스크롤바 - explorer */	
+	scrollbar-3dLight-Color: #ebebeb; 
+	scrollbar-base-color: #ebebeb; 
+	scrollbar-Face-Color: #1e3250; 
+	scrollbar-Track-Color: #ebebeb; 
+	scrollbar-DarkShadow-Color: #ebebeb;
+	scrollbar-Highlight-Color: #ebebeb; 
+	scrollbar-Shadow-Color: #ebebeb
+}
+.counsel_privacy_box .check_box {margin-top:20px;}
+.counsel_privacy_box .check_box label {color:#333;}
+
+/*========== 커뮤니티 -온라인 상담(로그인 확인) ==========*/
+.counsel__confirm .counsel_confirm_box > .btn_password {width:100%;}
+.counsel__confirm .counsel_confirm_box .title {font-size:20px;text-align:center}
+
+
+/*========== 커뮤니티 - 온라인 예약 ==========*/
+.datepicker .ui-datepicker {width:auto; font-family:'Gotham', 'NotoSans', sans-serif; letter-spacing:0;}
+.datepicker .ui-widget-header {background:none; border:none;}
+.datepicker .ui-datepicker .ui-datepicker-header {padding:0;}
+.datepicker .ui-datepicker .ui-datepicker-title span {letter-spacing:0; font-weight:400; font-size:25px;}
+.datepicker .ui-datepicker .ui-datepicker-buttonpane {display:none;}
+.datepicker .ui-widget.ui-widget-content {padding:0; border:none;}
+.datepicker .ui-datepicker .ui-datepicker-prev {width:31px; height:31px; top:5px; left:22%; background:url('/common/img/common/icon_datepicker_arrow_prev.png') no-repeat center; cursor:pointer;}
+.datepicker .ui-datepicker .ui-datepicker-next {width:31px; height:31px; top:5px; right:22%; background:url('/common/img/common/icon_datepicker_arrow_next.png') no-repeat center; cursor:pointer;}
+.datepicker .ui-datepicker .ui-datepicker-prev:hover {border:none;}
+.datepicker .ui-datepicker .ui-datepicker-next:hover {border:none;}
+.datepicker .ui-datepicker th {padding:1.3em .3em 0.7em; font-weight:500; text-align:center; color:#363636;}
+.datepicker .ui-datepicker td {padding:8px 5px;}
+.datepicker .ui-datepicker td a {width:38px; height:38px; margin:0 auto; line-height:28px; text-align:center; font-size:18px; font-weight:300; color:#363636;}
+.datepicker .ui-datepicker thead tr {margin-top:10px;}
+.datepicker .ui-datepicker-calendar {margin-top:20px; border:1px solid #b7b7b7;}
+.datepicker .ui-state-default, .datepicker .ui-widget-content .ui-state-default {border:none; background:none;}
+.datepicker .ui-state-active, .datepicker .ui-widget-content .ui-state-active {color:#fff; background-color:#1e3250; border-radius:100%;}
+.datepicker .ui-widget-content .ui-state-active {position:relative;}
+.datepicker .ui-datepicker-week-end:first-child span {color:#f26522}
+.datepicker .ui-datepicker-week-end:last-child span {color:#003471}
+.date_wrap {width:47%;}
+.date_wrap .info {margin-top:25px; font-size:20px;}
+.reser_info {padding:50px 65px; background:#f6f6f6;}
+.period_list {padding:10px 0 15px; color:#969696;}
+.period_list li {margin-top:5px;}
+.period_list .left {display:inline-block; width:250px;}
+.reser_today_yn .radio_box {margin-right:75px;}
+
+.time_wrap {width:47%; margin-top:8px; text-align:center; align-items:flex-start;}
+.time_box ul {padding:15px 0; border: 1px solid #b7b7b7;}
+.time_box ul li {padding:10px 30px;}
+.time_box ul li:hover {background-color:#1e3250; color:#fff;}
+.time_box ul li.active {background-color:#1e3250; color:#fff;}
+.time_box > p {padding-bottom:30px;}
+.time_box .time {display:inline-block; width:62px;}
+
+.reser_add_list .qst {margin-top:30px;}
+.reser_add_list .radio_box_wrap {width:30%; line-height:48px; margin-top:0;}
+.reser_add_list .input_box02 {width:70%;}
+
+
+/*========== 커뮤니티 - 고객 체험기 ==========*/
+.check_box_wrap_r {justify-content:center; margin-top:40px;}
+.check_box_wrap_r .check_box {margin:0 25px;}
+
+.review_list {flex-wrap: wrap; align-items:flex-start;justify-content:center; margin-top:130px;}
+.review_list .list_item {position:relative; width: calc(30% - 20px); margin-right:30px; margin-bottom:188px;}
+.review_list .list_item:nth-child(3n) {margin-right:0;}
+
+.list_item a {display:block;}
+.list_item .item_box .img {height:215px; overflow:hidden; border:1px solid #d7d7d7;}
+.list_item .item_box .img img {width:100%;height:100%;}
+.list_item .item_box .txt_box {padding:30px 0 35px; text-align:center; border:1px solid #d7d7d7; border-top:none;}
+.list_item .item_box .txt_box .title {font-size:25px; font-weight:500;}
+.list_item .item_box .txt_box .date {display:block; padding-top:18px; font-size:16px; color:#868686; font-weight:300; letter-spacing:0;} 
+.list_item .category {position:absolute; left:50%; bottom:-38px; transform:translateX(-50%); width:212px; padding:15px 0px; font-weight:700; color:#1e3250; text-align:center; border:2px solid #1e3250; border-radius:50px; background-color:#fff;}
+.list_item.video_item img {height:100%;}
+
+
+
+
+/*========== 커뮤니티 - 고객 체험기 상세 ==========*/
+.detail_title {padding:25px 20px; border-top:2px solid #363636; border-bottom:1px solid #b7b7b7;font-weight:700;}
+.detail_title .date {font-size:16px; color:#868686; letter-spacing:0; font-weight:300;}
+.detail_info {padding:25px 20px; border-bottom:1px solid #b7b7b7; font-weight:700;}
+.detail_info .title .bar_title {display:inline-block; margin:0 23px 0 20px; font-weight:400;}
+.detail_info .name {color:#6f6f6f; font-weight:500;}
+.detail_info .info02 {margin-left:120px;}
+.detail_write {justify-content:center;}
+.detail_write_inr {padding:45px 100px 70px; line-height:1.3;}
+.detail_write .txt {padding-top:30px; padding-bottom:150px; font-weight:500; line-height:1.4;}
+.detail_write .txt_q {padding-top:40px; font-family:'NotoSans', sans-serif; font-weight:700;}
+.detail_write .txt_a {padding-top:35px; line-height:1.4;}
+.detail_write .txt_n {padding-top:70px; color:#1e3250; font-weight:700;}
+.detail_write .detail_img {margin-top:30px;}
+.detail_write .detail_video {margin-top:30px;}
+.detail_page_control {margin-top:130px; border-top:2px solid #363636;}
+.detail_page_control .control_box {padding:25px 20px; border-bottom:1px solid #b7b7b7;}
+.detail_page_control .control_box .txt {font-weight:300; margin-right:30px;}
+.detail_page_control .control_box .title {font-weight:700;}
+.detail_page_control .control_box .date {font-size:16px; color:#868686; letter-spacing:0; font-weight:300;}
+
+
+/*========== 커뮤니티 - 미디어 ==========*/
+.media_news_list ul {overflow:hidden; flex-wrap: wrap; align-items:flex-start;}
+.media_news_list ul li {width:48.5%; margin-top:30px; border:1px solid #d7d7d7; overflow:hidden;}
+.media_news_list .news_box {position:relative; padding-bottom:150px; overflow:hidden;}
+.media_news_list .txt_box {position:absolute; left:0; bottom:0; z-index:2; width:100%; height:150px; padding:30px 40px; background:#fff; border-top:1px solid #d7d7d7; transition:height 0.4s;}
+.media_news_list .img_box {position:relative; border-bottom:none;}
+.media_news_list .img_box span {display:block; height:270px; overflow:hidden; transition:all 0.4s;}
+.media_news_list .img_box span img {width: 100%;}
+.media_news_list .img_box:before {position:absolute; top:0; right:0; bottom:0; left:0; z-index:2; background:rgba(0,0,0,0.25); opacity:0; transition:opacity 0.4s; content:'';}
+.media_news_list .title {height:50px; font-weight:500; line-height:1.3; overflow:hidden; text-overflow: ellipsis; white-space: normal; word-wrap: break-word; word-break: break-all; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+.media_news_list .date {margin-top:10px; font-size:16px; font-weight:300; letter-spacing:0; color:#868686;}
+.media_news_list .cont {height:34px; margin-top:20px; font-size:12px; line-height:17px; opacity:0; overflow:hidden; text-overflow: ellipsis; white-space: normal; word-wrap: break-word; word-break: break-all; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+.media_news_list a:hover .img_box:before {opacity:1;}
+.media_news_list a:hover .img_box span {transform:scale(1.1);}
+.media_news_list a:hover .txt_box {height:195px;}
+.media_news_list a:hover .cont {opacity:1; transition:opacity 0.4s 0.1s;}
+
+.media_tv_list ul {overflow:hidden; flex-wrap: wrap; align-items:flex-start;}
+.media_tv_list ul li {width:48.5%; margin-top:30px;}
+.media_tv_list .img_box {height:270px; overflow:hidden; border:1px solid #d7d7d7;}
+.media_tv_list .title {overflow:hidden; width:95%; height:21px; line-height:21px; margin-top:25px; white-space:nowrap; text-overflow:ellipsis; font-weight:500;}
+
+
+
+
+/*========== 커뮤니티 - 자주묻는질문 ==========*/
+.qna_wrap .sub_tab_menu li {width:25%; height:70px; line-height:70px; margin:0; background-color:#f6f6f6; border:1px solid #d7d7d7; border-right:none; color:#363636;}
+.qna_wrap .sub_tab_menu li:last-child {border-right:1px solid #d7d7d7;}
+.qna_wrap .sub_tab_menu li.active {position:relative; background-color:#fff;}
+.qna_wrap .sub_tab_menu li.active:after {position:absolute; top:0; width:100%; margin-top:0; border:5px solid #062f4d;}
+
+.qna_list {border-top:2px solid #363636; }
+.qna_list .qna_box {border-bottom:1px solid #b7b7b7;}
+.qna_list .qna_box .qna_inr {width: calc(100% - 50px);}
+.qna_list .qna_box .qa {display:inline-block; width:50px; font-size:25px;}
+.qna_list .qna_box .cont {line-height:1.4;}
+.qna_list .q_box {padding:25px 60px; cursor:pointer;}
+.qna_list .q_box .cont {width:calc(100% - 60px);}
+.qna_list .q_box button img {transform:rotateX(0deg); transition:all 0.5s;}
+.qna_list .q_box.active button img {transform:rotateX(180deg);}
+.qna_list .n_box {display:none; padding:25px 60px; background-color:#f6f6f6; border:1px solid #d7d7d7; border-top:none;}
+.qna_list .n_box .info {padding-top:30px; color:#f26522; font-size:18px;}
+.qna_list .n_box .info a {margin-left:13px;color:#fff; background-color:#1e3250; border-radius:50px; padding:2px 15px 3px 12px;}
+
+
+/*========== drag - 망막녹내장 ==========*/
+.drag_box .drag_frame_box {position:relative; width:100%;}
+.drag_box .drag_frame {position:relative; width:100%; height:420px;}
+.drag_box .drag_frame .img {width:100%; height:100%; background:no-repeat center;}
+.drag_box .drag_frame .img.drag {opacity:0; position:absolute; top:0; left:0;}
+.drag_box .drag_frame .img.retina_first {background-image:url('/common/img/sub/r_md_img_normal.jpg');}
+.drag_box .drag_frame .img.retina_second {background-image:url('/common/img/sub/r_md_img_abnormal.jpg');}
+.drag_box .drag_control {max-width:960px; margin:60px auto 0;}
+.drag_box .drag_control .bar {position:relative; width: 588px; height: 1px; background-color:#e6ded4;}
+.drag_box .drag_control .btn_drag {position: absolute; top: 50%; left: 0; transform:translateY(-50%); width: 48px; height: 47px;  margin-left: 0px; background: url('/common/img/common/btn_drag.png') no-repeat center; font-size: 0; cursor:pointer;border:0;}
+
+
+/*========== 아이디 비밀번호 찾기 ==========*/
+.input-required {color: #cd4848;}
+.idpw_wrap {padding-bottom:280px;}
+.idpw_wrap .flex_between {align-items:flex-start;}
+.idpw_wrap .cont-tit {padding-top: 20px; padding-bottom: 150px; font-weight: 500; font-size: 45px; text-align: center;}
+.idpw_box {width:40%;}
+.idpw_box .tit {font-size:30px; font-weight:500; text-align:center;}
+.idpw_box .input-box li {margin-top:50px;}
+.idpw_box .input-box li .input-wrap {padding-top: 18px;}
+.idpw_box .input-box p {font-size:25px; font-weight:500;}
+.idpw_box .input-box input {width:100%;}
+.idpw_box .btn-confirm {display:block; margin-top:60px; width: 100%; height: 60px; font-weight: 500; font-size: 25px;}
+
+/*========== 이벤트 db ==========*/
+.event_db {width:100%;padding-top:160px;}
+.event_db h3 {font-size:25px;margin:85px 0 30px 100px}
+.event_db .wsize {background-color:#f6f6f6;border:2px solid #d7d7d7;}
+.select_container {padding:0 70px 100px 70px;display: flex;justify-content: space-between;}
+.checkup_list {width:50%;margin-right:30px;position:relative;}
+.checkup_list .checkup_list_title {width:100%;margin-bottom:30px;}
+.info_container {width:50%;}
+.phone_num_list .phone_num_title {height:60px;}
+.select_container .info_box input {width:100%;height:60px;border:1px solid #d7d7d7;margin-bottom:30px;font-size:20px;padding-left:30px;}
+.checkup_list .info_box input  {margin-bottom:80px;}
+.phone_num_list {display:flex;width:100%}
+.phone_num_list .num_box {width:70%;padding-left:10px;}
+.phone_num_list input {width:100%;margin-bottom:0px;}
+.event_db .btn_apply_box {margin:50px 0 0 205px}
+.event_db .btn_apply {width:100%;margin-top:0px;}
+
+.checkup_list,
+.phone_num_list {position:relative;}
+
+.checkup_list .checkup_list_title,
+.phone_num_list .phone_num_title 
+{background: #fff url('/common/img/common/icon_select_arrow.png') no-repeat 93% center; border: 1px solid #b7b7b7; overflow: hidden; padding: 20px 30px; cursor:pointer;}
+.checkup_list .checkup_list_title {width:100%;min-height: 60px;}
+.phone_num_list .phone_num_title {min-width:29%;}
+
+.checkup_list .checkup_list_ul,
+.phone_num_list .phone_num_ul
+ {overflow-x: hidden; overflow-y: auto; border: 1px solid #b7b7b7; display: none; position: absolute; background: #fff; border-top: none; z-index:10;}
+.checkup_list .checkup_list_ul {width: 100%;top:62px;}
+.phone_num_list .phone_num_ul {width:29%;top: 60px;}
+
+
+.checkup_list .checkup_list_ul li,
+.phone_num_list .phone_num_ul li {width: 100%; cursor:pointer; font-weight:500; border-bottom: 1px solid #b7b7b7; padding: 20px 30px;height:60px;}
+.checkup_list .checkup_list_ul li:last-child,
+.phone_num_list .phone_num_ul li:last-child {border-bottom:none;}
+
+.checkup_list .checkup_list_ul li:hover,
+.phone_num_list .phone_num_ul li:hover {background-color:#1e3250; color:#fff;}
+
+.personal_info {max-width:1194px;margin:0 auto;padding:75px 72px 0px 72px;}
+.personal_info div {border-bottom:1px solid #d7d7d7;}
+.personal_info ul li {margin-bottom:25px;font-size:20px;line-height:22px;}
+.anchor-arrow_box {text-align:center}
+.personal_info .anchor-arrow {display:inline-block;padding-top:45px;padding-bottom:60px;font-size:23px;background: url('/common/img/sub/icon_r_arrow.png') right 45% no-repeat;font-weight: 700;color: #1e3250;padding-right: 20px;}
+
+
+.check_box_container {text-align:left;}
+.check_box_container input {display:none;opacity: 0;width:17px;height:17px;}
+.check_box_container label {cursor: pointer;font-size:16px;margin-top: 20px;}
+.check_box_container label:before {display: inline-block;content: '';width:17px;height:17px;background-color: #fff;border: 1px solid#707070;vertical-align:bottom;margin-right:10px;}
+.check_box_container input:checked + label:before {background: #1e3250 url('/common/img/common/icon_checkbox_on.png') center no-repeat;}
+
+
+
+
+@media all and (max-width:1200px){
+	/*========== 강남그랜드안과 - 의료진 소개 - 1200px ==========*/
+	.doctor_box .doctor-pic-wrap{width:40%;}
+	.sub .doctor_box .history_inr:after{right:-27%; width:120px; background-size:contain;}
+
+	/*========== 노안 백내장 클리닉 / 노안./ ==========*/
+	.presbyopia__clinic .tab_contents .sympo_list li {width:100%;}
+	.presbyopia__clinic .tab_contents .sympo_list li .txt_box {width:50%;padding:30px 25px;height:300px}
+	.presbyopia__clinic .tab_contents .sympo_list li .txt_box .target {font-size:18px;}
+	.presbyopia__clinic .tab_contents .sympo_list li .txt_box .desc_default {font-size:16px;padding-top:25px;}
+	.presbyopia__clinic .tab_contents .sympo_list li .img_box {width:50%;}
+	.presbyopia__clinic .tab_contents .sympo_list li .img_box {height:300px;}
+}
+
+@media all and (min-width:992px) and (max-width:1200px){
+	.sub_visual{padding:0 12px;}
+	/*========== 강남그랜드안과 - 의료진 소개 - 992px ~ 1200px ==========*/
+	.doctor_box .doctor_history_box{padding-top:30px;}
+	.doctor_box .doctor_name{padding-bottom:10px;}
+	.doctor_box .tab_menu{margin-top:20px;}
+	.doctor_box .tab{margin:20px 0;}
+	.doctor_swiper .swiper-container{margin:55px 42px 0;}
+	.doctor_swiper .swiper-button-prev{left:0;}
+	.doctor_swiper .swiper-button-next{right:0;}
+	/*========== 강남그랜드안과 - 장비 소개 - 992px ~ 1200px ==========*/
+	.equip_swiper .swiper-container{padding:60px 25px 0;}
+	.equip_swiper .swiper-button-prev{left:3px;}
+	.equip_swiper .swiper-button-next{right:3px;}
+	.equip_swiper .equip_desc br{display:none;}
+	.oper_ex500_box{padding-left:10px; padding-right:10px;}
+	.oper_ex500_box .img{width:720px;}
+	/*========== 강남그랜드안과 - 위치 및 진료안내 - 992px ~ 1200px ==========*/
+	.hours_wrap{padding:0 12px;}
+	.notice-wrap .sub_title03{padding:0 12px;}
+	.info_loca_inr{padding:0 12px;}
+	.info_loca_inr .loca_txt_box{width:47%;}
+	.info_loca_inr .loca_map_box{width:53%;}
+	.info_parking{padding:0 12px;}
+	.info_subway{padding:0 12px 200px;}
+	/*========== 강남그랜드안과 - 제안 제휴 992px ~ 1200px ==========*/
+	/* > 제휴 제안 */
+	.part_write_box{padding:120px 12px 0;}
+	/*========== 이벤트db 992px ~ 1200px ==========*/
+	.event_db input {font-size:17px;}
+	/*========== 시력교정클리닉 - 수술장비 - 992px ~ 1200px ==========*/
+	/* > 원데이라식 */
+	.rv_o_lasik07_z8_box{padding-left:10px; padding-right:10px;}
+	.rv_o_lasik07_z8_box .img{width:720px;}
+	.rv_o_lasik07_ex500_box{padding-left:10px; padding-right:10px;}
+	.rv_o_lasik07_ex500_box .img{width:720px;}
+	.rv_c_lasik05_z8_box{padding-left:10px; padding-right:10px;}
+	.rv_c_lasik05_z8_box .img{width:720px;}
+}
+
+@media all and (max-width:991px){
+	/*========== 공통 ==========*/
+	.sub{padding-top:77px; font-size:15px;}
+	.sub_sec{padding-top:65px;}
+	.sub_desc{margin-top:37px; font-size:17px; line-height:1.8;}
+	.sub_desc02{font-size:18px;}
+	.sub_title{font-weight:700; font-size:35px;}
+	.sub_title01{font-size:35px;}
+	.sub_title01 span{font-size:20px;}
+	.sub_title02{font-size:35px;}
+	.sub_title04{font-size:18px;}
+	.sub_txt_bar{padding:20px 0 23px;font-size:17px;}
+	.sub_txt_bar_brown{padding:20px 0; font-size:16px;}
+	.link_box li {margin:0px}
+	.pt45 {padding-top:45px}
+	.pt60 {padding:60px 0 55px 0 !important;}
+	.mr10 {margin-right:10px}
+	.pl15_pr15 {padding-left:15px;padding-right:15px}
+	.detail_write_inr {padding: 30px 30px 0;}
+
+	
+	/* checkbox */
+	.check_box label{font-size:16px;}
+	.check_box label:before{width:16px; height:16px; margin-right:7px;}
+	.btn_apply{height:50px; margin:67px auto 0; line-height:50px; font-size:16px;}
+	/* > input */
+	.input_box{line-height:40px;}
+	.input_box input{height:40px; font-size:15px;}
+	/* > list type */
+	.list_box > li{padding-left:8px; font-size:16px;}
+	.list_box > li:before{top:10px; width:3px; height:3px;}
+	/* > button */
+	.btn_detail{font-size:20px;}
+	/* 페이지 버튼 */
+	.paging li:nth-child(1) span {display:none}
+	.paging li {font-size:18px}
+	/*========== 비급여진료비 안내 - 991px ==========*/
+	.table_box table{width:1030px; margin:0 10px;}
+	.btn_download_box{position:static; padding-top:35px;}
+	.info_download_box{padding:45px 10px; text-align:center;}
+	.info_download_box .txt{width:100%;}
+	.info_download_box h4{font-size:20px;}
+	.info_download_box h4 > span{display:block; padding-top:10px;}
+	.btn_download_box .btn_download{display:block; width:97%; max-width:523px; margin:0 auto; padding:0;z-index:1;position:relative;}
+	.btn_download_box .btn_download + button{margin-top:14px;}
+	/*========== 강남그랜드안과 - 병원소개 - 991px ==========*/
+	.intro_sec01 .sub_visual{margin-top:60px;}
+	.intro_sec01 .sub_visual{justify-content:normal; padding-left:50%; padding-right:0; background-image:url('/common/img/sub/grand_intro_bg_intro_mo.jpg'); background-position:27% bottom;}
+	.intro_sec01 .sub_visual_txt{text-shadow:none;}
+	.sub_visual_txt .txt01, .sub_visual_txt .txt02{display:none;}
+	.intro_sec01 .sub_visual_txt .txt03{margin-top:0; font-weight:400; font-size:16px; color:#363636;}
+	.intro_sec02 .sub_desc{padding:0 10px;}
+	.intro_sec02 .img img{width:100%;}
+	.intro_sec02 .txt_box{flex-direction:column; flex-wrap:wrap; align-items:center; margin-top:37px;}
+	.intro_sec02 .txt_item{width:calc(100% - 20px); max-width:357px; margin:0 10px;}
+	.intro_sec02 .txt_item + .txt_item{margin-left:0;}
+	.intro_sec02 .txt_box .txt_item li{padding:17px 6px 32px 38px;}
+	.intro_sec02 .txt_box .txt_item li:first-child{border-width:5px;}
+	.intro_sec02 .txt_item .num{top:17px; font-size:23px;}
+	.intro_sec02 .txt_item .tit{font-size:23px;}
+	.intro_sec02 .txt_item .desc{margin-top:30px;}
+	.intro_sec03 .sub_visual{margin-top:28px; background-image: url('/common/img/sub/grand_intro_bg_ci_mo.jpg'); background-position:center bottom;}
+	.intro_sec03 .wsize{padding:0 25px;}
+	.intro_sec03 .logomark_box{margin-top:43px;}
+	.intro_sec03 .ci_box .txt{width:100%; margin-left:0;}
+	.intro_sec03 .ci_box h4{padding-bottom:10px; font-size:20px;}
+	.ci_box .txt-cont{display:flex; flex-direction:row; padding-top:17px;}
+	.characoter_box .txt-cont{padding-top:25px;}
+	.ci_box .txt-cont .left-cont{width:43%;}
+	.intro_sec03 .ci_box .img{width:100%;}
+	.ci_box .txt-cont .left-cont img{width:100%;}
+	.ci_box .txt-cont .right-cont{width:57%;}
+	.intro_sec03{padding-bottom:65px;}
+	.intro_sec03 .ci_box p{padding-left:10px; font-size:15px;}
+	.intro_sec03 .logomark_box p{padding-top:0;}
+	.intro_sec03 .character_box{margin-top:70px;}
+	/*========== 강남그랜드안과 - 의료진 소개 - 991px ==========*/
+	.sub_desc.doctor_desc:after{height:33px; margin:12px auto;}
+	.lys_box{margin-top:0;}
+	.doctor_box .doctor_txt_bar{padding:12px 0; font-size:17px;}
+	.doctor_box .doctor_history_box{padding-top:35px; background-position:right bottom; background-repeat:no-repeat; background-size:230px;}
+	.lgh_box .doctor_history_box{background-color:#dde0e5; background-image:url('/common/img/sub/grand_doctor_img_doctor01_01_mo.png');}
+	.lys_box .doctor_history_box{background-color:#f2eee9; background-image:url('/common/img/sub/grand_doctor_img_doctor02_01_mo.png');}
+	.ljj_box .doctor_history_box{background-color:#ebebeb; background-image:url('/common/img/sub/grand_doctor_img_doctor03_01_mo.png');}
+	.doctor_box .history_inr{width:100%; padding:0 25px;}
+	.sub .doctor_box .history_inr:after{content:none;}
+	.doctor_carelist{justify-content:center;}
+	.doctor_box .doctor_name{padding-top:13px; border:none; font-size:30px; text-align:center;}
+	.doctor_box .tab_menu{margin-top:0; border:1px solid #022e4b; line-height:1.2;}
+	.doctor_box .tab_menu li{width:50%; padding:7px 0; text-align:center;}
+	.doctor_box .tab_menu li.active{font-weight:700;}
+	.doctor_box .tab_menu li:after{content:none;}
+	.doctor_box .tab_menu li.active:after{content:none;}
+	.doctor_box .tab_menu li + li{margin-left:0; border-left:1px solid #022e4b;}
+	.doctor_box .tab{padding-left:3px; margin:33px 0;}
+	.doctor_box .history_list li{font-size:15px; line-height:1.2;}
+	.doctor_swiper{padding:38px 0 110px; border-bottom:none;}
+	.lys_swiper{margin-bottom:0;}
+	.doctor_swiper .swiper-container{margin-top:38px;}
+	.doctor_swiper .swiper-slide .img-wrap{text-align:center;}
+	.doctor_swiper .swiper-slide .img-wrap img {width:60%}
+	.doctor_swiper .swiper-pagination{bottom:-30px;}
+	/*========== 강남그랜드안과 - 장비 소개 -991px ==========*/
+	/* > 검사 장비 */
+	.sub_tab_menu{margin-top:60px;}
+	.tab_exam .sub_visual{background-image:url('/common/img/sub/grand_equip_ex_bg_mo.jpg'); background-position:center;}
+	.tab_oper .sub_visual{background-image:url('/common/img/sub/grand_equip_op_bg_mo.jpg'); background-position:center;}
+	.tab_disi .sub_visual{background-image:url('/common/img/sub/grand_equip_di_bg_mo.jpg'); background-position:center;}
+	.equip_swiper{padding:0 12px 60px;}
+	.e_swiper0201{margin-top:47px; margin-bottom:66px;}
+	.equip_swiper .swiper-pagination{bottom:0; left:50%; transform:translateX(-50%);}
+	.equip_swiper .swiper-container{padding-top:33px;}
+	.equip_swiper .equip_title{display:flex; align-items:center; justify-content:center; height:60px; font-size:17px; line-height:1;}
+	.equip_swiper .equip_img{height:370px; padding-top:0; margin-top:30px;}
+	.equip_swiper .equip_img img{max-height:100%;}
+	.equip_swiper .equip_desc br{display:none;}
+	.equip_swiper .equip_name{padding-top:0; font-size:16px;}
+	.equip_swiper .equip_desc{min-height:205px;} 
+	.last_equip_swiper{margin-bottom:75px;}
+	.mark_new{top:-52px; padding:20px 15px; font-size:18px;}
+	.oper_box > .sub_title02:after{height:42px; margin:13px auto 5px;}
+	.oper_box .img img{margin:0 auto; padding:0 10px;}
+	.oper_ex500_wrap{position:relative; padding-bottom:200px;}
+	.oper_ex500_wrap:after{content:''; display:block; position:absolute; left:0; right:0; top:0; bottom:0; background:url('/common/img/sub/grand_equip_op_img_ex500_mo.png') 95% 82% no-repeat; background-size:430px;}
+	.oper_ex500_box{padding:37px 25px 83px; margin-bottom:0;}
+	.oper_ex500_box .sub_title02{font-size:23px;}
+	.oper_ex500_box .tag_box{padding-top:23px;}
+	.oper_ex500_box .tag_box li{font-size:18px;}
+	.oper_ex500_box .tag_box li + li{margin-top:10px;}
+	.oper_list_box .flex_between{flex-wrap:wrap; justify-content:normal;}
+	.oper_list_box li{width:33.3%;}
+	.oper_list_box li:nth-child(n+4){margin-top:15px;}
+	.oper_list_box li .top{font-size:18px;}
+	.oper_list_box li .top img{width:42px;}
+	.oper_list_box li .top span{font-size:22px;}
+	.oper_list_box li .txt{padding-top:15px;}
+	#equip_tab03 .img{padding:0 25px;}
+	/*========== 강남그랜드안과 - 위치 및 진료안내 - 991px ==========*/
+	.info_hours .sub_title{padding-bottom:38px;}
+	.info_hours .sub_visual{height:325px; font-size:20px;}
+	.info_hours .sub_visual{background-image:url('/common/img/sub/grand_info_bg_mo.jpg');}
+	.hours_reservation_box{margin-top:30px; padding:0 3px;}
+	.hours_reservation_box li{width:50%; margin:0 7px;}
+	.hours_reservation_box li p{padding-top:17px; font-size:18px;}
+	.hours_reservation_box li .btn_link{margin:10px auto;}
+	.info_hours .hours_wrap{margin-top:62px; flex-direction:column;}
+	.hours_box{width:100%; padding:0 10px 73px;}
+	.hours_box:first-child{margin-right:0;}
+	.hours_box h4{text-align:center;}
+	.hours_box .table_info thead th{padding:10px 0 12px; font-size:16px;}
+	.hours_box .sc_table_info thead th:first-child{width:auto;}
+	.hours_box .table_info tbody td{padding:10px 0; font-size:16px;}
+	.hours_box .table_info .bar{width:4px;}
+	.hours_box .info_tel{padding-top:20px; padding-left:20px;}
+	.notice-wrap{margin-top:25px;}
+	.notice-wrap .sub_title03{text-align:center;}
+	.info_hours .list_box{padding:30px 18px;}
+	.info_loca_inr{flex-direction:column; margin:63px 25px 0;}
+	.info_loca_inr .loca_txt_box{width:100%; text-align:center;}
+	.info_loca_inr .map_btn_box{display:flex; flex-direction:row; margin:0 -3px 32px;}
+	.info_loca_inr .map_btn_box li{display:inline-flex; justify-content:center; align-items:center; width:calc(33.3% - 6px); height:auto; padding:10px 0; margin:0 3px; font-size:15px; line-height:1.2;}
+	.info_loca_inr .loca_map_box{width:100%;}
+	.info_parking{flex-direction:column; align-items:center; margin-top:55px;}
+	.info_parking .park_info{width:auto; padding-bottom:40px;}
+	.info_parking .park_info .sub_title03{text-align:center;}
+	.info_parking .list_box{display:inline-block; margin:0 auto; font-size:17px;}
+	.info_parking .list_box .addr{width:100%; padding-left:8px;}
+	.info_parking .park_table{width:100%; padding:0 25px;}
+	.info_parking .park_table li{height:auto; align-items:flex-start;}
+	.info_parking .park_table li > .title{width:19%; padding-top:17px; border-right:none;}
+	.info_parking .park_table li > .cont{width:81%; padding:15px 0 18px; padding-left:7px;     border-left: 1px solid #b7b7b7; font-size:15px;}
+	.info_subway{flex-direction:column; justify-content:center; margin-top:52px; padding-bottom:86px;}
+	.info_subway .sub_title03{padding-bottom:38px;}
+	.info_subway .txt01{justify-content:center; width:100%; padding-left:0;}
+	.info_subway .icon_person{margin-left:20%; background-size:contain;}
+	/*========== 강남그랜드안과 - 제안 제휴 -991px ==========*/
+	/* > 제휴 제안 */
+	.partner_wrap{padding-top:55px;}
+	.sub_tab_menu li{margin:0 10px;}
+	.partner_wrap .tab_contents{padding-top:30px; padding-bottom:95px;}
+	.sub_visual{padding:0 25px;}
+	.tab_prop .sub_visual{background-position:45% center; background-image:url('/common/img/sub/grand_part_bg01_mo.jpg');}
+	.tab_prop .sub_visual_txt .desc{width:68%; max-width:247px;}
+	.sub_visual_txt .title{padding-bottom:18px; font-size:20px;}
+	.part_write_box{padding:55px 25px 0;}
+	.sub_title03{font-size:25px;}
+	.part_write_box .sub_title03{padding-bottom:13px;}
+	.write_box_inr{padding:35px 0;}
+	.select_box{width:225px;}
+	.select_box .select{width:100%; padding:8px 13px;}
+	.select_box .select_ul{width:100%;}
+	.select_box .select_ul li{padding:8px 13px;}
+	.write_box_inr .input-wrap{padding-top:0;}
+	.write_box_inr .flex_between{flex-direction:column;}
+	.write_box_inr .flex_between > div:first-child{margin-right:0;}
+	.write_box_inr .terms-wrap{padding-top:53px;}
+	.part_write_box .check_box{margin-top:17px;}
+	.part_write_box .list_box{margin-top:17px;}
+	/* > 제휴 예약 신청 */
+	.tab_appl .sub_visual{background-position:52% center; background-image:url('/common/img/sub/grand_part_bg02_mo.jpg');}
+	.tab_appl .sub_visual_txt .desc{width:87%;}
+	.tab_appl .write_box_inr{padding:20px 0 35px;}
+	/* > 안 종합검진 신청 */
+	.tab_medi .sub_visual {background-position:25% center; background-image:url('/common/img/sub/grand_part_bg03_mo.jpg');}
+	/*========== 시력교정클리닉 - 수술장비 -991px ==========*/
+	/* > 원데이라식 */
+	.mark_newred{top:-52px; padding:20px 15px; font-size:18px;}
+	.mark_bestblue{top:-52px; padding:20px 15px; font-size:18px;}
+	.rv_o_lasik07_z8_wrap{position:relative; padding-bottom:200px;}
+	.rv_o_lasik07_z8_wrap:after{content:''; display:block; position:absolute; left:0; right:0; top:0; bottom:0; background:url('/common/img/sub/rv_o_lasik07_z8_mo.png') 95% 82% no-repeat; background-size:430px;}
+	.rv_o_lasik07_z8_box{padding:37px 25px 83px; margin-bottom:0;}
+	.rv_o_lasik07_z8_box .sub_title02{font-size:23px;}
+	.rv_o_lasik07_z8_box .tag_box{padding-top:23px;}
+	.rv_o_lasik07_z8_box .tag_box li{font-size:18px;}
+	.rv_o_lasik07_z8_box .tag_box li + li{margin-top:10px;}
+	.rv_o_lasik07_ex500_wrap{position:relative; padding-bottom:200px;}
+	.rv_o_lasik07_ex500_wrap:after{content:''; display:block; position:absolute; left:0; right:0; top:0; bottom:0; background:url('/common/img/sub/rv_o_lasik07_ex500_mo.png') 95% 82% no-repeat; background-size:430px;}
+	.rv_o_lasik07_ex500_box{padding:37px 25px 83px; margin-bottom:0;}
+	.rv_o_lasik07_ex500_box .sub_title02{font-size:23px;}
+	.rv_o_lasik07_ex500_box .tag_box{padding-top:23px;}
+	.rv_o_lasik07_ex500_box .tag_box li{font-size:18px;}
+	.rv_o_lasik07_ex500_box .tag_box li + li{margin-top:10px;}
+	
+	.rv_c_lasik05_z8_wrap{position:relative; padding-bottom:200px;}
+	.rv_c_lasik05_z8_wrap:after{content:''; display:block; position:absolute; left:0; right:0; top:0; bottom:0; background:url('/common/img/sub/rv_c_lasik05_z8_mo.png') 95% 82% no-repeat; background-size:430px;}
+	.rv_c_lasik05_z8_box{padding:37px 25px 83px; margin-bottom:0; background:#f3f1f1;}
+	.rv_c_lasik05_z8_box .sub_title02{font-size:23px;}
+	.rv_c_lasik05_z8_box .tag_box{padding-top:23px;}
+	.rv_c_lasik05_z8_box .tag_box li{font-size:18px;}
+	.rv_c_lasik05_z8_box .tag_box li + li{margin-top:10px;}
+	
+	
+	/*========== 노안 백내장 - 노안백내장클리닉 - 991px ==========*/
+	/* > 노안 백내장 클리닉 */
+
+	/* 노안 */
+	.tab_pres .sub_visual {background-position:25% center; background-image:url('/common/img/sub/pres_clinic_bg_mo.jpg');padding:0 25px}
+	.tab_pres .sub_visual .txt{font-size:22px; line-height:1.5; text-align:center;}
+	.pres_list_box{padding-top:60px;}
+	.pres_list{padding:48px 25px 0 25px;}
+	.presbyopia__clinic {padding-top:45px;}
+	.presbyopia__clinic .tab_contents .tab_pres .pb230 {padding:100px 0px 65px 0px  !important;}
+	.presbyopia__clinic .pres_kind_list .pres_kind_list_item .title:before {display:block; content:''; width:100%; height:2px; margin-bottom:12px; background-color:#363636;}
+	.presbyopia__clinic .pres_kind_list .pres_kind_list_item .title:after {display:none;}
+	.presbyopia__clinic .pres_kind_list .pres_kind_list_item .title {text-align:center;margin-top:45px;padding-top:0;padding-bottom:12px;border-left:2px solid #e0dede;border-right:2px solid #e0dede;}
+	.presbyopia__clinic .pres_kind_list.mo_show {padding:0 65px;}
+	.presbyopia__clinic .pres_kind_list.mo_show	.pres_kind_list_item .desc_default {font-size:18px;padding:15px 10px 25px 10px;border-right:2px solid #e0dede;border-left:2px solid #e0dede;border-bottom:2px solid #e0dede}
+	.presbyopia__clinic .pres_kind_list.mo_show	.pres_kind_list_item {width:100%;margin-bottom:85px;}
+	.presbyopia__clinic .pres_kind_list.mo_show	.pres_kind_list_item img {width:100%;}
+	.presbyopia__clinic .pres_kind_list.mo_show	.pres_kind_list_item div:nth-child(1) img {border:2px solid #e0dede;}
+	.presbyopia__clinic .pres_kind_list.mo_show	.pres_kind_list_item .img {margin-top:17px;}
+	.presbyopia__clinic .pres_kind_list.mo_show	.pres_kind_list_item .desc_default {min-height:150px}
+	.presbyopia__clinic .pres_treat .pres_treat_box,
+	.presbyopia__clinic .pres_treat .pres_treat_box .box.sur .flex_between {flex-direction:column;}
+	.presbyopia__clinic .pres_treat .pres_treat_box {padding:0 25px}
+	.presbyopia__clinic .pres_treat .pres_treat_box .box {min-height: max-content;text-align:center;}
+	.presbyopia__clinic .pres_treat .pres_treat_box .box .num span {font-size:18px;}
+	.presbyopia__clinic .pres_treat .pres_treat_box .box.non {padding:40px 52px 45px 52px;width:100%;margin-bottom:15px;}
+	.presbyopia__clinic .pres_treat .pres_treat_box .box.non .desc_default {font-size:17px;}
+	.presbyopia__clinic .pres_treat .pres_treat_box .box.sur {width:100%;margin:0;padding:35px 30px 50px 30px;}
+	.presbyopia__clinic .pres_treat .pres_treat_box .box.sur .title {width:250px;margin:auto;font-size:18px;}
+	.presbyopia__clinic .pres_treat .pres_treat_box .box.sur .desc_default {font-size:17px;}
+	.presbyopia__clinic .pres_treat .pres_treat_box .box.sur .box_inr {padding:0;width:100%}
+	.presbyopia__clinic .pres_treat .pres_treat_box .box.sur .num {margin-bottom:55px;}
+	.presbyopia__clinic .pres_treat_box .box.sur .box_inr:first-child {border:0;}
+	.presbyopia__clinic .pres_treat_box .box.non .title {width:200px;margin:auto;font-size:18px;}
+	.presbyopia__clinic .pres_treat .pres_treat_box .box.sur .flex_between .box_inr {margin:auto;}
+	.presbyopia__clinic .pres_treat .pres_treat_box .box.sur .flex_between .box_inr:nth-child(2) {margin-top:80px;}
+
+	
+	.system_list {padding:45px 10px 0 10px;margin-top:65px;}
+	.system_list .title_box {min-height:auto;}
+	.system_list .desc_default {padding-top:30px;font-size:16px;}
+	.system_list li:first-child .desc_default {padding-top:30px;}
+	.pres_wrap .link_box {flex-direction:column;padding: 35px 0 55px;}
+	.pres_wrap .link_box li:first-child a {padding-bottom:40px;}
+	.pres_wrap .pres_system .sub_desc02 {padding-bottom:0;}
+	.pres_wrap .pres_system {padding-top:60px !important;}
+	.pres_wrap .pres_system .sub_title01,
+	.pres_wrap .pres_system .sub_desc02 {padding:0 25px;}
+
+	/* 백내장 */
+
+	.presbyopia__clinic .pres_wrap .tab.tab_cata .pres_list li:first-child {margin-right:10px;}
+	.presbyopia__clinic .pres_wrap .tab .cata_swiper {padding-top: 125px !important;}
+
+	.presbyopia__clinic .pres_wrap .tab.tab_cata .pres_kind_list { padding-top:40px; flex-direction:column; }
+	.presbyopia__clinic .pres_wrap .tab.tab_cata .pres_kind_list .pres_kind_list_item { width:70%; margin:0 auto;}
+	.presbyopia__clinic .pres_wrap .tab.tab_cata .pres_kind_list .pres_kind_list_item .title { margin-top:0; padding-bottom:15px; text-align:left; border:0; border-bottom:1px solid #363636; }
+	.presbyopia__clinic .pres_wrap .tab.tab_cata .pres_kind_list .pres_kind_list_item .title:before { display:none; }
+	.presbyopia__clinic .pres_wrap .tab.tab_cata .pres_kind_list .pres_kind_list_item .title {font-size:20px;}
+	.presbyopia__clinic .pres_wrap .tab.tab_cata .pres_kind_list .pres_kind_list_item .desc_default { min-height:initial; margin-bottom:70px; padding-top:30px;font-size:18px;}
+	.presbyopia__clinic .tab_contents .tab_cata .pb230 {padding: 45px 0px 65px 0px !important;}
+
+	.presbyopia__clinic .cata_treat_inr .cata_treat_list {padding:55px 25px 0;display:grid;grid-template-columns: 1fr 1fr;}
+	.presbyopia__clinic .cata_treat_inr .cata_treat_list li {width:100%;}
+	.presbyopia__clinic .cata_treat_inr .cata_treat_list li:nth-child(odd) {padding-right:7.5px}
+	.presbyopia__clinic .cata_treat_inr .cata_treat_list li:nth-child(even) {padding-left:7.5px}
+	.presbyopia__clinic .cata_treat_inr .cata_treat_list li .list_title {font-size:17px;min-height: 100px;}
+	.presbyopia__clinic .cata_treat_inr .cata_treat_list li .img img {width:100%;}
+				
+	.presbyopia__clinic .tab_cata .sub_visual {position:relative; background-image:url('/common/img/sub/m_백내장_메인.png');}
+	.presbyopia__clinic .tab_cata .sub_visual .txt {font-size:17px;left: 40%;}
+	.presbyopia__clinic .tab_cata .care_sec .cata_treat_inr {top:-50px;}
+	.presbyopia__clinic .tab_cata .care_sec .bg_navy {padding: 100px 0 139px;}
+	
+
+	/* > 노안 백내장 수술전후 주의사항 */
+	.prebyopia__care .care_list_wrap .care_list:before {left:20px;}
+	.prebyopia__care .care_list li .desc_default .date:before {top:10px;}
+	.prebyopia__care .sub_title06 {font-size:20px;} 
+	.prebyopia__care .care_list_wrap {padding:35px 25px;}
+	.prebyopia__care .care_list_wrap .care_list {padding:30px 15px;}
+	.prebyopia__care .care_list_wrap .care_list li .img_box {margin-right:40px}
+	.prebyopia__care .care_list_wrap .care_list li .title {font-size:20px;}
+	.prebyopia__care .care_list_wrap .care_list li .desc_default {font-size:17px;}
+	.prebyopia__care .care_list li .img_box {width:20%;min-width:0px}
+
+
+	/*커뮤니티 공지사항 디테일*/
+	.notice__detail .detail_write_inr {padding:30px 25px 174px 25px;}
+	.btn_apply {margin-top:171px}
+	.detail_page_control {margin:60px 10px 0 10px;}
+	.detail_write .txt {font-size:16px}
+	.detail_page_control .flex_between{display:inline-block}
+	.flex_between .date {margin-top:13px}
+	.notice__detail .snb_item {font-size:35px}
+	.detail_title {display:block; margin:0 10px}
+	.detail_title .date {display:inline-block;margin-top:13px}
+	.detail_page_control .control_box .txt {margin-right:10px}
+
+
+	/*커뮤니티 온라인상담 신청 (서브)*/
+	.online__counseling {padding:0 25px}
+	.online__counseling .radio_box_wrap {flex-wrap:wrap;align-items: flex-start; justify-content: flex-start;}
+	.online__counseling .radio_box {display:flex;margin-right:15px; flex-basis: 50%; flex-grow: 1; flex-shrink: 1;flex: 1 1 50%;align-self: center;margin-bottom:17px;}
+	.online__counseling .radio_box_wrap .radio_box + .radio_box {margin-left:0;}
+	.online__counseling .sub_title {font-size:35px}
+	.radio_box label {font-size:17px}
+	.input_box label,.input_box input {font-size:16px}
+	.cont .cont_inr {font-size:16px}
+	.check_box label {font-size:18px}
+	.online__counseling .sub {padding-top:45px}
+	.online__counseling .btn_apply {margin-top:54px}
+	.online__counseling .pt100 {padding-top:87px !important;}
+	.online__counseling .pb200 {padding-bottom:87px !important;}
+	.counsel_detail_box #cont {font-size:16px;}
+	.online__counseling .counsel_detail_box .input_box label {min-width:100px}
+
+	/*커뮤니티 고객 체험기*/
+	.mo_padding {padding:45px 25px 0 25px}
+	.review__main .check_box_wrap_r {display:grid;grid-template-columns: 1fr 1fr;}
+	.check_box_wrap_r .check_box {margin-bottom:17px;}
+	.review_list {flex-direction: column; align-items: center;padding:0 15px}
+	.review_list .list_item {margin-bottom:75px;width:100%;}
+	.list_item .item_box .img {height:360px;}
+	.search_box02 {width:100%}
+	.mo_padding .pt100 {padding-top:55px !important;} 
+	.mo_padding .pb200 {padding-bottom:105px !important;}
+	.review_list {margin-top:73px;}
+	.btn_apply {margin-top:60px;}
+	
+	/*커뮤니티 고객 체험기 (서브)*/
+	.review_detail_sub {padding:45px 11px 0 11px;}
+	.review_detail_sub .detail_write .detail_write_inr {padding:45px 15px 7px 15px;}
+	.review_detail_sub .pt100 {padding-top:60px !important;}
+	.review_detail_sub .pb200 {padding-bottom:55px !important;}
+	.review_detail_sub .detail_video {margin-top:10px}
+	.review_detail_sub .detail_write_inr {padding-bottom:7px;}
+	.review_detail_sub .detail_write_inr .txt_q,
+	.review_detail_sub .detail_write_inr .txt_a {padding-top:25px;}
+	.review_detail_sub .detail_write_inr .txt_n {padding-top:67px;}
+	.detail_info {justify-content: space-between;}
+	.detail_info .info02 {margin-left:30px}
+
+	/*커뮤니티 미디어*/
+	.community__media {padding-top:45px}
+	.community__media .pt100.pb200 {padding-top:65px !important;padding-bottom:100px !important;padding-right:25px;padding-left:25px}
+	.community__media .wsize .pt100 {padding-top:65px !important;}
+	.community__media .wsize03 .paging {padding-top:47px}
+	.community__media .wsize03 .mt200 {margin-top:120px !important;}
+	.btn_tv {margin-top:60px}
+	.community__media .search_box {width:89%}
+	.news_wrap .media_news_list .flex_between {flex-direction: column;align-items: center;}
+	.media_tv_list .flex_between {flex-direction: column;align-items: center;}
+	.news_wrap .sub_title05,
+	.tv_wrap .sub_title05 {font-size:23px;text-align:center;}
+
+	.media_news_list ul li {width:100%}
+	.media_news_list .img_box span {height:364px; overflow:hidden;}
+	.media_news_list .img_box img {width:100%}
+	.media_news_list .news_box .txt_box .title {font-size:18px;}
+	.media_news_list .news_box .txt_box .date {font-size:15px;}
+
+	.media_tv_list ul li {width:100%}
+	.media_tv_list.img_box {height:364px;width:100%}
+	.media_tv_list .tv_box .img_box span {display:inline-block;width:100%;height:364px;overflow:hidden;}
+  	.media_tv_list .tv_box .img_box img {width:100%;height:100%}
+	.media_tv_list .tv_box .txt_box {padding-left:40px;
+									 border-right:1px solid #d7d7d7;
+									 border-left:1px solid #d7d7d7;
+									 border-bottom:1px solid #d7d7d7;
+									 padding:43px 0 43px 40px;
+									 }
+	.media_tv_list .tv_box .txt_box .title {margin:0;font-size:18px}
+
+	/*커뮤니티 미디어 (서브)*/
+	.media__detail .detail_write_inr {padding:30px 25px 100px 25px;}
+	.media__detail .detail_title .title {font-size:17px}
+	.media__detail .detail_title .date {font-size:15px}
+	.media__detail .detail_write_inr .txt {font-size:15px}
+	.media__detail .detail_page_control .control_box .txt,
+	.media__detail .detail_page_control .control_box .title {font-size:17px}
+	.media__detail .detail_page_control .control_box .date {font-size:15px}
+	.media__detail .detail_page_control .control_box .txt {margin-right:10px}
+
+	/*커뮤니티 자주 묻는 질문*/
+	.community__qna {padding:45px 10px 0 10px}
+	.community__qna .pt100.pb100 {padding:65px 0 73px 0 !important;} 
+	.community__qna .search_box {width:90%}
+	.community__qna .qna_wrap .sub_tab_menu {padding-top:5px;padding-bottom:0px}
+	.community__qna .tab_contents {margin-top:60px !important;}
+	.community__qna .paging {padding-top:35px;}
+	.community__qna .qna_box {font-size:17px;}
+	.community__qna .q_box {padding:20px 7.5px 16px 15px}
+	.community__qna .n_box {padding:15px;}
+	.community__qna .n_box .info span {display:block;line-height: 25px;}
+	.qna_list .n_box .info a {display:inline-block;margin-left:0;margin-top:12px;padding: 4px 15px 6px 12px;}
+	.community__qna .sub_tab_menu {display:grid;grid-template-columns:1fr 1fr 1fr;}
+	.community__qna .sub_tab_menu li {width:100%;}
+
+	
+
+
+	/*커뮤니티 온라인 예약*/
+	.com__reservation {padding:45px 10px 0 10px}
+	.com__reservation .date__container {flex-direction: column;align-items: center;}
+	.com__reservation .wsize {padding:50px 0 90px 0 !important;}
+	.com__reservation .date_wrap {width:100%}
+	.com__reservation .date_wrap .info {margin:20px 0 40px 0}
+	.com__reservation .date__container .time_wrap {padding-left:20px;padding-right:20px;width:100%;font-size:16px}
+	.com__reservation .date__container .time_wrap .time_box {width:50%;}
+	.com__reservation .date__container .time_wrap .time_box > p {padding-bottom:20px;}
+	.com__reservation .date__container .time_wrap span {margin:0 10px}
+	.com__reservation .radio_box_wrap {flex-wrap: nowrap;}
+	.com__reservation .radio__box__container {flex-direction: column;}
+	.com__reservation .radio__box__container .radio_box_wrap {width:100%}
+	.com__reservation .radio_box_wrap .radio_box {display:inline-block;width:50%;margin:0}
+	.com__reservation .radio__box__container .radio_box_wrap .mr75 {margin-right:0 !important;}
+	.com__reservation .reser_add_list .input_box02 {width:100%}
+	.com__reservation .counsel_detail_box .input_box label {min-width:140px}
+	.com__reservation .datepicker .ui-datepicker td a {font-size:17px}
+	.com__reservation .datepicker .ui-datepicker .ui-datepicker-title span {font-size:18px;}
+	.com__reservation .date_wrap .info {font-size:15px;text-align:center}
+	.com__reservation .reser_add_list p {font-size:16px;}
+	.com__reservation .input_box02 input,
+	.com__reservation .list_box02 > li {font-size:16px;}
+	.com__reservation .counsel_privacy_box .sub_title05 {font-size:20px;}
+	.com__reservation .counsel_privacy_box .cont .cont_inr {font-size:16px}
+	.com__reservation .clinic__desc {margin-top:55px !important;}
+	.com__reservation .reser_today_yn {margin-top:65px !important;}
+	.com__reservation .reser__date,
+	.com__reservation .counsel_detail_box {margin-top:80px !important;}
+	.com__reservation .counsel_privacy_box {margin-top:90px;}
+	.com__reservation .radio_box_wrap {margin-bottom:30px;}
+	.com__reservation .reser_info .list_box .period_list li span {display:block;}
+	.com__reservation .check_box_wrap {display:grid;grid-template-columns: 1fr 1fr;}
+	.com__reservation .check_box_wrap .check_box {margin:0;}
+
+	/*커뮤니티 온라인 상담, 공지사항*/
+	.com__counsel,
+	.com__notice {padding:45px 10px 0 10px;}
+	.com__counsel .search_box,
+	.com__notice .search_box {width:85.5%;}
+	.com__counsel .paging,
+	.com__notice .paging {padding-top:50px;}
+	.mo_counsel .icon_lock,
+	.mo_notice .icon_lock {display:inline-block; width:20px; height:25px; margin-right:12px; background:url('/common/img/common/icon_lock.png') no-repeat center; vertical-align:sub;}
+
+	/*커뮤니티 온라인 상담*/
+	.com__counsel .wsize {padding:65px 0 80px 0 !important;}
+	.mo_counsel .class.answer{display:inline-block; width:88px; padding:4px 0 5px; background-color:#1e3250; border:2px solid #1e3250; font-size:16px; color:#fff; font-weight:500; text-align:center; border-radius:50px;}
+	.com__counsel .table_notice_wrap {margin-top:35px;}
+	.mo_counsel .class.wait {display:inline-block; width:88px; padding:4px 0 5px; background-color:#fff; border:2px solid #1e3250; font-size:18px; color:#363636; font-weight:500; text-align:center; border-radius:50px;}
+	.mo_counsel {width:100%;}
+	.mo_counsel li {position:relative;width:100%;height:150px;padding:0 15px;}
+	.mo_counsel li .class {position:absolute;top:25px;right:15px;}
+	.mo_counsel li {font-size:16px;border-bottom:1px solid #b7b7b7; }
+	.mo_counsel li:nth-child(1) {border-top:2px solid #363636;}
+	.mo_counsel li div h3 {display:inline-block;margin-top:35px}
+	.mo_counsel li div .icon_wrap {padding:15px 0 10px 0;}
+	.mo_counsel li div .icon_devide {margin:0 10px;}
+
+	/*커뮤니티 공지사항*/
+	.com__notice .wsize {padding:65px 0 120px 0 !important;}
+	.com__notice .table_notice_wrap {margin-top:35px;}
+	.mo_notice .class.answer {display:inline-block; width:60px; padding:4px 0 4px; background-color:#1e3250; border:2px solid #1e3250; font-size:18px; color:#fff; font-weight:500; text-align:center; border-radius:50px;}
+	.mo_notice {width:100%}
+	.mo_notice li {position:relative;width:100%;height:150px;padding:0 15px;}
+	.mo_notice li .class {position:absolute;top:25px;right:15px;}
+	.mo_notice li {font-size:16px;border-bottom:1px solid #b7b7b7; }
+	.mo_notice li:nth-child(1) {border-top:2px solid #363636;}
+	.mo_notice li div h3 {display:inline-block;margin-top:35px;color:#1e3250;}
+	.mo_notice li div p {padding:15px 0 10px 0;}
+
+	/*커뮤니티 온라인상담(서브)*/
+	.counsel__review .wsize {padding:70px 0 75px 0 !important;}
+	.counsel__review .detail_write_inr {padding:0 25px;width:100%}
+	.counsel__review .detail_write_inr .counsel_detail_info {width:100%}
+	.counsel__review .detail_title {margin:0 25px;}
+	.counsel__review .counsel_detail_answer {margin:0 25px;}
+	.counsel__review .counsel_detail_answer .title {font-size:20px;}
+	.counsel__review .counsel_detail_answer .answer_box {font-size:16px;}
+	.counsel__review .counsel_detail_info {padding:55px 0 50px 0}
+	.counsel__review .detail_write .txt {padding-bottom:190px;padding-top:0;}
+	.counsel__review .counsel_detail_answer .btn_box {margin-top:35px;}
+	.counsel__review .counsel_detail_answer .answer_box {padding: 20px 0 100px 15px;text-align:start;}
+	.counsel__review .ml__auto {margin:0;}
+	.counsel__review .counsel_detail_answer .btn_counsel + .btn_counsel {margin:0;width:105px}
+	.counsel__review .counsel_detail_answer .btn_counsel {width:105px;height:42px;}
+	.counsel__review .counsel_detail_answer .btn_apply {width:105px;height:42px;line-height: 42px;}
+	.counsel__review .detail_title {display:flex;}
+	.counsel__review .detail_title .title {font-size:20px;}
+	.counsel__review .detail_title .date {margin:0;font-size:16px;}
+	.counsel__review .detail_write_inr .counsel_detail_info{font-size:16px;}
+
+	/*커뮤니티 온라인 상담(로그인 확인)*/
+	.counsel__confirm .counsel_confirm_box > .btn_password {width:100%;}
+	.counsel__confirm .counsel_confirm_box .title {font-size:20px;text-align:center}
+
+	/*========== 아이디 비밀번호 찾기 - 991px ==========*/
+	.idpw_wrap {padding: 0 25px 54px;}
+	.idpw_wrap .flex_between {align-items:flex-start;}
+	.idpw_wrap .cont-tit {padding-top: 0; padding-bottom: 50px; font-size: 30px;}
+	.idpw_box {width:45%;}
+	.idpw_box .tit {font-size:22px;}
+	.idpw_box .input-box li {margin-top:30px;}
+	.idpw_box .input-box p {font-size:18px;}
+	.idpw_box .btn-confirm {margin-top:40px; height: 45px; font-size: 18px;}
+
+	.drag_box .drag_frame .img.retina_first {background-image:url('/common/img/sub/m_r_md_img_normal.jpg');background-size:100% 100%;} 
+	.drag_box .drag_frame .img.retina_second {background-image:url('/common/img/sub/m_r_md_img_abnormal.jpg');background-size:100% 100%;} 
+
+	/*==========  이벤트db - 991px ==========*/
+	.event_db {padding:45px 10px 0 10px;}
+	.event_db h3 {margin:55px 0;text-align:center}
+	.select_container {flex-direction: column;padding: 0 25px 50px 25px;width:100%;}
+	.select_container .checkup_list {width:100%;margin-right:0;margin-bottom:20px;}
+	.checkup_list .checkup_list_title {font-size: 16px;}
+	.checkup_list .info_box input {margin-bottom:0px;}
+	.checkup_list .checkup_list_title,
+	.info_container .info_box input {margin-bottom:20px;}
+	.select_container .info_container {width:100%}
+	.info_container input {margin-bottom:20px;font-size:16px;}
+	.personal_info {padding: 35px 10px 0px 10px;}
+	.personal_info ul li {font-size:16px;}
+	.personal_info .anchor-arrow {font-size:18px;text-align: center;}
+	.phone_num_list .phone_num_title {font-size:16px;}
+	.phone_num_list .phone_num_ul li {font-size:16px;}
+	.event_db .btn_apply_box {margin:0 auto;padding-top: 20px;}
+	.event_db .btn_apply {max-width:52.5%;margin-top:35px;}
+	.event_db .btn_apply {margin-top: 70px;}
+
+
+
+	.check_box_container {text-align:center;position:absolute;bottom:-230px;left:50%;transform: translateX(-50%);width:100%}
+	.check_box_container input {display:none;opacity: 0;width:17px;height:17px;}
+	.check_box_container label {cursor: pointer;font-size:16px;margin-top: 20px;}
+	.check_box_container label:before {display: inline-block;content: '';width:17px;height:17px;background-color: #fff;border: 1px	 solid#707070;vertical-align:bottom;margin-right:10px;}
+	.check_box_container input:checked + label:before {background: #1e3250 url('/common/img/common/icon_checkbox_on.png') center no-repeat;}
+
+
+}
+
+
+
+@media all and (max-width:750px){
+	.drag_box .drag_frame {height:350px;}
+	/*search_box 공통*/
+	.search_box {height:55px;}
+	.search_box .search input,
+	.search_box button {font-size:15px}
+	.search_box .btn_search {width:100px}
+
+	/*커뮤니티 고객 체험기*/
+	.paging li {font-size:15px;}
+	.list_item .item_box .img {height:260px;}
+	.check_box_wrap_r .check_box {margin-left:0;margin-right:0px;}
+	.check_box_wrap_r .check_box label {font-size:15px;}
+
+	/*커뮤니티 고객 체험기 (서브)*/
+	.detail_info .title .bar_title {margin:0 10px}
+	.detail_info .info02 {margin-left:10px}
+	.detail_info {font-size:13px;}
+
+	/*커뮤니티 미디어*/
+	.media_news_list .img_box span {height:182px;}
+	.media_tv_list .tv_box .img_box span {height:182px;}
+	.media_tv_list .img_box {height:182px}
+	.detail_info .info02 {margin-left:10px}
+	.detail_info {font-size:13px;}
+
+	/*커뮤니티 온라인 예약*/
+	.com__reservation .counsel_detail_box .input_box label {min-width:100px}
+
+
+	/* > 노안 백내장 수술전후 주의사항 */
+	.prebyopia__care {padding-top:45px;}
+	.prebyopia__care .care_list_wrap .care_list {padding:30px}
+	.prebyopia__care .care_list_wrap .care_list li {padding:30px 0;}
+	.prebyopia__care .care_list_wrap .care_list li .title {font-size:18px;}
+	.prebyopia__care .care_list_wrap .care_list li .desc_default {font-size:14px;}
+	.prebyopia__care .care_list_wrap .care_list li .txt_box p span	 {width:105px;}
+	.prebyopia__care .care_after_info {padding:40px 25px 50px 25px;}
+	.prebyopia__care .care_after_info h3 {font-size:23px;}
+	.prebyopia__care .care_after_info .list_box03 {padding-top:20px;font-size:17px;}
+	.prebyopia__care .pres_care_desc {padding:20px 0 50px;}
+	.prebyopia__care .care_list li .img_box {width:15%}
+
+
+
+	/* > 노안 백내장 클리닉*/
+	.presbyopia__clinic .tab_contents .sympo_list li .txt_box {padding:10px 20px;height:250px}
+	.presbyopia__clinic .tab_contents .sympo_list li .txt_box .target {font-size:15px;}
+	.presbyopia__clinic .tab_contents .sympo_list li .txt_box .desc_default {font-size:14px;padding-top:15px;}
+	.presbyopia__clinic .tab_contents .sympo_list li .img_box {height:250px;}
+
+	/*========== 아이디 비밀번호 찾기 - 991px ==========*/
+	.idpw_wrap .flex_between {flex-direction:column;}
+	.idpw_box {width:100%;}
+	.pw_box {margin-top:100px;}
+	
+
+}
+
+@media all and (max-width:570px){
+	.drag_box .drag_frame {height:250px;}
+	/*커뮤니티 온라인 예약*/
+	.com__reservation .date__container .time_wrap .time_box ul li {padding:10px 15px 10px 0px}
+	.com__reservation .date__container .time_wrap .time_box ul li a {font-size:13px}
+	.com__reservation .date__container .time_wrap .time_box ul li a span {margin:0}
+
+	/* > 노안 백내장 수술전후 주의사항 */
+	.prebyopia__care .care_list_wrap .care_list li .img_box	 {margin-right: 20px;}
+	.prebyopia__care .care_list_wrap .care_list li .txt_box {width:100%;}
+
+
+	/* > 노안 백내장 클리닉*/
+	.presbyopia__clinic .tab_contents .sympo_list li .img_box {height:200px;}
+	.presbyopia__clinic .tab_contents .sympo_list li .txt_box {padding:10px 10px 0 10px;height:200px}
+	.presbyopia__clinic .tab_contents .sympo_list li .txt_box .num img {height:30px}
+	.presbyopia__clinic .tab_contents .sympo_list li .txt_box .target {font-size:13px;padding-top:10px;}
+	.presbyopia__clinic .tab_contents .sympo_list li .txt_box .desc_default {font-size:12px;padding-top:10px;}
+	.presbyopia__clinic .pres_kind_list.mo_show	.pres_kind_list_item .desc_default {font-size:15px;}
+	.presbyopia__clinic .tab .link_box li .btn_detail:after {width:13px;height:15px;margin-left:15px;}
+	
+
+	
+
+
+}
+
+@media all and (max-width:450px){
+   .drag_box .drag_frame {height:210px;}
+}
+
+@media all and (max-width:430px){
+	.paging {font-size:13px;margin-left:-20px}
+	.sub_visual{height:310px;}
+	/*========== 강남그랜드안과 - 의료진 소개 - 430px ==========*/
+	.doctor_box .doctor_history_box{background-size:45%; background-position:103% bottom;}
+	.doctor_box .history_inr{padding:0 12px;}
+	.doctor_carelist{margin:0 -12px; font-size:14px;}
+	.doctor_box.lys_box .history_list li{font-size:17px;}
+	.doctor_box .doctor_carelist li:after{margin:0 5px;}
+	/*========== 강남그랜드안과 - 장비 소개 - 430px ==========*/
+	/* > 검사 장비 */
+	.equip_swiper .equip_img{height:185px; align-items:flex-end;}
+	.equip_swiper .equip_desc{font-size:14px;}
+	.oper_ex500_wrap{padding-bottom:100px;}
+	.oper_ex500_wrap:after{background-size:80%; background-position:63% 95%;}
+	/*========== 강남그랜드안과 - 위치 및 진료안내 - 430px ==========*/
+	.info_hours .sub_visual{height:163px;}
+	.hours_reservation_box li .item_top{height:67px; background-size:31px;}
+	.hours_reservation_box li.couns_box .item_top{background-size:37px;}
+	.hours_reservation_box li .btn_link{width:27px; height:27px;}
+	.hours_box .info_tel{padding-left:10px;}
+	.hours_box .info_tel span{font-size:18px;}
+	.info_loca_inr .loca_map_box{height:246px;}
+	/*========== 강남그랜드안과 - 제안 제휴 - 430px ==========*/
+	/* > 제휴 제안 */
+	.tab_prop .sub_visual{background-position:15% center;}
+	.tab_medi .sub_visual_txt .desc{width:60%;}
+
+
+	/*커뮤니티 온라인상담 신청 (서브)*/
+	#online__counseling .radio_box label {font-size:15px}
+
+	/*커뮤니티 고객 체험기*/
+	.list_item .item_box .img {height:200px;}
+	.mark_best {padding:13px 9px 15px;font-size:15px;}
+	
+
+	/*커뮤니티 온라인 예약*/
+	.com__reservation .counsel_detail_box .input_box label {min-width:80px}
+	.com__reservation .datepicker .ui-datepicker td a {width:31px;height:31px;font-size:13px}
+	.com__reservation .radio_box label {font-size:15px}
+	.com__reservation .check_box_wrap .check_box {height:25px;}
+	.com__reservation .check_box_wrap .check_box label {font-size:15px;}
+
+	/*커뮤니티 온라인 상담*/
+	.mo_counsel li {font-size:13px;}
+	.mo_counsel .class.answer,
+	.mo_counsel .class.wait {font-size:15px;}
+
+	/*커뮤니티 공지사항*/
+	.mo_notice li {font-size:13px;}
+	.mo_notice .class.answer,
+	.mo_notice .class.wait {font-size:15px;}
+
+	
+	/*커뮤니티 온라인상담(서브)*/
+	.counsel__review .detail_write_inr .counsel_detail_info .counsel_detail_list .cont {padding:0 30px}
+	.counsel__review .detail_write_inr .counsel_detail_info li:nth-child(6) p {font-size:14px;}
+
+	/* 시력 교정 클리닉 - 원데이라식 수술장비 */
+	.rv_o_lasik07_z8_wrap{padding-bottom:100px;}
+	.rv_o_lasik07_z8_wrap:after{background-size:90%; background-position:63% 80%;}
+	.rv_o_lasik07_ex500_wrap{padding-bottom:100px;}
+	.rv_o_lasik07_ex500_wrap:after{background-size:80%; background-position:63% 95%;}
+	.rv_c_lasik05_z8_wrap{padding-bottom:100px;}
+	.rv_c_lasik05_z8_wrap:after{background-size:70%; background-position:93% 83%;}
+	
+	/* > 노안 백내장 수술전후 주의사항 */
+	.prebyopia__care .care_list_wrap .care_list {padding:30px 10px;}
+	.prebyopia__care .care_list_wrap .care_list li .title {font-size:16px;}
+	.prebyopia__care .care_list_wrap .care_list li .desc_default {font-size:11px;}
+	.prebyopia__care .care_list_wrap .care_list li .txt_box p span	 {width:90px;}
+
+	/* >이벤트 db*/
+	.info_container input {font-size:15px;padding-left:15px;}
+	.checkup_list .checkup_list_title {font-size:15px;padding:20px 15px;}
+	.select_container .info_box input {font-size:17px;}
+	.phone_num_list .num_box input {font-size:13px}
+	.phone_num_list .phone_num_title {padding: 20px 15px;background-size:17px 10px;}
+	.phone_num_list .phone_num_ul li {padding: 20px 15px;}
+
+}
+
+
+@media all and (max-width:390px){
+	/*커뮤니티 고객 체험기 (서브)*/
+	.detail_info .info02 {margin-left:5px}
+	.detail_info {font-size:11px;}
+	.review_detail_sub .detail_write_inr {font-size:13px;}
+
+	/* >이벤트 db*/
+	.phone_num_list .num_box input {padding-left:10px;font-size:11px;}
+}
+
+
+
+/* ==== AGREE ==== */
+.agreeWrap{padding-bottom:160px;}
+.agreeContainer { margin-top:110px; padding:50px; border:1px solid #e1e1e1;  }
+.agreeList { padding-top:40px; }
+
+.agreeTitle { font-size:40px; font-weight:500; text-align:center; }
+.articleTitle { font-size:18px; font-weight:700; }
+.agreeText { font-size:18px; color:#363636; line-height:1.5; letter-spacing:-0.5px; }
+.agreeBr{ height:40px; }
+
+@media all and (max-width:1200px){
+	.agreeWrap{ padding-left:50px; padding-right:50px;}
+}
+
+@media all and (max-width:750px){
+	.agreeWrap{ padding:70px 25px 80px; }
+	.agreeContainer { padding:15px 25px 45px; margin-top:50px; }
+	.agreeList { padding-top:30px; }
+
+
+	.agreeTitle { font-size:32px; }
+	.articleTitle { font-size:13px; }
+	.agreeText { font-size:13px;}
+	.agreeBr{ height:30px; }
+}

@@ -1,0 +1,152 @@
+[
+	{
+		"id": "",
+		"text": "Web Administrators",
+		"code" : "aaaa" ,
+		"attributes": {
+			"url": ""
+		},
+		"children": [
+			{
+				"id": 11,
+				"text": "공통관리",
+				"attributes": {
+					"url": ""
+				},
+				"children": [
+					{
+						"id": 111,
+						"text": "코드관리",
+						"attributes": { "url": ""}
+						,
+						"children": [
+								{
+									"id": 1111,
+									"text": "코드관리",
+									"attributes": {
+										"url": "/admin/code/codeSet"
+									}
+								}
+								
+								,
+								{
+									"id": 1112,
+									"text": "GNB관리",
+									"attributes": {
+										"url": "/admin/gnb/gnbSet"
+									}								
+								}
+														
+						]						
+					}
+					,
+					{
+						"id": 112,
+						"text": "파일관리",
+						"attributes": { "url": "" }
+						,
+						"children": [
+								{
+									"id": 1121,
+									"text": "업로드 설정관리",
+									"attributes": {
+										"url": "/admin/manager/fileSet"
+									}
+								}
+								,
+								{
+									"id": 1122,
+									"text": "파일 WhiteList",
+									"attributes": {
+										"url": "/admin/file/fileWhiteList"
+									}	
+								}					
+								
+								,
+								{
+									"id": 1123,
+									"text": "파일 업로드",
+									"attributes": {
+										"url": "/admin/manager/fileCommonform"
+									}	
+								},
+								{
+									"id": 1124,
+									"text": "다중 파일 업로드",
+									"attributes": {
+										"url": "/admin/manager/multiFileCommonform"
+									}	
+								}					
+						]
+					}
+					,
+					{
+						"id": 113,
+						"text": "메세지관리",
+						"attributes": {
+							"url": ""
+						},
+						"children": [
+							{
+								"id": 1131,
+								"text": "메세지관리",
+								"attributes": {
+									"url": "/admin/manager/message"
+								}
+							}
+						]
+					},
+					{
+						"id": 114,
+						"text": "커뮤니티",
+						"attributes": {
+							"url": ""
+						},
+						"children": [
+							{
+								"id": 1141,
+								"text": "공지사항",
+								"attributes": {
+									"url": "/admin/manager/boardList"
+								}
+							}
+						]
+					},
+					{
+						"id": 115,
+						"text": "배너관리",
+						"attributes": {
+							"url": ""
+						},
+						"children": [
+							{
+								"id": 1151,
+								"text": "배너관리",
+								"attributes": {
+									"url": "/admin/banner/bannerManage"
+								}
+							}
+						]
+					}	,
+					{
+						"id": 116,
+						"text": "매장관리",
+						"attributes": {
+							"url": ""
+						},
+						"children": [
+							{
+								"id": 1161,
+								"text": "매장등록",
+								"attributes": {
+									"url": "/admin/store/store"
+								}
+							}
+						]
+					}										
+				]
+			}
+
+		]
+	}
+]

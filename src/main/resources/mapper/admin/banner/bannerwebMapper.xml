@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.grand.admin.banner.dao.BannerwebDAOImpl.Mapper">
+	<select id="selectbannerwebInfoCount" resultType="int">
+				        SELECT 
+				        	count(bannersub_idx)
+				        FROM 
+				        	tbl_bannersub
+				        	where 1=1 
+						<if test="bannersub_parentidx != null and bannersub_parentidx != ''">
+							and bannersub_parentidx = #{bannersub_parentidx}
+						</if>
+				      ORDER  BY bannersub_idx asc 
+    </select>
+    <select id="selectbannerwebInfo" resultType="bannerwebVO">
+			SELECT bannersub_idx, bannersub_explan, bannersub_webImg, bannersub_mobImg, bannersub_etcImg,
+				   concat(DATE_FORMAT(bannersub_showstrdate, "%Y-%m-%d") ,' ~ ',DATE_FORMAT(bannersub_showenddate, "%Y-%m-%d"))as bannersub_showdate, 
+				   bannersub_spareImg, bannersub_show, bannersub_link, bannersub_showorder, bannersub_showstrdate,
+				   bannersub_showenddate, bannersub_tag, bannersub_regdate, bannersub_summary, bannersub_parentidx, 
+				   bannersub_webImgfilekey, bannersub_mobImgfilekey, bannersub_etcImgfilekey, bannersub_spareImgfilekey,bannersub_linktype 
+			FROM tbl_bannersub 
+			where 1=1 
+			<if test="bannersub_parentidx != null and bannersub_parentidx != ''">
+				and bannersub_parentidx = #{bannersub_parentidx}
+			</if>
+			<if test="bannersub_link != null and bannersub_link != ''">
+				and bannersub_link = #{bannersub_link}
+			</if>
+			ORDER  BY bannersub_idx asc 
+			LIMIT   #{startpage} , #{rows}
+    </select>
+    
+    
+    <select id="selectBannercommonInfo" resultType="bannerwebVO">
+		    SELECT 
+		    	bannersub_idx	, 
+		    	bannersub_explan, 
+		    	bannersub_webImg, 
+		    	bannersub_mobImg, 
+		    	bannersub_etcImg, 
+		    	bannersub_spareImg, bannersub_show, bannersub_link, bannersub_showorder, bannersub_showstrdate, bannersub_showenddate, bannersub_tag, bannersub_regdate, bannersub_summary, bannersub_parentidx, bannersub_webImgfilekey, bannersub_mobImgfilekey, bannersub_etcImgfilekey, bannersub_spareImgfilekey, bannersub_linktype, bannersub_delyn, bannersub_reg_id, bannersub_mod_id 
+			FROM tbl_bannersub
+			where 1=1
+			and bannersub_delyn = 'N'
+			and bannersub_show = 'Y'
+			and NOW() between bannersub_showstrdate and bannersub_showenddate
+			
+			<if test="bannersub_parentidx != null and bannersub_parentidx != ''">
+				and	bannersub_parentidx = #{bannersub_parentidx}
+			</if>
+			<if test="banner_gnb != null and banner_gnb != ''">
+				and bannersub_parentidx = (select banner_idx from tbl_banner where banner_gnb = #{banner_gnb})
+			</if>
+			
+			order by cast(bannersub_showorder as unsigned) asc
+    </select>
+</mapper>

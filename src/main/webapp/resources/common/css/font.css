@@ -1,0 +1,135 @@
+/* Gmarket Sans */
+@font-face {
+	font-family: 'Gmarket';
+	font-weight: 300;
+	font-style: normal;
+	src: local('../font/GmarketSansLight'), local('../font/GmarketSansLight');
+	src: url(../font/GmarketSansLight.eot);
+	src: url(../font/GmarketSansLight.eot?#iefix) format('embedded-opentype'),
+		 url(../font/GmarketSansLight.woff) format('woff'),
+		 url(../font/GmarketSansLight.woff2) format('woff2'),
+		 url(../font/GmarketSansLight.otf) format('truetype');
+	unicode-range: U+0041-005A, U+0061-007A, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E, U+0030-0039;
+
+}   
+
+@font-face {
+	font-family: 'Gmarket';
+	font-weight: 500;
+	font-style: normal;
+	src: local('../font/GmarketSansMedium'), local('../font/GmarketSansMedium');
+	src: url(../font/GmarketSansMedium.eot);
+	src: url(../font/GmarketSansMedium.eot?#iefix) format('embedded-opentype'),
+		 url(../font/GmarketSansMedium.woff) format('woff'),
+		 url(../font/GmarketSansMedium.woff2) format('woff2'),
+		 url(../font/GmarketSansMedium.otf) format('truetype');
+	unicode-range: U+0041-005A, U+0061-007A, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E, U+0030-0039;
+}  
+
+@font-face {
+	font-family: 'Gmarket';
+	font-weight: 700;
+	font-style: normal;
+	src: local('../font/GmarketSansBold'), local('../font/GmarketSansBold');
+	src: url(../font/GmarketSansBold.eot);
+	src: url(../font/GmarketSansBold.eot?#iefix) format('embedded-opentype'),
+		 url(../font/GmarketSansBold.woff) format('woff'),
+		 url(../font/GmarketSansBold.woff2) format('woff2'),
+		 url(../font/GmarketSansBold.otf) format('truetype');
+	unicode-range:  U+0041-005A, U+0061-007A, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E, U+0030-0039;
+}  
+
+/* Gotham */
+@font-face {
+	font-family: 'Gotham';
+	font-weight: 300;
+	font-style: normal;
+	src: local('../font/Gotham-Light'), local('../font/Gotham-Light');
+	src: url(../font/Gotham-Light.eot);
+	src: url(../font/Gotham-Light.eot?#iefix) format('embedded-opentype'),
+		 url(../font/Gotham-Light.woff) format('woff'),
+		 url(../font/Gotham-Light.woff2) format('woff2'),
+		 url(../font/Gotham-Light.otf) format('truetype');
+	unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}   
+
+@font-face {
+	font-family: 'Gotham';
+	font-weight: 500;
+	font-style: normal;
+	src: local('../font/Gotham-Medium'), local('../font/Gotham-Medium');
+	src: url(../font/Gotham-Medium.eot);
+	src: url(../font/Gotham-Medium.eot?#iefix) format('embedded-opentype'),
+		 url(../font/Gotham-Medium.woff) format('woff'),
+		 url(../font/Gotham-Medium.woff2) format('woff2'),
+		 url(../font/Gotham-Medium.otf) format('truetype');
+	unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}   
+
+/* Noto Sans KR */
+@font-face {
+	font-family: 'NotoSans';
+	font-weight: 100;
+	font-style: normal;
+	src: local('../font/NotoSansKR-Thin'), local('../font/NotoSansKR-Thin');
+	src: url(../font/NotoSansKR-Thin.eot);
+	src: url(./font/NotoSansKR-Thin.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Thin.woff) format('woff'),
+		 url(../font/NotoSansKR-Thin.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Thin.otf) format('truetype');
+}
+@font-face {
+	font-family: 'NotoSans';
+	font-weight: 300;
+	font-style: normal;
+	src: local('../font/NotoSansKR-Light'), local('../font/NotoSansKR-Light');
+	src: url(../font/NotoSansKR-Light.eot);
+	src: url(../font/NotoSansKR-Light.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Light.woff) format('woff'),
+		 url(../font/NotoSansKR-Light.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Light.otf) format('truetype');
+}
+@font-face {
+	font-family: 'NotoSans';
+	font-weight: 400;
+	font-style: normal;
+	src: local('../font/NotoSansKR-Regular'), local('../font/NotoSansKR-Regular');
+	src: url(../font/NotoSansKR-Regular.eot);
+	src: url(../font/NotoSansKR-Regular.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Regular.woff) format('woff'),
+		 url(../font/NotoSansKR-Regular.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Regular.otf) format('truetype');
+}
+@font-face {
+	font-family: 'NotoSans';
+	font-weight: 500;
+	font-style: normal;
+	src: local('../font/NotoSansKR-Medium'), local('../font/NotoSansKR-Medium');
+	src: url(../font/NotoSansKR-Medium.eot);
+	src: url(../font/NotoSansKR-Medium.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Medium.woff) format('woff'),
+		 url(../font/NotoSansKR-Medium.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Medium.otf) format('truetype');
+}
+@font-face {
+	font-family: 'NotoSans';
+	font-weight: 700;
+	font-style: normal;
+	src: local('../font/NotoSansKR-Bold'), local('../font/NotoSansKR-Bold');
+	src: url(../font/NotoSansKR-Bold.eot);
+	src: url(../font/NotoSansKR-Bold.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Bold.woff) format('woff'),
+		 url(../font/NotoSansKR-Bold.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Bold.otf) format('truetype');
+}
+@font-face {
+	font-family: 'NotoSans';
+	font-weight: 900;
+	font-style: normal;
+	src: local('../font/NotoSansKR-Black'), local('../font/NotoSansKR-Black');
+	src: url(../font/NotoSansKR-Black.eot);
+	src: url(../font/NotoSansKR-Black.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Black.woff) format('woff'),
+		 url(../font/NotoSansKR-Black.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Black.otf) format('truetype');
+}   

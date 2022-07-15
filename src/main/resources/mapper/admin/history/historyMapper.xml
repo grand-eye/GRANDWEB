@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.grand.admin.history.dao.HistoryDAOImpl.Mapper">
+
+    <select id="selectHistory" resultType="historyVO" parameterType="historyVO">
+   	-- com.grand.admin.history.dao.HistoryDAOImpl.Mapper.selectHistory
+			SELECT 
+				history_idx
+				,board_idx
+				,board_content
+				,board_reg_date
+				,board_menu_code
+				,board_reg_name
+				,board_mod_id
+			FROM 
+				tbl_history
+			where board_content is not null
+			and board_content !=''
+			<if test="board_reg_name !=null and board_reg_name !=''">
+			and board_reg_name like CONCAT('%', #{board_reg_name}, '%')
+			</if>
+			<if test="board_start_date !=null and board_start_date !=''">
+		    	AND	board_reg_date >= #{board_start_date}
+		    </if>
+		    <if test="board_end_date !=null and board_end_date !=''">
+		    	AND	board_reg_date <![CDATA[<=]]> #{board_end_date}
+		    </if>	
+			ORDER BY board_reg_date DESC
+			LIMIT #{startpage} , #{rows}	
+			
+   	</select>
+    
+</mapper>

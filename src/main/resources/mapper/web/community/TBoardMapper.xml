@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.grand.web.community.dao.TBoardDAOImpl.Mapper">
+ 
+    <!-- 
+        mybatis-config.xml의 typeAlias에 등록해두지 않았다면 
+        
+        <select id="selectMember" resultType="com.example.dto.MemberVO" >
+            SELECT ID, PW ,NAME FROM TEST
+        </select>
+        
+        이렇게 해야 한다.
+    -->
+    
+    <sql id="whereBoardList">
+    	WHERE
+    		1=1
+    	AND	
+			board_menu_code = #{board_menu_code}
+		AND
+			board_useyn != 'N'
+		AND
+	    		board_show = 'Y'
+		<if test="board_idx !=0 and board_menu_code != 'BD04'">
+		AND
+		(
+			board_idx = #{board_idx}
+			OR
+			board_idx = (select max(board_idx) from t_board where board_idx <![CDATA[ < ]]> #{board_idx} and board_menu_code = #{board_menu_code} and board_useyn != 'N')
+			OR
+			board_idx = (select min(board_idx) from t_board where board_idx <![CDATA[ > ]]> #{board_idx} and board_menu_code = #{board_menu_code} and board_useyn != 'N')
+		)
+		</if>
+		<if test="board_cate_L !=null and board_cate_L !=''">
+		AND
+			board_cate_L = #{board_cate_L}
+		</if>
+		<if test="search_category !=null and search_category !=''">
+			AND
+			board_cate_L in
+			<foreach collection="search_category_split" item="code" index="index" separator="," open="(" close=")">
+				#{code}
+			</foreach>
+		</if>
+		<if test="board_menu_code == 'BD05'">
+		AND
+			board_reg_date = #{board_reg_date}
+		</if>
+		<if test="board_search !=null and board_search !=''">
+		AND
+			board_title like CONCAT('%',#{board_search},'%')
+		</if>
+		<if test="board_reg_pass !=null and board_reg_pass !=''">
+		AND
+			board_reg_pass = SHA2( #{board_reg_pass}, 256 )
+		</if>
+		<if test="board_idx !=0 and board_menu_code != 'BD01' ">
+		AND
+			board_idx = #{board_idx}
+		</if>
+    </sql>		
+    
+    <select id="selectCommunity" resultType="TBoardVO" parameterType="TBoardVO">
+	-- com.grand.web.community.dao.TBoardDAOImpl.Mapper.selectCommunity
+
+		SELECT
+			row_number () over (order by board_etc10 asc,board_reg_date asc,board_idx asc) as rnum
+			,tb.board_idx
+			,tb.board_title
+			,tb.board_menu_code
+			,tb.board_cate_L
+			,tb.board_cate_M
+			,date_format(tb.board_reg_date,'%Y-%m-%d') as board_reg_date
+			,date_format(tb.board_show_str_date,'%Y-%m-%d') as board_show_str_date
+			,date_format(tb.board_show_end_date,'%Y-%m-%d') as board_show_end_date
+			,tb.board_reg_name
+			,tb.board_detail
+			,tb.board_memory
+			,tb.board_mobile
+			,tb.board_secret
+			,tb.board_notice
+			,tb.board_useyn
+			,tb.birthday
+			,tb.board_etc1
+			,tb.board_etc2
+			,tb.board_etc3
+			,tb.board_etc4
+			,tb.board_reply
+			,tb.save_file
+			,tb.board_url
+			,CASE
+				WHEN UPPER(tb.board_notice) = 'Y' THEN 9999
+				ELSE IFNULL(tb.board_etc10, 0)
+			END AS board_etc10
+			<if test="board_menu_code =='BD04' or board_menu_code =='BD06' ">
+			,tcd.tcd_title as tcd_title
+			,tcds.tcd_title as tcds_title
+			</if>
+		FROM t_board tb
+		<if test="board_menu_code =='BD04' or board_menu_code =='BD06'">
+			left OUTER join t_code_detail tcd
+			on tb.board_cate_L = tcd.tcd_code
+			left OUTER join t_code_detail tcds
+			on tb.board_cate_M = tcds.tcd_code
+		</if>
+		<include refid="whereBoardList" />
+		order by rnum desc
+		<if test="board_menu_code !='BD16'">
+			LIMIT #{startpage} , #{rows}
+		</if>
+   	</select>
+   	
+   	<select id="selectNoticeCount" resultType="_int" parameterType="TBoardVO">
+    
+		SELECT
+			COUNT(*)  
+		FROM t_board
+		<include refid="whereBoardList" />
+			    
+    </select>
+   	
+   	<select id="selectNoticeList" resultType="TBoardVO">
+	-- com.grand.web.community.dao.TBoardDAOImpl.Mapper.selectNoticeList
+   
+			SELECT 
+				board_idx
+				,board_title
+			FROM 
+				t_board
+   
+   	</select>
+   	
+   	<insert id="insertBoard" parameterType="TBoardVO" useGeneratedKeys="true" keyProperty="board_idx">
+   	-- com.grand.web.community.dao.TBoardDAOImpl.Mapper.insertBoard
+			INSERT INTO t_board
+			(
+					board_menu_code
+				,	board_title
+				, 	board_reg_name
+				,	board_reg_date
+				,	board_reg_pass
+				,	board_useyn
+				,	board_mobile
+				,	board_email
+				,	board_show
+				,	birthday
+				,	board_notice
+				,	board_detail
+				,	board_cate_L
+				,	board_cate_M
+				,	board_etc1
+				,	board_etc2
+				,	board_etc3
+				,	board_etc4
+				,	board_reg_ip
+				<if test="utm_source != null and utm_source != ''">
+				,	utm_source
+				</if>
+				
+			)
+			VALUES
+			(
+					#{board_menu_code}
+				,	#{board_title}
+				,	#{board_reg_name}
+				,	now()
+				,	SHA2( #{board_reg_pass},256 )
+				,	#{board_useyn}
+				,	#{board_mobile}
+				,	#{board_email}
+				,	#{board_show}
+				,	#{birthday}
+				,	#{board_notice}
+				,	#{board_detail}
+				,	#{board_cate_L}
+				,	#{board_cate_M}
+				,	#{board_etc1}
+				,	#{board_etc2}
+				,	#{board_etc3}
+				,	#{board_etc4}
+				,	#{commonIp}
+				<if test="utm_source != null and utm_source != ''">
+				,	#{utm_source}
+				</if>
+			)
+   	</insert>
+   	
+   	 <update id="updateBoardCnt" parameterType="TBoardVO" >
+    -- com.grand.web.community.dao.TBoardDAOImpl.Mapper.updateBoardCnt
+    
+    	UPDATE t_board
+    		SET board_cnt = board_cnt +1
+   		WHERE board_idx = #{board_idx}
+    </update>
+    
+    <update id="deleteBoard" parameterType="TBoardVO" >
+    -- com.grand.web.community.dao.TBoardDAOImpl.Mapper.deleteBoard
+    
+    	DELETE FROM 
+    		t_board
+   		WHERE board_idx = #{board_idx}
+    </update>
+    
+    <update id="updateBoard" parameterType="TBoardVO" >
+    -- com.grand.web.community.dao.TBoardDAOImpl.Mapper.updateBoard
+    
+    	UPDATE t_board 
+    		SET 
+    	board_mod_date = now()
+    	,board_reg_name = #{board_reg_name}
+    	,board_reg_pass = SHA2(#{board_reg_pass},256)
+    	,birthday = #{birthday}
+    	,board_mobile = #{board_mobile}
+    	,board_title = #{board_title}
+    	,board_detail = #{board_detail}
+    	,board_cate_L = #{board_cate_L}
+    	,board_cate_M = #{board_cate_M}
+    	
+   		WHERE board_idx = #{board_idx}
+    </update>
+    
+</mapper>

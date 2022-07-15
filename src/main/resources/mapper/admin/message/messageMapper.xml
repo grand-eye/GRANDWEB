@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.grand.message.dao.MessageDAOImpl.Mapper">
+ 
+    <!-- 
+        mybatis-config.xml의 typeAlias에 등록해두지 않았다면 
+        
+        <select id="selectMember" resultType="com.example.dto.MemberVO" >
+            SELECT ID, PW ,NAME FROM TEST
+        </select>
+        
+        이렇게 해야 한다.
+    -->
+    
+   	<insert id="insertMessageCode" parameterType="messageVO" >
+			INSERT INTO t_message
+			(
+					msg_code 
+				,	msg_text
+				,   msg_locale
+				, 	msg_date
+				, 	msg_etc
+				,   msg_order_num
+			) 
+			VALUES 
+			(
+					#{msg_code}
+				, 	#{msg_text}
+				, 	'KR'
+				, 	now()
+				,	#{msg_etc}
+				,	#{msg_order_num}
+			)  
+			ON DUPLICATE KEY 
+			UPDATE 
+					msg_code		=	#{msg_code}
+				, 	msg_text		=	#{msg_text}
+				, 	msg_etc		=	#{msg_etc}
+				,   msg_order_num = #{msg_order_num}
+   	</insert>
+   	
+    
+    <select id="selectExistsMessageCode"	resultType="int">
+    
+			SELECT
+			
+			( 
+				(select count(msg_index) from t_message where msg_code = #{code})
+				+
+				(select count(idx) from t_fileinfo 		 where cateCode =#{code})
+			
+			) as codeExits    
+    
+    </select>
+    
+    <select id="selectMessageCount" resultType="int">
+    
+			  SELECT 
+					count( msg_code )
+		      FROM   t_message
+		      where 1=1
+		      <choose>
+		     		<when test="msg_search != null and !msg_search.equals('')">
+							AND 
+							(
+								INSTR( msg_text , #{msg_search})  <![CDATA[ > ]]> 0
+								OR	
+								INSTR( msg_etc   , #{msg_search} )  <![CDATA[ > ]]> 0
+							)				     			
+		     		</when> 	
+		      </choose>
+    </select>    
+    
+    <select id="selectMessage" resultType="messageVO">
+    
+			SELECT t.* 
+			FROM   t_message as a 
+			JOIN (
+			
+						SELECT 
+								
+								 msg_code
+							,	 msg_text
+							, 	 msg_etc
+							,	 msg_index
+							,	 msg_order_num
+			 
+				      FROM   t_message a,(select @ROWNUM := 0) tmp
+				      where 1=1
+				      <choose>
+				     		<when test="msg_search != null and !msg_search.equals('')">
+									AND 
+									(
+										INSTR( msg_text , #{msg_search})  <![CDATA[ > ]]> 0
+										OR	
+										INSTR( msg_etc   , #{msg_search} )  <![CDATA[ > ]]> 0
+									)				     			
+				     		</when> 	
+				      </choose>
+				      ORDER  BY msg_order_num,msg_index asc 
+				      LIMIT   #{startpage} , #{rows}
+			      ) 
+			AS t ON t.msg_code = a.msg_code; 
+    
+    
+    </select>
+    
+    
+    <select id="getMsg" resultType="String">
+    -- com.grand.message.dao.MessageDAOImpl.Mapper.getMsg
+    	
+        select
+        	<![CDATA[ 
+        		ifnull( replace( replace( replace( msg_text , '\r\n', '<br />') , '\r', '<br />') , '\n', '<br />' )  ,  '' ) as msg_text
+        	]]>
+        from
+        	t_message
+         
+        where
+        	msg_code  = #{msg_code}
+        and
+        	msg_locale = #{msg_locale}
+
+		UNION ALL
+
+		SELECT
+			CONCAT(fileExt,'@',fileSize)  as msg_text
+		FROM		
+			t_fileinfo
+		WHERE
+			cateCode = #{msg_code}
+			
+    </select>
+    
+    
+    
+    
+</mapper>

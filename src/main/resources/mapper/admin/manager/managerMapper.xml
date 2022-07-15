@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.grand.admin.manager.dao.ManagerDAOImpl.Mapper">
+
+	
+	<select id="selectManagerLoginStateCount" resultType="int">
+	-- com.grand.admin.manager.dao.ManagerDAOImpl.Mapper.selectManagerLoginStateCount
+			select
+				count(tal_index)
+			from
+				t_admin_loginhistory
+			where tal_user_id 			= #{tal_user_id}
+			and	  tal_login_state	= #{tal_login_state}
+	</select>
+
+
+	<select id="selectManagerLoginDayCount" resultType="int">
+	-- com.grand.admin.manager.dao.ManagerDAOImpl.Mapper.selectManagerLoginDayCount
+		select
+			( to_days( now() ) - to_days(TA_LAST_LOGIN_DATE) ) as dayCount
+		from
+			t_admin
+		where
+			ta_user_id = #{ta_user_id}
+	</select>
+	
+	<select id="selectGetManager" 	resultType="com.grand.admin.manager.vo.ManagerVO">
+	-- com.grand.admin.manager.dao.ManagerDAOImpl.Mapper.selectGetManager
+			select
+					ta_index
+				,	ta_user_id		
+				,	ta_user_name
+				,	ta_phone
+				,	ta_tel
+				,	ta_email
+				,	ta_group_code
+				,	ta_team_code
+				,	ta_reg_date
+				,	ta_use_yn
+				,	ta_del_yn
+				,	ta_update_date
+				,	ta_desc
+				,	case when ta_use_yn = 'Y' then '사용가능' else '사용불가' end as ta_use_yn_msg
+				, ( select t1.tcd_title from t_code_detail t1 where t1.tcd_code = a.ta_group_code ) as ta_group_name
+				, ( select t1.tcd_title from t_code_detail t1 where t1.tcd_code = a.ta_team_code ) as ta_team_name
+ 			from 
+ 				t_admin a
+ 			where 1=1	
+ 			
+ 			<if  test="ta_user_id != null and !ta_user_id.equals('')">
+ 				and   ta_user_id = #{ta_user_id}
+ 			</if>
+ 			
+ 			<if  test="ta_user_name != null and !ta_user_name.equals('')">
+					AND 
+					(
+						INSTR( ta_user_name , #{ta_user_name})  <![CDATA[ > ]]> 0
+					)	
+ 			</if> 			
+ 			
+ 			<if  test="ta_group_code != null and !ta_group_code.equals('')">
+ 				and   ta_group_code = #{ta_group_code}
+ 			</if>
+ 			
+ 			<if  test="ta_team_code != null and !ta_team_code.equals('')">
+ 				and   ta_team_code = #{ta_team_code}
+ 			</if>
+ 			
+ 			
+ 			<if  test="ta_use_yn != null and !ta_use_yn.equals('')">
+	 				AND	ta_use_yn = #{ta_use_yn}
+ 			</if>
+ 			
+ 			<if  test="ta_del_yn != null and !ta_del_yn.equals('')">
+	 				AND	ta_del_yn = #{ta_del_yn}
+ 			</if> 			
+ 			 			
+ 			
+ 			
+	</select>
+ 	
+ 	<select id="selectManagerLogin" resultType="com.grand.admin.manager.vo.ManagerVO">
+ 	-- com.grand.admin.manager.dao.ManagerDAOImpl.Mapper.selectManagerLogin
+ 			select
+ 					ta_user_id
+ 				,	ta_user_name
+ 				,	now() as ta_now_loginDt
+ 				,	ta_group_code
+ 				,	ta_team_code
+				, ( select t1.tcd_title from t_code_detail t1 where t1.tcd_code = a.ta_group_code ) as ta_group_name
+				, ( select t1.tcd_title from t_code_detail t1 where t1.tcd_code = a.ta_team_code ) as ta_team_name 				
+ 			from 
+ 				t_admin a
+ 			where 1=1
+ 			and	 ta_use_yn = 'Y'
+ 			and   ta_del_yn  = 'N'
+ 			and   ta_user_id = #{i_user_id}
+ 			and   TA_USER_PW = SHA2( #{i_password}, 256 )
+ 	</select>
+ 	
+    <select id="selectExistsManagerID"	resultType="int">
+    -- com.grand.admin.manager.dao.ManagerDAOImpl.Mapper.selectExistsManagerID
+			  SELECT 
+					count( TA_USER_ID )
+		      FROM   t_ADMIN
+		      where 1=1
+		      and TA_USER_ID = #{ta_user_id}
+    </select>    
+     	
+ 	<insert id="insertManagerHistory" parameterType="com.grand.admin.manager.vo.ManagerHistoryVO" >
+ 	-- com.grand.admin.manager.dao.ManagerDAOImpl.Mapper.insertManagerHistory	
+ 		insert into t_admin_loginhistory
+ 		(
+ 				tal_user_id
+ 			,	tal_login_state
+ 			,	tal_login_date
+ 			,	tal_agent
+ 			,	tal_ip
+ 		)
+ 		values
+ 		(
+ 				#{tal_user_id}
+ 			,	#{tal_login_state}
+ 			,	now()
+ 			,	#{tal_agent}
+ 			,	#{tal_ip} 		
+ 		)
+ 		
+ 	
+ 	</insert>
+ 	
+ 	<update id="updateManagerLoginDate" parameterType="com.grand.admin.manager.vo.ManagerVO" >
+ 	-- com.grand.admin.manager.dao.ManagerDAOImpl.Mapper.updateManagerLoginDate	
+ 			UPDATE t_ADMIN
+ 			SET
+ 				TA_LAST_LOGIN_DATE = now()
+ 			WHERE  TA_USER_ID = #{ta_user_id}
+ 	</update>
+ 
+ 	<update id="updateManager" parameterType="com.grand.admin.manager.vo.ManagerVO" >
+ 	-- com.grand.admin.manager.dao.ManagerDAOImpl.Mapper.updateManager	 	
+		UPDATE t_ADMIN
+		SET 
+		     
+		    <if  test="cng_password != null and !cng_password.equals('')">
+		    		TA_USER_PW    = SHA2( #{cng_password}, 256 )		, 
+		    </if>
+
+		    <if  test="ta_user_name != null and !ta_user_name.equals('')">
+		    		TA_USER_NAME    = #{ta_user_name} 	,  
+		    </if>
+		    
+		    <if  test="ta_phone != null and !ta_phone.equals('')">
+		    		ta_phone    = #{ta_phone} 	,  
+		    </if>
+
+
+		     <if  test="ta_tel != null and !ta_tel.equals('')">
+		    		ta_tel    = #{ta_tel} 	,  
+		    </if>
+		    
+		     <if  test="ta_email != null and !ta_email.equals('')">
+		    		ta_email    = #{ta_email} 	,  
+		    </if>	
+		    
+		     <if  test="ta_group_code != null and !ta_group_code.equals('')">
+		    		ta_group_code    = #{ta_group_code} 	,  
+		    </if>		
+		    
+		     <if  test="ta_team_code != null and !ta_team_code.equals('')">
+		    		ta_team_code    = #{ta_team_code} 	,  
+		    </if>				    	    	    
+		    
+		    
+		    
+		     <if  test="ta_use_yn != null and !ta_use_yn.equals('')">
+		    		ta_use_yn    = #{ta_use_yn} 	,  
+		    </if>				    	    	    
+		    
+		    
+		     <if  test="ta_del_yn != null and !ta_del_yn.equals('')">
+		    		ta_del_yn    = #{ta_del_yn} 	,  
+		    </if>				    	    	    
+
+		     <if  test="ta_desc != null and !ta_desc.equals('')">
+		    		ta_desc    = #{ta_desc} 	,  
+		    </if>	
+ 			
+ 			TA_UPDATE_DATE = now()
+
+ 			WHERE  TA_USER_ID = #{ta_user_id}
+ 			
+ 			<if  test="i_password != null and !i_password.equals('')">
+	 			AND	TA_USER_PW = SHA2( #{i_password}, 256 )
+ 			</if>
+ 	
+ 	</update>
+ 	
+ 	<insert id="insertManager" parameterType="com.grand.admin.manager.vo.ManagerVO" >
+ 	-- com.grand.admin.manager.dao.ManagerDAOImpl.Mapper.insertManager	 	
+ 			INSERT INTO t_admin 
+ 			(
+				  TA_USER_ID
+				, TA_USER_PW
+				, TA_USER_NAME
+				, TA_PHONE
+				, TA_TEL
+				, TA_EMAIL
+				, TA_GROUP_CODE
+				, TA_TEAM_CODE
+				, TA_REG_DATE 	
+				, TA_USE_YN		
+				, TA_REG_ID
+				, TA_DESC
+ 			)
+ 			VALUES
+ 			(
+				  #{ta_user_id}
+				, SHA2( #{ta_user_pw}, 256 )
+				, #{ta_user_name}
+				, #{ta_phone}
+				, #{ta_tel}
+				, #{ta_email}
+				, #{ta_group_code}
+				, #{ta_team_code}
+				, now()
+				, #{ta_use_yn}
+				, #{reg_id}
+				, #{ta_desc}
+ 			)
+			
+			ON DUPLICATE KEY 
+			UPDATE 	
+						TA_USER_ID = #{ta_user_id}
+				<if  test="ta_new_user_pw != null and !ta_new_user_pw.equals('')">
+				,		TA_USER_PW = SHA2( #{ta_new_user_pw}, 256 )
+				</if>				
+				,		TA_USER_NAME = #{ta_user_name}
+				,		TA_PHONE = #{ta_phone}
+				,		TA_TEL = #{ta_tel}
+				,		TA_EMAIL = #{ta_email}
+				,		TA_GROUP_CODE = #{ta_group_code}
+				,		TA_TEAM_CODE = #{ta_team_code}
+				,		TA_USE_YN = #{ta_use_yn}
+				,		TA_DESC = #{ta_desc}
+				,		TA_MOD_ID = #{reg_id}
+				,		TA_UPDATE_DATE = now()
+ 	</insert>
+ 
+     
+</mapper>
