@@ -10,9 +10,6 @@
 		]]>
 	</entry>
 
-	<entry key="username">root</entry>
-	<entry key="password">jong!Q@W3e4r</entry>
-
 	<!-- ?? -->
 	<!--
 	<entry key="username">usr_grand_stg</entry>
@@ -20,10 +17,8 @@
 	-->
 
 	<!-- REAL -->
-	<!--
 	<entry key="username">usr_grand</entry>
 	<entry key="password">Alvmfwm!@3</entry>
-	-->
 
 	<entry key="GRAND_URL"><![CDATA[https://grand.co.kr/]]></entry>
 	<entry key="GRAND_BRANDCODE"><![CDATA[GRAND]]></entry>
