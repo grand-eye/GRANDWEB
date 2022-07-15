@@ -36,10 +36,12 @@
 					</div>
 					<div class="btn-wrap">
 						<button class="btn-main btn-login" type="button">로그인</button>
+						<%--
 						<div id="naver_id_login" style="display:none;"></div>
 						<button class="btn-main btn-login-naver" type="button" onclick="document.getElementById('naver_id_login_anchor').click();"><img src="/common/img/sub/icon_naver.png" alt="naver"> 네이버 로그인</button>
 						<button class="btn-main btn-login-kakao" type="button"><img src="/common/img/sub/icon_kakao.png" alt="naver"> 카카오 로그인</button>
 						<button class="btn-main btn-login-google" type="button"><img src="/common/img/sub/icon_google.png" alt="naver"> 구글 로그인</button>
+						--%>
 						<p class="login-division"><span>or</span></p>
 						<button class="btn-main btn-join" onclick="location.href='/user/join_terms'" type="button">회원 가입</button>
 					</div>
