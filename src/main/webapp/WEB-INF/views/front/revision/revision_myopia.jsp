@@ -5,7 +5,7 @@
 	<%@ include file="/WEB-INF/views/front/inc/header.jsp" %>
 
 	<style type="text/css">
-		.myopia_wrap .myopia-hero01{background:url('') center no-repeat;}
+		.myopia_wrap .myopia-hero01{background:url('/common/img/new/revision_myopia_bg.jpg') center no-repeat;}
 		.mo_myopia-hero01 img{width:100%;max-height:423px;}
 
 		.myopia_wrap .myopia04 .gray-bg .wsize{top:-126px;}
@@ -14,14 +14,18 @@
 		.myopia05 .cont-desc{padding-bottom:253px;}
 		.myopia05 .anchor-arrow{display:inline-block; margin:60px 0 190px;}
 
-		.link-wrap .arrow02{margin-left:120px;}
-
 		/* jbnoh */
 		.pres_kind_list{padding: 20px;}
 		.desc_default{height: 260px;}
-		.equip_title {height:70px; line-height:70px; text-align:center; font-size:30px; font-weight:700; color:#1e3250; border:1px solid #b7b7b7;}
-		.pres_kind_list .pres_kind_list_item .title:after {display:block; content:''; width:100%; height:2px; margin-top:12px; background-color:#363636;}
+		.equip_title {height:70px; line-height:70px; text-align:center; font-size:30px; font-weight:700; color:#fff; border:1px solid #b7b7b7;}
+		.equip_title.et_one {background-color: #60bae1}
+		.equip_title.et_two {background-color: #0b455a}
+		.equip_title.et_three {background-color: #6f297b}
+		.pres_kind_list .pres_kind_list_item .title_one:after {display:block; content:''; width:100%; height:2px; margin-top:12px; background-color:#60bae1;}
+		.pres_kind_list .pres_kind_list_item .title_two:after {display:block; content:''; width:100%; height:2px; margin-top:12px; background-color:#0b455a;}
+		.pres_kind_list .pres_kind_list_item .title_three:after {display:block; content:''; width:100%; height:2px; margin-top:12px; background-color:#6f297b;}
 		.pres_kind_list .pres_kind_list_item .title.clr {color: #ccc;}
+		.title.clr img {max-height: 40px; vertical-align: middle;}
 		.pres_kind_list .pres_kind_list_item .desc-sheet {text-align: left; padding-left: 30px;}
 		.desc-sheet .desc-sheet-sub {padding-top: 30px;}
 		.desc-sheet .desc-sheet-sub.last {padding-bottom: 30px;}
@@ -59,7 +63,7 @@
 							<h4 class="top-tit">시력저하의 원인</h4>
 							<h2 class="cont-tit">근시</h2>
 							<div class="img-wrap">
-								<img src="" alt="">
+								<img src="/common/img/new/01.jpg" alt="">
 							</div>
 							<p class="cont-desc">
 								근시는 물체의 상이 망막의 앞쪽에 맺히는 굴절이상으로
@@ -77,7 +81,7 @@
 							<h4 class="top-tit">대표적인</h4>
 							<h2 class="cont-tit">근시 발생 원인</h2>
 							<div class="img-wrap">
-								<img src="" alt="">
+								<img src="/common/img/new/02.jpg" alt="">
 							</div>
 						</div>
 						<div class="myopia03 first-sec txt-center">
@@ -99,7 +103,7 @@
 								고도 근시로 진행하지 않도록 예방이 중요합니다.
 							</p>
 							<div class="img-wrap">
-								<img src="" alt="">
+								<img src="/common/img/new/03.jpg" alt="">
 							</div>
 						</div>
 						<div class="myopia04 care-sec txt-center">
@@ -115,15 +119,15 @@
 										<!-- PC -->
 										<ul class="pres_kind_list flex_between align-item-start pc_show">
 											<li class="pres_kind_list_item">
-												<p class="equip_title">드림 렌즈</p>
-												<div><img src="" alt="image"></div>
-												<p class="title clr">밤 착용 (수면)</p>
+												<p class="equip_title et_one">드림 렌즈</p>
+												<div><img src="/common/img/new/04.jpg" alt="image"></div>
+												<p class="title title_one clr"><img src="/common/img/new/07.jpg" alt="image">밤 착용 (수면)</p>
 												<p class="desc_default">
 													드림 렌즈는 수면 시 착용하는 굴절이상 교정용 특수 콘택트렌즈입니다.
 													<span class="txt_space"></span>
 													일반 렌즈와 다르게 가운데 부분이 주변부보다 편평해서 자는 동안 편평한 부분이 각막의 볼록한 부분을 변화시켜 근시를 교정합니다.
 												</p>
-												<p class="title"></p>
+												<p class="title title_one"></p>
 												<div class="desc-sheet" style="background: #ebebeb;">
 													<div class="desc-sheet-sub">
 														<p>치료 효과</p>
@@ -156,15 +160,15 @@
 												</div>
 											</li>
 											<li class="pres_kind_list_item">
-												<p class="equip_title">마이오가드</p>
-												<div><img src="" alt="image"></div>
-												<p class="title clr">잠들기 전</p>
+												<p class="equip_title et_two">마이오가드</p>
+												<div><img src="/common/img/new/05.jpg" alt="image"></div>
+												<p class="title title_two clr"><img src="/common/img/new/08.jpg" alt="image">잠들기 전</p>
 												<p class="desc_default">
 													마이오가드는 0.125% 의 저농도 아트로핀 점안액으로 근시 진행 억제를 도와줍니다.
 													<span class="txt_space"></span>
 													근시 억제 40~70% 효과 인증받았으며, 드림 렌즈와 함께 사용할 수 있는 식품의약품안전처에서 정식으로 허가받은 점안액입니다.
 												</p>
-												<p class="title"></p>
+												<p class="title title_two"></p>
 												<div class="desc-sheet">
 													<div class="desc-sheet-sub">
 														<p>치료 효과</p>
@@ -197,15 +201,15 @@
 												</div>
 											</li>
 											<li class="pres_kind_list_item">
-												<p class="equip_title">마이사이트 렌즈</p>
-												<div><img src="" alt="image"></div>
-												<p class="title clr">낮 착용 (생활)</p>
+												<p class="equip_title et_three">마이사이트 렌즈</p>
+												<div><img src="/common/img/new/06.jpg" alt="image"></div>
+												<p class="title title_three clr"><img src="/common/img/new/09.jpg" alt="image">낮 착용 (생활)</p>
 												<p class="desc_default">
 													마이사이트 렌즈는 하루 10시간 착용으로 시력 교정 및 근시 완화를 도와주는 렌즈입니다.
 													<span class="txt_space"></span>
 													드림 렌즈 착용에 실패한 경우, 수면 시간이 짧아 드림 렌즈로 충분한 효과를 내지 못한 경우, 안경 착용을 싫어하며 아트로핀 치료가 불가능할 때 사용합니다.
 												</p>
-												<p class="title"></p>
+												<p class="title title_three"></p>
 												<div class="desc-sheet" style="background: #ebebeb;">
 													<div class="desc-sheet-sub">
 														<p>치료 효과</p>
@@ -241,15 +245,15 @@
 										<!-- MO -->
 										<ul class="pres_kind_list mo_show">
 											<li class="pres_kind_list_item">
-												<p class="equip_title">드림 렌즈</p>
-												<div><img src="" alt="image"></div>
-												<p class="title clr">밤 착용 (수면)</p>
+												<p class="equip_title et_one">드림 렌즈</p>
+												<div><img src="/common/img/new/04.jpg" alt="image"></div>
+												<p class="title title_one clr"><img src="/common/img/new/07.jpg" alt="image">밤 착용 (수면)</p>
 												<p class="desc_default">
 													드림 렌즈는 수면 시 착용하는 굴절이상 교정용 특수 콘택트렌즈입니다.
 													<span class="txt_space"></span>
 													일반 렌즈와 다르게 가운데 부분이 주변부보다 편평해서 자는 동안 편평한 부분이 각막의 볼록한 부분을 변화시켜 근시를 교정합니다.
 												</p>
-												<p class="title"></p>
+												<p class="title title_one"></p>
 												<div class="desc-sheet" style="background: #ebebeb;">
 													<div class="desc-sheet-sub">
 														<p>치료 효과</p>
@@ -282,15 +286,15 @@
 												</div>
 											</li>
 											<li class="pres_kind_list_item">
-												<p class="equip_title">마이오가드</p>
-												<div><img src="" alt="image"></div>
-												<p class="title clr">잠들기 전</p>
+												<p class="equip_title et_two">마이오가드</p>
+												<div><img src="/common/img/new/05.jpg" alt="image"></div>
+												<p class="title title_two clr"><img src="/common/img/new/08.jpg" alt="image">잠들기 전</p>
 												<p class="desc_default">
 													마이오가드는 0.125% 의 저농도 아트로핀 점안액으로 근시 진행 억제를 도와줍니다.
 													<span class="txt_space"></span>
 													근시 억제 40~70% 효과 인증받았으며, 드림 렌즈와 함께 사용할 수 있는 식품의약품안전처에서 정식으로 허가받은 점안액입니다.
 												</p>
-												<p class="title"></p>
+												<p class="title title_two"></p>
 												<div class="desc-sheet">
 													<div class="desc-sheet-sub">
 														<p>치료 효과</p>
@@ -323,15 +327,15 @@
 												</div>
 											</li>
 											<li class="pres_kind_list_item">
-												<p class="equip_title">마이사이트 렌즈</p>
-												<div><img src="" alt="image"></div>
-												<p class="title clr">낮 착용 (생활)</p>
+												<p class="equip_title et_three">마이사이트 렌즈</p>
+												<div><img src="/common/img/new/06.jpg" alt="image"></div>
+												<p class="title title_three clr"><img src="/common/img/new/09.jpg" alt="image">낮 착용 (생활)</p>
 												<p class="desc_default">
 													마이사이트 렌즈는 하루 10시간 착용으로 시력 교정 및 근시 완화를 도와주는 렌즈입니다.
 													<span class="txt_space"></span>
 													드림 렌즈 착용에 실패한 경우, 수면 시간이 짧아 드림 렌즈로 충분한 효과를 내지 못한 경우, 안경 착용을 싫어하며 아트로핀 치료가 불가능할 때 사용합니다.
 												</p>
-												<p class="title"></p>
+												<p class="title title_three"></p>
 												<div class="desc-sheet" style="background: #ebebeb;">
 													<div class="desc-sheet-sub">
 														<p>치료 효과</p>
@@ -464,11 +468,9 @@
 							</div>
 
 							<div class="link-wrap pc_show">
-								<a href="/revision/dream" class="anchor-arrow">드림렌즈 바로 가기</a>
-								<a href="/community/review" class="anchor-arrow arrow02">고객 체험기 바로 가기</a>
+								<a href="/community/review" class="anchor-arrow">고객 체험기 바로 가기</a>
 							</div>
 								<ul class="link_box justify-cont-center flex mo_show">
-								<li><a href="/revision/dream" class="btn_detail">드림렌즈 바로 가기</a></li>
 								<li><a href="/community/review" class="btn_detail">고객 체험기 바로 가기</a></li>
 							</ul>
 						</div>
