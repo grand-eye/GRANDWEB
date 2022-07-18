@@ -23,7 +23,7 @@ public class RevisionController {
     @RequestMapping(value = "/revision/dream", method = RequestMethod.GET)
     public String dream(Locale locale) throws Exception{
  
-        return "/front/revision/revision_dream";
+        return "/front/revision/revision_myopia";
     }
     
     @RequestMapping(value = "/revision/implant", method = RequestMethod.GET)
