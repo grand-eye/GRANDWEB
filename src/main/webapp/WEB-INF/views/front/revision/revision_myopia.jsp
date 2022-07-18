@@ -17,6 +17,7 @@
 		/* jbnoh */
 		.pres_kind_list{padding: 20px;}
 		.desc_default{height: 260px;}
+		.revision__care .desc_default{height: auto;}
 		.equip_title {height:70px; line-height:70px; text-align:center; font-size:30px; font-weight:700; color:#fff; border:1px solid #b7b7b7;}
 		.equip_title.et_one {background-color: #60bae1}
 		.equip_title.et_two {background-color: #0b455a}
@@ -54,7 +55,7 @@
 					<%-- 근시 치료 --%>
 					<div id="myopiaTab" class="myopia_wrap main-tab tab" style="display:block;">
 						<div class="sub_visual myopia-hero01 pc_show"></div>
-						<div class="mo_myopia-hero01 mo_show"><img src="" alt=""></div>
+						<div class="mo_myopia-hero01 mo_show"><img src="/common/img/new/revision_myopia_bg.jpg" alt=""></div>
 						<div class="sub_txt_bar">
 							강남그랜드안과는 우리 아이 평생 근시 주치의로 아이들의 시력을 성인이 되어서도 관리합니다.
 						</div>
@@ -426,41 +427,36 @@
 								</ul>
 							</div>
 
-							<div class="system_list_box mo_show">
-								<ul class="system_list">
+							<div class="feature-wrap system-list mo_show">
+								<ul class="feature-list">
 									<li>
-										<div class="title_box">
+										<div class="feature-circle">
 											<img src="/common/img/sub/mo_pres_clinic_system_bg01.png" alt="클리닉1">
 										</div>
-										<p class="desc_default">
-											의료진과 상담 전 검안사와 일대일
-											<br class="br_none_450">
-											정밀 검사로 고객의 눈 상태를
-											<br class="br_none_450">
+										<p class="feature-desc">
+											의료진과 상담 전 검안사와 일대일 <br>
+											정밀 검사로 고객의 눈 상태를 <br>
 											확인합니다.
 										</p>
 									</li>
 									<li>
-										<div class="title_box">
+										<div class="feature-circle">
 											<img src="/common/img/sub/pres_clinic_system_bg02 (2).png" alt="클리닉2">
 										</div>
-										<p class="desc_default">
-											검사 결과를 바탕으로 의료진과
-											<br class="br_none_450">
+										<p class="feature-desc">
+											검사 결과를 바탕으로 의료진과 <br>
 											일대일 상담을 진행합니다.
 											<span class="txt_space"></span>
-											이때 의료진은 고객에게 맞는
-											<br class="br_none_450">
+											이때 의료진은 고객에게 맞는 <br>
 											근시 치료 방법을 결정합니다.
 										</p>
 									</li>
 									<li>
-										<div class="title_box">
+										<div class="feature-circle">
 											<img src="/common/img/sub/mo_pres_clinic_system_bg03.png" alt="클리닉3">
 										</div>
-										<p class="desc_default">
-											의료진 상담 시 결정한 방법으로
-											<br class="br_none_450">
+										<p class="feature-desc">
+											의료진 상담 시 결정한 방법으로<br>
 											치료를 진행합니다.
 										</p>
 									</li>
@@ -743,7 +739,7 @@
 
 						<%-- 드림 렌즈 주의사항 --%>
 						<div class="txt-center"><h2 class="cont-tit">드림 렌즈 주의사항</h2></div>
-						<div class="notandum_wrap">
+						<div class="revision__care notandum_wrap">
 							<div class="bg_brown_light care_list_wrap">
 								<div class="wsize02">
 									<h3 class="sub_title06"># 검사 전</h3>
