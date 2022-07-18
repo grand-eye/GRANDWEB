@@ -55,7 +55,7 @@
 					<%-- 근시 치료 --%>
 					<div id="myopiaTab" class="myopia_wrap main-tab tab" style="display:block;">
 						<div class="sub_visual myopia-hero01 pc_show"></div>
-						<div class="mo_myopia-hero01 mo_show"><img src="/common/img/new/revision_myopia_bg.jpg" alt=""></div>
+						<div class="mo_myopia-hero01 mo_show"><img src="/common/img/new/mo/revision_myopia_bg.jpg" alt=""></div>
 						<div class="sub_txt_bar">
 							강남그랜드안과는 우리 아이 평생 근시 주치의로 아이들의 시력을 성인이 되어서도 관리합니다.
 						</div>
@@ -247,8 +247,8 @@
 										<ul class="pres_kind_list mo_show">
 											<li class="pres_kind_list_item">
 												<p class="equip_title et_one">드림 렌즈</p>
-												<div><img src="/common/img/new/04.jpg" alt="image"></div>
-												<p class="title title_one clr"><img src="/common/img/new/07.jpg" alt="image">밤 착용 (수면)</p>
+												<div><img src="/common/img/new/mo/04.jpg" alt="image"></div>
+												<p class="title title_one clr"><img src="/common/img/new/mo/07.jpg" alt="image">밤 착용 (수면)</p>
 												<p class="desc_default">
 													드림 렌즈는 수면 시 착용하는 굴절이상 교정용 특수 콘택트렌즈입니다.
 													<span class="txt_space"></span>
@@ -288,8 +288,8 @@
 											</li>
 											<li class="pres_kind_list_item">
 												<p class="equip_title et_two">마이오가드</p>
-												<div><img src="/common/img/new/05.jpg" alt="image"></div>
-												<p class="title title_two clr"><img src="/common/img/new/08.jpg" alt="image">잠들기 전</p>
+												<div><img src="/common/img/new/mo/05.jpg" alt="image"></div>
+												<p class="title title_two clr"><img src="/common/img/new/mo/08.jpg" alt="image">잠들기 전</p>
 												<p class="desc_default">
 													마이오가드는 0.125% 의 저농도 아트로핀 점안액으로 근시 진행 억제를 도와줍니다.
 													<span class="txt_space"></span>
@@ -329,8 +329,8 @@
 											</li>
 											<li class="pres_kind_list_item">
 												<p class="equip_title et_three">마이사이트 렌즈</p>
-												<div><img src="/common/img/new/06.jpg" alt="image"></div>
-												<p class="title title_three clr"><img src="/common/img/new/09.jpg" alt="image">낮 착용 (생활)</p>
+												<div><img src="/common/img/new/mo/06.jpg" alt="image"></div>
+												<p class="title title_three clr"><img src="/common/img/new/mo/09.jpg" alt="image">낮 착용 (생활)</p>
 												<p class="desc_default">
 													마이사이트 렌즈는 하루 10시간 착용으로 시력 교정 및 근시 완화를 도와주는 렌즈입니다.
 													<span class="txt_space"></span>
